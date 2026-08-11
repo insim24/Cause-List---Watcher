@@ -1,0 +1,9 @@
+{
+  "people": [
+    { "name": "Syed Mohtasim", "aliases": ["Syed Mohtashim"] },
+    { "name": "Syed Manzoor", "aliases": [] },
+    { "name": "Saqib Fayaz", "aliases": [] },
+    { "name": "Owais Ashraf", "aliases": ["Owais Ashraf Shah"] }
+  ],
+  "list_types": ["daywise", "supplementary", "entire", "registrar"]
+}

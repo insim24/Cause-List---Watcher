@@ -1,0 +1,8 @@
+{
+  "people": [
+    { "name": "Bilal Nazir", "aliases": ["Adv. Bilal Nazir", "B. Nazir"] },
+    { "name": "Tanveer Ahmad", "aliases": [] },
+    { "name": "Sameer Kaul", "aliases": ["S. Kaul"] }
+  ],
+  "list_types": ["daywise", "supplementary", "entire", "registrar"]
+}

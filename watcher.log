@@ -1,0 +1,364 @@
+2026-08-07 13:59:33,618 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-07 13:59:33,618 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-07 13:59:34,711 [INFO] Found 15 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-08-07 13:59:34,712 [INFO] Downloading Supplementary%20Cause%20List%20-%2007.08.2026.pdf (supplementary)
+2026-08-07 13:59:36,446 [INFO] Supplementary%20Cause%20List%20-%2007.08.2026.pdf: 1 potential match(es)
+2026-08-07 13:59:36,447 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2007.08.2026.pdf (supplementary)
+2026-08-07 13:59:36,778 [INFO] Supplementary%20Cause%20List%20-2-%2007.08.2026.pdf: 0 potential match(es)
+2026-08-07 13:59:36,779 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2007.08.2026.pdf (supplementary)
+2026-08-07 13:59:36,931 [INFO] Supplementary%20Cause%20List%20-3-%2007.08.2026.pdf: 0 potential match(es)
+2026-08-07 13:59:36,932 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2007.08.2026.pdf (supplementary)
+2026-08-07 13:59:37,395 [INFO] Spl.Supplementary%20Cause%20List%20-%2007.08.2026.pdf: 1 potential match(es)
+2026-08-07 13:59:37,396 [INFO] Downloading causelist_03082026.pdf (daywise)
+2026-08-07 13:59:45,596 [INFO] causelist_03082026.pdf: 5 potential match(es)
+2026-08-07 13:59:45,598 [INFO] Downloading causelist_04082026.pdf (daywise)
+2026-08-07 13:59:49,621 [INFO] causelist_04082026.pdf: 6 potential match(es)
+2026-08-07 13:59:49,622 [INFO] Downloading causelist_05082026.pdf (daywise)
+2026-08-07 13:59:52,713 [INFO] causelist_05082026.pdf: 2 potential match(es)
+2026-08-07 13:59:52,719 [INFO] Downloading causelist_06082026.pdf (daywise)
+2026-08-07 13:59:56,163 [INFO] causelist_06082026.pdf: 2 potential match(es)
+2026-08-07 13:59:56,163 [INFO] Downloading causelist_07082026.pdf (daywise)
+2026-08-07 13:59:58,821 [INFO] causelist_07082026.pdf: 0 potential match(es)
+2026-08-07 13:59:58,821 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-07 14:00:33,613 [INFO] entirelist_sgr.pdf: 15 potential match(es)
+2026-08-07 14:00:33,613 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-07 14:00:34,369 [INFO] rjcourtsgr.pdf: 0 potential match(es)
+2026-08-07 14:00:34,371 [INFO] Added 32 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-07 | Court 5 | Sr  | CM(5099/2026
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-07 | Court 4 | Sr  | 
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Mohtasim] 2026-08-03 | Court 5 | Sr  | CM(4653/2026
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr  | IA(2/2018
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr  | CPOWP 712/2017
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr  | OWP 1095/2017
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr  | OWP 2196/2017
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-04 | Court 1 | Sr  | CRM(M) 557/2022
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-04 | Court 5 | Sr 03 | CrlM(1854/2025
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Mohtasim] 2026-08-04 | Court 5 | Sr 03 | HCP 105/2025
+2026-08-07 14:00:34,371 [INFO]   -> [Saqib Fayaz] 2026-08-04 | Court 5 | Sr 03 | HCP 105/2025
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-04 | Court 7 | Sr 03 | WP(C) 2934/2023
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-04 | Court 7 | Sr 03 | RFA 94/2024
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-05 | Court 7 | Sr 04 | OWP 1638/2018
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-05 | Court 7 | Sr 04 | OWP 31/2015
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-06 | Court 1 | Sr  | LPA 231/2022
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Mohtasim] 2026-08-06 | Court 1 | Sr  | LPA 231/2022
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Mohtasim] 2026-08-03 | Court 5 | Sr 16 | CM(4653/2026
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr 16 | IA(2/2018
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr 16 | CPOWP 712/2017
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr 16 | OWP 1095/2017
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr 16 | OWP 2196/2017
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-03 | Court 1 | Sr 16 | CRM(M) 557/2022
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-03 | Court 5 | Sr 03 | CrlM(1854/2025
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Mohtasim] 2026-08-03 | Court 5 | Sr 03 | HCP 105/2025
+2026-08-07 14:00:34,371 [INFO]   -> [Saqib Fayaz] 2026-08-03 | Court 5 | Sr 03 | HCP 105/2025
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-03 | Court 7 | Sr 03 | WP(C) 2934/2023
+2026-08-07 14:00:34,371 [INFO]   -> [Owais Ashraf] 2026-08-03 | Court 7 | Sr 03 | RFA 94/2024
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr 04 | OWP 1638/2018
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 7 | Sr 04 | OWP 31/2015
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Manzoor] 2026-08-03 | Court 1 | Sr 04 | LPA 231/2022
+2026-08-07 14:00:34,371 [INFO]   -> [Syed Mohtasim] 2026-08-03 | Court 1 | Sr 04 | LPA 231/2022
+2026-08-08 12:01:45,055 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-08 12:01:45,063 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-08 12:01:45,875 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-08 12:01:45,875 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-08 12:01:46,368 [INFO] Supplementary%20Cause%20List%20-%2010.08.2026.pdf: 1 case row(s) read, 0 potential match(es)
+2026-08-08 12:01:46,372 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-08 12:01:49,955 [INFO] causelist_10082026.pdf: 53 case row(s) read, 0 potential match(es)
+2026-08-08 12:01:49,955 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-08 12:01:52,597 [INFO] causelist_11082026.pdf: 74 case row(s) read, 0 potential match(es)
+2026-08-08 12:01:52,597 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-08 12:01:55,433 [INFO] causelist_12082026.pdf: 68 case row(s) read, 0 potential match(es)
+2026-08-08 12:01:55,433 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-08 12:01:58,213 [INFO] causelist_13082026.pdf: 62 case row(s) read, 0 potential match(es)
+2026-08-08 12:01:58,215 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-08 12:02:00,295 [INFO] causelist_14082026.pdf: 82 case row(s) read, 0 potential match(es)
+2026-08-08 12:02:00,295 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-08 12:02:13,565 [INFO] entirelist_sgr.pdf: 383 case row(s) read, 0 potential match(es)
+2026-08-08 12:02:13,565 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-08 12:02:14,433 [INFO] rjcourtsgr.pdf: 32 case row(s) read, 0 potential match(es)
+2026-08-08 12:02:14,463 [INFO] Added 0 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-08 12:03:00,564 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-08 12:03:00,564 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-08 12:03:01,442 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-08 12:03:01,444 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-08 12:03:01,572 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-08 12:03:01,576 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-08 12:03:01,922 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-08 12:03:01,924 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-08 12:03:02,122 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-08 12:03:02,126 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-08 12:03:02,276 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-08 12:03:02,278 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-08 12:03:02,406 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-08 12:03:02,406 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-08 12:03:02,531 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-08 12:03:02,531 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-08 12:03:03,180 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-08 12:03:03,182 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-08 12:03:03,305 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-08 12:03:03,314 [INFO] Added 0 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-08 12:07:48,904 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-08 12:07:48,904 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-08 12:07:49,842 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-08 12:07:49,842 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-08 12:07:49,975 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-08 12:07:49,977 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-08 12:07:50,785 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-08 12:07:50,787 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-08 12:07:51,319 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-08 12:07:51,319 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-08 12:07:52,090 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-08 12:07:52,092 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-08 12:07:52,939 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-08 12:07:52,941 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-08 12:07:53,488 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-08 12:07:53,490 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-08 12:08:00,374 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-08 12:08:00,374 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-08 12:08:01,165 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-08 12:08:01,173 [INFO] Added 0 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 09:48:05,891 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 09:48:05,893 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 09:48:06,793 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 09:48:06,793 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 09:48:06,899 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-10 09:48:06,899 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 09:48:07,122 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 09:48:07,122 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 09:48:07,266 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 09:48:07,280 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 09:48:07,377 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 09:48:07,377 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 09:48:07,508 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 09:48:07,508 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 09:48:07,620 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 09:48:07,620 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 09:48:08,144 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 09:48:08,144 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 09:48:08,253 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 09:48:08,259 [INFO] Added 0 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 09:48:41,273 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 09:48:41,273 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 09:48:42,145 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 09:48:42,145 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 09:48:42,239 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-10 09:48:42,239 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 09:48:42,474 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 09:48:42,474 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 09:48:42,568 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 09:48:42,568 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 09:48:42,684 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 09:48:42,684 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 09:48:42,795 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 09:48:42,795 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 09:48:42,891 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 09:48:42,891 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 09:48:43,400 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 09:48:43,400 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 09:48:43,500 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 09:48:43,507 [INFO] Added 0 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 09:58:05,483 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 09:58:05,483 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 09:58:06,263 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 09:58:06,263 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 09:58:07,117 [INFO] Supplementary%20Cause%20List%20-%2010.08.2026.pdf: 1 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:07,117 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 09:58:10,511 [INFO] causelist_10082026.pdf: 53 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:10,511 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 09:58:13,031 [INFO] causelist_11082026.pdf: 74 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:13,031 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 09:58:16,375 [INFO] causelist_12082026.pdf: 68 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:16,375 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 09:58:21,550 [INFO] causelist_13082026.pdf: 62 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:21,550 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 09:58:26,648 [INFO] causelist_14082026.pdf: 82 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:26,649 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 09:58:50,982 [INFO] entirelist_sgr.pdf: 383 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:50,986 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 09:58:53,937 [INFO] rjcourtsgr.pdf: 32 case row(s) read, 0 potential match(es)
+2026-08-10 09:58:53,949 [INFO] Added 0 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 09:59:39,807 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 09:59:39,809 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 09:59:41,679 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 09:59:41,679 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 09:59:41,862 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-10 09:59:41,862 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 09:59:42,182 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 09:59:42,182 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 09:59:42,326 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 09:59:42,326 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 09:59:42,469 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 09:59:42,469 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 09:59:42,581 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 09:59:42,581 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 09:59:42,693 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 09:59:42,693 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 09:59:43,257 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 09:59:43,257 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 09:59:43,362 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 09:59:43,378 [INFO] Added 0 new match(es). Total saved: 32. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 10:00:26,673 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 10:00:26,673 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 10:00:27,549 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 10:00:27,549 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 10:00:27,673 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-10 10:00:27,673 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 10:00:28,459 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 10:00:28,459 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 10:00:29,167 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 10:00:29,169 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 10:00:29,870 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 10:00:29,873 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 10:00:30,462 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 10:00:30,462 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 10:00:30,984 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 10:00:30,986 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 10:00:36,927 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 10:00:36,929 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 10:00:37,513 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 10:00:37,532 [INFO] Added 0 new match(es). Total saved: 0. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 10:03:18,692 [WARNING] Could not read C:\Causelist\package\cases_auto.json, starting fresh
+2026-08-10 10:03:18,692 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 10:03:18,692 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 10:03:19,470 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 10:03:19,470 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 10:03:19,586 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-10 10:03:19,586 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 10:03:19,827 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 10:03:19,827 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 10:03:19,962 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 10:03:19,977 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 10:03:20,073 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 10:03:20,073 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 10:03:20,233 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 10:03:20,233 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 10:03:20,341 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 10:03:20,342 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 10:03:20,863 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 10:03:20,863 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 10:03:20,960 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 10:03:20,969 [INFO] Added 0 new match(es). Total saved: 0. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 10:06:30,854 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 10:06:30,854 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 10:06:31,679 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 10:06:31,679 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 10:06:32,793 [INFO] Supplementary%20Cause%20List%20-%2010.08.2026.pdf: 1 case row(s) read, 0 potential match(es)
+2026-08-10 10:06:32,793 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 10:06:36,811 [INFO] causelist_10082026.pdf: 53 case row(s) read, 0 potential match(es)
+2026-08-10 10:06:36,811 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 10:06:39,602 [INFO] causelist_11082026.pdf: 74 case row(s) read, 0 potential match(es)
+2026-08-10 10:06:39,602 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 10:06:42,524 [INFO] causelist_12082026.pdf: 68 case row(s) read, 0 potential match(es)
+2026-08-10 10:06:42,524 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 10:06:45,384 [INFO] causelist_13082026.pdf: 62 case row(s) read, 0 potential match(es)
+2026-08-10 10:06:45,384 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 10:06:47,699 [INFO] causelist_14082026.pdf: 82 case row(s) read, 0 potential match(es)
+2026-08-10 10:06:47,699 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 10:07:06,835 [INFO] entirelist_sgr.pdf: 383 case row(s) read, 0 potential match(es)
+2026-08-10 10:07:06,835 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 10:07:08,663 [INFO] rjcourtsgr.pdf: 32 case row(s) read, 0 potential match(es)
+2026-08-10 10:07:08,663 [INFO] Added 0 new match(es). Total saved: 0. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 15:06:34,498 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 15:06:34,498 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 15:06:35,448 [INFO] Found 12 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-08-10 15:06:35,448 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 15:06:35,953 [INFO] Supplementary%20Cause%20List%20-%2010.08.2026.pdf: 16 case row(s) read, 0 potential match(es)
+2026-08-10 15:06:35,953 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2010.08.2026.pdf (supplementary)
+2026-08-10 15:06:36,125 [INFO] No case entries found in Supplementary%20Cause%20List%20-2-%2010.08.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-08-10 15:06:36,125 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 15:06:39,573 [INFO] causelist_10082026.pdf: 607 case row(s) read, 4 potential match(es)
+2026-08-10 15:06:39,573 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 15:06:42,257 [INFO] causelist_11082026.pdf: 427 case row(s) read, 1 potential match(es)
+2026-08-10 15:06:42,257 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 15:06:44,812 [INFO] causelist_12082026.pdf: 447 case row(s) read, 3 potential match(es)
+2026-08-10 15:06:44,812 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 15:06:47,319 [INFO] causelist_13082026.pdf: 325 case row(s) read, 1 potential match(es)
+2026-08-10 15:06:47,319 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 15:06:49,316 [INFO] causelist_14082026.pdf: 348 case row(s) read, 0 potential match(es)
+2026-08-10 15:06:49,316 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 15:07:02,726 [INFO] entirelist_sgr.pdf: 2154 case row(s) read, 9 potential match(es)
+2026-08-10 15:07:02,726 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 15:07:04,268 [INFO] rjcourtsgr.pdf: 32 case row(s) read, 0 potential match(es)
+2026-08-10 15:07:04,275 [INFO] Added 9 new match(es). Total saved: 9. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 15:07:04,275 [INFO]   -> [Syed Mohtasim] 2026-08-10 | Court 13 | Sr 27 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-08-10 15:07:04,275 [INFO]   -> [Syed Manzoor] 2026-08-10 | Court 13 | Sr 27 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-08-10 15:07:04,275 [INFO]   -> [Syed Mohtasim] 2026-08-10 | Court 13 | Sr 54 | CRM(M) 216/2024 CrlM(569/2024)
+2026-08-10 15:07:04,275 [INFO]   -> [Owais Ashraf] 2026-08-10 | Court 13 | Sr 54 | CRM(M) 216/2024 CrlM(569/2024)
+2026-08-10 15:07:04,275 [INFO]   -> [Saqib Fayaz] 2026-08-11 | Court 5 | Sr 77 | CRM(M) 453/2025 CrlM(1086/2025)
+2026-08-10 15:07:04,275 [INFO]   -> [Syed Manzoor] 2026-08-12 | Court 8 | Sr 19 | WP(C) 463/2025 CM(1095/2025) CM(4969/2026) c/w i)CCP(S) 109/2025 ii)CCP(S) 167/2026
+2026-08-10 15:07:04,275 [INFO]   -> [Syed Mohtasim] 2026-08-12 | Court 13 | Sr 31 | WP(C) 1394/2024 CM(3769/2024)
+2026-08-10 15:07:04,276 [INFO]   -> [Syed Manzoor] 2026-08-12 | Court 13 | Sr 31 | WP(C) 1394/2024 CM(3769/2024)
+2026-08-10 15:07:04,276 [INFO]   -> [Syed Manzoor] 2026-08-13 | Court 13 | Sr 32 | SWP 1424/2006
+2026-08-10 15:07:04,276 [INFO]   -> [Syed Mohtasim] 2026-08-10 | Court 13 | Sr 27 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-08-10 15:07:04,276 [INFO]   -> [Syed Manzoor] 2026-08-10 | Court 13 | Sr 27 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-08-10 15:07:04,276 [INFO]   -> [Syed Mohtasim] 2026-08-10 | Court 13 | Sr 54 | CRM(M) 216/2024 CrlM(569/2024)
+2026-08-10 15:07:04,276 [INFO]   -> [Owais Ashraf] 2026-08-10 | Court 13 | Sr 54 | CRM(M) 216/2024 CrlM(569/2024)
+2026-08-10 15:07:04,278 [INFO]   -> [Saqib Fayaz] 2026-08-11 | Court 5 | Sr 77 | CRM(M) 453/2025 CrlM(1086/2025)
+2026-08-10 15:07:04,278 [INFO]   -> [Syed Manzoor] 2026-08-12 | Court 8 | Sr 19 | WP(C) 463/2025 CM(1095/2025) CM(4969/2026) c/w i)CCP(S) 109/2025 ii)CCP(S) 167/2026
+2026-08-10 15:07:04,278 [INFO]   -> [Syed Mohtasim] 2026-08-12 | Court 13 | Sr 31 | WP(C) 1394/2024 CM(3769/2024)
+2026-08-10 15:07:04,278 [INFO]   -> [Syed Manzoor] 2026-08-12 | Court 13 | Sr 31 | WP(C) 1394/2024 CM(3769/2024)
+2026-08-10 15:07:04,278 [INFO]   -> [Syed Manzoor] 2026-08-13 | Court 13 | Sr 32 | SWP 1424/2006
+2026-08-10 15:35:44,317 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 15:35:44,317 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 15:35:45,172 [INFO] Found 12 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-08-10 15:35:45,172 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 15:35:45,337 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-10 15:35:45,338 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2010.08.2026.pdf (supplementary)
+2026-08-10 15:35:45,790 [INFO] Supplementary%20Cause%20List%20-2-%2010.08.2026.pdf: 8 case row(s) read, 0 potential match(es)
+2026-08-10 15:35:45,790 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 15:35:46,152 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 15:35:46,153 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 15:35:46,338 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 15:35:46,340 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 15:35:46,539 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 15:35:46,543 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 15:35:46,665 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 15:35:46,667 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 15:35:46,850 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 15:35:46,852 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 15:35:47,570 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 15:35:47,577 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 15:35:47,678 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 15:35:47,688 [INFO] Added 0 new match(es). Total saved: 9. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 15:35:56,364 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 15:35:56,364 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 15:35:57,358 [INFO] Found 12 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-08-10 15:35:57,358 [INFO] Downloading Supplementary%20Cause%20List%20-%2010.08.2026.pdf (supplementary)
+2026-08-10 15:35:57,500 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2010.08.2026.pdf
+2026-08-10 15:35:57,503 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2010.08.2026.pdf (supplementary)
+2026-08-10 15:35:57,702 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2010.08.2026.pdf
+2026-08-10 15:35:57,704 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 15:35:58,954 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 15:35:58,956 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 15:35:59,946 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 15:35:59,955 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 15:36:00,774 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 15:36:00,776 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 15:36:01,800 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 15:36:01,804 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 15:36:02,410 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 15:36:02,412 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 15:36:08,292 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 15:36:08,295 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 15:36:09,320 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 15:36:09,331 [INFO] Added 0 new match(es). Total saved: 9. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 20:22:21,416 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-10 20:22:21,416 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-10 20:22:22,453 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-10 20:22:22,453 [INFO] Downloading Supplementary%20Cause%20List%20-%2011.08.2026.pdf (supplementary)
+2026-08-10 20:22:23,253 [INFO] Supplementary%20Cause%20List%20-%2011.08.2026.pdf: 40 case row(s) read, 1 potential match(es)
+2026-08-10 20:22:23,253 [INFO] Downloading causelist_10082026.pdf (daywise)
+2026-08-10 20:22:23,576 [INFO] Unchanged since last run, skipping re-parse: causelist_10082026.pdf
+2026-08-10 20:22:23,576 [INFO] Downloading causelist_11082026.pdf (daywise)
+2026-08-10 20:22:23,692 [INFO] Unchanged since last run, skipping re-parse: causelist_11082026.pdf
+2026-08-10 20:22:23,693 [INFO] Downloading causelist_12082026.pdf (daywise)
+2026-08-10 20:22:23,783 [INFO] Unchanged since last run, skipping re-parse: causelist_12082026.pdf
+2026-08-10 20:22:23,785 [INFO] Downloading causelist_13082026.pdf (daywise)
+2026-08-10 20:22:23,881 [INFO] Unchanged since last run, skipping re-parse: causelist_13082026.pdf
+2026-08-10 20:22:23,881 [INFO] Downloading causelist_14082026.pdf (daywise)
+2026-08-10 20:22:23,987 [INFO] Unchanged since last run, skipping re-parse: causelist_14082026.pdf
+2026-08-10 20:22:23,987 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-10 20:22:24,502 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-10 20:22:24,504 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-10 20:22:24,601 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-10 20:22:24,603 [INFO] Added 1 new match(es). Total saved: 10. Dashboard: C:\Causelist\package\causelist_dashboard.html
+2026-08-10 20:22:24,603 [INFO]   -> [Syed Mohtasim] 2026-08-11 | Court 5 | Sr 106 | FAO 26/2026 CM(5096/2026) Caveat 1131/2026
