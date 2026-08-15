@@ -20,7 +20,20 @@ CAUSELIST_PAGE = BASE + "/causelistk.php"
 # forces re-parsing even of files whose content hasn't changed — otherwise a
 # PDF fetched once under old, buggy parsing logic would stay wrong forever,
 # since "unchanged since last run" would keep skipping it.
-PARSER_VERSION = "3-global-column-learning"
+PARSER_VERSION = "4-grouped-people"
+
+PRIMARY_CASE_RE = re.compile(r"[A-Za-z()/\s]{2,20}?\d{1,6}/\d{4}")
+
+
+def primary_case_id(case_no):
+    """Reduces a possibly multi-line, multi-reference case number string
+    down to its first real case reference, normalized for comparison —
+    used as the identity for dedup, since the exact concatenated text can
+    vary slightly between source PDFs (daywise vs entire causelist) even
+    for the literal same case."""
+    m = PRIMARY_CASE_RE.search(case_no or "")
+    text = m.group(0) if m else (case_no or "")
+    return re.sub(r"\s+", " ", text).strip().upper()
 
 COURT_RE = re.compile(r"court\s*no\.?\s*[:\-]?\s*([0-9]{1,3}|[ivxlcdm]{1,6})\b", re.I)
 BENCH_RE = re.compile(r"^\W*hon'?ble\s+.*justice.*$", re.I)
@@ -308,25 +321,31 @@ def extract_entries_from_pdf(path, fallback_date=""):
 
 
 def match_people(entries, people, source_name=""):
-    """Checks each entry's advocate AND case-name text for a tracked
-    name/alias (covers both use cases: tracking yourself as counsel, or as
-    a named party), tagging matches with which person they belong to."""
+    """Checks each entry's advocate AND case-name text for tracked
+    names/aliases (covers both use cases: tracking yourself as counsel, or
+    as a named party). If more than one tracked person appears on the same
+    case, returns ONE result listing all of them — not a duplicate row per
+    person."""
     results = []
     for e in entries:
         haystack = (e.get("advocate", "") + " " + e.get("caseName", "")).lower()
-        for p in people:
-            if any(term and term.lower() in haystack for term in p["terms"]):
-                results.append({
-                    "person": p["person"],
-                    "court": e.get("court", ""),
-                    "sr": e.get("sr", ""),
-                    "bench": e.get("bench", ""),
-                    "benchType": e.get("benchType", ""),
-                    "listType": e.get("listType", ""),
-                    "caseNo": e.get("caseNo", ""),
-                    "caseName": e.get("caseName", ""),
-                    "snippet": e.get("snippet", ""),
-                    "date": e.get("date", ""),
-                    "source": source_name,
-                })
+        matched = [p["person"] for p in people if any(term and term.lower() in haystack for term in p["terms"])]
+        if not matched:
+            continue
+        if not (e.get("caseNo") or e.get("caseName")):
+            continue  # nothing identifiable about this row — likely a parsing artifact, not a real case
+        results.append({
+            "person": ", ".join(matched),
+            "people": matched,
+            "court": e.get("court", ""),
+            "sr": e.get("sr", ""),
+            "bench": e.get("bench", ""),
+            "benchType": e.get("benchType", ""),
+            "listType": e.get("listType", ""),
+            "caseNo": e.get("caseNo", ""),
+            "caseName": e.get("caseName", ""),
+            "snippet": e.get("snippet", ""),
+            "date": e.get("date", ""),
+            "source": source_name,
+        })
     return results

@@ -35,14 +35,17 @@ from causelist_core import (
     find_causelist_links,
     guess_date_from_filename,
     match_people,
+    primary_case_id,
 )
 from dashboard_template import render_dashboard
+from display_board import fetch_display_board
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DOWNLOAD_DIR = os.path.join(HERE, "downloads")
 DATA_FILE = os.path.join(HERE, "cases_auto.json")
 MANIFEST_FILE = os.path.join(HERE, "manifest.json")
 DASHBOARD_FILE = os.path.join(HERE, "causelist_dashboard.html")
+DISPLAY_BOARD_FILE = os.path.join(HERE, "display_board.json")
 LOG_FILE = os.path.join(HERE, "watcher.log")
 CONFIG_FILE = os.path.join(HERE, "config.json")
 
@@ -118,18 +121,40 @@ def download_pdf(session, url, dest_path):
 
 
 def merge_matches(existing, new_results):
-    def key(r):
-        return (r.get("date"), r.get("court"), r.get("sr"), r.get("caseNo"), r.get("person"))
+    """Dedup key is (date, court, normalized primary case id) — NOT the raw
+    sr/caseNo strings, since those can vary slightly between the daywise and
+    entire-causelist PDFs for the exact same case. When the same case is
+    seen again (whether from a different tracked person or a different
+    source PDF), its 'people' list is merged rather than creating a
+    duplicate row — this is what actually fixes cases appearing multiple
+    times on the dashboard."""
+    for item in existing:
+        if "people" not in item:  # migrate pre-grouping saved data
+            item["people"] = [item["person"]] if item.get("person") else []
 
-    existing_keys = {key(r) for r in existing}
+    def key(r):
+        return (r.get("date"), r.get("court"), primary_case_id(r.get("caseNo")))
+
+    index = {key(r): r for r in existing}
     added = 0
     for r in new_results:
         k = key(r)
-        if k not in existing_keys:
+        if k in index:
+            target = index[k]
+            merged = list(target.get("people", []))
+            for p in r.get("people", []):
+                if p not in merged:
+                    merged.append(p)
+            target["people"] = merged
+            target["person"] = ", ".join(merged)
+            # prefer whichever version actually has a serial number set
+            if not target.get("sr") and r.get("sr"):
+                target["sr"] = r["sr"]
+        else:
             r = dict(r)
             r["id"] = "-".join(str(x) for x in k) + f"-{added}-{int(time.time())}"
             existing.append(r)
-            existing_keys.add(k)
+            index[k] = r
             added += 1
     return existing, added
 
@@ -208,10 +233,21 @@ def run(dry_run=False):
     save_json(DATA_FILE, matches)
     save_json(MANIFEST_FILE, manifest)
 
+    board = None
+    try:
+        logging.info("Fetching live display board")
+        board = fetch_display_board(session, HEADERS)
+        save_json(DISPLAY_BOARD_FILE, board)
+        logging.info("Display board: %s", json.dumps(board))
+    except Exception as e:
+        logging.warning("Could not fetch the live display board (non-fatal): %s", e)
+        board = load_json(DISPLAY_BOARD_FILE, None)  # fall back to last-known state if we have one
+
     dashboard_html = render_dashboard(
         matches,
         people_label,
         source_note="last checked " + datetime.now().strftime("%d %b %Y, %I:%M %p"),
+        board=board,
     )
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
         f.write(dashboard_html)

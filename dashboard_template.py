@@ -12,7 +12,14 @@ TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="icon" href="icon-192.png" type="image/png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#0B1319" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Causelist" />
 <title>My Causelist Docket</title>
 <style>
   :root{{
@@ -151,6 +158,23 @@ TEMPLATE = """<!DOCTYPE html>
     line-height:1.5;}}
   .tw-empty{{padding:16px 13px;color:var(--parchment-dim);font-size:12.5px;text-align:center;}}
 
+  /* ---- live display board ---- */
+  .board-row{{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}}
+  .wing-card h3{{font-family:var(--font-serif);font-size:15px;margin:0 0 10px;display:flex;align-items:center;gap:8px;}}
+  .wing-badge{{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.6px;text-transform:uppercase;
+    padding:2px 8px;border-radius:999px;}}
+  .wing-badge.idle{{background:var(--ink-700);color:var(--parchment-faint);}}
+  .wing-badge.active{{background:var(--seal-soft);color:var(--seal);}}
+  .board-court-row{{display:flex;justify-content:space-between;align-items:center;
+    background:var(--ink-700);border:1px solid var(--line);border-radius:5px;
+    padding:8px 11px;margin-bottom:7px;font-family:var(--font-mono);font-size:12.5px;}}
+  .board-court-row b{{color:var(--brass);}}
+  .board-msg{{font-size:11.5px;color:var(--parchment-dim);line-height:1.5;padding:7px 0;
+    border-top:1px dashed var(--line);}}
+  .board-msg:first-of-type{{border-top:none;}}
+  .board-empty{{font-size:12px;color:var(--parchment-faint);}}
+  .board-stale-note{{font-size:10.5px;color:var(--parchment-faint);margin-top:6px;}}
+
   /* ---- sortable table (All cases) ---- */
   .table-scroll{{overflow-x:auto;}}
   table.case-table{{width:100%;border-collapse:collapse;font-size:13px;min-width:720px;}}
@@ -171,6 +195,7 @@ TEMPLATE = """<!DOCTYPE html>
   @media (max-width:900px){{
     .main-grid{{grid-template-columns:1fr;}}
     .stats-row{{grid-template-columns:repeat(2,1fr);}}
+    .board-row{{grid-template-columns:1fr;}}
   }}
   @media (max-width:520px){{
     .hero{{align-items:flex-start;}}
@@ -208,6 +233,8 @@ TEMPLATE = """<!DOCTYPE html>
   </div>
 
   <div class="stats-row" id="statsRow"></div>
+
+  <div class="board-row" id="boardRow" style="display:none"></div>
 
   <div class="main-grid">
     <div class="card">
@@ -247,6 +274,7 @@ TEMPLATE = """<!DOCTYPE html>
 
 <script>
 var MATCHES = {matches_json};
+var BOARD = {board_json};
 var selectedPerson = null;
 var selectedDate = null;
 
@@ -276,11 +304,11 @@ var calCursor = (function(){{
 }})();
 
 function filtered(){{
-  return selectedPerson ? MATCHES.filter(function(m){{return m.person===selectedPerson;}}) : MATCHES;
+  return selectedPerson ? MATCHES.filter(function(m){{return m.people && m.people.indexOf(selectedPerson)!==-1;}}) : MATCHES;
 }}
 
 function renderChips(){{
-  var people = Array.from(new Set(MATCHES.map(function(m){{return m.person;}}).filter(Boolean)));
+  var people = Array.from(new Set(MATCHES.reduce(function(acc,m){{return acc.concat(m.people||[]);}},[])));
   var box = document.getElementById('personChips');
   if (people.length < 2){{ box.style.display='none'; return; }}
   box.style.display='flex';
@@ -514,9 +542,41 @@ function renderTodayWidget(){{
   }}).join('');
 }}
 
+function renderBoard(){{
+  var row = document.getElementById('boardRow');
+  if (!BOARD || typeof BOARD !== 'object'){{ row.style.display = 'none'; return; }}
+  var wings = Object.keys(BOARD);
+  if (!wings.length){{ row.style.display = 'none'; return; }}
+  row.style.display = 'grid';
+  row.innerHTML = wings.map(function(name){{
+    var w = BOARD[name];
+    var badge = w.idle
+      ? '<span class="wing-badge idle">No cases now</span>'
+      : '<span class="wing-badge active">Live</span>';
+    var body = '';
+    if (!w.idle && w.courts && w.courts.length){{
+      body += w.courts.map(function(c){{
+        return '<div class="board-court-row"><span>Court <b>'+esc(c.court)+'</b></span><span>Now on item <b>'+esc(c.item)+'</b></span></div>';
+      }}).join('');
+    }} else if (!w.idle && w.raw_status_rows && w.raw_status_rows.length){{
+      body += w.raw_status_rows.map(function(l){{ return '<div class="board-court-row">'+esc(l)+'</div>'; }}).join('');
+    }} else if (w.idle) {{
+      body += '<div class="board-empty">No courts currently in session on this board.</div>';
+    }}
+    if (w.messages && w.messages.length){{
+      body += w.messages.map(function(m){{
+        return '<div class="board-msg">'+esc(m.text)+'</div>';
+      }}).join('');
+    }}
+    return '<div class="card wing-card"><h3>'+esc(name)+' '+badge+'</h3>'+body+
+      '<div class="board-stale-note">From the High Court\\'s live display board \\u2014 updates whenever this dashboard is regenerated.</div></div>';
+  }}).join('');
+}}
+
 function renderEverything(){{
   renderChips();
   renderStats();
+  renderBoard();
   renderCalendar();
   renderAgenda();
   renderTodayWidget();
@@ -561,11 +621,12 @@ renderEverything();
 """
 
 
-def render_dashboard(matches, name, source_note="run manually or on a schedule"):
+def render_dashboard(matches, name, source_note="run manually or on a schedule", board=None):
     return TEMPLATE.format(
         name=_html.escape(name or "Your cases"),
         generated_at=datetime.now().strftime("%d %b %Y, %I:%M %p"),
         count=len(matches),
         matches_json=json.dumps(matches),
+        board_json=json.dumps(board or {}),
         source_note=_html.escape(source_note),
     )
