@@ -2,10 +2,9 @@ name: Check causelist
 
 on:
   schedule:
-    # Runs at 05:00 and 09:30 UTC = 10:30am and 3:00pm IST. Adjust as you like.
     - cron: "0 5 * * 1-6"
     - cron: "30 9 * * 1-6"
-  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab too
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -15,17 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run watcher
         run: python causelist_watcher.py
-
       - name: Commit updated data + dashboard
         run: |
           git config user.name "causelist-bot"
