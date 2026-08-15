@@ -362,3 +362,95 @@
 2026-08-10 20:22:24,601 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
 2026-08-10 20:22:24,603 [INFO] Added 1 new match(es). Total saved: 10. Dashboard: C:\Causelist\package\causelist_dashboard.html
 2026-08-10 20:22:24,603 [INFO]   -> [Syed Mohtasim] 2026-08-11 | Court 5 | Sr 106 | FAO 26/2026 CM(5096/2026) Caveat 1131/2026
+2026-08-15 04:37:07,062 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-15 04:37:07,062 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-15 04:37:08,401 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-15 04:37:08,401 [INFO] Downloading Supplementary%20Cause%20List%20-%2017.08.2026.pdf (supplementary)
+2026-08-15 04:37:08,872 [INFO] Supplementary%20Cause%20List%20-%2017.08.2026.pdf: 26 case row(s) read, 0 potential match(es)
+2026-08-15 04:37:08,872 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-15 04:37:12,148 [INFO] causelist_17082026.pdf: 536 case row(s) read, 0 potential match(es)
+2026-08-15 04:37:12,148 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-15 04:37:14,740 [INFO] causelist_18082026.pdf: 397 case row(s) read, 15 potential match(es)
+2026-08-15 04:37:14,740 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-15 04:37:17,672 [INFO] causelist_19082026.pdf: 476 case row(s) read, 6 potential match(es)
+2026-08-15 04:37:17,672 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-15 04:37:20,045 [INFO] causelist_20082026.pdf: 313 case row(s) read, 1 potential match(es)
+2026-08-15 04:37:20,045 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-15 04:37:22,648 [INFO] causelist_21082026.pdf: 448 case row(s) read, 14 potential match(es)
+2026-08-15 04:37:22,649 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-15 04:37:37,467 [INFO] entirelist_sgr.pdf: 2170 case row(s) read, 36 potential match(es)
+2026-08-15 04:37:37,467 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-15 04:37:38,577 [INFO] rjcourtsgr.pdf: 30 case row(s) read, 0 potential match(es)
+2026-08-15 04:37:38,579 [INFO] Added 36 new match(es). Total saved: 46. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-15 04:37:38,579 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 7 | Sr 26 | CM(M) 161/2026 CM(2889/2026) Caveat 312/2026
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 7 | Sr 90 | CM(M) 9/2026 CM(63/2026)
+2026-08-15 04:37:38,579 [INFO]   -> [Saqib Fayaz] 2026-08-18 | Court 7 | Sr 90 | CM(M) 9/2026 CM(63/2026)
+2026-08-15 04:37:38,579 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 7 | Sr 90 | CM(M) 9/2026 CM(63/2026)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 8 | Sr 2 | CCP(S) 475/2024 in[OWP 1369/2014](HIGHER UP BY COURT DIRECTION)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 8 | Sr 2 | CCP(S) 475/2024 in[OWP 1369/2014](HIGHER UP BY COURT DIRECTION)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 8 | Sr 68 | WP(C) 2508/2022 CM(6347/2022)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 8 | Sr 68 | WP(C) 2508/2022 CM(6347/2022)
+2026-08-15 04:37:38,579 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 8 | Sr 68 | WP(C) 2508/2022 CM(6347/2022)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 8 | Sr 77 | WP(C) 371/2024 CM(2585/2024) CM(879/2024)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 8 | Sr 77 | WP(C) 371/2024 CM(2585/2024) CM(879/2024)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 13 | Sr 21 | SWP 2371/2011 COURT NO. : 13
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 13 | Sr 51 | WP(C) 496/2025 CM(1186/2025) c/w i)CCP(S) 115/2026
+2026-08-15 04:37:38,579 [INFO]   -> [Saqib Fayaz] 2026-08-18 | Court 13 | Sr 51 | WP(C) 496/2025 CM(1186/2025) c/w i)CCP(S) 115/2026
+2026-08-15 04:37:38,579 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 13 | Sr 51 | WP(C) 496/2025 CM(1186/2025) c/w i)CCP(S) 115/2026
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-19 | Court 5 | Sr 109 | WP(C) 876/2026
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Manzoor] 2026-08-19 | Court 5 | Sr 109 | WP(C) 876/2026
+2026-08-15 04:37:38,579 [INFO]   -> [Saqib Fayaz] 2026-08-19 | Court 5 | Sr 109 | WP(C) 876/2026
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-19 | Court 8 | Sr 49 | WP(C) 398/2023 CM(3096/2023) CM(918/2023) CM(919/2023)
+2026-08-15 04:37:38,579 [INFO]   -> [Owais Ashraf] 2026-08-19 | Court 8 | Sr 49 | WP(C) 398/2023 CM(3096/2023) CM(918/2023) CM(919/2023)
+2026-08-15 04:37:38,579 [INFO]   -> [Owais Ashraf] 2026-08-19 | Court 8 | Sr 64 | WP(C) 81/2024 CM(142/2024)
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Manzoor] 2026-08-20 | Court 1 | Sr 19 | LPASW 26/2019[LPA 42/2019]
+2026-08-15 04:37:38,579 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 5 | Sr 82 | WP(C) 2614/2025 CM(6907/2025) COURT NO. : 5
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 5 | Sr 82 | WP(C) 2614/2025 CM(6907/2025) COURT NO. : 5
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-21 | Court 8 | Sr 25 | CM(M) 201/2022[WP(C) 1110/2019] CM(2033/2019[1/2019]) CM(928/2020) c/w i)CM(M) 202/2022 IA(1/2018) IA(2/2018)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 8 | Sr 68 | WP(C) 1860/2025 CM(3210/2026) CM(4907/2025) COURT NO. : 8
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-21 | Court 8 | Sr 68 | WP(C) 1860/2025 CM(3210/2026) CM(4907/2025) COURT NO. : 8
+2026-08-15 04:37:38,580 [INFO]   -> [Saqib Fayaz] 2026-08-21 | Court 8 | Sr 68 | WP(C) 1860/2025 CM(3210/2026) CM(4907/2025) COURT NO. : 8
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 11 | Sr 11 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-08-15 04:37:38,580 [INFO]   -> [Saqib Fayaz] 2026-08-21 | Court 11 | Sr 11 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 11 | Sr 11 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 11 | Sr 61 | CRM(M) 156/2026 CrlM(365/2026)
+2026-08-15 04:37:38,580 [INFO]   -> [Saqib Fayaz] 2026-08-21 | Court 11 | Sr 61 | CRM(M) 156/2026 CrlM(365/2026)
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 11 | Sr 61 | CRM(M) 156/2026 CrlM(365/2026)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 13 | Sr 85 | RFA 38/2023 CM(7632/2023) Caveat 2795/2023
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 13 | Sr 85 | RFA 38/2023 CM(7632/2023) Caveat 2795/2023
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 7 | Sr 26 | CM(M) 161/2026 CM(2889/2026) Caveat 312/2026
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 7 | Sr 90 | CM(M) 9/2026 CM(63/2026)
+2026-08-15 04:37:38,580 [INFO]   -> [Saqib Fayaz] 2026-08-18 | Court 7 | Sr 90 | CM(M) 9/2026 CM(63/2026)
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 7 | Sr 90 | CM(M) 9/2026 CM(63/2026)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 8 | Sr 2 | CCP(S) 475/2024 in[OWP 1369/2014](HIGHER UP BY COURT DIRECTION)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 8 | Sr 2 | CCP(S) 475/2024 in[OWP 1369/2014](HIGHER UP BY COURT DIRECTION)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 8 | Sr 68 | WP(C) 2508/2022 CM(6347/2022)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 8 | Sr 68 | WP(C) 2508/2022 CM(6347/2022)
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 8 | Sr 68 | WP(C) 2508/2022 CM(6347/2022)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 8 | Sr 77 | WP(C) 371/2024 CM(2585/2024) CM(879/2024)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 8 | Sr 77 | WP(C) 371/2024 CM(2585/2024) CM(879/2024)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-18 | Court 13 | Sr 21 | SWP 2371/2011 COURT NO. : 13
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-18 | Court 13 | Sr 51 | WP(C) 496/2025 CM(1186/2025) c/w i)CCP(S) 115/2026
+2026-08-15 04:37:38,580 [INFO]   -> [Saqib Fayaz] 2026-08-18 | Court 13 | Sr 51 | WP(C) 496/2025 CM(1186/2025) c/w i)CCP(S) 115/2026
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-18 | Court 13 | Sr 51 | WP(C) 496/2025 CM(1186/2025) c/w i)CCP(S) 115/2026
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-19 | Court 5 | Sr 109 | WP(C) 876/2026
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-19 | Court 5 | Sr 109 | WP(C) 876/2026
+2026-08-15 04:37:38,580 [INFO]   -> [Saqib Fayaz] 2026-08-19 | Court 5 | Sr 109 | WP(C) 876/2026
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-19 | Court 8 | Sr 49 | WP(C) 398/2023 CM(3096/2023) CM(918/2023) CM(919/2023)
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-19 | Court 8 | Sr 49 | WP(C) 398/2023 CM(3096/2023) CM(918/2023) CM(919/2023)
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-19 | Court 8 | Sr 64 | WP(C) 81/2024 CM(142/2024)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-20 | Court 1 | Sr 19 | LPASW 26/2019[LPA 42/2019]
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 5 | Sr 82 | WP(C) 2614/2025 CM(6907/2025) COURT NO. : 5
+2026-08-15 04:37:38,580 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 5 | Sr 82 | WP(C) 2614/2025 CM(6907/2025) COURT NO. : 5
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-21 | Court 8 | Sr 25 | CM(M) 201/2022[WP(C) 1110/2019] CM(2033/2019[1/2019]) CM(928/2020) c/w i)CM(M) 202/2022 IA(1/2018) IA(2/2018)
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 8 | Sr 68 | WP(C) 1860/2025 CM(3210/2026) CM(4907/2025) COURT NO. : 8
+2026-08-15 04:37:38,580 [INFO]   -> [Syed Manzoor] 2026-08-21 | Court 8 | Sr 68 | WP(C) 1860/2025 CM(3210/2026) CM(4907/2025) COURT NO. : 8
+2026-08-15 04:37:38,581 [INFO]   -> [Saqib Fayaz] 2026-08-21 | Court 8 | Sr 68 | WP(C) 1860/2025 CM(3210/2026) CM(4907/2025) COURT NO. : 8
+2026-08-15 04:37:38,581 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 11 | Sr 11 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-08-15 04:37:38,581 [INFO]   -> [Saqib Fayaz] 2026-08-21 | Court 11 | Sr 11 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-08-15 04:37:38,581 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 11 | Sr 11 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-08-15 04:37:38,581 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 11 | Sr 61 | CRM(M) 156/2026 CrlM(365/2026)
+2026-08-15 04:37:38,581 [INFO]   -> [Saqib Fayaz] 2026-08-21 | Court 11 | Sr 61 | CRM(M) 156/2026 CrlM(365/2026)
+2026-08-15 04:37:38,581 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 11 | Sr 61 | CRM(M) 156/2026 CrlM(365/2026)
+2026-08-15 04:37:38,581 [INFO]   -> [Syed Mohtasim] 2026-08-21 | Court 13 | Sr 85 | RFA 38/2023 CM(7632/2023) Caveat 2795/2023
+2026-08-15 04:37:38,581 [INFO]   -> [Owais Ashraf] 2026-08-21 | Court 13 | Sr 85 | RFA 38/2023 CM(7632/2023) Caveat 2795/2023
