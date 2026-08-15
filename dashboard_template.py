@@ -213,7 +213,7 @@ TEMPLATE = """<!DOCTYPE html>
   table.case-table td{{padding:10px;border-bottom:1px solid var(--line-soft);vertical-align:top;}}
   table.case-table tr:hover td{{background:var(--ink-700);}}
   td.mono{{font-family:var(--font-mono);font-size:12.5px;white-space:nowrap;}}
-  td.wrap-cell{{max-width:260px;}}
+  td.wrap-cell{{max-width:260px;white-space:normal;overflow-wrap:break-word;}}
 
   @media (max-width:1180px){{
     #todayWidget{{position:static;width:auto;max-height:none;margin-bottom:20px;box-shadow:var(--shadow);}}
