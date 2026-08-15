@@ -72,6 +72,7 @@ TEMPLATE = """<!DOCTYPE html>
   .fetch-status.ok{{color:#7FBF7F;}}
   .fetch-status.err{{color:var(--seal);}}
   .fetch-status a{{color:inherit;text-decoration:underline;}}
+  .fetch-manual-link{{font-size:11px;color:var(--parchment-faint);text-decoration:underline;cursor:pointer;}}
 
   /* ---- stat cards ---- */
   .stats-row{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px;}}
@@ -247,6 +248,7 @@ TEMPLATE = """<!DOCTYPE html>
   <div class="fetch-row">
     <button class="fetch-btn" id="fetchBtn"><span>&#8635;</span><span>Fetch Now</span></button>
     <span class="fetch-status" id="fetchStatus"></span>
+    <a href="#" class="fetch-manual-link" id="manualTokenLink">or paste a token manually</a>
   </div>
 
   <div class="stats-row" id="statsRow"></div>
@@ -595,16 +597,79 @@ var GH_REPO = 'Cause-List---Watcher';
 var GH_WORKFLOW = 'watch.yml';
 var GH_BRANCH = 'main';
 var GH_API = 'https://api.github.com';
+var GH_OAUTH_CLIENT_ID = 'Ov23li1if38IxNLXEcFz';
+var OAUTH_REDIRECT_URI = 'https://insim24.github.io/Cause-List---Watcher/causelist_dashboard.html';
+var OAUTH_EXCHANGE_URL = 'https://causelist-watcher-oauth.vercel.app/api/github-oauth-exchange';
 
 function ghToken(){{ return localStorage.getItem('gh_pat') || ''; }}
 function setGhToken(t){{ if (t) localStorage.setItem('gh_pat', t); }}
 function clearGhToken(){{ localStorage.removeItem('gh_pat'); }}
 function ensureGhToken(){{
-  var t = ghToken();
-  if (t) return t;
-  t = window.prompt('Paste a GitHub personal access token to trigger a fetch.\\n\\nNeeds "repo" + "workflow" scope (classic token), or Actions:write + Contents:read (fine-grained, scoped to this repo).\\n\\nStored ONLY in this browser\\'s local storage \\u2014 never written into this file or committed anywhere.');
-  if (t) setGhToken(t.trim());
-  return ghToken();
+  return ghToken() || null;
+}}
+function randomOauthState(){{
+  var arr = new Uint8Array(16);
+  crypto.getRandomValues(arr);
+  return Array.prototype.map.call(arr, function(b){{ return b.toString(16).padStart(2, '0'); }}).join('');
+}}
+function startGithubSignIn(pendingFetch){{
+  var state = randomOauthState();
+  sessionStorage.setItem('gh_oauth_state', state);
+  sessionStorage.setItem('gh_oauth_pending_fetch', pendingFetch ? '1' : '');
+  ghStatus('Redirecting to GitHub to sign in\\u2026', '');
+  var qs = 'client_id=' + encodeURIComponent(GH_OAUTH_CLIENT_ID) +
+    '&scope=' + encodeURIComponent('public_repo,workflow') +
+    '&redirect_uri=' + encodeURIComponent(OAUTH_REDIRECT_URI) +
+    '&state=' + encodeURIComponent(state);
+  window.location.href = 'https://github.com/login/oauth/authorize?' + qs;
+}}
+function promptForManualToken(){{
+  var t = window.prompt('Paste a GitHub personal access token to trigger a fetch.\\n\\nNeeds "repo" + "workflow" scope (classic token), or Actions:write + Contents:read (fine-grained, scoped to this repo).\\n\\nStored ONLY in this browser\\'s local storage \\u2014 never written into this file or committed anywhere.');
+  if (t){{
+    setGhToken(t.trim());
+    triggerFetch();
+  }}
+}}
+function completeGithubOauthIfNeeded(){{
+  var params = new URLSearchParams(window.location.search);
+  var code = params.get('code');
+  var state = params.get('state');
+  if (!code || !state) return;
+
+  var expectedState = sessionStorage.getItem('gh_oauth_state') || '';
+  sessionStorage.removeItem('gh_oauth_state');
+  var pendingFetch = sessionStorage.getItem('gh_oauth_pending_fetch') === '1';
+  sessionStorage.removeItem('gh_oauth_pending_fetch');
+
+  var cleanUrl = window.location.origin + window.location.pathname;
+  window.history.replaceState({{}}, document.title, cleanUrl);
+
+  if (state !== expectedState){{
+    ghStatus('Sign-in failed: state mismatch (possible CSRF). Please try again.', 'err');
+    return;
+  }}
+
+  ghStatus('Finishing sign-in\\u2026', '');
+  fetch(OAUTH_EXCHANGE_URL, {{
+    method: 'POST',
+    headers: {{'Content-Type': 'application/json'}},
+    body: JSON.stringify({{code: code}})
+  }}).then(function(resp){{
+    return resp.json().then(function(data){{
+      if (!resp.ok || data.error){{
+        throw new Error(data.error || ('exchange failed with status ' + resp.status));
+      }}
+      return data;
+    }});
+  }}).then(function(data){{
+    setGhToken(data.access_token);
+    ghStatus('Signed in.', 'ok');
+    if (pendingFetch){{
+      triggerFetch();
+    }}
+  }}).catch(function(err){{
+    ghStatus('Sign-in error: ' + err.message, 'err');
+  }});
 }}
 function ghStatus(msg, kind, link){{
   var el = document.getElementById('fetchStatus');
@@ -674,7 +739,7 @@ function refreshDataFromRepo(){{
 }}
 function triggerFetch(){{
   var token = ensureGhToken();
-  if (!token){{ ghStatus('No token provided \\u2014 cancelled.', 'err'); return; }}
+  if (!token){{ startGithubSignIn(true); return; }}
   var btn = document.getElementById('fetchBtn');
   btn.disabled = true;
   var startedAt = Date.now();
@@ -751,7 +816,12 @@ document.getElementById('backToUpcoming').addEventListener('click', function(){{
 }});
 document.getElementById('searchBox').addEventListener('input', function(e){{ renderAllTable(e.target.value); }});
 document.getElementById('fetchBtn').addEventListener('click', triggerFetch);
+document.getElementById('manualTokenLink').addEventListener('click', function(e){{
+  e.preventDefault();
+  promptForManualToken();
+}});
 
+completeGithubOauthIfNeeded();
 renderEverything();
 </script>
 </body>
