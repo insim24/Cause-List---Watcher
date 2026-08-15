@@ -50,6 +50,20 @@ TEMPLATE = """<!DOCTYPE html>
   .hero{{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;
     padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px;}}
   .hero-left{{display:flex;gap:16px;align-items:center;}}
+  .theme-picker{{position:relative;flex:none;z-index:65;}}
+  .theme-gear-btn{{background:transparent;border:1px solid var(--line);
+    color:var(--parchment-dim);width:32px;height:32px;border-radius:50%;cursor:pointer;
+    font-size:15px;transition:.15s;}}
+  .theme-gear-btn:hover{{border-color:var(--brass);color:var(--brass);}}
+  .theme-panel{{position:absolute;top:40px;right:0;z-index:65;background:var(--ink-850);
+    border:1px solid var(--line);border-radius:9px;box-shadow:var(--shadow);padding:8px;
+    display:flex;flex-direction:column;gap:4px;min-width:190px;}}
+  .theme-swatch-btn{{display:flex;align-items:center;gap:10px;background:transparent;
+    border:1px solid transparent;border-radius:6px;padding:7px 9px;cursor:pointer;
+    color:var(--parchment);font-size:12.5px;font-family:inherit;text-align:left;width:100%;transition:.12s;}}
+  .theme-swatch-btn:hover{{background:var(--ink-700);}}
+  .theme-swatch-btn.active{{border-color:var(--brass);background:var(--brass-soft);}}
+  .theme-swatch-dot{{width:16px;height:16px;border-radius:50%;flex:none;border:1px solid rgba(255,255,255,0.15);}}
   .seal{{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--brass);
     display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);
     font-size:32px;color:var(--brass);flex:none;box-shadow:0 0 0 4px var(--ink-900), 0 0 0 5px var(--brass-line);}}
@@ -105,7 +119,7 @@ TEMPLATE = """<!DOCTYPE html>
   .cal-cell.has-case:hover{{background:var(--seal-soft);transform:translateY(-1px);}}
   .cal-cell.today{{outline:1.5px solid var(--brass);outline-offset:-1px;}}
   .cal-cell.selected{{background:var(--brass-soft);border-color:var(--brass);}}
-  .stamp{{position:absolute;top:2px;right:2px;background:var(--seal);color:var(--parchment);
+  .stamp{{position:absolute;top:2px;right:2px;background:var(--seal);color:#F5F0E6;
     font-family:var(--font-mono);font-size:9px;border-radius:50%;width:15px;height:15px;
     display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.4);}}
   .link-btn{{background:transparent;border:none;color:var(--brass);font-size:12.5px;cursor:pointer;
@@ -243,6 +257,10 @@ TEMPLATE = """<!DOCTYPE html>
       </div>
     </div>
     <div class="chip-row" id="personChips"></div>
+    <div class="theme-picker">
+      <button class="theme-gear-btn" id="themeGearBtn" title="Choose theme" aria-label="Choose theme">&#9881;</button>
+      <div class="theme-panel" id="themePanel" style="display:none"></div>
+    </div>
   </div>
 
   <div class="fetch-row">
@@ -292,6 +310,72 @@ TEMPLATE = """<!DOCTYPE html>
 </div>
 
 <script>
+var THEMES = {{
+  'Midnight Ink': {{ink900:'#0B1319',ink850:'#0F1A22',ink800:'#15222C',ink700:'#1D2E3A',ink650:'#243848',line:'#2E4353',linesoft:'#243848',parchment:'#EFE7D6',parchdim:'#93A0A6',parchfaint:'#7E8D94',seal:'#C2503A',sealAlpha:0.14,brass:'#CBA135',brassAlpha:0.14}},
+  'Chambers Green': {{ink900:'#0A1410',ink850:'#0E1D17',ink800:'#14281F',ink700:'#1C3A2B',ink650:'#254A37',line:'#2E5340',linesoft:'#254A37',parchment:'#E9EDE2',parchdim:'#94A896',parchfaint:'#7E9080',seal:'#C2503A',sealAlpha:0.14,brass:'#C9A227',brassAlpha:0.14}},
+  'Parchment Light': {{ink900:'#F6F1E4',ink850:'#EFE8D5',ink800:'#EAE2CC',ink700:'#E2D8BD',ink650:'#D8CBA9',line:'#C9B98D',linesoft:'#D8CBA9',parchment:'#2A2116',parchdim:'#6B5D45',parchfaint:'#5E5340',seal:'#A8402E',sealAlpha:0.14,brass:'#6B4E0D',brassAlpha:0.18}},
+  'Slate & Silver': {{ink900:'#12161C',ink850:'#171C24',ink800:'#1E252F',ink700:'#28323F',ink650:'#333F4E',line:'#3B4756',linesoft:'#333F4E',parchment:'#E7EAEE',parchdim:'#98A2AF',parchfaint:'#80899A',seal:'#C2503A',sealAlpha:0.14,brass:'#B9C4CE',brassAlpha:0.14}},
+  'Deep Burgundy': {{ink900:'#1A0E12',ink850:'#241319',ink800:'#301A22',ink700:'#40232E',ink650:'#502D3A',line:'#5C3040',linesoft:'#502D3A',parchment:'#F0E6E4',parchdim:'#A38E92',parchfaint:'#8F7A7D',seal:'#E2664A',sealAlpha:0.16,brass:'#D4A94A',brassAlpha:0.14}}
+}};
+var THEME_ORDER = ['Midnight Ink', 'Chambers Green', 'Parchment Light', 'Slate & Silver', 'Deep Burgundy'];
+var THEME_STORAGE_KEY = 'dashboard_theme';
+
+function hexToRgbTriplet(hex){{
+  var h = hex.replace('#', '');
+  var r = parseInt(h.substring(0, 2), 16);
+  var g = parseInt(h.substring(2, 4), 16);
+  var b = parseInt(h.substring(4, 6), 16);
+  return r + ',' + g + ',' + b;
+}}
+function applyTheme(name){{
+  var t = THEMES[name] || THEMES['Midnight Ink'];
+  var root = document.documentElement.style;
+  root.setProperty('--ink-900', t.ink900);
+  root.setProperty('--ink-850', t.ink850);
+  root.setProperty('--ink-800', t.ink800);
+  root.setProperty('--ink-700', t.ink700);
+  root.setProperty('--ink-650', t.ink650);
+  root.setProperty('--line', t.line);
+  root.setProperty('--line-soft', t.linesoft);
+  root.setProperty('--parchment', t.parchment);
+  root.setProperty('--parchment-dim', t.parchdim);
+  root.setProperty('--parchment-faint', t.parchfaint);
+  root.setProperty('--seal', t.seal);
+  root.setProperty('--seal-soft', 'rgba(' + hexToRgbTriplet(t.seal) + ',' + t.sealAlpha + ')');
+  root.setProperty('--seal-line', 'rgba(' + hexToRgbTriplet(t.seal) + ',0.45)');
+  root.setProperty('--brass', t.brass);
+  root.setProperty('--brass-soft', 'rgba(' + hexToRgbTriplet(t.brass) + ',' + t.brassAlpha + ')');
+  root.setProperty('--brass-line', 'rgba(' + hexToRgbTriplet(t.brass) + ',0.5)');
+}}
+function saveTheme(name){{
+  localStorage.setItem(THEME_STORAGE_KEY, name);
+}}
+function loadSavedTheme(){{
+  var saved = localStorage.getItem(THEME_STORAGE_KEY);
+  return (saved && THEMES[saved]) ? saved : 'Midnight Ink';
+}}
+function renderThemePanel(activeName){{
+  var panel = document.getElementById('themePanel');
+  panel.innerHTML = THEME_ORDER.map(function(name){{
+    var t = THEMES[name];
+    var activeCls = name === activeName ? ' active' : '';
+    var dotStyle = 'background:linear-gradient(135deg,' + t.ink900 + ' 50%,' + t.brass + ' 50%);';
+    return '<button class="theme-swatch-btn' + activeCls + '" data-theme-name="' + name + '">' +
+      '<span class="theme-swatch-dot" style="' + dotStyle + '"></span><span>' + name + '</span></button>';
+  }}).join('');
+  panel.querySelectorAll('[data-theme-name]').forEach(function(btn){{
+    btn.addEventListener('click', function(){{
+      var name = btn.getAttribute('data-theme-name');
+      applyTheme(name);
+      saveTheme(name);
+      renderThemePanel(name);
+      document.getElementById('themePanel').style.display = 'none';
+    }});
+  }});
+}}
+
+applyTheme(loadSavedTheme());
+
 var MATCHES = {matches_json};
 var BOARD = {board_json};
 var selectedPerson = null;
@@ -820,6 +904,19 @@ document.getElementById('manualTokenLink').addEventListener('click', function(e)
   e.preventDefault();
   promptForManualToken();
 }});
+document.getElementById('themeGearBtn').addEventListener('click', function(e){{
+  e.stopPropagation();
+  var panel = document.getElementById('themePanel');
+  panel.style.display = panel.style.display === 'none' ? 'flex' : 'none';
+}});
+document.addEventListener('click', function(e){{
+  var panel = document.getElementById('themePanel');
+  var gear = document.getElementById('themeGearBtn');
+  if (panel.style.display !== 'none' && !panel.contains(e.target) && e.target !== gear){{
+    panel.style.display = 'none';
+  }}
+}});
+renderThemePanel(loadSavedTheme());
 
 completeGithubOauthIfNeeded();
 renderEverything();
