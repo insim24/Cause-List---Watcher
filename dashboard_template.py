@@ -63,9 +63,10 @@ TEMPLATE = """<!DOCTYPE html>
 
   /* ---- fetch now ---- */
   .fetch-row{{display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap;}}
-  .fetch-btn{{background:var(--brass-soft);border:1px solid var(--brass-line);color:var(--brass);
-    padding:9px 16px;border-radius:6px;font-size:13px;cursor:pointer;font-weight:600;transition:.15s;}}
-  .fetch-btn:hover{{background:var(--brass);color:var(--ink-900);}}
+  .fetch-btn{{background:var(--brass);color:var(--ink-900);border:none;font-weight:700;
+    padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12.5px;
+    display:flex;align-items:center;gap:7px;transition:.15s;}}
+  .fetch-btn:hover{{opacity:.85;}}
   .fetch-btn:disabled{{opacity:.55;cursor:default;}}
   .fetch-status{{font-size:12px;color:var(--parchment-dim);}}
   .fetch-status.ok{{color:#7FBF7F;}}
@@ -244,7 +245,7 @@ TEMPLATE = """<!DOCTYPE html>
   </div>
 
   <div class="fetch-row">
-    <button class="fetch-btn" id="fetchBtn">&#8635; Fetch Now</button>
+    <button class="fetch-btn" id="fetchBtn"><span>&#8635;</span><span>Fetch Now</span></button>
     <span class="fetch-status" id="fetchStatus"></span>
   </div>
 
