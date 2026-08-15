@@ -1,0 +1,24 @@
+{
+  "Srinagar Wing": {
+    "idle": true,
+    "courts": [],
+    "raw_status_rows": [],
+    "messages": [
+      {
+        "id": "8",
+        "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session: 23,51,71,72,75,76,78,79,81,82 and 83 the learned advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."
+      }
+    ]
+  },
+  "Jammu Wing": {
+    "idle": true,
+    "courts": [],
+    "raw_status_rows": [],
+    "messages": [
+      {
+        "id": "9",
+        "text": "Mentioned mattes: 47,105,114,133,143"
+      }
+    ]
+  }
+}
