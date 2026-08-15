@@ -554,3 +554,25 @@
 2026-08-15 05:00:35,840 [INFO] Fetching live display board
 2026-08-15 05:00:37,145 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session: 23,51,71,72,75,76,78,79,81,82 and 83 the learned advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "9", "text": "Mentioned mattes: 47,105,114,133,143"}]}}
 2026-08-15 05:00:37,147 [INFO] Added 0 new match(es). Total saved: 46. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-15 05:56:24,612 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-15 05:56:24,613 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-15 05:56:25,865 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-15 05:56:25,865 [INFO] Downloading Supplementary%20Cause%20List%20-%2017.08.2026.pdf (supplementary)
+2026-08-15 05:56:26,181 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2017.08.2026.pdf
+2026-08-15 05:56:26,182 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-15 05:56:26,831 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-15 05:56:26,831 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-15 05:56:27,230 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-15 05:56:27,230 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-15 05:56:27,581 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-15 05:56:27,581 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-15 05:56:27,931 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-15 05:56:27,931 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-15 05:56:28,281 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-15 05:56:28,281 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-15 05:56:30,049 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-15 05:56:30,049 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-15 05:56:30,327 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-15 05:56:30,328 [INFO] Fetching live display board
+2026-08-15 05:56:31,893 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session: 23,51,71,72,75,76,78,79,81,82 and 83 the learned advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "9", "text": "Mentioned mattes: 47,105,114,133,143"}]}}
+2026-08-15 05:56:31,894 [INFO] Added 0 new match(es). Total saved: 24. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
