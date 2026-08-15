@@ -25,6 +25,6 @@ jobs:
         run: |
           git config user.name "causelist-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add cases_auto.json manifest.json causelist_dashboard.html watcher.log
+          git add cases_auto.json manifest.json causelist_dashboard.html display_board.json watcher.log
           git diff --cached --quiet || git commit -m "Auto-update causelist data"
           git push
