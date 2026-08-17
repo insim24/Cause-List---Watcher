@@ -252,7 +252,7 @@
       <div class="seal">§</div>
       <div>
         <h1>My Causelist Docket</h1>
-        <p class="hero-sub">Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf &middot; <span id="lastChecked">last checked 17 Aug 2026, 10:58 AM</span></p>
+        <p class="hero-sub">Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf &middot; <span id="lastChecked">last checked 17 Aug 2026, 04:36 PM</span></p>
       </div>
       <div class="theme-picker">
         <button class="theme-gear-btn" id="themeGearBtn" title="Choose theme" aria-label="Choose theme">&#9881;</button>
@@ -868,17 +868,20 @@ function updateReminderButton(){
     document.getElementById('reminderRow').style.display = 'none';
     return;
   }
-  if (Notification.permission === 'granted' && notifyEnabled()){
-    btn.textContent = '\ud83d\udd14 Desktop alerts on';
-    btn.disabled = true;
-  } else if (Notification.permission === 'denied'){
+  if (Notification.permission === 'denied'){
     btn.textContent = '\ud83d\udd15 Desktop alerts blocked';
     btn.disabled = true;
     if (note) note.textContent = 'Notifications are blocked for this site in your browser settings.';
+  } else if (Notification.permission === 'granted' && notifyEnabled()){
+    btn.textContent = '\ud83d\udd14 Desktop alerts on (click to turn off)';
+    btn.disabled = false;
   } else {
     btn.textContent = '\ud83d\udd14 Enable desktop alerts';
     btn.disabled = false;
   }
+}
+function setNotifyEnabled(on){
+  try { localStorage.setItem(NOTIFY_PREF_KEY, on ? '1' : '0'); } catch (e){}
 }
 function initReminders(){
   pruneOldReminderKeys();
@@ -889,8 +892,13 @@ function initReminders(){
   if (btn){
     btn.addEventListener('click', function(){
       if (!('Notification' in window)) return;
+      if (Notification.permission === 'granted' && notifyEnabled()){
+        setNotifyEnabled(false);
+        updateReminderButton();
+        return;
+      }
       Notification.requestPermission().then(function(perm){
-        if (perm === 'granted') { try { localStorage.setItem(NOTIFY_PREF_KEY, '1'); } catch (e){} }
+        if (perm === 'granted') setNotifyEnabled(true);
         updateReminderButton();
       });
     });
