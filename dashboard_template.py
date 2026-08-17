@@ -192,10 +192,12 @@ TEMPLATE = """<!DOCTYPE html>
     padding:2px 8px;border-radius:999px;}}
   .wing-badge.idle{{background:var(--ink-700);color:var(--parchment-faint);}}
   .wing-badge.active{{background:var(--seal-soft);color:var(--seal);}}
-  .board-court-row{{display:flex;justify-content:space-between;align-items:center;
+  .board-court-row{{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
     background:var(--ink-700);border:1px solid var(--line);border-radius:5px;
     padding:8px 11px;margin-bottom:7px;font-family:var(--font-mono);font-size:12.5px;}}
   .board-court-row b{{color:var(--brass);}}
+  .board-court-coram{{font-family:var(--font-serif);font-size:11px;color:var(--parchment-dim);
+    margin-top:3px;line-height:1.35;}}
   .board-msg{{font-size:11.5px;color:var(--parchment-dim);line-height:1.5;padding:7px 0;
     border-top:1px dashed var(--line);}}
   .board-msg:first-of-type{{border-top:none;}}
@@ -661,7 +663,8 @@ function renderBoard(){{
     var body = '';
     if (!w.idle && w.courts && w.courts.length){{
       body += w.courts.map(function(c){{
-        return '<div class="board-court-row"><span>Court <b>'+esc(c.court)+'</b></span><span>Now on item <b>'+esc(c.item)+'</b></span></div>';
+        var coram = c.coram ? '<div class="board-court-coram">'+esc(c.coram)+'</div>' : '';
+        return '<div class="board-court-row"><div><span>Court <b>'+esc(c.court)+'</b></span>'+coram+'</div><span>Item <b>'+esc(c.item)+'</b></span></div>';
       }}).join('');
     }} else if (!w.idle && w.raw_status_rows && w.raw_status_rows.length){{
       body += w.raw_status_rows.map(function(l){{ return '<div class="board-court-row">'+esc(l)+'</div>'; }}).join('');
@@ -674,8 +677,55 @@ function renderBoard(){{
       }}).join('');
     }}
     return '<div class="card wing-card"><h3>'+esc(name)+' '+badge+'</h3>'+body+
-      '<div class="board-stale-note">From the High Court\\'s live display board \\u2014 updates whenever this dashboard is regenerated.</div></div>';
+      '<div class="board-stale-note">'+boardStatusText()+'</div></div>';
   }}).join('');
+}}
+
+var BOARD_ENDPOINT = 'https://causelist-watcher-oauth.vercel.app/api/display-board';
+var BOARD_POLL_MS = 45000;
+var boardUpdatedAt = null;
+var boardPollTimer = null;
+
+function boardStatusText(){{
+  if (boardUpdatedAt === null) return 'Live board \\u2014 connecting for live updates\\u2026';
+  var secs = Math.max(0, Math.round((Date.now() - boardUpdatedAt) / 1000));
+  var age = secs < 60 ? (secs + 's ago') : (Math.floor(secs / 60) + 'm ago');
+  var stale = secs > 150 ? ' (retrying\\u2026)' : '';
+  return 'Live board \\u2014 updated ' + age + stale;
+}}
+
+function tickBoardStatus(){{
+  var notes = document.querySelectorAll('#boardRow .board-stale-note');
+  for (var i = 0; i < notes.length; i++) notes[i].textContent = boardStatusText();
+}}
+
+function pollBoard(){{
+  if (document.hidden) return;
+  fetch(BOARD_ENDPOINT, {{cache: 'no-store'}})
+    .then(function(resp){{
+      if (!resp.ok) throw new Error('status ' + resp.status);
+      return resp.json();
+    }})
+    .then(function(data){{
+      if (!data || typeof data !== 'object' || data.error) throw new Error(data && data.error || 'bad response');
+      BOARD = data;
+      boardUpdatedAt = Date.now();
+      renderBoard();
+    }})
+    .catch(function(err){{
+      // keep showing the last good board data; just note the failure
+      console.warn('Live board poll failed:', err.message);
+    }});
+}}
+
+function startBoardPolling(){{
+  pollBoard();
+  if (boardPollTimer) clearInterval(boardPollTimer);
+  boardPollTimer = setInterval(pollBoard, BOARD_POLL_MS);
+  setInterval(tickBoardStatus, 1000);
+  document.addEventListener('visibilitychange', function(){{
+    if (!document.hidden) pollBoard();
+  }});
 }}
 
 var GH_OWNER = 'insim24';
@@ -922,6 +972,7 @@ renderThemePanel(loadSavedTheme());
 
 completeGithubOauthIfNeeded();
 renderEverything();
+startBoardPolling();
 </script>
 </body>
 </html>

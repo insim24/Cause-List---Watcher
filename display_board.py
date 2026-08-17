@@ -6,82 +6,87 @@ which shows which item/serial number each court is *currently* calling, plus
 any "mentioned matters" notices — the genuine real-time counterpart to the
 cause list (which is only ever a schedule).
 
-IMPORTANT — this module was built and tested only against the board's IDLE
-state ("No Cases To Display"), since that's what was live at build time. The
-*populated* state (an actual court actively hearing case N) has not been
-observed yet, so the court-status parsing below is a best-effort guess at
-the layout based on the page's static text ("Court Nos. which are not
-listed are currently not in session" implies per-court rows when active).
-If it turns out wrong once real data is seen, only WING_TABLE_RE / the
-row-parsing logic here needs correcting — the rest of the pipeline doesn't
-care about the internal shape, just the dict this returns.
+Each wing renders as a <div class="wing"><table class="my_table"> with a
+title row, a COURT NO / CORAM / SR NO header row, then either data rows or a
+single "No Cases To Display" row, then a "Messages" title row and id/text
+rows. Note that the court number lives inside a hidden
+<input name="roomno" value="..."> submit button, not as plain text next to
+"Court No" — a flat get_text() pass can't see it, so this walks the table
+DOM directly instead.
 """
 import re
 
 DISPLAY_BOARD_URL = "https://jkhc.gov.in/dis/"
 
-WING_NAMES = ["Srinagar Wing", "Jammu Wing"]
-COURT_ROW_RE = re.compile(r"court\s*no\.?\s*[:\-]?\s*(\d+)\D+(\d+)", re.I)
+
+def _cell_text(cell):
+    return cell.get_text(" ", strip=True)
+
+
+def _court_number(cell):
+    inp = cell.find("input", attrs={"name": "roomno"})
+    if inp and inp.get("value", "").strip():
+        return inp["value"].strip()
+    return _cell_text(cell)
 
 
 def parse_display_board(html):
-    """Returns {wing_name: {"idle": bool, "courts": [{"court": "5", "item": "23"}, ...],
+    """Returns {wing_name: {"idle": bool,
+    "courts": [{"court": "5", "item": "23", "coram": "..."}, ...],
     "raw_status_rows": [...], "messages": [{"id": "8", "text": "..."}]}}"""
     from bs4 import BeautifulSoup
 
     soup = BeautifulSoup(html, "html.parser")
-    text_blocks = soup.get_text("\n", strip=True).split("\n")
-
     result = {}
-    wing_starts = []
-    for i, line in enumerate(text_blocks):
-        for wing in WING_NAMES:
-            if line.strip().lower() == wing.lower():
-                wing_starts.append((wing, i))
 
-    for idx, (wing, start) in enumerate(wing_starts):
-        end = wing_starts[idx + 1][1] if idx + 1 < len(wing_starts) else len(text_blocks)
-        block = text_blocks[start + 1:end]
+    for wing_div in soup.select("div.wing"):
+        table = wing_div.find("table")
+        if not table:
+            continue
+        rows = table.find_all("tr", recursive=False) or table.find_all("tr")
+        if not rows:
+            continue
 
-        # the last wing's block otherwise runs into page footer text
-        for i, l in enumerate(block):
-            if re.match(r"^(Note|Disclaimer)\s*:", l.strip(), re.I):
-                block = block[:i]
-                break
-
-        try:
-            messages_at = next(i for i, l in enumerate(block) if l.strip().lower() == "messages")
-        except StopIteration:
-            messages_at = len(block)
-
-        status_lines = [l for l in block[:messages_at] if l.strip()]
-        message_lines = [l for l in block[messages_at + 1:] if l.strip()]
-
-        idle = any(l.strip().lower() == "no cases to display" for l in status_lines)
+        wing_name = _cell_text(rows[0])
+        section = "courts"
+        idle = False
         courts = []
-        if not idle:
-            for l in status_lines:
-                m = COURT_ROW_RE.search(l)
-                if m:
-                    courts.append({"court": m.group(1), "item": m.group(2)})
-
         messages = []
-        i = 0
-        while i < len(message_lines):
-            l = message_lines[i].strip()
-            if re.match(r"^(\d+|\*)$", l):
-                msg_id = l
-                text = message_lines[i + 1].strip() if i + 1 < len(message_lines) else ""
+        raw_status_rows = []
+
+        for tr in rows[1:]:
+            if tr.find("th"):
+                if _cell_text(tr).strip().lower() == "messages":
+                    section = "messages"
+                continue
+
+            cells = tr.find_all("td")
+            if not cells:
+                continue
+
+            if section == "courts":
+                if len(cells) == 1:
+                    if _cell_text(cells[0]).lower() == "no cases to display":
+                        idle = True
+                    continue
+                if len(cells) == 3:
+                    court = _court_number(cells[0])
+                    coram = _cell_text(cells[1])
+                    item = _cell_text(cells[2])
+                    if court:
+                        courts.append({"court": court, "item": item, "coram": coram})
+                    continue
+                raw_status_rows.append(_cell_text(tr))
+            elif len(cells) >= 2:
+                msg_id = _cell_text(cells[0])
+                text = _cell_text(cells[1])
                 if text:
                     messages.append({"id": msg_id, "text": text})
-                    i += 2
-                    continue
-            i += 1
 
-        result[wing] = {
+        result[wing_name] = {
             "idle": idle,
             "courts": courts,
-            "raw_status_rows": status_lines if not idle and not courts else [],
+            "raw_status_rows": raw_status_rows,
             "messages": messages,
         }
     return result
