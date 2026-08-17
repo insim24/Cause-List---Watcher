@@ -1,19 +1,41 @@
 {
   "Srinagar Wing": {
-    "idle": true,
+    "idle": false,
     "courts": [],
-    "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session: 23,51,71,72,75,76,78,79,81,82 and 83 the learned advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."
-      }
-    ]
+    "raw_status_rows": [
+      "COURT NO",
+      "CORAM",
+      "SR NO",
+      "HON'BLE  THE CHIEF JUSTICE (A),",
+      "HON'BLE MR. JUSTICE MOHD YOUSUF WANI",
+      "7",
+      "HON'BLE MR. JUSTICE SANJAY DHAR",
+      "11",
+      "HON'BLE MR. JUSTICE RAHUL BHARTI",
+      "4",
+      "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI",
+      "152",
+      "HON'BLE MR. JUSTICE SHAHZAD AZEEM",
+      "18",
+      "REGISTRAR JUDICIAL",
+      "6"
+    ],
+    "messages": []
   },
   "Jammu Wing": {
-    "idle": true,
+    "idle": false,
     "courts": [],
-    "raw_status_rows": [],
+    "raw_status_rows": [
+      "COURT NO",
+      "CORAM",
+      "SR NO",
+      "HON'BLE MR. JUSTICE RAJNESH OSWAL",
+      "169",
+      "HON'BLE MR. JUSTICE MA CHOWDHARY",
+      "44",
+      "HON'BLE MR. JUSTICE SANJAY PARIHAR",
+      "179"
+    ],
     "messages": [
       {
         "id": "9",

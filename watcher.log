@@ -686,3 +686,25 @@
 2026-08-15 10:02:13,627 [INFO] Fetching live display board
 2026-08-15 10:02:14,701 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session: 23,51,71,72,75,76,78,79,81,82 and 83 the learned advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "9", "text": "Mentioned mattes: 47,105,114,133,143"}]}}
 2026-08-15 10:02:14,702 [INFO] Added 0 new match(es). Total saved: 24. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-17 06:05:18,267 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-17 06:05:18,267 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-17 06:05:19,490 [INFO] Found 12 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-08-17 06:05:19,490 [INFO] Downloading Supplementary%20Cause%20List%20-%2017.08.2026.pdf (supplementary)
+2026-08-17 06:05:19,779 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2017.08.2026.pdf
+2026-08-17 06:05:19,779 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-17 06:05:20,329 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-17 06:05:20,329 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-17 06:05:20,780 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-17 06:05:20,780 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-17 06:05:21,229 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-17 06:05:21,229 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-17 06:05:21,579 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-17 06:05:21,579 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-17 06:05:21,929 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-17 06:05:21,929 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-17 06:05:23,679 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-17 06:05:23,679 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-17 06:05:23,952 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-17 06:05:23,953 [INFO] Fetching live display board
+2026-08-17 06:05:26,364 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [], "raw_status_rows": ["COURT NO", "CORAM", "SR NO", "HON'BLE  THE CHIEF JUSTICE (A),", "HON'BLE MR. JUSTICE MOHD YOUSUF WANI", "7", "HON'BLE MR. JUSTICE SANJAY DHAR", "11", "HON'BLE MR. JUSTICE RAHUL BHARTI", "4", "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI", "152", "HON'BLE MR. JUSTICE SHAHZAD AZEEM", "18", "REGISTRAR JUDICIAL", "6"], "messages": []}, "Jammu Wing": {"idle": false, "courts": [], "raw_status_rows": ["COURT NO", "CORAM", "SR NO", "HON'BLE MR. JUSTICE RAJNESH OSWAL", "169", "HON'BLE MR. JUSTICE MA CHOWDHARY", "44", "HON'BLE MR. JUSTICE SANJAY PARIHAR", "179"], "messages": [{"id": "9", "text": "Mentioned mattes: 47,105,114,133,143"}]}}
+2026-08-17 06:05:26,364 [INFO] Added 0 new match(es). Total saved: 24. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
