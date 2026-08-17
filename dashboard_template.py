@@ -75,18 +75,25 @@ TEMPLATE = """<!DOCTYPE html>
   .chip-btn:hover{{color:var(--parchment);}}
   .chip-btn.active{{background:var(--brass-soft);border-color:var(--brass);color:var(--brass);font-weight:600;}}
 
-  /* ---- fetch now ---- */
-  .fetch-row{{display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap;}}
-  .fetch-btn{{background:var(--brass);color:var(--ink-900);border:none;font-weight:700;
-    padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12.5px;
-    display:flex;align-items:center;gap:7px;transition:.15s;}}
-  .fetch-btn:hover{{opacity:.85;}}
-  .fetch-btn:disabled{{opacity:.55;cursor:default;}}
-  .fetch-status{{font-size:12px;color:var(--parchment-dim);}}
-  .fetch-status.ok{{color:#7FBF7F;}}
-  .fetch-status.err{{color:var(--seal);}}
-  .fetch-status a{{color:inherit;text-decoration:underline;}}
-  .fetch-manual-link{{font-size:11px;color:var(--parchment-faint);text-decoration:underline;cursor:pointer;}}
+  /* ---- case reminders ---- */
+  .reminder-row{{display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap;}}
+  .reminder-btn{{background:var(--brass);color:var(--ink-900);border:none;font-weight:700;
+    padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12.5px;transition:.15s;}}
+  .reminder-btn:hover{{opacity:.85;}}
+  .reminder-btn:disabled{{opacity:.55;cursor:default;}}
+  .reminder-note{{font-size:11.5px;color:var(--parchment-faint);}}
+  .reminder-toasts{{position:fixed;bottom:18px;right:18px;z-index:9999;
+    display:flex;flex-direction:column;gap:10px;max-width:340px;}}
+  .reminder-toast{{position:relative;background:var(--ink-800);border:1px solid var(--brass-line);
+    border-radius:8px;padding:12px 34px 12px 14px;box-shadow:var(--shadow);animation:reminderIn .2s ease-out;}}
+  .reminder-toast.now{{border-color:var(--seal-line);}}
+  .reminder-toast h4{{margin:0 0 4px;font-family:var(--font-serif);font-size:13.5px;color:var(--brass);}}
+  .reminder-toast.now h4{{color:var(--seal);}}
+  .reminder-toast p{{margin:0;font-size:12px;line-height:1.4;color:var(--parchment-dim);}}
+  .reminder-toast .rt-close{{position:absolute;top:6px;right:8px;background:none;border:none;
+    color:var(--parchment-faint);font-size:15px;cursor:pointer;line-height:1;padding:4px;}}
+  .reminder-toast .rt-close:hover{{color:var(--parchment);}}
+  @keyframes reminderIn{{from{{opacity:0;transform:translateY(8px);}}to{{opacity:1;transform:translateY(0);}}}}
 
   /* ---- stat cards ---- */
   .stats-row{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px;}}
@@ -265,15 +272,16 @@ TEMPLATE = """<!DOCTYPE html>
     <div class="chip-row" id="personChips"></div>
   </div>
 
-  <div class="fetch-row">
-    <button class="fetch-btn" id="fetchBtn"><span>&#8635;</span><span>Fetch Now</span></button>
-    <span class="fetch-status" id="fetchStatus"></span>
-    <a href="#" class="fetch-manual-link" id="manualTokenLink">or paste a token manually</a>
+  <div class="reminder-row" id="reminderRow" style="display:none">
+    <button class="reminder-btn" id="reminderBtn"></button>
+    <span class="reminder-note" id="reminderNote">Get notified when your case is a few items from being called.</span>
   </div>
 
   <div class="stats-row" id="statsRow"></div>
 
   <div class="board-row" id="boardRow" style="display:none"></div>
+
+  <div class="reminder-toasts" id="reminderToasts"></div>
 
   <div class="main-grid">
     <div class="card">
@@ -682,7 +690,7 @@ function renderBoard(){{
 }}
 
 var BOARD_ENDPOINT = 'https://causelist-watcher-oauth.vercel.app/api/display-board';
-var BOARD_POLL_MS = 45000;
+var BOARD_POLL_MS = 15000;
 var boardUpdatedAt = null;
 var boardPollTimer = null;
 
@@ -690,7 +698,7 @@ function boardStatusText(){{
   if (boardUpdatedAt === null) return 'Live board \\u2014 connecting for live updates\\u2026';
   var secs = Math.max(0, Math.round((Date.now() - boardUpdatedAt) / 1000));
   var age = secs < 60 ? (secs + 's ago') : (Math.floor(secs / 60) + 'm ago');
-  var stale = secs > 150 ? ' (retrying\\u2026)' : '';
+  var stale = secs > 45 ? ' (retrying\\u2026)' : '';
   return 'Live board \\u2014 updated ' + age + stale;
 }}
 
@@ -711,6 +719,7 @@ function pollBoard(){{
       BOARD = data;
       boardUpdatedAt = Date.now();
       renderBoard();
+      checkCaseReminders();
     }})
     .catch(function(err){{
       // keep showing the last good board data; just note the failure
@@ -728,187 +737,175 @@ function startBoardPolling(){{
   }});
 }}
 
-var GH_OWNER = 'insim24';
-var GH_REPO = 'Cause-List---Watcher';
-var GH_WORKFLOW = 'watch.yml';
-var GH_BRANCH = 'main';
-var GH_API = 'https://api.github.com';
-var GH_OAUTH_CLIENT_ID = 'Ov23li1if38IxNLXEcFz';
-var OAUTH_REDIRECT_URI = 'https://insim24.github.io/Cause-List---Watcher/causelist_dashboard.html';
-var OAUTH_EXCHANGE_URL = 'https://causelist-watcher-oauth.vercel.app/api/github-oauth-exchange';
+var MATCHES_ENDPOINT = 'https://raw.githubusercontent.com/insim24/Cause-List---Watcher/main/cases_auto.json';
+var MATCHES_POLL_MS = 5 * 60 * 1000;
+var matchesUpdatedAt = null;
 
-function ghToken(){{ return localStorage.getItem('gh_pat') || ''; }}
-function setGhToken(t){{ if (t) localStorage.setItem('gh_pat', t); }}
-function clearGhToken(){{ localStorage.removeItem('gh_pat'); }}
-function ensureGhToken(){{
-  return ghToken() || null;
+function matchesStatusText(){{
+  if (matchesUpdatedAt === null) return null;
+  var secs = Math.max(0, Math.round((Date.now() - matchesUpdatedAt) / 1000));
+  var age = secs < 60 ? (secs + 's ago') : (Math.floor(secs / 60) + 'm ago');
+  return 'auto-synced ' + age;
 }}
-function randomOauthState(){{
-  var arr = new Uint8Array(16);
-  crypto.getRandomValues(arr);
-  return Array.prototype.map.call(arr, function(b){{ return b.toString(16).padStart(2, '0'); }}).join('');
+function tickMatchesStatus(){{
+  var text = matchesStatusText();
+  if (text === null) return;
+  var el = document.getElementById('lastChecked');
+  if (el) el.textContent = text;
 }}
-function startGithubSignIn(pendingFetch){{
-  var state = randomOauthState();
-  sessionStorage.setItem('gh_oauth_state', state);
-  sessionStorage.setItem('gh_oauth_pending_fetch', pendingFetch ? '1' : '');
-  ghStatus('Redirecting to GitHub to sign in\\u2026', '');
-  var qs = 'client_id=' + encodeURIComponent(GH_OAUTH_CLIENT_ID) +
-    '&scope=' + encodeURIComponent('public_repo,workflow') +
-    '&redirect_uri=' + encodeURIComponent(OAUTH_REDIRECT_URI) +
-    '&state=' + encodeURIComponent(state);
-  window.location.href = 'https://github.com/login/oauth/authorize?' + qs;
-}}
-function promptForManualToken(){{
-  var t = window.prompt('Paste a GitHub personal access token to trigger a fetch.\\n\\nNeeds "repo" + "workflow" scope (classic token), or Actions:write + Contents:read (fine-grained, scoped to this repo).\\n\\nStored ONLY in this browser\\'s local storage \\u2014 never written into this file or committed anywhere.');
-  if (t){{
-    setGhToken(t.trim());
-    triggerFetch();
-  }}
-}}
-function completeGithubOauthIfNeeded(){{
-  var params = new URLSearchParams(window.location.search);
-  var code = params.get('code');
-  var state = params.get('state');
-  if (!code || !state) return;
-
-  var expectedState = sessionStorage.getItem('gh_oauth_state') || '';
-  sessionStorage.removeItem('gh_oauth_state');
-  var pendingFetch = sessionStorage.getItem('gh_oauth_pending_fetch') === '1';
-  sessionStorage.removeItem('gh_oauth_pending_fetch');
-
-  var cleanUrl = window.location.origin + window.location.pathname;
-  window.history.replaceState({{}}, document.title, cleanUrl);
-
-  if (state !== expectedState){{
-    ghStatus('Sign-in failed: state mismatch (possible CSRF). Please try again.', 'err');
-    return;
-  }}
-
-  ghStatus('Finishing sign-in\\u2026', '');
-  fetch(OAUTH_EXCHANGE_URL, {{
-    method: 'POST',
-    headers: {{'Content-Type': 'application/json'}},
-    body: JSON.stringify({{code: code}})
-  }}).then(function(resp){{
-    return resp.json().then(function(data){{
-      if (!resp.ok || data.error){{
-        throw new Error(data.error || ('exchange failed with status ' + resp.status));
-      }}
-      return data;
-    }});
-  }}).then(function(data){{
-    setGhToken(data.access_token);
-    ghStatus('Signed in.', 'ok');
-    if (pendingFetch){{
-      triggerFetch();
-    }}
-  }}).catch(function(err){{
-    ghStatus('Sign-in error: ' + err.message, 'err');
-  }});
-}}
-function ghStatus(msg, kind, link){{
-  var el = document.getElementById('fetchStatus');
-  el.textContent = msg;
-  el.className = 'fetch-status' + (kind ? ' ' + kind : '');
-  if (link){{
-    var a = document.createElement('a');
-    a.href = link; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'View run on GitHub';
-    el.appendChild(document.createTextNode(' '));
-    el.appendChild(a);
-  }}
-}}
-function ghApi(path, opts){{
-  opts = opts || {{}};
-  var headers = opts.headers || {{}};
-  headers['Authorization'] = 'Bearer ' + ghToken();
-  headers['Accept'] = 'application/vnd.github+json';
-  opts.headers = headers;
-  return fetch(GH_API + path, opts);
-}}
-function b64ToUtf8(b64){{
-  var binary = atob(b64.replace(/\\n/g, ''));
-  var bytes = new Uint8Array(binary.length);
-  for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-  return new TextDecoder('utf-8').decode(bytes);
-}}
-function fetchRepoJson(path){{
-  return ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + path + '?ref=' + GH_BRANCH)
+function pollMatches(){{
+  if (document.hidden) return;
+  fetch(MATCHES_ENDPOINT, {{cache: 'no-store'}})
     .then(function(resp){{
-      if (!resp.ok) throw new Error('Could not read ' + path + ' (status ' + resp.status + ')');
+      if (!resp.ok) throw new Error('status ' + resp.status);
       return resp.json();
     }})
-    .then(function(data){{ return JSON.parse(b64ToUtf8(data.content)); }});
-}}
-function pollForRun(afterMs, attempt){{
-  attempt = attempt || 0;
-  if (attempt > 30) return Promise.reject(new Error('Timed out waiting for the run to appear in the Actions list.'));
-  return ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/actions/workflows/' + GH_WORKFLOW + '/runs?event=workflow_dispatch&per_page=5')
-    .then(function(resp){{ return resp.json(); }})
     .then(function(data){{
-      var runs = (data.workflow_runs || []).filter(function(r){{ return new Date(r.created_at).getTime() >= afterMs - 5000; }});
-      if (runs.length) return runs[runs.length - 1];
-      return new Promise(function(resolve){{ setTimeout(resolve, 4000); }}).then(function(){{ return pollForRun(afterMs, attempt + 1); }});
+      if (!Array.isArray(data)) throw new Error('bad response');
+      MATCHES = data;
+      matchesUpdatedAt = Date.now();
+      renderEverything();
+      checkCaseReminders();
+    }})
+    .catch(function(err){{
+      console.warn('Matches refresh failed:', err.message);
     }});
 }}
-function pollRunUntilDone(run, attempt){{
-  attempt = attempt || 0;
-  if (run.status === 'completed') return run;
-  if (attempt > 60) return Promise.reject(new Error('Timed out waiting for the run to finish.'));
-  ghStatus('Run is ' + run.status + '\\u2026', '');
-  return new Promise(function(resolve){{ setTimeout(resolve, 5000); }})
-    .then(function(){{ return ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/actions/runs/' + run.id); }})
-    .then(function(resp){{ return resp.json(); }})
-    .then(function(fresh){{ return pollRunUntilDone(fresh, attempt + 1); }});
-}}
-function refreshDataFromRepo(){{
-  return fetchRepoJson('cases_auto.json').then(function(matches){{
-    MATCHES = matches;
-    return fetchRepoJson('display_board.json').catch(function(){{ return null; }});
-  }}).then(function(board){{
-    BOARD = board || {{}};
-    renderEverything();
-    var lc = document.getElementById('lastChecked');
-    if (lc) lc.textContent = 'fetched just now via GitHub Actions';
-    ghStatus('Done \\u2014 dashboard updated with the latest data.', 'ok');
+function startMatchesPolling(){{
+  pollMatches();
+  setInterval(pollMatches, MATCHES_POLL_MS);
+  setInterval(tickMatchesStatus, 1000);
+  document.addEventListener('visibilitychange', function(){{
+    if (!document.hidden) pollMatches();
   }});
 }}
-function triggerFetch(){{
-  var token = ensureGhToken();
-  if (!token){{ startGithubSignIn(true); return; }}
-  var btn = document.getElementById('fetchBtn');
-  btn.disabled = true;
-  var startedAt = Date.now();
-  ghStatus('Triggering a fresh fetch\\u2026', '');
-  ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/actions/workflows/' + GH_WORKFLOW + '/dispatches', {{
-    method: 'POST',
-    headers: {{'Content-Type': 'application/json'}},
-    body: JSON.stringify({{ref: GH_BRANCH}})
-  }}).then(function(resp){{
-    if (resp.status === 401 || resp.status === 403){{
-      clearGhToken();
-      throw new Error('That token was rejected (status ' + resp.status + '). Click Fetch Now again to re-enter it.');
+
+/* ---- case-coming-up reminders ---- */
+var REMINDER_LOOKAHEAD = 3;
+var NOTIFY_PREF_KEY = 'reminder_notify_enabled';
+
+function currentItemsByCourt(){{
+  var map = {{}};
+  if (!BOARD) return map;
+  Object.keys(BOARD).forEach(function(wingName){{
+    var w = BOARD[wingName];
+    if (!w || !w.courts) return;
+    w.courts.forEach(function(c){{
+      var n = parseFloat(c.item);
+      if (!isNaN(n)) map[String(c.court).trim()] = n;
+    }});
+  }});
+  return map;
+}}
+function reminderKey(match, tier){{
+  return 'reminder:' + todayIso() + ':' + match.id + ':' + tier;
+}}
+function reminderSeen(key){{
+  try {{ return !!localStorage.getItem(key); }} catch (e){{ return false; }}
+}}
+function markReminderSeen(key){{
+  try {{ localStorage.setItem(key, String(Date.now())); }} catch (e){{}}
+}}
+function pruneOldReminderKeys(){{
+  try {{
+    var prefix = 'reminder:' + todayIso() + ':';
+    var toRemove = [];
+    for (var i = 0; i < localStorage.length; i++){{
+      var k = localStorage.key(i);
+      if (k && k.indexOf('reminder:') === 0 && k.indexOf(prefix) !== 0) toRemove.push(k);
     }}
-    if (resp.status !== 204){{
-      throw new Error('GitHub returned status ' + resp.status + ' when triggering the workflow.');
+    toRemove.forEach(function(k){{ localStorage.removeItem(k); }});
+  }} catch (e){{}}
+}}
+function checkCaseReminders(){{
+  if (!Array.isArray(MATCHES) || !MATCHES.length) return;
+  var today = todayIso();
+  var current = currentItemsByCourt();
+  MATCHES.filter(function(m){{ return m.date === today; }}).forEach(function(m){{
+    var courtItem = current[String(m.court).trim()];
+    var caseSr = parseFloat(m.sr);
+    if (courtItem === undefined || isNaN(caseSr)) return;
+    var diff = caseSr - courtItem;
+    if (diff <= 0 && diff > -20){{
+      var nowKey = reminderKey(m, 'now');
+      if (!reminderSeen(nowKey)){{
+        markReminderSeen(nowKey);
+        fireReminder(m, 'now', 'Being called now',
+          'Court ' + m.court + ' is at item ' + courtItem + ' \\u2014 your case (Sr ' + m.sr + ') may be up.');
+      }}
+    }} else if (diff > 0 && diff <= REMINDER_LOOKAHEAD){{
+      var soonKey = reminderKey(m, 'soon');
+      if (!reminderSeen(soonKey)){{
+        markReminderSeen(soonKey);
+        fireReminder(m, 'soon', 'Coming up soon',
+          'Court ' + m.court + ' is at item ' + courtItem + ', ' + diff + ' before your case (Sr ' + m.sr + ').');
+      }}
     }}
-    ghStatus('Triggered \\u2014 waiting for the run to start\\u2026', '');
-    return pollForRun(startedAt);
-  }}).then(function(run){{
-    return pollRunUntilDone(run);
-  }}).then(function(run){{
-    if (!run) return;
-    if (run.conclusion !== 'success'){{
-      ghStatus('Run finished with status: ' + run.conclusion + '.', 'err', run.html_url);
-      return;
-    }}
-    ghStatus('Run succeeded \\u2014 pulling fresh data\\u2026', '');
-    return refreshDataFromRepo();
-  }}).catch(function(err){{
-    ghStatus('Error: ' + err.message, 'err');
-  }}).then(function(){{
+  }});
+}}
+function fireReminder(match, tier, title, body){{
+  showReminderToast(match, tier, title, body);
+  sendBrowserNotification(title, body);
+}}
+function showReminderToast(match, tier, title, body){{
+  var container = document.getElementById('reminderToasts');
+  if (!container) return;
+  var el = document.createElement('div');
+  el.className = 'reminder-toast' + (tier === 'now' ? ' now' : '');
+  var caseLabel = esc(match.caseName || match.caseNo || 'Your case');
+  var personLabel = match.person ? esc(match.person) + ' \\u00b7 ' : '';
+  el.innerHTML = '<button class="rt-close" aria-label="Dismiss">&times;</button>' +
+    '<h4>' + esc(title) + '</h4>' +
+    '<p>' + esc(body) + '</p>' +
+    '<p style="margin-top:5px;font-family:var(--font-mono);font-size:11px;">' + personLabel + caseLabel + '</p>';
+  el.querySelector('.rt-close').addEventListener('click', function(){{ el.remove(); }});
+  container.appendChild(el);
+  setTimeout(function(){{ if (el.parentNode) el.remove(); }}, 30000);
+}}
+function notifyEnabled(){{
+  try {{ return localStorage.getItem(NOTIFY_PREF_KEY) === '1'; }} catch (e){{ return false; }}
+}}
+function sendBrowserNotification(title, body){{
+  if (!('Notification' in window)) return;
+  if (Notification.permission !== 'granted' || !notifyEnabled()) return;
+  try {{ new Notification(title, {{body: body, icon: 'icon-192.png'}}); }} catch (e){{}}
+}}
+function updateReminderButton(){{
+  var btn = document.getElementById('reminderBtn');
+  var note = document.getElementById('reminderNote');
+  if (!btn) return;
+  if (!('Notification' in window)){{
+    document.getElementById('reminderRow').style.display = 'none';
+    return;
+  }}
+  if (Notification.permission === 'granted' && notifyEnabled()){{
+    btn.textContent = '\\ud83d\\udd14 Desktop alerts on';
+    btn.disabled = true;
+  }} else if (Notification.permission === 'denied'){{
+    btn.textContent = '\\ud83d\\udd15 Desktop alerts blocked';
+    btn.disabled = true;
+    if (note) note.textContent = 'Notifications are blocked for this site in your browser settings.';
+  }} else {{
+    btn.textContent = '\\ud83d\\udd14 Enable desktop alerts';
     btn.disabled = false;
-  }});
+  }}
+}}
+function initReminders(){{
+  pruneOldReminderKeys();
+  var row = document.getElementById('reminderRow');
+  if (row) row.style.display = 'flex';
+  updateReminderButton();
+  var btn = document.getElementById('reminderBtn');
+  if (btn){{
+    btn.addEventListener('click', function(){{
+      if (!('Notification' in window)) return;
+      Notification.requestPermission().then(function(perm){{
+        if (perm === 'granted') {{ try {{ localStorage.setItem(NOTIFY_PREF_KEY, '1'); }} catch (e){{}} }}
+        updateReminderButton();
+      }});
+    }});
+  }}
+  checkCaseReminders();
 }}
 
 function renderEverything(){{
@@ -951,11 +948,6 @@ document.getElementById('backToUpcoming').addEventListener('click', function(){{
   renderAgenda();
 }});
 document.getElementById('searchBox').addEventListener('input', function(e){{ renderAllTable(e.target.value); }});
-document.getElementById('fetchBtn').addEventListener('click', triggerFetch);
-document.getElementById('manualTokenLink').addEventListener('click', function(e){{
-  e.preventDefault();
-  promptForManualToken();
-}});
 document.getElementById('themeGearBtn').addEventListener('click', function(e){{
   e.stopPropagation();
   var panel = document.getElementById('themePanel');
@@ -970,9 +962,10 @@ document.addEventListener('click', function(e){{
 }});
 renderThemePanel(loadSavedTheme());
 
-completeGithubOauthIfNeeded();
 renderEverything();
 startBoardPolling();
+startMatchesPolling();
+initReminders();
 </script>
 </body>
 </html>
