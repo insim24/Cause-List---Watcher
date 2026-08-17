@@ -1,29 +1,25 @@
 {
   "Srinagar Wing": {
     "idle": false,
-    "courts": [],
-    "raw_status_rows": [
-      "COURT NO",
-      "CORAM",
-      "SR NO",
-      "HON'BLE  THE CHIEF JUSTICE (A),",
-      "HON'BLE MR. JUSTICE MOHD YOUSUF WANI",
-      "33",
-      "HON'BLE MR. JUSTICE SANJAY DHAR",
-      "79",
-      "HON'BLE MR. JUSTICE RAHUL BHARTI",
-      "161",
-      "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI",
-      "129",
-      "HON'BLE MR. JUSTICE SHAHZAD AZEEM",
-      "65"
-    ],
-    "messages": [
+    "courts": [
       {
-        "id": "13",
-        "text": "Immediate presence of adv  waseem ramzan lone is required in court"
+        "court": "5",
+        "item": "91",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "163",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
+        "item": "73",
+        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
       }
-    ]
+    ],
+    "raw_status_rows": [],
+    "messages": []
   },
   "Jammu Wing": {
     "idle": true,
