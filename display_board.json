@@ -8,19 +8,20 @@
       "SR NO",
       "HON'BLE  THE CHIEF JUSTICE (A),",
       "HON'BLE MR. JUSTICE MOHD YOUSUF WANI",
-      "24",
-      "HON'BLE MR. JUSTICE SANJAY DHAR",
-      "53",
+      "33",
       "HON'BLE MR. JUSTICE RAHUL BHARTI",
-      "157",
+      "160",
       "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI",
-      "62",
+      "129",
       "HON'BLE MR. JUSTICE SHAHZAD AZEEM",
-      "24",
-      "REGISTRAR JUDICIAL",
-      "6"
+      "62"
     ],
-    "messages": []
+    "messages": [
+      {
+        "id": "13",
+        "text": "Immediate presence of adv  waseem ramzan lone is required in court"
+      }
+    ]
   },
   "Jammu Wing": {
     "idle": true,
