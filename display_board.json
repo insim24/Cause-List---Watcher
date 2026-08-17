@@ -8,30 +8,24 @@
       "SR NO",
       "HON'BLE  THE CHIEF JUSTICE (A),",
       "HON'BLE MR. JUSTICE MOHD YOUSUF WANI",
-      "22",
+      "24",
       "HON'BLE MR. JUSTICE SANJAY DHAR",
-      "50",
+      "53",
       "HON'BLE MR. JUSTICE RAHUL BHARTI",
-      "12",
+      "157",
       "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI",
-      "43",
+      "62",
       "HON'BLE MR. JUSTICE SHAHZAD AZEEM",
-      "44",
+      "24",
       "REGISTRAR JUDICIAL",
       "6"
     ],
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
+    "idle": true,
     "courts": [],
-    "raw_status_rows": [
-      "COURT NO",
-      "CORAM",
-      "SR NO",
-      "HON'BLE MR. JUSTICE RAJNESH OSWAL",
-      "169"
-    ],
+    "raw_status_rows": [],
     "messages": [
       {
         "id": "9",
