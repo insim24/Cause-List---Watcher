@@ -9,7 +9,7 @@
       },
       {
         "court": "7",
-        "item": "133",
+        "item": "109",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       }
     ],
@@ -24,16 +24,6 @@
   "Jammu Wing": {
     "idle": false,
     "courts": [
-      {
-        "court": "3",
-        "item": "12",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "4",
-        "item": "37",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
       {
         "court": "12",
         "item": "177",
