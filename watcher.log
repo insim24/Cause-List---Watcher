@@ -1034,3 +1034,29 @@
 2026-08-18 11:18:21,988 [INFO] Fetching live display board
 2026-08-18 11:18:27,664 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "55", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "133", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session:\r\n55,65,75,80,81,82,84,89,90,91,93,94  AND 97.\r\nThe learned Advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "12", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE RAJESH SEKHRI"}, {"court": "4", "item": "37", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "12", "item": "177", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "4", "text": "item no's 64,80,192,199 203 in the regular cause list will be taken up immediately after break, all concerned to take note"}, {"id": "9", "text": "mentioned matters- 59,76,102,132,148,154,169,170,173,175"}]}}
 2026-08-18 11:18:27,665 [INFO] Added 0 new match(es). Total saved: 24. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-18 11:20:23,421 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-18 11:20:23,422 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-18 11:20:24,618 [INFO] Found 14 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-08-18 11:20:24,618 [INFO] Downloading Supplementary%20Cause%20List%20-%2018.08.2026.pdf (supplementary)
+2026-08-18 11:20:24,922 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2018.08.2026.pdf
+2026-08-18 11:20:24,922 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2018.08.2026.pdf (supplementary)
+2026-08-18 11:20:25,188 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2018.08.2026.pdf
+2026-08-18 11:20:25,188 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2018.08.2026.pdf (supplementary)
+2026-08-18 11:20:25,453 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2018.08.2026.pdf
+2026-08-18 11:20:25,453 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-18 11:20:25,980 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-18 11:20:25,980 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-18 11:20:26,321 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-18 11:20:26,322 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-18 11:20:26,722 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-18 11:20:26,722 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-18 11:20:27,072 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-18 11:20:27,072 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-18 11:20:27,421 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-18 11:20:27,422 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-18 11:20:29,180 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-18 11:20:29,180 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-18 11:20:29,445 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-18 11:20:29,446 [INFO] Fetching live display board
+2026-08-18 11:20:34,085 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "55", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "133", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session:\r\n55,65,75,80,81,82,84,89,90,91,93,94  AND 97.\r\nThe learned Advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "12", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE RAJESH SEKHRI"}, {"court": "4", "item": "37", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "12", "item": "177", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "4", "text": "item no's 64,80,192,199 203 in the regular cause list will be taken up immediately after break, all concerned to take note"}, {"id": "9", "text": "mentioned matters- 59,76,102,132,148,154,169,170,173,175"}]}}
+2026-08-18 11:20:34,085 [INFO] Added 0 new match(es). Total saved: 24. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
