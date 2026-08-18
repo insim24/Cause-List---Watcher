@@ -6,11 +6,6 @@
         "court": "5",
         "item": "55",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "109",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       }
     ],
     "raw_status_rows": [],
@@ -22,14 +17,8 @@
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "12",
-        "item": "177",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
