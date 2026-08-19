@@ -13,37 +13,17 @@
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
       },
       {
-        "court": "7",
-        "item": "115",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
         "court": "10",
         "item": "1",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "13",
-        "item": "88",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "It is notified for the information of all concerned that the following matters have been mentioned during the early morning mention session:\r\n55,58,60,84,89,92,94,95 and 96\r\nThe learned Advocates who have mentioned the aforesaid matters are advised to duly intimate the learned counsel appearing for the opposite side regarding the same."
-      }
-    ]
+    "messages": []
   },
   "Jammu Wing": {
     "idle": false,
     "courts": [
-      {
-        "court": "4",
-        "item": "269",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
       {
         "court": "10",
         "item": "1",
@@ -51,11 +31,6 @@
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "9",
-        "text": "mentioned matters-54,101,108,115,140,144,151,160"
-      }
-    ]
+    "messages": []
   }
 }
