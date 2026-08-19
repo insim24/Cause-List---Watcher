@@ -3,61 +3,41 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "4",
-        "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
         "court": "7",
-        "item": "1",
+        "item": "8",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       },
       {
         "court": "8",
-        "item": "1",
+        "item": "40",
         "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
-        "court": "13",
-        "item": "6",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "30",
-        "item": "1",
-        "coram": "REGISTRAR JUDICIAL"
       }
     ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "7",
+        "text": "Passed Over Matters: 2,5,7,8,9"
+      }
+    ]
   },
   "Jammu Wing": {
     "idle": false,
     "courts": [
       {
         "court": "3",
-        "item": "92",
+        "item": "101",
         "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE RAJESH SEKHRI"
       },
       {
-        "court": "4",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
         "court": "6",
-        "item": "96",
+        "item": "19",
         "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
       },
       {
         "court": "9",
-        "item": "170",
+        "item": "15",
         "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      },
-      {
-        "court": "12",
-        "item": "246",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
