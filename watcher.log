@@ -1286,3 +1286,29 @@
 2026-08-19 09:49:18,133 [INFO] Fetching live display board
 2026-08-19 09:49:38,891 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Read timed out. (read timeout=20)
 2026-08-19 09:49:38,892 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-19 09:52:11,162 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-19 09:52:11,163 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-19 09:52:12,392 [INFO] Found 13 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-08-19 09:52:12,392 [INFO] Downloading Supplementary%20Cause%20List%20-%2019.08.2026.pdf (supplementary)
+2026-08-19 09:52:12,709 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2019.08.2026.pdf
+2026-08-19 09:52:12,709 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2019.08.2026.pdf (supplementary)
+2026-08-19 09:52:13,009 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2019.08.2026.pdf
+2026-08-19 09:52:13,009 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2019.08.2026.pdf (supplementary)
+2026-08-19 09:52:13,281 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2019.08.2026.pdf
+2026-08-19 09:52:13,281 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-19 09:52:13,860 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-19 09:52:13,860 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-19 09:52:14,258 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-19 09:52:14,258 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-19 09:52:14,658 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-19 09:52:14,658 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-19 09:52:15,008 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-19 09:52:15,008 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-19 09:52:15,358 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-19 09:52:15,359 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-19 09:52:17,091 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-19 09:52:17,091 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-19 09:52:17,367 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-19 09:52:17,368 [INFO] Fetching live display board
+2026-08-19 09:52:38,399 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Read timed out. (read timeout=20)
+2026-08-19 09:52:38,400 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
