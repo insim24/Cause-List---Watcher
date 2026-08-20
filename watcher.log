@@ -1344,3 +1344,27 @@
 2026-08-19 13:08:16,973 [INFO] Fetching live display board
 2026-08-19 13:08:21,316 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "41", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "9", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "10", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "10", "item": "1", "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": []}}
 2026-08-19 13:08:21,316 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-20 06:01:51,971 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-20 06:01:51,971 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-20 06:01:53,211 [INFO] Found 12 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-08-20 06:01:53,211 [INFO] Downloading Supplementary%20Cause%20List%20-%2020.08.2026.pdf (supplementary)
+2026-08-20 06:01:53,727 [INFO] Supplementary%20Cause%20List%20-%2020.08.2026.pdf: 15 case row(s) read, 0 potential match(es)
+2026-08-20 06:01:53,727 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2020.08.2026.pdf (supplementary)
+2026-08-20 06:01:54,055 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2020.08.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-08-20 06:01:54,055 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-20 06:01:54,721 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-20 06:01:54,721 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-20 06:01:55,139 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-20 06:01:55,139 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-20 06:01:55,540 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-20 06:01:55,540 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-20 06:01:55,888 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-20 06:01:55,888 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-20 06:01:56,239 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-20 06:01:56,239 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-20 06:01:58,066 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-20 06:01:58,066 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-20 06:01:58,349 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-20 06:01:58,350 [INFO] Fetching live display board
+2026-08-20 06:01:59,788 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "53", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "8", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "3", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "13", "item": "16", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "30", "item": "1", "coram": "REGISTRAR JUDICIAL"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "The court proceedings will commence at 12 PM"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "59", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE RAJESH SEKHRI"}, {"court": "4", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE SANJAY PARIHAR"}, {"court": "6", "item": "2", "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "9", "item": "168", "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"}], "raw_status_rows": [], "messages": []}}
+2026-08-20 06:01:59,789 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

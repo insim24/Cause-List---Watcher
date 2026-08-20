@@ -128,5 +128,15 @@
     "hash": "0733034c9ef53a8cb253d6e17a51d22ef9c4ab4051fa6e92ffbc7dd02e74f219",
     "parser_version": "4-grouped-people",
     "last_seen": "2026-08-19T09:47:52.998658"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Aug/weeklycauselist_17082026/Supplementary%20Cause%20List%20-%2020.08.2026.pdf": {
+    "hash": "4365ae256667bd8e08ac6b670a76c61b5b598aac2f44c543ac6b68bea4296da1",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-08-20T06:01:53.539479"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Aug/weeklycauselist_17082026/Spl.Supplementary%20Cause%20List%20-%2020.08.2026.pdf": {
+    "hash": "174a76f6d2b5508d6b9dcc5ccb817292cec2f27ce8b753ee2ff9d9ddb65f98ba",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-08-20T06:01:54.012003"
   }
 }
