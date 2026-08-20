@@ -1368,3 +1368,29 @@
 2026-08-20 06:01:58,350 [INFO] Fetching live display board
 2026-08-20 06:01:59,788 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "53", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "8", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "3", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "13", "item": "16", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "30", "item": "1", "coram": "REGISTRAR JUDICIAL"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "The court proceedings will commence at 12 PM"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "59", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE RAJESH SEKHRI"}, {"court": "4", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE SANJAY PARIHAR"}, {"court": "6", "item": "2", "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "9", "item": "168", "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"}], "raw_status_rows": [], "messages": []}}
 2026-08-20 06:01:59,789 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-20 10:58:54,476 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-20 10:58:54,476 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-20 10:58:55,583 [INFO] Found 14 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-08-20 10:58:55,583 [INFO] Downloading Supplementary%20Cause%20List%20-%2020.08.2026.pdf (supplementary)
+2026-08-20 10:58:55,850 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2020.08.2026.pdf
+2026-08-20 10:58:55,850 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2020.08.2026.pdf (supplementary)
+2026-08-20 10:58:56,171 [INFO] Supplementary%20Cause%20List%20-1-%2020.08.2026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-08-20 10:58:56,171 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2020.08.2026.pdf (supplementary)
+2026-08-20 10:58:56,410 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2020.08.2026.pdf
+2026-08-20 10:58:56,410 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-20 10:58:56,900 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-20 10:58:56,900 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-20 10:58:57,200 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-20 10:58:57,200 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-20 10:58:57,500 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-20 10:58:57,500 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-20 10:58:57,800 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-20 10:58:57,800 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-20 10:58:58,100 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-20 10:58:58,100 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-20 10:58:59,591 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-20 10:58:59,591 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-20 10:58:59,830 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-20 10:58:59,831 [INFO] Fetching live display board
+2026-08-20 10:59:02,208 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "51", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "13", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "56", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Immediate presence of Ld Govt Adv (Mr Zahid Qais Noor) is required in the court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Sh.MK Bhardwaj ,Sh. Adarsh Sharma and Mr. Sachin Dogra  Advocates are required in court in item no.20"}]}}
+2026-08-20 10:59:02,209 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

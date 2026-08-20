@@ -4,63 +4,37 @@
     "courts": [
       {
         "court": "1",
-        "item": "53",
+        "item": "51",
         "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       },
       {
         "court": "5",
-        "item": "8",
+        "item": "13",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
       },
       {
         "court": "7",
-        "item": "3",
+        "item": "56",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "13",
-        "item": "16",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "30",
-        "item": "1",
-        "coram": "REGISTRAR JUDICIAL"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "8",
-        "text": "The court proceedings will commence at 12 PM"
+        "text": "Immediate presence of Ld Govt Adv (Mr Zahid Qais Noor) is required in the court"
       }
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "59",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "4",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      },
-      {
-        "court": "6",
-        "item": "2",
-        "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
-      },
-      {
-        "court": "9",
-        "item": "168",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "4",
+        "text": "Sh.MK Bhardwaj ,Sh. Adarsh Sharma and Mr. Sachin Dogra  Advocates are required in court in item no.20"
+      }
+    ]
   }
 }
