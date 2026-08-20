@@ -1420,3 +1420,27 @@
 2026-08-20 11:55:39,810 [INFO] Fetching live display board
 2026-08-20 11:55:42,162 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "51", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "13", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "15", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Immediate presence of Ld Govt Adv (Mr Zahid Qais Noor) is required in the court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Sh.MK Bhardwaj ,Sh. Adarsh Sharma and Mr. Sachin Dogra  Advocates are required in court in item no.20"}]}}
 2026-08-20 11:55:42,162 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-20 16:37:36,461 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-20 16:37:36,462 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-20 16:37:37,610 [INFO] Found 12 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-08-20 16:37:37,610 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-20 16:37:38,672 [INFO] Supplementary%20Cause%20List%20-%2021.08.2026.pdf: 104 case row(s) read, 0 potential match(es)
+2026-08-20 16:37:38,672 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-20 16:37:39,249 [INFO] Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf: 31 case row(s) read, 0 potential match(es)
+2026-08-20 16:37:39,249 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-20 16:37:39,737 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-20 16:37:39,738 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-20 16:37:40,037 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-20 16:37:40,037 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-20 16:37:40,387 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-20 16:37:40,388 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-20 16:37:40,688 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-20 16:37:40,688 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-20 16:37:40,988 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-20 16:37:40,988 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-20 16:37:42,505 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-20 16:37:42,505 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-20 16:37:42,749 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-20 16:37:42,750 [INFO] Fetching live display board
+2026-08-20 16:37:45,198 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "51", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "13", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Immediate presence of Ld Govt Adv (Mr Zahid Qais Noor) is required in the court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-08-20 16:37:45,199 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
