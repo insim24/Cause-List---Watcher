@@ -3,43 +3,32 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "10",
-        "coram": "HON'BLE  THE CHIEF JUSTICE (A)"
+        "court": "4",
+        "item": "1",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       },
       {
         "court": "5",
-        "item": "118",
+        "item": "127",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
       },
       {
         "court": "7",
-        "item": "1",
+        "item": "115",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       },
       {
-        "court": "8",
-        "item": "105",
-        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
         "court": "11",
-        "item": "73",
+        "item": "50",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "13",
-        "item": "96",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "30",
-        "item": "8",
-        "coram": "REGISTRAR JUDICIAL"
       }
     ],
     "raw_status_rows": [],
     "messages": [
+      {
+        "id": "8",
+        "text": "Division matters will be taken, rest of the single matters adjourned."
+      },
       {
         "id": "7",
         "text": "Immediate presence of Mr.  (Waseem Gul, GA) is required in court."
@@ -50,32 +39,21 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "16",
-        "coram": "HON'BLE  THE ACTING CHIEF JUSTICE"
-      },
-      {
-        "court": "3",
-        "item": "56",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "4",
-        "item": "7",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE MA CHOWDHARY"
-      },
-      {
-        "court": "9",
-        "item": "176",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "76",
-        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
+        "court": "12",
+        "item": "21",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "9",
+        "text": "32,49,53,66,74,82,104,120,123,145,147"
+      },
+      {
+        "id": "12",
+        "text": "Adv Vipan Gandotra is required in court"
+      }
+    ]
   }
 }

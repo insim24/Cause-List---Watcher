@@ -1492,3 +1492,35 @@
 2026-08-21 06:03:47,577 [INFO] Fetching live display board
 2026-08-21 06:03:49,772 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "10", "coram": "HON'BLE  THE CHIEF JUSTICE (A)"}, {"court": "5", "item": "118", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "1", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "105", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "11", "item": "73", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "13", "item": "96", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "30", "item": "8", "coram": "REGISTRAR JUDICIAL"}], "raw_status_rows": [], "messages": [{"id": "7", "text": "Immediate presence of Mr.  (Waseem Gul, GA) is required in court."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "1", "item": "16", "coram": "HON'BLE  THE ACTING CHIEF JUSTICE"}, {"court": "3", "item": "56", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "4", "item": "7", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "9", "item": "176", "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"}, {"court": "10", "item": "76", "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": []}}
 2026-08-21 06:03:49,773 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-21 10:59:26,411 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-21 10:59:26,411 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-21 10:59:27,617 [INFO] Found 17 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-08-21 10:59:27,618 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-21 10:59:27,933 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-21 10:59:27,933 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2021.08.2026.pdf (supplementary)
+2026-08-21 10:59:28,364 [INFO] Supplementary%20Cause%20List%20-2-%2021.08.2026.pdf: 16 case row(s) read, 0 potential match(es)
+2026-08-21 10:59:28,364 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2021.08.2026.pdf (supplementary)
+2026-08-21 10:59:28,723 [INFO] Supplementary%20Cause%20List%20-3-%2021.08.2026.pdf: 13 case row(s) read, 0 potential match(es)
+2026-08-21 10:59:28,723 [INFO] Downloading Supplementary%20Cause%20List%20-4-%2021.08.2026.pdf (supplementary)
+2026-08-21 10:59:28,985 [INFO] No case entries found in Supplementary%20Cause%20List%20-4-%2021.08.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-08-21 10:59:28,985 [INFO] Downloading Supplementary%20Cause%20List%20-5-%2021.08.2026.pdf (supplementary)
+2026-08-21 10:59:29,257 [INFO] No case entries found in Supplementary%20Cause%20List%20-5-%2021.08.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-08-21 10:59:29,257 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-21 10:59:29,505 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-21 10:59:29,505 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-21 10:59:29,883 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-21 10:59:29,883 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-21 10:59:30,284 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-21 10:59:30,284 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-21 10:59:30,583 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-21 10:59:30,583 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-21 10:59:30,833 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-21 10:59:30,833 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-21 10:59:31,133 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-21 10:59:31,134 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-21 10:59:32,611 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-21 10:59:32,611 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-21 10:59:32,860 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-21 10:59:32,861 [INFO] Fetching live display board
+2026-08-21 10:59:39,398 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "127", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "115", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "11", "item": "50", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Division matters will be taken, rest of the single matters adjourned."}, {"id": "7", "text": "Immediate presence of Mr.  (Waseem Gul, GA) is required in court."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "12", "item": "21", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "9", "text": "32,49,53,66,74,82,104,120,123,145,147"}, {"id": "12", "text": "Adv Vipan Gandotra is required in court"}]}}
+2026-08-21 10:59:39,399 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
