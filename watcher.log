@@ -1444,3 +1444,27 @@
 2026-08-20 16:37:42,750 [INFO] Fetching live display board
 2026-08-20 16:37:45,198 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "51", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "13", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Immediate presence of Ld Govt Adv (Mr Zahid Qais Noor) is required in the court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-08-20 16:37:45,199 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-21 05:53:28,728 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-21 05:53:28,728 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-21 05:53:29,900 [INFO] Found 13 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-08-21 05:53:29,900 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-21 05:53:30,214 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-21 05:53:30,214 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-21 05:53:30,514 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-21 05:53:30,514 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-21 05:53:31,022 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-21 05:53:31,022 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-21 05:53:31,366 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-21 05:53:31,366 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-21 05:53:31,764 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-21 05:53:31,764 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-21 05:53:32,113 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-21 05:53:32,113 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-21 05:53:32,468 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-21 05:53:32,468 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-21 05:53:34,171 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-21 05:53:34,171 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-21 05:53:34,426 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-21 05:53:34,428 [INFO] Fetching live display board
+2026-08-21 05:53:36,237 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "10", "coram": "HON'BLE  THE CHIEF JUSTICE (A)"}, {"court": "5", "item": "116", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "8", "item": "101", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "11", "item": "71", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "13", "item": "103", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "30", "item": "7", "coram": "REGISTRAR JUDICIAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "1", "item": "9", "coram": "HON'BLE  THE ACTING CHIEF JUSTICE"}, {"court": "3", "item": "65", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "4", "item": "7", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "9", "item": "169", "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"}, {"court": "10", "item": "76", "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"}, {"court": "12", "item": "257", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": []}}
+2026-08-21 05:53:36,238 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

@@ -4,26 +4,72 @@
     "courts": [
       {
         "court": "1",
-        "item": "51",
-        "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+        "item": "10",
+        "coram": "HON'BLE  THE CHIEF JUSTICE (A)"
       },
       {
         "court": "5",
-        "item": "13",
+        "item": "116",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "8",
+        "item": "101",
+        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
+      },
+      {
+        "court": "11",
+        "item": "71",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "13",
+        "item": "103",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      },
+      {
+        "court": "30",
+        "item": "7",
+        "coram": "REGISTRAR JUDICIAL"
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "Immediate presence of Ld Govt Adv (Mr Zahid Qais Noor) is required in the court"
-      }
-    ]
+    "messages": []
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "1",
+        "item": "9",
+        "coram": "HON'BLE  THE ACTING CHIEF JUSTICE"
+      },
+      {
+        "court": "3",
+        "item": "65",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "4",
+        "item": "7",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE MA CHOWDHARY"
+      },
+      {
+        "court": "9",
+        "item": "169",
+        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
+      },
+      {
+        "court": "10",
+        "item": "76",
+        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "12",
+        "item": "257",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      }
+    ],
     "raw_status_rows": [],
     "messages": []
   }
