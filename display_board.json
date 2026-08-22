@@ -1,59 +1,19 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "4",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "5",
-        "item": "127",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "115",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "11",
-        "item": "50",
-        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "8",
         "text": "Division matters will be taken, rest of the single matters adjourned."
-      },
-      {
-        "id": "7",
-        "text": "Immediate presence of Mr.  (Waseem Gul, GA) is required in court."
       }
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "12",
-        "item": "21",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "9",
-        "text": "32,49,53,66,74,82,104,120,123,145,147"
-      },
-      {
-        "id": "12",
-        "text": "Adv Vipan Gandotra is required in court"
-      }
-    ]
+    "messages": []
   }
 }
