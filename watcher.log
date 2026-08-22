@@ -1556,3 +1556,35 @@
 2026-08-22 05:58:28,313 [INFO] Fetching live display board
 2026-08-22 05:58:35,046 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Division matters will be taken, rest of the single matters adjourned."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-08-22 05:58:35,047 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-22 10:02:07,414 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-22 10:02:07,414 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-22 10:02:08,617 [INFO] Found 17 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-08-22 10:02:08,617 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-22 10:02:08,945 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-22 10:02:08,945 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2021.08.2026.pdf (supplementary)
+2026-08-22 10:02:09,244 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2021.08.2026.pdf
+2026-08-22 10:02:09,245 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2021.08.2026.pdf (supplementary)
+2026-08-22 10:02:09,513 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2021.08.2026.pdf
+2026-08-22 10:02:09,513 [INFO] Downloading Supplementary%20Cause%20List%20-4-%2021.08.2026.pdf (supplementary)
+2026-08-22 10:02:09,781 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-4-%2021.08.2026.pdf
+2026-08-22 10:02:09,781 [INFO] Downloading Supplementary%20Cause%20List%20-5-%2021.08.2026.pdf (supplementary)
+2026-08-22 10:02:10,049 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-5-%2021.08.2026.pdf
+2026-08-22 10:02:10,049 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-22 10:02:10,316 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-22 10:02:10,316 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-22 10:02:10,745 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-22 10:02:10,745 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-22 10:02:11,145 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-22 10:02:11,145 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-22 10:02:11,444 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-22 10:02:11,445 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-22 10:02:11,744 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-22 10:02:11,744 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-22 10:02:12,044 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-22 10:02:12,045 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-22 10:02:13,665 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-22 10:02:13,665 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-22 10:02:13,933 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-22 10:02:13,934 [INFO] Fetching live display board
+2026-08-22 10:02:16,129 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Division matters will be taken, rest of the single matters adjourned."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-08-22 10:02:16,130 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
