@@ -1652,3 +1652,35 @@
 2026-08-22 15:07:00,615 [INFO] Fetching live display board
 2026-08-22 15:07:02,811 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Division matters will be taken, rest of the single matters adjourned."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-08-22 15:07:02,812 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-24 08:03:34,606 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-24 08:03:34,606 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-24 08:03:35,787 [INFO] Found 17 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-08-24 08:03:35,787 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-24 08:03:36,102 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-24 08:03:36,103 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2021.08.2026.pdf (supplementary)
+2026-08-24 08:03:36,404 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2021.08.2026.pdf
+2026-08-24 08:03:36,404 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2021.08.2026.pdf (supplementary)
+2026-08-24 08:03:36,660 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2021.08.2026.pdf
+2026-08-24 08:03:36,660 [INFO] Downloading Supplementary%20Cause%20List%20-4-%2021.08.2026.pdf (supplementary)
+2026-08-24 08:03:36,915 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-4-%2021.08.2026.pdf
+2026-08-24 08:03:36,915 [INFO] Downloading Supplementary%20Cause%20List%20-5-%2021.08.2026.pdf (supplementary)
+2026-08-24 08:03:37,169 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-5-%2021.08.2026.pdf
+2026-08-24 08:03:37,169 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf (supplementary)
+2026-08-24 08:03:37,453 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2021.08.2026.pdf
+2026-08-24 08:03:37,454 [INFO] Downloading causelist_17082026.pdf (daywise)
+2026-08-24 08:03:38,000 [INFO] Unchanged since last run, skipping re-parse: causelist_17082026.pdf
+2026-08-24 08:03:38,000 [INFO] Downloading causelist_18082026.pdf (daywise)
+2026-08-24 08:03:38,453 [INFO] Unchanged since last run, skipping re-parse: causelist_18082026.pdf
+2026-08-24 08:03:38,453 [INFO] Downloading causelist_19082026.pdf (daywise)
+2026-08-24 08:03:38,852 [INFO] Unchanged since last run, skipping re-parse: causelist_19082026.pdf
+2026-08-24 08:03:38,852 [INFO] Downloading causelist_20082026.pdf (daywise)
+2026-08-24 08:03:39,202 [INFO] Unchanged since last run, skipping re-parse: causelist_20082026.pdf
+2026-08-24 08:03:39,202 [INFO] Downloading causelist_21082026.pdf (daywise)
+2026-08-24 08:03:39,552 [INFO] Unchanged since last run, skipping re-parse: causelist_21082026.pdf
+2026-08-24 08:03:39,553 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-24 08:03:41,220 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-24 08:03:41,220 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-24 08:03:41,473 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-24 08:03:41,474 [INFO] Fetching live display board
+2026-08-24 08:04:02,045 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7f8092fbab50>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
+2026-08-24 08:04:02,047 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
