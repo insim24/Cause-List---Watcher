@@ -1684,3 +1684,23 @@
 2026-08-24 08:03:41,474 [INFO] Fetching live display board
 2026-08-24 08:04:02,045 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7f8092fbab50>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
 2026-08-24 08:04:02,047 [INFO] Added 0 new match(es). Total saved: 25. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-24 11:27:33,768 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-24 11:27:33,768 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-24 11:27:39,515 [INFO] Found 7 relevant causelist link(s) on the page (4 after filtering by list_types)
+2026-08-24 11:27:39,516 [INFO] Downloading causelist_27082026.pdf (daywise)
+2026-08-24 11:27:42,721 [INFO] causelist_27082026.pdf: 395 case row(s) read, 2 potential match(es)
+2026-08-24 11:27:42,721 [INFO] Downloading causelist_29082026.pdf (daywise)
+2026-08-24 11:27:45,162 [INFO] causelist_29082026.pdf: 389 case row(s) read, 1 potential match(es)
+2026-08-24 11:27:45,162 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-24 11:27:52,170 [INFO] entirelist_sgr.pdf: 784 case row(s) read, 3 potential match(es)
+2026-08-24 11:27:52,170 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-24 11:27:53,374 [INFO] rjcourtsgr.pdf: 9 case row(s) read, 0 potential match(es)
+2026-08-24 11:27:53,375 [INFO] Fetching live display board
+2026-08-24 11:28:18,692 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7fd464cbe790>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
+2026-08-24 11:28:18,693 [INFO] Added 3 new match(es). Total saved: 28. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-27 | Court 5 | Sr 80 | CrlA(S) 6/2023 CrlM(1582/2023) CrlM(900/2023)
+2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-27 | Court 13 | Sr 3 | CRM(M) 463/2021 CrlM(1492/2021) c/w i)CRM(M) 174/2022 CrlM(1271/2023) CrlM(569/2022)
+2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-29 | Court 8 | Sr 2 | CM(4186/2026) IN OWP 1417/2018 C/DELAY CM(4187/2026)
+2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-27 | Court 5 | Sr 80 | CrlA(S) 6/2023 CrlM(1582/2023) CrlM(900/2023)
+2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-27 | Court 13 | Sr 3 | CRM(M) 463/2021 CrlM(1492/2021) c/w i)CRM(M) 174/2022 CrlM(1271/2023) CrlM(569/2022)
+2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-29 | Court 8 | Sr 2 | CM(4186/2026) IN OWP 1417/2018 C/DELAY CM(4187/2026)
