@@ -1704,3 +1704,17 @@
 2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-27 | Court 5 | Sr 80 | CrlA(S) 6/2023 CrlM(1582/2023) CrlM(900/2023)
 2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-27 | Court 13 | Sr 3 | CRM(M) 463/2021 CrlM(1492/2021) c/w i)CRM(M) 174/2022 CrlM(1271/2023) CrlM(569/2022)
 2026-08-24 11:28:18,693 [INFO]   -> [Syed Manzoor] 2026-08-29 | Court 8 | Sr 2 | CM(4186/2026) IN OWP 1417/2018 C/DELAY CM(4187/2026)
+2026-08-25 06:03:26,608 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-25 06:03:26,608 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-25 06:03:30,059 [INFO] Found 7 relevant causelist link(s) on the page (4 after filtering by list_types)
+2026-08-25 06:03:30,059 [INFO] Downloading causelist_27082026.pdf (daywise)
+2026-08-25 06:03:30,617 [INFO] Unchanged since last run, skipping re-parse: causelist_27082026.pdf
+2026-08-25 06:03:30,617 [INFO] Downloading causelist_29082026.pdf (daywise)
+2026-08-25 06:03:30,974 [INFO] Unchanged since last run, skipping re-parse: causelist_29082026.pdf
+2026-08-25 06:03:30,974 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-25 06:03:32,404 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-25 06:03:32,404 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-25 06:03:32,646 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-25 06:03:32,647 [INFO] Fetching live display board
+2026-08-25 06:04:05,706 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7fc9e1219e50>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
+2026-08-25 06:04:05,708 [INFO] Added 0 new match(es). Total saved: 28. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
