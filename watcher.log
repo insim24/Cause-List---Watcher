@@ -1718,3 +1718,22 @@
 2026-08-25 06:03:32,647 [INFO] Fetching live display board
 2026-08-25 06:04:05,706 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7fc9e1219e50>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
 2026-08-25 06:04:05,708 [INFO] Added 0 new match(es). Total saved: 28. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-26 06:05:53,528 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-26 06:05:53,528 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-26 06:05:57,448 [INFO] Found 9 relevant causelist link(s) on the page (6 after filtering by list_types)
+2026-08-26 06:05:57,448 [INFO] Downloading Supplementary%20Cause%20List%20-%2027.08.2026.pdf (supplementary)
+2026-08-26 06:05:58,203 [INFO] Supplementary%20Cause%20List%20-%2027.08.2026.pdf: 58 case row(s) read, 1 potential match(es)
+2026-08-26 06:05:58,203 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2027.08.2026.pdf (supplementary)
+2026-08-26 06:05:58,531 [INFO] Spl.Supplementary%20Cause%20List%20-%2027.08.2026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-08-26 06:05:58,532 [INFO] Downloading causelist_27082026.pdf (daywise)
+2026-08-26 06:05:59,112 [INFO] Unchanged since last run, skipping re-parse: causelist_27082026.pdf
+2026-08-26 06:05:59,112 [INFO] Downloading causelist_29082026.pdf (daywise)
+2026-08-26 06:05:59,512 [INFO] Unchanged since last run, skipping re-parse: causelist_29082026.pdf
+2026-08-26 06:05:59,512 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-26 06:06:00,958 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-26 06:06:00,958 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-26 06:06:01,234 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-26 06:06:01,235 [INFO] Fetching live display board
+2026-08-26 06:06:21,780 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7f9fafb04190>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
+2026-08-26 06:06:21,782 [INFO] Added 1 new match(es). Total saved: 29. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-26 06:06:21,782 [INFO]   -> [Saqib Fayaz] 2026-08-27 | Court 8 | Sr 74 | WP(C) 2085/2026 CM(5637/2026)
