@@ -1755,3 +1755,21 @@
 2026-08-28 21:21:09,065 [INFO] Fetching live display board
 2026-08-28 21:21:10,287 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-08-28 21:21:10,288 [INFO] Added 0 new match(es). Total saved: 29. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-28 21:48:56,544 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-28 21:48:56,544 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-28 21:48:57,599 [INFO] Found 9 relevant causelist link(s) on the page (6 after filtering by list_types)
+2026-08-28 21:48:57,600 [INFO] Downloading Supplementary%20Cause%20List%20-%2029.08.2026.pdf (supplementary)
+2026-08-28 21:48:57,962 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2029.08.2026.pdf
+2026-08-28 21:48:57,963 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2029.08.2026.pdf (supplementary)
+2026-08-28 21:48:58,191 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2029.08.2026.pdf
+2026-08-28 21:48:58,191 [INFO] Downloading causelist_27082026.pdf (daywise)
+2026-08-28 21:48:58,958 [INFO] Unchanged since last run, skipping re-parse: causelist_27082026.pdf
+2026-08-28 21:48:58,958 [INFO] Downloading causelist_29082026.pdf (daywise)
+2026-08-28 21:48:59,709 [INFO] Unchanged since last run, skipping re-parse: causelist_29082026.pdf
+2026-08-28 21:48:59,709 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-28 21:49:04,438 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-28 21:49:04,438 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-28 21:49:04,713 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-28 21:49:04,714 [INFO] Fetching live display board
+2026-08-28 21:49:06,027 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-08-28 21:49:06,028 [INFO] Added 0 new match(es). Total saved: 29. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
