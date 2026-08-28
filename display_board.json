@@ -3,12 +3,7 @@
     "idle": true,
     "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "Division matters will be taken, rest of the single matters adjourned."
-      }
-    ]
+    "messages": []
   },
   "Jammu Wing": {
     "idle": true,
