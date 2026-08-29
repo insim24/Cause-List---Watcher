@@ -1791,3 +1791,28 @@
 2026-08-29 05:05:43,294 [INFO] Fetching live display board
 2026-08-29 05:05:44,406 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-08-29 05:05:44,407 [INFO] Added 0 new match(es). Total saved: 29. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-29 09:36:13,769 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-29 09:36:13,769 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-29 09:36:14,896 [INFO] Found 13 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-08-29 09:36:14,896 [INFO] Downloading Supplementary%20Cause%20List%20-%2029.08.2026.pdf (supplementary)
+2026-08-29 09:36:15,213 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2029.08.2026.pdf
+2026-08-29 09:36:15,213 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2029.08.2026.pdf (supplementary)
+2026-08-29 09:36:15,727 [INFO] Supplementary%20Cause%20List%20-2-%2029.08.2026.pdf: 18 case row(s) read, 1 potential match(es)
+2026-08-29 09:36:15,728 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2029.08.2026.pdf (supplementary)
+2026-08-29 09:36:16,079 [INFO] Supplementary%20Cause%20List%20-3-%2029.08.2026.pdf: 6 case row(s) read, 0 potential match(es)
+2026-08-29 09:36:16,080 [INFO] Downloading Supplementary%20Cause%20List%20-4-%2029.08.2026.pdf (supplementary)
+2026-08-29 09:36:16,335 [INFO] No case entries found in Supplementary%20Cause%20List%20-4-%2029.08.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-08-29 09:36:16,335 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2029.08.2026.pdf (supplementary)
+2026-08-29 09:36:16,613 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2029.08.2026.pdf
+2026-08-29 09:36:16,613 [INFO] Downloading causelist_27082026.pdf (daywise)
+2026-08-29 09:36:17,648 [INFO] Unchanged since last run, skipping re-parse: causelist_27082026.pdf
+2026-08-29 09:36:17,648 [INFO] Downloading causelist_29082026.pdf (daywise)
+2026-08-29 09:36:18,358 [INFO] Unchanged since last run, skipping re-parse: causelist_29082026.pdf
+2026-08-29 09:36:18,358 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-29 09:36:23,035 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-29 09:36:23,035 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-29 09:36:23,274 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-29 09:36:23,275 [INFO] Fetching live display board
+2026-08-29 09:36:26,972 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "20", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "79", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "13", "item": "96", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "7", "text": "Passed Over Matters: 66,71,75,76,79"}, {"id": "8", "text": "Immediate presence of Ld DyAg (Mr Bikramdeep singh ) is required in the court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "4", "item": "19", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "5", "item": "2", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": []}}
+2026-08-29 09:36:26,973 [INFO] Added 1 new match(es). Total saved: 30. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-29 09:36:26,973 [INFO]   -> [Saqib Fayaz] 2026-08-29 | Court 8 | Sr 69 | WP(C) 2085/2026 CM(5637/2026) THE HIGH COURT SUPPLEMENTARY-2 a) BEFORE NOTICE b) AFTER NOTICE MATTERS

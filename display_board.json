@@ -1,13 +1,49 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "5",
+        "item": "20",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "79",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "13",
+        "item": "96",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      }
+    ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "7",
+        "text": "Passed Over Matters: 66,71,75,76,79"
+      },
+      {
+        "id": "8",
+        "text": "Immediate presence of Ld DyAg (Mr Bikramdeep singh ) is required in the court"
+      }
+    ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "4",
+        "item": "19",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "5",
+        "item": "2",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      }
+    ],
     "raw_status_rows": [],
     "messages": []
   }
