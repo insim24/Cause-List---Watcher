@@ -1816,3 +1816,39 @@
 2026-08-29 09:36:26,972 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "20", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "7", "item": "79", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "13", "item": "96", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "7", "text": "Passed Over Matters: 66,71,75,76,79"}, {"id": "8", "text": "Immediate presence of Ld DyAg (Mr Bikramdeep singh ) is required in the court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "4", "item": "19", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "5", "item": "2", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": []}}
 2026-08-29 09:36:26,973 [INFO] Added 1 new match(es). Total saved: 30. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-08-29 09:36:26,973 [INFO]   -> [Saqib Fayaz] 2026-08-29 | Court 8 | Sr 69 | WP(C) 2085/2026 CM(5637/2026) THE HIGH COURT SUPPLEMENTARY-2 a) BEFORE NOTICE b) AFTER NOTICE MATTERS
+2026-08-29 13:06:25,424 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-29 13:06:25,425 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-29 13:06:26,502 [INFO] Found 10 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-08-29 13:06:26,502 [INFO] Downloading Supplementary%20Cause%20List%20-%2031.08.2026.pdf (supplementary)
+2026-08-29 13:06:26,910 [INFO] Supplementary%20Cause%20List%20-%2031.08.2026.pdf: 5 case row(s) read, 0 potential match(es)
+2026-08-29 13:06:26,911 [INFO] Downloading causelist_31082026.pdf (daywise)
+2026-08-29 13:06:29,706 [INFO] causelist_31082026.pdf: 329 case row(s) read, 1 potential match(es)
+2026-08-29 13:06:29,706 [INFO] Downloading causelist_01092026.pdf (daywise)
+2026-08-29 13:06:34,639 [INFO] causelist_01092026.pdf: 530 case row(s) read, 2 potential match(es)
+2026-08-29 13:06:34,639 [INFO] Downloading causelist_02092026.pdf (daywise)
+2026-08-29 13:06:40,488 [INFO] causelist_02092026.pdf: 611 case row(s) read, 3 potential match(es)
+2026-08-29 13:06:40,488 [INFO] Downloading causelist_03092026.pdf (daywise)
+2026-08-29 13:06:45,033 [INFO] causelist_03092026.pdf: 353 case row(s) read, 2 potential match(es)
+2026-08-29 13:06:45,033 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-29 13:07:01,757 [INFO] entirelist_sgr.pdf: 1823 case row(s) read, 8 potential match(es)
+2026-08-29 13:07:01,757 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-29 13:07:02,661 [INFO] rjcourtsgr.pdf: 16 case row(s) read, 0 potential match(es)
+2026-08-29 13:07:02,663 [INFO] Fetching live display board
+2026-08-29 13:07:06,238 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Immediate presence of Ld DyAg (Mr Bikramdeep singh ) is required in the court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "9", "text": "Mentioned matters-46,55,56,96,120,138"}, {"id": "6", "text": "PD SINGH( DYAG0 IS REQUIRED"}]}}
+2026-08-29 13:07:06,239 [INFO] Added 8 new match(es). Total saved: 38. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Manzoor] 2026-08-31 | Court 12 | Sr 7 | CM(4186/2026) IN OWP 1417/2018 C/DELAY CM(4187/2026)
+2026-08-29 13:07:06,239 [INFO]   -> [Owais Ashraf] 2026-09-01 | Court 10 | Sr 15 | CM(M) 161/2026 CM(2889/2026) Caveat 312/2026
+2026-08-29 13:07:06,239 [INFO]   -> [Saqib Fayaz] 2026-09-01 | Court 12 | Sr 127 | CRM(M) 453/2025 CrlM(1086/2025)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-02 | Court 4 | Sr 147 | CRM(M) 153/2026 CrlM(359/2026)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf] 2026-09-02 | Court 6 | Sr 72 | WP(C) 1385/2025 CM(3641/2025) CM(4854/2026)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-09-02 | Court 6 | Sr 102 | WP(C) 876/2026
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-03 | Court 1 | Sr 50 | LPA 329/2019 in[OWP 623/2011] CM(2646/2025) CM(7685/2019) c/w COURT NO. : 1 i)LPA 136/2019 CM(1781/2023) CM(1783/2023) CM(4329/2019) ii)LPA 211/2019 CM(3297/2022) CM(5271/2019) iii)LPA 268/2019 CM(6764/2019)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Manzoor] 2026-09-03 | Court 4 | Sr 71 | OWP 31/2015 IA(1/2015[53/2015]) CM(2051/2025) CM(2054/2025) CM(7179/2024)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Manzoor] 2026-08-31 | Court 12 | Sr 7 | CM(4186/2026) IN OWP 1417/2018 C/DELAY CM(4187/2026)
+2026-08-29 13:07:06,239 [INFO]   -> [Owais Ashraf] 2026-09-01 | Court 10 | Sr 15 | CM(M) 161/2026 CM(2889/2026) Caveat 312/2026
+2026-08-29 13:07:06,239 [INFO]   -> [Saqib Fayaz] 2026-09-01 | Court 12 | Sr 127 | CRM(M) 453/2025 CrlM(1086/2025)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-02 | Court 4 | Sr 147 | CRM(M) 153/2026 CrlM(359/2026)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf] 2026-09-02 | Court 6 | Sr 72 | WP(C) 1385/2025 CM(3641/2025) CM(4854/2026)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-09-02 | Court 6 | Sr 102 | WP(C) 876/2026
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-03 | Court 1 | Sr 50 | LPA 329/2019 in[OWP 623/2011] CM(2646/2025) CM(7685/2019) c/w COURT NO. : 1 i)LPA 136/2019 CM(1781/2023) CM(1783/2023) CM(4329/2019) ii)LPA 211/2019 CM(3297/2022) CM(5271/2019) iii)LPA 268/2019 CM(6764/2019)
+2026-08-29 13:07:06,239 [INFO]   -> [Syed Manzoor] 2026-09-03 | Court 4 | Sr 71 | OWP 31/2015 IA(1/2015[53/2015]) CM(2051/2025) CM(2054/2025) CM(7179/2024)
