@@ -1852,3 +1852,23 @@
 2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-09-02 | Court 6 | Sr 102 | WP(C) 876/2026
 2026-08-29 13:07:06,239 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-03 | Court 1 | Sr 50 | LPA 329/2019 in[OWP 623/2011] CM(2646/2025) CM(7685/2019) c/w COURT NO. : 1 i)LPA 136/2019 CM(1781/2023) CM(1783/2023) CM(4329/2019) ii)LPA 211/2019 CM(3297/2022) CM(5271/2019) iii)LPA 268/2019 CM(6764/2019)
 2026-08-29 13:07:06,239 [INFO]   -> [Syed Manzoor] 2026-09-03 | Court 4 | Sr 71 | OWP 31/2015 IA(1/2015[53/2015]) CM(2051/2025) CM(2054/2025) CM(7179/2024)
+2026-08-31 05:06:00,661 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-08-31 05:06:00,662 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-08-31 05:06:01,857 [INFO] Found 10 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-08-31 05:06:01,857 [INFO] Downloading Supplementary%20Cause%20List%20-%2031.08.2026.pdf (supplementary)
+2026-08-31 05:06:02,125 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2031.08.2026.pdf
+2026-08-31 05:06:02,125 [INFO] Downloading causelist_31082026.pdf (daywise)
+2026-08-31 05:06:02,654 [INFO] Unchanged since last run, skipping re-parse: causelist_31082026.pdf
+2026-08-31 05:06:02,654 [INFO] Downloading causelist_01092026.pdf (daywise)
+2026-08-31 05:06:03,184 [INFO] Unchanged since last run, skipping re-parse: causelist_01092026.pdf
+2026-08-31 05:06:03,184 [INFO] Downloading causelist_02092026.pdf (daywise)
+2026-08-31 05:06:05,016 [INFO] Unchanged since last run, skipping re-parse: causelist_02092026.pdf
+2026-08-31 05:06:05,016 [INFO] Downloading causelist_03092026.pdf (daywise)
+2026-08-31 05:06:05,700 [INFO] Unchanged since last run, skipping re-parse: causelist_03092026.pdf
+2026-08-31 05:06:05,700 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-08-31 05:06:10,466 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-08-31 05:06:10,466 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-08-31 05:06:10,750 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-08-31 05:06:10,752 [INFO] Fetching live display board
+2026-08-31 05:06:12,131 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "45", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "9", "text": "Mentioned matters-46,55,56,96,120,138"}, {"id": "6", "text": "PD SINGH( DYAG0 IS REQUIRED"}]}}
+2026-08-31 05:06:12,132 [INFO] Added 0 new match(es). Total saved: 38. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

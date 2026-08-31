@@ -1,14 +1,15 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": [
+    "idle": false,
+    "courts": [
       {
-        "id": "8",
-        "text": "Immediate presence of Ld DyAg (Mr Bikramdeep singh ) is required in the court"
+        "court": "1",
+        "item": "45",
+        "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
-    ]
+    ],
+    "raw_status_rows": [],
+    "messages": []
   },
   "Jammu Wing": {
     "idle": true,
