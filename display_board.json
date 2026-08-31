@@ -4,59 +4,54 @@
     "courts": [
       {
         "court": "1",
-        "item": "26",
+        "item": "36",
         "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       },
       {
         "court": "4",
-        "item": "36",
+        "item": "31",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
         "court": "6",
-        "item": "17",
+        "item": "6",
         "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
       },
       {
         "court": "10",
-        "item": "52",
+        "item": "64",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
       },
       {
         "court": "12",
-        "item": "34",
+        "item": "40",
         "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "6",
+        "text": "Immediate presence of Mr.  (hakeem aman ali govt advocate) is required in court"
+      }
+    ]
   },
   "Jammu Wing": {
     "idle": false,
     "courts": [
       {
-        "court": "3",
-        "item": "16",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
         "court": "5",
-        "item": "99",
+        "item": "33",
         "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
       },
       {
         "court": "7",
-        "item": "15",
+        "item": "55",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       },
       {
-        "court": "8",
-        "item": "45",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
         "court": "9",
-        "item": "31",
+        "item": "22",
         "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
       }
     ],
