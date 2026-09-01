@@ -1,55 +1,18 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "10",
-        "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "6",
-        "item": "4",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      },
-      {
-        "court": "10",
-        "item": "34",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "12",
-        "item": "178",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "6",
+        "text": "Immediate presence of (Mr. mir majid bashir advocate ) is required in court for serial no 67"
+      }
+    ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "5",
-        "item": "18",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "8",
-        "item": "53",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
-        "court": "9",
-        "item": "44",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {

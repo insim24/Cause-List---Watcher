@@ -1983,3 +1983,25 @@
 2026-09-01 09:41:24,925 [INFO] Fetching live display board
 2026-09-01 09:41:27,783 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "10", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "6", "item": "4", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "10", "item": "34", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "12", "item": "178", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "5", "item": "18", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "1", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "53", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "9", "item": "44", "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Today,s Mentioned matters , 31,92,102,108,115,123,142,144,147,148,149 . To be taken up at 3.30 PM"}]}}
 2026-09-01 09:41:27,786 [INFO] Added 0 new match(es). Total saved: 39. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-01 19:12:00,969 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-01 19:12:00,969 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-01 19:12:02,124 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-09-01 19:12:02,124 [INFO] Downloading Supplementary%20Cause%20List%20-%2002.09.2026.pdf (supplementary)
+2026-09-01 19:12:02,699 [INFO] Supplementary%20Cause%20List%20-%2002.09.2026.pdf: 51 case row(s) read, 0 potential match(es)
+2026-09-01 19:12:02,699 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2002.09.2026.pdf (supplementary)
+2026-09-01 19:12:02,964 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2002.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-01 19:12:02,964 [INFO] Downloading causelist_31082026.pdf (daywise)
+2026-09-01 19:12:03,372 [INFO] Unchanged since last run, skipping re-parse: causelist_31082026.pdf
+2026-09-01 19:12:03,372 [INFO] Downloading causelist_01092026.pdf (daywise)
+2026-09-01 19:12:03,914 [INFO] Unchanged since last run, skipping re-parse: causelist_01092026.pdf
+2026-09-01 19:12:03,914 [INFO] Downloading causelist_02092026.pdf (daywise)
+2026-09-01 19:12:04,272 [INFO] Unchanged since last run, skipping re-parse: causelist_02092026.pdf
+2026-09-01 19:12:04,272 [INFO] Downloading causelist_03092026.pdf (daywise)
+2026-09-01 19:12:04,522 [INFO] Unchanged since last run, skipping re-parse: causelist_03092026.pdf
+2026-09-01 19:12:04,522 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-01 19:12:05,846 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-01 19:12:05,846 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-01 19:12:06,091 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-01 19:12:06,093 [INFO] Fetching live display board
+2026-09-01 19:12:07,475 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "6", "text": "Immediate presence of (Mr. mir majid bashir advocate ) is required in court for serial no 67"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Today,s Mentioned matters , 31,92,102,108,115,123,142,144,147,148,149 . To be taken up at 3.30 PM"}]}}
+2026-09-01 19:12:07,475 [INFO] Added 0 new match(es). Total saved: 39. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
