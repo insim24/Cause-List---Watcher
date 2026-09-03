@@ -1,7 +1,28 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "4",
+        "item": "5",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "6",
+        "item": "2",
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+      },
+      {
+        "court": "10",
+        "item": "8",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "12",
+        "item": "3",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
@@ -14,25 +35,35 @@
     "idle": false,
     "courts": [
       {
-        "court": "4",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR.  JUSTICE SANJAY DHAR"
+        "court": "5",
+        "item": "11",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
       },
       {
-        "court": "12",
+        "court": "7",
+        "item": "3",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
         "item": "1",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      },
+      {
+        "court": "9",
+        "item": "4",
+        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "9",
-        "text": "Mentioned matters---88,92,94,99,100,107,109,117,119,133,136,138,144,153,161"
+        "text": "*"
       },
       {
         "id": "8",
-        "text": "Today ,s Mentioned matters ,9, 31,40,72,100,102,111,114,116,125,126,148,187,198,202,203,206,208,215,225,226 . To be taken up at 3.30 PM ,inform the Opposite counsel in advance. Dated 02/09/2026"
+        "text": "Today ,s Mentioned matter , 39"
       }
     ]
   }
