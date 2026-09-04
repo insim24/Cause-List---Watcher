@@ -1,74 +1,19 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "2",
-        "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "4",
-        "item": "59",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "6",
-        "item": "19",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      },
-      {
-        "court": "12",
-        "item": "85",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      }
-    ],
-    "raw_status_rows": [],
-    "messages": []
-  },
-  "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "1",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "5",
-        "item": "27",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "11",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "8",
-        "item": "1",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
-        "court": "9",
-        "item": "46",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "9",
-        "text": "*"
-      },
-      {
-        "id": "8",
-        "text": "Today ,s Mentioned matter , 39"
-      },
-      {
-        "id": "1",
-        "text": "The court proceedings are scheduled to commence at 02:00 PM"
+        "id": "4",
+        "text": "Immediate presence of Mr. Mujeeb Andrabi Adv. is required in court"
       }
     ]
+  },
+  "Jammu Wing": {
+    "idle": true,
+    "courts": [],
+    "raw_status_rows": [],
+    "messages": []
   }
 }
