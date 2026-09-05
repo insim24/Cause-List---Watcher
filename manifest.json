@@ -308,5 +308,40 @@
     "hash": "5fd4f7b082b69a8410e82d010e115fa12000cfb4f7f28d803bc9fe288a4530d6",
     "parser_version": "4-grouped-people",
     "last_seen": "2026-09-04T05:10:12.456091"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/Supplementary%20Cause%20List%20-%2007.09.2026.pdf": {
+    "hash": "09f65f44015d99aa55abc52224017108c3ca6df6a14fd4baaa43033099791789",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-05T10:44:30.352037"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/causelist_07092026.pdf": {
+    "hash": "6810ddfa154b9c3fc2975642558e9bc4834dc16fd82c7dc9126b4a977df0117d",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-05T10:44:31.601917"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/causelist_08092026.pdf": {
+    "hash": "85096b22e33d4ec8984127ad77efa1d64a13ca19ed673e215f17bf1d28e1f718",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-05T10:44:37.701685"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/causelist_09092026.pdf": {
+    "hash": "cf8373328e7eb5ebad5c58b7bdda9c909ff3f36a93889fca0a20a56da1d3e24e",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-05T10:44:42.343396"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/causelist_10092026.pdf": {
+    "hash": "98bc9e027de7b69bbf4773de7bfbe9bb43e6fd5e81900db62718b08e53833379",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-05T10:44:46.884877"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/entirelist_sgr.pdf": {
+    "hash": "8e289656014a757bacb243d4499217ebc1f55746ad0fc18455d94b87e15ce9e6",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-05T10:44:57.792807"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/rjcourtsgr.pdf": {
+    "hash": "f007bab57d10349bd3d46182769e618e34aa3591156ede8994316cbb9ca8064f",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-05T10:45:19.000408"
   }
 }

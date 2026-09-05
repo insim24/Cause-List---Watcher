@@ -2199,3 +2199,44 @@
 2026-09-05 09:38:21,196 [INFO] Fetching live display board
 2026-09-05 09:38:22,423 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Mr. Mujeeb Andrabi Adv. is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-05 09:38:22,424 [INFO] Added 0 new match(es). Total saved: 39. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-05 10:44:28,936 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-05 10:44:28,936 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-05 10:44:30,085 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-09-05 10:44:30,086 [INFO] Downloading Supplementary%20Cause%20List%20-%2007.09.2026.pdf (supplementary)
+2026-09-05 10:44:30,551 [INFO] Supplementary%20Cause%20List%20-%2007.09.2026.pdf: 16 case row(s) read, 0 potential match(es)
+2026-09-05 10:44:30,552 [INFO] Downloading causelist_07092026.pdf (daywise)
+2026-09-05 10:44:36,154 [INFO] causelist_07092026.pdf: 630 case row(s) read, 4 potential match(es)
+2026-09-05 10:44:36,154 [INFO] Downloading causelist_08092026.pdf (daywise)
+2026-09-05 10:44:41,490 [INFO] causelist_08092026.pdf: 478 case row(s) read, 1 potential match(es)
+2026-09-05 10:44:41,490 [INFO] Downloading causelist_09092026.pdf (daywise)
+2026-09-05 10:44:45,816 [INFO] causelist_09092026.pdf: 436 case row(s) read, 2 potential match(es)
+2026-09-05 10:44:45,816 [INFO] Downloading causelist_10092026.pdf (daywise)
+2026-09-05 10:44:51,021 [INFO] causelist_10092026.pdf: 407 case row(s) read, 1 potential match(es)
+2026-09-05 10:44:51,021 [INFO] Downloading causelist_11092026.pdf (daywise)
+2026-09-05 10:44:51,062 [WARNING] Could not download https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_07092026/causelist_11092026.pdf: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-09-05 10:44:51,062 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-05 10:45:18,003 [INFO] entirelist_sgr.pdf: 2402 case row(s) read, 11 potential match(es)
+2026-09-05 10:45:18,003 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-05 10:45:19,958 [INFO] rjcourtsgr.pdf: 15 case row(s) read, 0 potential match(es)
+2026-09-05 10:45:19,960 [INFO] Fetching live display board
+2026-09-05 10:45:21,224 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Mr. Mujeeb Andrabi Adv. is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-05 10:45:21,225 [INFO] Added 11 new match(es). Total saved: 50. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Mohtasim] 2026-09-07 | Court 4 | Sr 182 | CRM(M) 364/2026 CrlM(836/2026)
+2026-09-05 10:45:21,225 [INFO]   -> [Owais Ashraf] 2026-09-07 | Court 6 | Sr 97 | WP(C) 1605/2026 CM(4176/2026) THE HIGH COURT REGULAR a) BEFORE NOTICE
+2026-09-05 10:45:21,225 [INFO]   -> [Saqib Fayaz] 2026-09-07 | Court 12 | Sr 24 | WP(C) 2085/2026 CM(5637/2026)
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-07 | Court 12 | Sr 196 | CRM(M) 173/2019 CrlM(533/2019)
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-08 | Court 6 | Sr 17 | SWP 2371/2011
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-09 | Court 4 | Sr 44 | CRMC 246/2017 c/w i)CRMC 356/2018 IA(1/2018) ii)CRMC 387/2018 IA(1/2018) IA(2/2018) IA(3/2018)
+2026-09-05 10:45:21,225 [INFO]   -> [Owais Ashraf] 2026-09-09 | Court 4 | Sr 84 | WP(C) 1379/2024 CM(3735/2024)
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-10 | Court 4 | Sr 100 | CrlA(AS) 25/2025 CrlM(778/2025) CrlM(779/2025)
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Mohtasim] 2026-09-07 | Court 4 | Sr 182 | CRM(M) 364/2026 CrlM(836/2026)
+2026-09-05 10:45:21,225 [INFO]   -> [Owais Ashraf] 2026-09-07 | Court 6 | Sr 97 | WP(C) 1605/2026 CM(4176/2026) THE HIGH COURT REGULAR a) BEFORE NOTICE
+2026-09-05 10:45:21,225 [INFO]   -> [Saqib Fayaz] 2026-09-07 | Court 12 | Sr 24 | WP(C) 2085/2026 CM(5637/2026)
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-07 | Court 12 | Sr 196 | CRM(M) 173/2019 CrlM(533/2019) THE HIGH COURT REGULAR a) BEFORE NOTICE
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-08 | Court 6 | Sr 17 | SWP 2371/2011
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-09 | Court 4 | Sr 44 | CRMC 246/2017 c/w i)CRMC 356/2018 IA(1/2018) ii)CRMC 387/2018 IA(1/2018) IA(2/2018) IA(3/2018)
+2026-09-05 10:45:21,225 [INFO]   -> [Owais Ashraf] 2026-09-09 | Court 4 | Sr 84 | WP(C) 1379/2024 CM(3735/2024)
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Manzoor] 2026-09-10 | Court 4 | Sr 100 | CrlA(AS) 25/2025 CrlM(778/2025) CrlM(779/2025)
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Mohtasim] 2026-09-11 | Court 1 | Sr 7 | Arb P 13/2024
+2026-09-05 10:45:21,225 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-11 | Court 10 | Sr 31 | CCP(S) 255/2026 in[WP(C) 1444/2020]
+2026-09-05 10:45:21,226 [INFO]   -> [Owais Ashraf] 2026-09-11 | Court 12 | Sr 90 | WP(C) 182/2025 CM(354/2025)
