@@ -2177,3 +2177,25 @@
 2026-09-05 05:09:43,183 [INFO] Fetching live display board
 2026-09-05 05:09:44,466 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Mr. Mujeeb Andrabi Adv. is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-05 05:09:44,466 [INFO] Added 0 new match(es). Total saved: 39. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-05 09:38:11,394 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-05 09:38:11,395 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-05 09:38:12,531 [INFO] Found 12 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-09-05 09:38:12,531 [INFO] Downloading Supplementary%20Cause%20List%20-%2003.09.2026.pdf (supplementary)
+2026-09-05 09:38:12,807 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2003.09.2026.pdf
+2026-09-05 09:38:12,807 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2003.09.2026.pdf (supplementary)
+2026-09-05 09:38:13,038 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2003.09.2026.pdf
+2026-09-05 09:38:13,038 [INFO] Downloading causelist_31082026.pdf (daywise)
+2026-09-05 09:38:13,722 [INFO] Unchanged since last run, skipping re-parse: causelist_31082026.pdf
+2026-09-05 09:38:13,722 [INFO] Downloading causelist_01092026.pdf (daywise)
+2026-09-05 09:38:14,707 [INFO] Unchanged since last run, skipping re-parse: causelist_01092026.pdf
+2026-09-05 09:38:14,707 [INFO] Downloading causelist_02092026.pdf (daywise)
+2026-09-05 09:38:15,434 [INFO] Unchanged since last run, skipping re-parse: causelist_02092026.pdf
+2026-09-05 09:38:15,434 [INFO] Downloading causelist_03092026.pdf (daywise)
+2026-09-05 09:38:15,957 [INFO] Unchanged since last run, skipping re-parse: causelist_03092026.pdf
+2026-09-05 09:38:15,957 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-05 09:38:21,109 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-05 09:38:21,110 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-05 09:38:21,194 [WARNING] Could not download https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Aug/weeklycauselist_31082026/rjcourtsgr.pdf: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-09-05 09:38:21,196 [INFO] Fetching live display board
+2026-09-05 09:38:22,423 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Mr. Mujeeb Andrabi Adv. is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-05 09:38:22,424 [INFO] Added 0 new match(es). Total saved: 39. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
