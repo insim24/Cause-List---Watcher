@@ -2265,3 +2265,27 @@
 2026-09-07 05:10:28,864 [INFO]   -> [Syed Mohtasim] 2026-09-11 | Court 1 | Sr 7 | Arb P 13/2024
 2026-09-07 05:10:28,864 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-11 | Court 10 | Sr 31 | CCP(S) 255/2026 in[WP(C) 1444/2020]
 2026-09-07 05:10:28,864 [INFO]   -> [Owais Ashraf] 2026-09-11 | Court 12 | Sr 90 | WP(C) 182/2025 CM(354/2025)
+2026-09-07 09:42:52,611 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-07 09:42:52,611 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-07 09:42:53,880 [INFO] Found 12 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-09-07 09:42:53,880 [INFO] Downloading Supplementary%20Cause%20List%20-%2007.09.2026.pdf (supplementary)
+2026-09-07 09:42:54,158 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2007.09.2026.pdf
+2026-09-07 09:42:54,158 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2007.09.2026.pdf (supplementary)
+2026-09-07 09:42:56,195 [INFO] No case entries found in Supplementary%20Cause%20List%20-1-%2007.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-07 09:42:56,196 [INFO] Downloading causelist_07092026.pdf (daywise)
+2026-09-07 09:42:57,211 [INFO] Unchanged since last run, skipping re-parse: causelist_07092026.pdf
+2026-09-07 09:42:57,211 [INFO] Downloading causelist_08092026.pdf (daywise)
+2026-09-07 09:42:58,113 [INFO] Unchanged since last run, skipping re-parse: causelist_08092026.pdf
+2026-09-07 09:42:58,113 [INFO] Downloading causelist_09092026.pdf (daywise)
+2026-09-07 09:42:58,807 [INFO] Unchanged since last run, skipping re-parse: causelist_09092026.pdf
+2026-09-07 09:42:58,807 [INFO] Downloading causelist_10092026.pdf (daywise)
+2026-09-07 09:42:59,565 [INFO] Unchanged since last run, skipping re-parse: causelist_10092026.pdf
+2026-09-07 09:42:59,565 [INFO] Downloading causelist_11092026.pdf (daywise)
+2026-09-07 09:43:00,307 [INFO] Unchanged since last run, skipping re-parse: causelist_11092026.pdf
+2026-09-07 09:43:00,307 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-07 09:43:06,315 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-07 09:43:06,315 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-07 09:43:06,608 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-07 09:43:06,610 [INFO] Fetching live display board
+2026-09-07 09:43:11,174 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "32", "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "4", "item": "142", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "6", "item": "4", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "12", "item": "41", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}, {"court": "30", "item": "7", "coram": "REGISTRAR JUDICIAL"}], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Mr.  hakim suhail ishtiyaq Adv. is required in court"}, {"id": "12", "text": "Immediate presence of adv usman gani  is required in court"}, {"id": "6", "text": "Special cause list of Hon*ble Mr Justice Rajesh Sekri will be taken up after break"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "31", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "5", "item": "34", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "111", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "9", "item": "109", "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "mentioned matters 104,154,77,96 shall be taken up at 3;30pm"}]}}
+2026-09-07 09:43:11,175 [INFO] Added 0 new match(es). Total saved: 50. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
