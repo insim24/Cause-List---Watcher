@@ -2240,3 +2240,28 @@
 2026-09-05 10:45:21,225 [INFO]   -> [Syed Mohtasim] 2026-09-11 | Court 1 | Sr 7 | Arb P 13/2024
 2026-09-05 10:45:21,225 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-11 | Court 10 | Sr 31 | CCP(S) 255/2026 in[WP(C) 1444/2020]
 2026-09-05 10:45:21,226 [INFO]   -> [Owais Ashraf] 2026-09-11 | Court 12 | Sr 90 | WP(C) 182/2025 CM(354/2025)
+2026-09-07 05:10:17,927 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-07 05:10:17,927 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-07 05:10:20,394 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-09-07 05:10:20,394 [INFO] Downloading Supplementary%20Cause%20List%20-%2007.09.2026.pdf (supplementary)
+2026-09-07 05:10:20,665 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2007.09.2026.pdf
+2026-09-07 05:10:20,665 [INFO] Downloading causelist_07092026.pdf (daywise)
+2026-09-07 05:10:21,373 [INFO] Unchanged since last run, skipping re-parse: causelist_07092026.pdf
+2026-09-07 05:10:21,373 [INFO] Downloading causelist_08092026.pdf (daywise)
+2026-09-07 05:10:21,823 [INFO] Unchanged since last run, skipping re-parse: causelist_08092026.pdf
+2026-09-07 05:10:21,823 [INFO] Downloading causelist_09092026.pdf (daywise)
+2026-09-07 05:10:22,172 [INFO] Unchanged since last run, skipping re-parse: causelist_09092026.pdf
+2026-09-07 05:10:22,172 [INFO] Downloading causelist_10092026.pdf (daywise)
+2026-09-07 05:10:22,522 [INFO] Unchanged since last run, skipping re-parse: causelist_10092026.pdf
+2026-09-07 05:10:22,522 [INFO] Downloading causelist_11092026.pdf (daywise)
+2026-09-07 05:10:25,809 [INFO] causelist_11092026.pdf: 451 case row(s) read, 3 potential match(es)
+2026-09-07 05:10:25,810 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-07 05:10:27,505 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-07 05:10:27,505 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-07 05:10:27,776 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-07 05:10:27,778 [INFO] Fetching live display board
+2026-09-07 05:10:28,863 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Mr. Mujeeb Andrabi Adv. is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-07 05:10:28,864 [INFO] Added 0 new match(es). Total saved: 50. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-07 05:10:28,864 [INFO]   -> [Syed Mohtasim] 2026-09-11 | Court 1 | Sr 7 | Arb P 13/2024
+2026-09-07 05:10:28,864 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-11 | Court 10 | Sr 31 | CCP(S) 255/2026 in[WP(C) 1444/2020]
+2026-09-07 05:10:28,864 [INFO]   -> [Owais Ashraf] 2026-09-11 | Court 12 | Sr 90 | WP(C) 182/2025 CM(354/2025)
