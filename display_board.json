@@ -3,24 +3,9 @@
     "idle": false,
     "courts": [
       {
-        "court": "4",
-        "item": "35",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "6",
-        "item": "26",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      },
-      {
         "court": "10",
-        "item": "37",
+        "item": "56",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "12",
-        "item": "17",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
@@ -39,11 +24,6 @@
     "idle": true,
     "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "mentioned items are as shown herein ,item no 32,86,122,128 ,132"
-      }
-    ]
+    "messages": []
   }
 }

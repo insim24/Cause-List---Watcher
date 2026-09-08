@@ -2341,3 +2341,33 @@
 2026-09-08 09:42:33,292 [INFO] Fetching live display board
 2026-09-08 09:42:37,179 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "35", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "6", "item": "26", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "10", "item": "37", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "12", "item": "17", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "12", "text": "Immediate presence of adv aswad attar is required in court"}, {"id": "*", "text": "Swearing-In Ceremony of Hon\u2019ble Dr. Justice Pushpendra Singh Bhati as Chief Justice of the High Court of Jammu & Kashmir and Ladakh will be held on 09.09.2026 at 11:00 AM physically at Sher-e-Kashmir University of Agricultural Sciences and Technology (SKUAST) and virtually in Hon\u2019ble Chief Justice Court, Jammu Wing. Live on Official YouTube Channel of the High Court of Jammu & Kashmir and Ladakh."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "mentioned items are as shown herein ,item no 32,86,122,128 ,132"}]}}
 2026-09-08 09:42:37,180 [INFO] Added 0 new match(es). Total saved: 50. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-08 14:17:57,485 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-08 14:17:57,485 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-08 14:17:58,718 [INFO] Found 16 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-09-08 14:17:58,718 [INFO] Downloading Supplementary%20Cause%20List%20-%2009.09.2026.pdf (supplementary)
+2026-09-08 14:17:59,324 [INFO] Supplementary%20Cause%20List%20-%2009.09.2026.pdf: 29 case row(s) read, 0 potential match(es)
+2026-09-08 14:17:59,324 [INFO] Downloading Supplementary%20Cause%20List%20-%2008.09.2026.pdf (supplementary)
+2026-09-08 14:17:59,846 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2008.09.2026.pdf
+2026-09-08 14:17:59,847 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2008.09.2026.pdf (supplementary)
+2026-09-08 14:18:00,136 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2008.09.2026.pdf
+2026-09-08 14:18:00,136 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2008.09.2026.pdf (supplementary)
+2026-09-08 14:18:00,400 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2008.09.2026.pdf
+2026-09-08 14:18:00,400 [INFO] Downloading Supplementary%20Cause%20List%20-MEDIATION%20LIST-%2008.09.2026.pdf (supplementary)
+2026-09-08 14:18:00,686 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-MEDIATION%20LIST-%2008.09.2026.pdf
+2026-09-08 14:18:00,686 [INFO] Downloading causelist_07092026.pdf (daywise)
+2026-09-08 14:18:01,727 [INFO] Unchanged since last run, skipping re-parse: causelist_07092026.pdf
+2026-09-08 14:18:01,727 [INFO] Downloading causelist_08092026.pdf (daywise)
+2026-09-08 14:18:02,686 [INFO] Unchanged since last run, skipping re-parse: causelist_08092026.pdf
+2026-09-08 14:18:02,686 [INFO] Downloading causelist_09092026.pdf (daywise)
+2026-09-08 14:18:03,396 [INFO] Unchanged since last run, skipping re-parse: causelist_09092026.pdf
+2026-09-08 14:18:03,396 [INFO] Downloading causelist_10092026.pdf (daywise)
+2026-09-08 14:18:04,296 [INFO] Unchanged since last run, skipping re-parse: causelist_10092026.pdf
+2026-09-08 14:18:04,296 [INFO] Downloading causelist_11092026.pdf (daywise)
+2026-09-08 14:18:04,986 [INFO] Unchanged since last run, skipping re-parse: causelist_11092026.pdf
+2026-09-08 14:18:04,987 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-08 14:18:11,186 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-08 14:18:11,186 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-08 14:18:12,279 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-08 14:18:12,281 [INFO] Fetching live display board
+2026-09-08 14:18:16,644 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "10", "item": "56", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": [{"id": "12", "text": "Immediate presence of adv aswad attar is required in court"}, {"id": "*", "text": "Swearing-In Ceremony of Hon\u2019ble Dr. Justice Pushpendra Singh Bhati as Chief Justice of the High Court of Jammu & Kashmir and Ladakh will be held on 09.09.2026 at 11:00 AM physically at Sher-e-Kashmir University of Agricultural Sciences and Technology (SKUAST) and virtually in Hon\u2019ble Chief Justice Court, Jammu Wing. Live on Official YouTube Channel of the High Court of Jammu & Kashmir and Ladakh."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-08 14:18:16,645 [INFO] Added 0 new match(es). Total saved: 50. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
