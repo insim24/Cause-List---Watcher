@@ -1,39 +1,9 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "32",
-        "coram": "HON'BLE  THE CHIEF JUSTICE (A), HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "4",
-        "item": "142",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "6",
-        "item": "4",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      },
-      {
-        "court": "12",
-        "item": "41",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      },
-      {
-        "court": "30",
-        "item": "7",
-        "coram": "REGISTRAR JUDICIAL"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
-      {
-        "id": "4",
-        "text": "Immediate presence of Mr.  hakim suhail ishtiyaq Adv. is required in court"
-      },
       {
         "id": "12",
         "text": "Immediate presence of adv usman gani  is required in court"
@@ -48,32 +18,17 @@
     "idle": false,
     "courts": [
       {
-        "court": "3",
-        "item": "31",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
         "court": "5",
-        "item": "34",
+        "item": "198",
         "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
       },
       {
-        "court": "7",
-        "item": "111",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "9",
-        "item": "109",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
+        "court": "8",
+        "item": "168",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "mentioned matters 104,154,77,96 shall be taken up at 3;30pm"
-      }
-    ]
+    "messages": []
   }
 }
