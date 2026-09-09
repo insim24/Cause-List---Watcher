@@ -1,22 +1,60 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "1",
+        "item": "12",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE SANJEEV KUMAR"
+      },
+      {
+        "court": "4",
+        "item": "32",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "6",
+        "item": "25",
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+      },
+      {
+        "court": "10",
+        "item": "5",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "11",
+        "item": "121",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "12",
+        "item": "142",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "12",
-        "text": "Immediate presence of adv aswad attar is required in court"
-      },
-      {
-        "id": "*",
-        "text": "Swearing-In Ceremony of Hon’ble Dr. Justice Pushpendra Singh Bhati as Chief Justice of the High Court of Jammu & Kashmir and Ladakh will be held on 09.09.2026 at 11:00 AM physically at Sher-e-Kashmir University of Agricultural Sciences and Technology (SKUAST) and virtually in Hon’ble Chief Justice Court, Jammu Wing. Live on Official YouTube Channel of the High Court of Jammu & Kashmir and Ladakh."
+        "id": "11",
+        "text": "The court proceedings are scheduled to commence at 12:30 PM"
       }
     ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "5",
+        "item": "23",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "8",
+        "item": "38",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": []
   }
