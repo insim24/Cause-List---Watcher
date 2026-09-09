@@ -1,13 +1,7 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "10",
-        "item": "56",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
