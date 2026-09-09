@@ -4,12 +4,12 @@
     "courts": [
       {
         "court": "1",
-        "item": "12",
+        "item": "13",
         "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE SANJEEV KUMAR"
       },
       {
         "court": "4",
-        "item": "32",
+        "item": "34",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
@@ -24,7 +24,7 @@
       },
       {
         "court": "11",
-        "item": "121",
+        "item": "122",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       },
       {
@@ -46,13 +46,8 @@
     "courts": [
       {
         "court": "5",
-        "item": "23",
+        "item": "25",
         "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "8",
-        "item": "38",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
       }
     ],
     "raw_status_rows": [],
