@@ -3,34 +3,9 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "13",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE SANJEEV KUMAR"
-      },
-      {
-        "court": "4",
-        "item": "34",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
         "court": "6",
-        "item": "25",
+        "item": "50",
         "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      },
-      {
-        "court": "10",
-        "item": "5",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "11",
-        "item": "122",
-        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "12",
-        "item": "142",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
@@ -42,14 +17,8 @@
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "5",
-        "item": "25",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": []
   }
