@@ -3,29 +3,14 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "9",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE SANJEEV KUMAR"
-      },
-      {
         "court": "4",
-        "item": "3",
+        "item": "16",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
         "court": "6",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      },
-      {
-        "court": "10",
         "item": "17",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "12",
-        "item": "2",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
       }
     ],
     "raw_status_rows": [],
@@ -37,35 +22,9 @@
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "29",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "5",
-        "item": "18",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "8",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "9",
-        "item": "9",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "5",
-        "text": "Mr. PD Singh,Mr. Adarsh Bhagat and Mr. Eishan Didichi are required immediately in the court"
-      }
-    ]
+    "messages": []
   }
 }

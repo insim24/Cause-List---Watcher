@@ -2513,3 +2513,28 @@
 2026-09-10 09:42:21,067 [INFO] Fetching live display board
 2026-09-10 09:42:23,542 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "9", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE SANJEEV KUMAR"}, {"court": "4", "item": "3", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "6", "item": "1", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "10", "item": "17", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "12", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "ADVOCATE M M DAR AND ADVOCATE M Y LONE IS REQUIRED IN COURT NO 10"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "29", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "5", "item": "18", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "8", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "9", "item": "9", "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"}], "raw_status_rows": [], "messages": [{"id": "5", "text": "Mr. PD Singh,Mr. Adarsh Bhagat and Mr. Eishan Didichi are required immediately in the court"}]}}
 2026-09-10 09:42:23,544 [INFO] Added 0 new match(es). Total saved: 50. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-10 14:34:45,441 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-10 14:34:45,442 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-10 14:34:46,686 [INFO] Found 16 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-09-10 14:34:46,686 [INFO] Downloading Supplementary%20Cause%20List%20-%2011.09.2026.pdf (supplementary)
+2026-09-10 14:34:47,834 [INFO] Supplementary%20Cause%20List%20-%2011.09.2026.pdf: 92 case row(s) read, 2 potential match(es)
+2026-09-10 14:34:47,834 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2011.09.2026.pdf (supplementary)
+2026-09-10 14:34:48,562 [INFO] Spl.Supplementary%20Cause%20List%20-%2011.09.2026.pdf: 38 case row(s) read, 1 potential match(es)
+2026-09-10 14:34:48,562 [INFO] Downloading causelist_07092026.pdf (daywise)
+2026-09-10 14:34:49,159 [INFO] Unchanged since last run, skipping re-parse: causelist_07092026.pdf
+2026-09-10 14:34:49,159 [INFO] Downloading causelist_08092026.pdf (daywise)
+2026-09-10 14:34:49,551 [INFO] Unchanged since last run, skipping re-parse: causelist_08092026.pdf
+2026-09-10 14:34:49,551 [INFO] Downloading causelist_10092026.pdf (daywise)
+2026-09-10 14:34:49,951 [INFO] Unchanged since last run, skipping re-parse: causelist_10092026.pdf
+2026-09-10 14:34:49,951 [INFO] Downloading causelist_11092026.pdf (daywise)
+2026-09-10 14:34:50,251 [INFO] Unchanged since last run, skipping re-parse: causelist_11092026.pdf
+2026-09-10 14:34:50,251 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-10 14:34:51,882 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-10 14:34:51,882 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-10 14:34:52,143 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-10 14:34:52,145 [INFO] Fetching live display board
+2026-09-10 14:34:54,627 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "16", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "6", "item": "17", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "ADVOCATE M M DAR AND ADVOCATE M Y LONE IS REQUIRED IN COURT NO 10"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-10 14:34:54,628 [INFO] Added 3 new match(es). Total saved: 53. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-10 14:34:54,628 [INFO]   -> [Owais Ashraf] 2026-09-11 | Court 4 | Sr 131 | WP(C) 2232/2026 CM(6066/2026)
+2026-09-10 14:34:54,628 [INFO]   -> [Owais Ashraf] 2026-09-11 | Court 12 | Sr 115 | HCP 122/2026
+2026-09-10 14:34:54,628 [INFO]   -> [Syed Manzoor] 2026-09-11 | Court 4 | Sr 2 | LPA 74/2020 in[SWP 381/2011] CM(4775/2025) CM(4062/2025) CM(2759/2020) CM(5356/2026) CM(217/2022) CM(2281/2022) CM(2758/2020) CM(2208/2020) CM(2002/2023) c/w COURT NO. : 4 i)LPA 82/2020 CM(2329/2022) CM(2629/2020) CM(472/2022) ii)LPA 117/2020 THE HIGH COURT SUPPLEMENTARY-1 a) BEFORE NOTICE
