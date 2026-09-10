@@ -3,16 +3,21 @@
     "idle": false,
     "courts": [
       {
-        "court": "6",
-        "item": "50",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+        "court": "1",
+        "item": "40",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE SANJEEV KUMAR"
+      },
+      {
+        "court": "11",
+        "item": "78",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "11",
-        "text": "The court proceedings are scheduled to commence at 12:30 PM"
+        "text": "The court proceedings are scheduled to commence at 10:30 AM"
       }
     ]
   },
