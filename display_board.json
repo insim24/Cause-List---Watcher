@@ -3,27 +3,53 @@
     "idle": false,
     "courts": [
       {
+        "court": "2",
+        "item": "121",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR"
+      },
+      {
+        "court": "3",
+        "item": "1",
+        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SANJAY DHAR"
+      },
+      {
         "court": "4",
-        "item": "16",
+        "item": "143",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
-        "court": "6",
-        "item": "17",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+        "court": "11",
+        "item": "7",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "12",
+        "item": "139",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      },
+      {
+        "court": "30",
+        "item": "4",
+        "coram": "REGISTRAR JUDICIAL"
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "10",
-        "text": "ADVOCATE M M DAR AND ADVOCATE M Y LONE IS REQUIRED IN COURT NO 10"
-      }
-    ]
+    "messages": []
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "7",
+        "item": "61",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
+        "item": "16",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": []
   }
