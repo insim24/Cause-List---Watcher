@@ -423,5 +423,35 @@
     "hash": "3b5b25ceba7b209d24fa890fb00962600917daad660662ed38d4044511117ade",
     "parser_version": "4-grouped-people",
     "last_seen": "2026-09-11T13:43:11.877356"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_14092026/SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf": {
+    "hash": "7ddb0f2f59564229afe22db0775fc5e343ec363a689c7dca181105aa13949c4c",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-12T15:47:30.400377"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_14092026/causelist_14092026.pdf": {
+    "hash": "21ec614420f82f5659cfcfd1139009d8aa4b8e4203488712eb7276306b20da58",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-12T15:47:32.450751"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_14092026/causelist_15092026.pdf": {
+    "hash": "f624434c058832256bd8670e624806d4e0df12de09cd9036ba5e2cc0c553fa4d",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-12T15:47:36.950632"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_14092026/causelist_17092026.pdf": {
+    "hash": "2abeab0878da6253afb244f7eac32767f5cbb9a41508b647a4030285d7545e23",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-12T15:47:41.412581"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_14092026/causelist_18092026.pdf": {
+    "hash": "15ad3a63bc1343a5c308de48a40319b304e6400b732795a09610bce62cd27d7e",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-12T15:47:45.300374"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_14092026/rjcourtsgr.pdf": {
+    "hash": "3cec95dbe2dd9a04e8c8a04bc9bf9946479d8f2ff8b69cfe14eecefc850b788c",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-12T15:47:48.616139"
   }
 }
