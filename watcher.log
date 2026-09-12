@@ -2586,3 +2586,27 @@
 2026-09-11 13:43:16,182 [INFO] Fetching live display board
 2026-09-11 13:43:19,988 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"}, {"court": "4", "item": "40", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "7", "item": "74", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": []}}
 2026-09-11 13:43:19,989 [INFO] Added 0 new match(es). Total saved: 53. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-12 09:02:12,293 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-12 09:02:12,294 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-12 09:02:13,474 [INFO] Found 18 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-09-12 09:02:13,474 [INFO] Downloading Supplementary%20Cause%20List%20-%2011.09.2026.pdf (supplementary)
+2026-09-12 09:02:13,921 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2011.09.2026.pdf
+2026-09-12 09:02:13,922 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2010.09.2026.pdf (supplementary)
+2026-09-12 09:02:14,222 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2010.09.2026.pdf
+2026-09-12 09:02:14,222 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2011.09.2026.pdf (supplementary)
+2026-09-12 09:02:14,622 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2011.09.2026.pdf
+2026-09-12 09:02:14,622 [INFO] Downloading causelist_07092026.pdf (daywise)
+2026-09-12 09:02:15,572 [INFO] Unchanged since last run, skipping re-parse: causelist_07092026.pdf
+2026-09-12 09:02:15,572 [INFO] Downloading causelist_08092026.pdf (daywise)
+2026-09-12 09:02:16,572 [INFO] Unchanged since last run, skipping re-parse: causelist_08092026.pdf
+2026-09-12 09:02:16,572 [INFO] Downloading causelist_10092026.pdf (daywise)
+2026-09-12 09:02:17,427 [INFO] Unchanged since last run, skipping re-parse: causelist_10092026.pdf
+2026-09-12 09:02:17,427 [INFO] Downloading causelist_11092026.pdf (daywise)
+2026-09-12 09:02:18,024 [INFO] Unchanged since last run, skipping re-parse: causelist_11092026.pdf
+2026-09-12 09:02:18,024 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-12 09:02:23,714 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-12 09:02:23,714 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-12 09:02:24,784 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-12 09:02:24,903 [INFO] Fetching live display board
+2026-09-12 09:02:26,190 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-12 09:02:26,191 [INFO] Added 0 new match(es). Total saved: 53. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

@@ -1,30 +1,13 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "1",
-        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "4",
-        "item": "40",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "7",
-        "item": "74",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": []
   }
