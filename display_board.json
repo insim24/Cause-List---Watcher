@@ -1,14 +1,65 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "1",
+        "item": "24",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "9",
+        "item": "150",
+        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
+        "court": "12",
+        "item": "17",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      }
+    ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "11",
+        "text": "All matters mentioned above will be attended at 3:30 pm"
+      }
+    ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "2",
+        "item": "38",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      },
+      {
+        "court": "3",
+        "item": "38",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "66",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "22",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      }
+    ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "1",
+        "text": "Jammu matters will be taken at 2PM."
+      },
+      {
+        "id": "3",
+        "text": "MR GAGAN KHOLI Advocate is required in court in item no.108"
+      }
+    ]
   }
 }

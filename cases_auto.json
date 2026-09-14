@@ -1125,5 +1125,41 @@
     "date": "2026-09-18",
     "source": "rjcourtsgr.pdf",
     "id": "2026-09-18-30-RFA 92/2026-10-1789228068"
+  },
+  {
+    "person": "Syed Mohtasim, Owais Ashraf",
+    "people": [
+      "Syed Mohtasim",
+      "Owais Ashraf"
+    ],
+    "court": "1",
+    "sr": "9",
+    "bench": "HON'BLE MR. JUSTICE RAJNESH OSWAL",
+    "benchType": "DB-I",
+    "listType": "Regular",
+    "caseNo": "CRM(M) 557/2022",
+    "caseName": "UQAB ALI WAZIR Vs SHO POLICE STATION SADDER, SRINAGAR (HOME DEPARTMENT)",
+    "snippet": "CRM(M) 557/2022\nUQAB ALI WAZIR Vs SHO POLICE STATION SADDER, SRINAGAR (HOME DEPARTMENT)\nM/S OWAIS ASHRAF SHAH AND SYED MOHTASIM FOR PET. MR. SAJAD ASHRAF FOR RES MOHSIN QADRI FOR RES",
+    "date": "2026-09-16",
+    "source": "causelist_16092026.pdf",
+    "id": "2026-09-16-1-CRM(M) 557/2022-0-1789381284"
+  },
+  {
+    "person": "Syed Mohtasim, Owais Ashraf",
+    "people": [
+      "Syed Mohtasim",
+      "Owais Ashraf"
+    ],
+    "court": "12",
+    "sr": "54",
+    "bench": "HON'BLE MR. JUSTICE SANJAY PARIHAR",
+    "benchType": "SB-VII",
+    "listType": "Regular",
+    "caseNo": "CRM(M) 216/2024 CrlM(569/2024)",
+    "caseName": "GHULAM RASOOL THEKRAY Vs WAZEERA BANO AND ORS.",
+    "snippet": "CRM(M) 216/2024 CrlM(569/2024)\nGHULAM RASOOL THEKRAY Vs WAZEERA BANO AND ORS.\nM/S SYED MOHTASIM, OWAIS ASHRAF SHAH, SYED ARSALAN FOR PET. MS AFROOZA HASSAN FOR RES. MRS. AFROOZA HASSAN FOR RES MS.AFROOZA HASSAN FOR RES",
+    "date": "2026-09-16",
+    "source": "causelist_16092026.pdf",
+    "id": "2026-09-16-12-CRM(M) 216/2024-1-1789381284"
   }
 ]
