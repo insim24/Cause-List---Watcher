@@ -3,19 +3,14 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "24",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"
+        "court": "6",
+        "item": "65",
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
       },
       {
-        "court": "9",
-        "item": "150",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
-        "court": "12",
-        "item": "17",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+        "court": "11",
+        "item": "128",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
     "raw_status_rows": [],
@@ -30,36 +25,12 @@
     "idle": false,
     "courts": [
       {
-        "court": "2",
-        "item": "38",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "3",
-        "item": "38",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "5",
-        "item": "66",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "22",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+        "court": "9",
+        "item": "1",
+        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "1",
-        "text": "Jammu matters will be taken at 2PM."
-      },
-      {
-        "id": "3",
-        "text": "MR GAGAN KHOLI Advocate is required in court in item no.108"
-      }
-    ]
+    "messages": []
   }
 }
