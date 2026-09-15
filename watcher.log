@@ -2763,3 +2763,29 @@
 2026-09-15 09:47:47,458 [INFO] Fetching live display board
 2026-09-15 09:47:50,524 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "4", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "6", "item": "44", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "9", "item": "13", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "29", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "124", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "11", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "Immediate presence of Ld AAG(Mr Allaudin Ganie)  is required in the court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "26", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "3", "item": "49", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "21", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "200", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "87", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu Matters will be taken at 2PM."}]}}
 2026-09-15 09:47:50,526 [INFO] Added 0 new match(es). Total saved: 67. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-15 14:24:41,274 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-15 14:24:41,274 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-15 14:24:42,540 [INFO] Found 13 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-09-15 14:24:42,540 [INFO] Downloading Supplementary%20Cause%20List%20-%2016.09.2026.pdf (supplementary)
+2026-09-15 14:24:43,400 [INFO] Supplementary%20Cause%20List%20-%2016.09.2026.pdf: 66 case row(s) read, 0 potential match(es)
+2026-09-15 14:24:43,401 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-15 14:24:43,828 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-15 14:24:43,828 [INFO] Downloading causelist_14092026.pdf (daywise)
+2026-09-15 14:24:44,428 [INFO] Unchanged since last run, skipping re-parse: causelist_14092026.pdf
+2026-09-15 14:24:44,428 [INFO] Downloading causelist_15092026.pdf (daywise)
+2026-09-15 14:24:44,778 [INFO] Unchanged since last run, skipping re-parse: causelist_15092026.pdf
+2026-09-15 14:24:44,778 [INFO] Downloading causelist_16092026.pdf (daywise)
+2026-09-15 14:24:45,128 [INFO] Unchanged since last run, skipping re-parse: causelist_16092026.pdf
+2026-09-15 14:24:45,128 [INFO] Downloading causelist_17092026.pdf (daywise)
+2026-09-15 14:24:45,476 [INFO] Unchanged since last run, skipping re-parse: causelist_17092026.pdf
+2026-09-15 14:24:45,477 [INFO] Downloading causelist_18092026.pdf (daywise)
+2026-09-15 14:24:45,777 [INFO] Unchanged since last run, skipping re-parse: causelist_18092026.pdf
+2026-09-15 14:24:45,778 [INFO] Downloading causelist_19092026.pdf (daywise)
+2026-09-15 14:24:46,078 [INFO] Unchanged since last run, skipping re-parse: causelist_19092026.pdf
+2026-09-15 14:24:46,078 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-15 14:24:48,376 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-15 14:24:48,376 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-15 14:24:48,660 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-15 14:24:48,661 [INFO] Fetching live display board
+2026-09-15 14:24:52,301 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "37", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "Immediate presence of Ld AAG(Mr Allaudin Ganie)  is required in the court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu Matters will be taken at 2PM."}]}}
+2026-09-15 14:24:52,302 [INFO] Added 0 new match(es). Total saved: 67. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
