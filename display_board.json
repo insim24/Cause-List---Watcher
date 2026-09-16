@@ -11,75 +11,20 @@
         "court": "2",
         "item": "2",
         "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "9",
-        "item": "112",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "14",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "11",
-        "item": "109",
-        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "12",
-        "item": "9",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "11",
-        "text": "BELOW MENTION MATTERS WLL BE TAKENUP AT 3;30 PM . 29,32,33,43,46,53,69,73,75,87,94,98 & 99."
+        "text": "MR JAVEED HAMEED ADV IS REQUIRED IN THIS COURT  IMMEDIATELY IN 113"
       }
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "2",
-        "item": "58",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "3",
-        "item": "52",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "5",
-        "item": "11",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "209",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "8",
-        "item": "44",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "5",
-        "text": "Mr. GS Thakur Adv is required in the court in DB matter immediately"
-      },
-      {
-        "id": "1",
-        "text": "Court Proceedings will commence from 12:00PM."
-      }
-    ]
+    "messages": []
   }
 }
