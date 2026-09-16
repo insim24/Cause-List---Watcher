@@ -2845,3 +2845,31 @@
 2026-09-16 14:17:26,726 [INFO] Fetching live display board
 2026-09-16 14:17:30,122 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "40", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "2", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR JAVEED HAMEED ADV IS REQUIRED IN THIS COURT  IMMEDIATELY IN 113"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-16 14:17:30,123 [INFO] Added 0 new match(es). Total saved: 67. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-16 17:00:30,098 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-16 17:00:30,098 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-16 17:00:31,484 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-16 17:00:31,484 [INFO] Downloading Supplementary%20Cause%20List%20-%2017.09.2026.pdf (supplementary)
+2026-09-16 17:00:31,762 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2017.09.2026.pdf
+2026-09-16 17:00:31,762 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2017.09.2026.pdf (supplementary)
+2026-09-16 17:00:32,012 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2017.09.2026.pdf
+2026-09-16 17:00:32,012 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-16 17:00:32,511 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-16 17:00:32,511 [INFO] Downloading causelist_14092026.pdf (daywise)
+2026-09-16 17:00:33,111 [INFO] Unchanged since last run, skipping re-parse: causelist_14092026.pdf
+2026-09-16 17:00:33,111 [INFO] Downloading causelist_15092026.pdf (daywise)
+2026-09-16 17:00:33,761 [INFO] Unchanged since last run, skipping re-parse: causelist_15092026.pdf
+2026-09-16 17:00:33,762 [INFO] Downloading causelist_16092026.pdf (daywise)
+2026-09-16 17:00:34,500 [INFO] Unchanged since last run, skipping re-parse: causelist_16092026.pdf
+2026-09-16 17:00:34,500 [INFO] Downloading causelist_17092026.pdf (daywise)
+2026-09-16 17:00:35,162 [INFO] Unchanged since last run, skipping re-parse: causelist_17092026.pdf
+2026-09-16 17:00:35,162 [INFO] Downloading causelist_18092026.pdf (daywise)
+2026-09-16 17:00:35,789 [INFO] Unchanged since last run, skipping re-parse: causelist_18092026.pdf
+2026-09-16 17:00:35,790 [INFO] Downloading causelist_19092026.pdf (daywise)
+2026-09-16 17:00:36,295 [INFO] Unchanged since last run, skipping re-parse: causelist_19092026.pdf
+2026-09-16 17:00:36,295 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-16 17:00:43,764 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-16 17:00:43,764 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-16 17:00:44,981 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-16 17:00:44,983 [INFO] Fetching live display board
+2026-09-16 17:00:48,335 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "40", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "2", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR JAVEED HAMEED ADV IS REQUIRED IN THIS COURT  IMMEDIATELY IN 113"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-16 17:00:48,336 [INFO] Added 0 new match(es). Total saved: 67. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
