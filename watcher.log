@@ -2789,3 +2789,31 @@
 2026-09-15 14:24:48,661 [INFO] Fetching live display board
 2026-09-15 14:24:52,301 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "37", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "Immediate presence of Ld AAG(Mr Allaudin Ganie)  is required in the court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu Matters will be taken at 2PM."}]}}
 2026-09-15 14:24:52,302 [INFO] Added 0 new match(es). Total saved: 67. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-16 09:41:57,116 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-16 09:41:57,116 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-16 09:41:58,453 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-16 09:41:58,453 [INFO] Downloading Supplementary%20Cause%20List%20-%2016.09.2026.pdf (supplementary)
+2026-09-16 09:41:59,121 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2016.09.2026.pdf
+2026-09-16 09:41:59,121 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2016.09.2026.pdf (supplementary)
+2026-09-16 09:41:59,514 [INFO] Supplementary%20Cause%20List%20-2-%2016.09.2026.pdf: 8 case row(s) read, 0 potential match(es)
+2026-09-16 09:41:59,514 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-16 09:42:00,084 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-16 09:42:00,084 [INFO] Downloading causelist_14092026.pdf (daywise)
+2026-09-16 09:42:00,954 [INFO] Unchanged since last run, skipping re-parse: causelist_14092026.pdf
+2026-09-16 09:42:00,954 [INFO] Downloading causelist_15092026.pdf (daywise)
+2026-09-16 09:42:01,846 [INFO] Unchanged since last run, skipping re-parse: causelist_15092026.pdf
+2026-09-16 09:42:01,846 [INFO] Downloading causelist_16092026.pdf (daywise)
+2026-09-16 09:42:02,885 [INFO] Unchanged since last run, skipping re-parse: causelist_16092026.pdf
+2026-09-16 09:42:02,885 [INFO] Downloading causelist_17092026.pdf (daywise)
+2026-09-16 09:42:03,873 [INFO] Unchanged since last run, skipping re-parse: causelist_17092026.pdf
+2026-09-16 09:42:03,873 [INFO] Downloading causelist_18092026.pdf (daywise)
+2026-09-16 09:42:04,870 [INFO] Unchanged since last run, skipping re-parse: causelist_18092026.pdf
+2026-09-16 09:42:04,870 [INFO] Downloading causelist_19092026.pdf (daywise)
+2026-09-16 09:42:05,427 [INFO] Unchanged since last run, skipping re-parse: causelist_19092026.pdf
+2026-09-16 09:42:05,427 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-16 09:42:11,749 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-16 09:42:11,749 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-16 09:42:12,958 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-16 09:42:12,960 [INFO] Fetching live display board
+2026-09-16 09:42:16,065 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "40", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "2", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "9", "item": "112", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "14", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "109", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "9", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "BELOW MENTION MATTERS WLL BE TAKENUP AT 3;30 PM . 29,32,33,43,46,53,69,73,75,87,94,98 & 99."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "58", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "3", "item": "52", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "11", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "209", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "44", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": [{"id": "5", "text": "Mr. GS Thakur Adv is required in the court in DB matter immediately"}, {"id": "1", "text": "Court Proceedings will commence from 12:00PM."}]}}
+2026-09-16 09:42:16,066 [INFO] Added 0 new match(es). Total saved: 67. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
