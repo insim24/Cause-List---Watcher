@@ -3,91 +3,23 @@
     "idle": false,
     "courts": [
       {
-        "court": "3",
-        "item": "1",
-        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "6",
-        "item": "29",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      },
-      {
-        "court": "9",
-        "item": "16",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "4",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
         "court": "11",
-        "item": "6",
+        "item": "13",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "12",
-        "item": "19",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "11",
-        "text": "Immediate presence of Mr. Mohsin Qadiri SR AAG. Mr Wasim Gull  AAG and Mr Zahid Qais Noor GA are  required in court"
+        "text": "MR BIKRAMDEEP SINGH GA IS REQUIRED IN THIS COURT."
       }
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "2",
-        "item": "81",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "3",
-        "item": "110",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "5",
-        "item": "6",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "6",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "8",
-        "item": "25",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "1",
-        "text": "Court Proceedings will commence from 11:30AM."
-      },
-      {
-        "id": "7",
-        "text": "Advocate Anil Khajuria is required in court"
-      },
-      {
-        "id": "3",
-        "text": "MR DEWAKAR SHARMA DYAG is required in court in item no.106"
-      },
-      {
-        "id": "8",
-        "text": "Meherban singh AAG is required"
-      }
-    ]
+    "messages": []
   }
 }

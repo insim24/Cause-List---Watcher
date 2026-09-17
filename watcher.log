@@ -2905,3 +2905,33 @@
 2026-09-17 09:50:39,651 [INFO] Fetching live display board
 2026-09-17 09:50:41,915 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "6", "item": "29", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "9", "item": "16", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "4", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "6", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "19", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "Immediate presence of Mr. Mohsin Qadiri SR AAG. Mr Wasim Gull  AAG and Mr Zahid Qais Noor GA are  required in court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "81", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "3", "item": "110", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "6", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "6", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "25", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "Court Proceedings will commence from 11:30AM."}, {"id": "7", "text": "Advocate Anil Khajuria is required in court"}, {"id": "3", "text": "MR DEWAKAR SHARMA DYAG is required in court in item no.106"}, {"id": "8", "text": "Meherban singh AAG is required"}]}}
 2026-09-17 09:50:41,917 [INFO] Added 0 new match(es). Total saved: 67. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-17 14:07:26,001 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-17 14:07:26,001 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-17 14:07:27,233 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-17 14:07:27,234 [INFO] Downloading Supplementary%20Cause%20List%20-%2018.09.2026.pdf (supplementary)
+2026-09-17 14:07:28,597 [INFO] Supplementary%20Cause%20List%20-%2018.09.2026.pdf: 106 case row(s) read, 0 potential match(es)
+2026-09-17 14:07:28,597 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2018.09.2026.pdf (supplementary)
+2026-09-17 14:07:29,114 [INFO] Spl.Supplementary%20Cause%20List%20-%2018.09.2026.pdf: 16 case row(s) read, 2 potential match(es)
+2026-09-17 14:07:29,114 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-17 14:07:29,450 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-17 14:07:29,450 [INFO] Downloading causelist_14092026.pdf (daywise)
+2026-09-17 14:07:29,900 [INFO] Unchanged since last run, skipping re-parse: causelist_14092026.pdf
+2026-09-17 14:07:29,900 [INFO] Downloading causelist_15092026.pdf (daywise)
+2026-09-17 14:07:30,350 [INFO] Unchanged since last run, skipping re-parse: causelist_15092026.pdf
+2026-09-17 14:07:30,350 [INFO] Downloading causelist_16092026.pdf (daywise)
+2026-09-17 14:07:30,800 [INFO] Unchanged since last run, skipping re-parse: causelist_16092026.pdf
+2026-09-17 14:07:30,800 [INFO] Downloading causelist_17092026.pdf (daywise)
+2026-09-17 14:07:31,099 [INFO] Unchanged since last run, skipping re-parse: causelist_17092026.pdf
+2026-09-17 14:07:31,099 [INFO] Downloading causelist_18092026.pdf (daywise)
+2026-09-17 14:07:31,371 [INFO] Unchanged since last run, skipping re-parse: causelist_18092026.pdf
+2026-09-17 14:07:31,371 [INFO] Downloading causelist_19092026.pdf (daywise)
+2026-09-17 14:07:31,642 [INFO] Unchanged since last run, skipping re-parse: causelist_19092026.pdf
+2026-09-17 14:07:31,642 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-17 14:07:33,788 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-17 14:07:33,788 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-17 14:07:34,062 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-17 14:07:34,064 [INFO] Fetching live display board
+2026-09-17 14:07:36,809 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "13", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR BIKRAMDEEP SINGH GA IS REQUIRED IN THIS COURT."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-17 14:07:36,810 [INFO] Added 2 new match(es). Total saved: 69. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-17 14:07:36,810 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-18 | Court 2 | Sr 2 | CM(8435/2024) IN RP 95/2024 C/DELAY
+2026-09-17 14:07:36,810 [INFO]   -> [Syed Manzoor] 2026-09-18 | Court 4 | Sr 2 | LPA 74/2020 in[SWP 381/2011] CM(4775/2025) CM(4062/2025) CM(2759/2020) CM(5356/2026) CM(217/2022) CM(2281/2022) CM(2758/2020) CM(2208/2020) CM(2002/2023) c/w COURT NO. : 4 i)LPA 82/2020 CM(2329/2022) CM(2629/2020) CM(472/2022) ii)LPA 117/2020
