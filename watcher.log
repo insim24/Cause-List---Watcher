@@ -2991,3 +2991,29 @@
 2026-09-18 09:24:35,570 [INFO] Fetching live display board
 2026-09-18 09:24:38,672 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "2", "item": "1", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "4", "item": "68", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "98", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "3", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR.  JUSTICE RAJESH SEKHRI"}, {"court": "5", "item": "14", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "192", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "The Court Proceedings will commence from 10:30AM."}]}}
 2026-09-18 09:24:38,673 [INFO] Added 0 new match(es). Total saved: 69. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-18 13:44:08,316 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-18 13:44:08,316 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-18 13:44:09,499 [INFO] Found 13 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-09-18 13:44:09,499 [INFO] Downloading Supplementary%20Cause%20List%20-%2019.09.2026.pdf (supplementary)
+2026-09-18 13:44:10,166 [INFO] Supplementary%20Cause%20List%20-%2019.09.2026.pdf: 62 case row(s) read, 0 potential match(es)
+2026-09-18 13:44:10,166 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-18 13:44:10,959 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-18 13:44:10,960 [INFO] Downloading causelist_14092026.pdf (daywise)
+2026-09-18 13:44:11,742 [INFO] Unchanged since last run, skipping re-parse: causelist_14092026.pdf
+2026-09-18 13:44:11,742 [INFO] Downloading causelist_15092026.pdf (daywise)
+2026-09-18 13:44:12,782 [INFO] Unchanged since last run, skipping re-parse: causelist_15092026.pdf
+2026-09-18 13:44:12,782 [INFO] Downloading causelist_16092026.pdf (daywise)
+2026-09-18 13:44:13,843 [INFO] Unchanged since last run, skipping re-parse: causelist_16092026.pdf
+2026-09-18 13:44:13,843 [INFO] Downloading causelist_17092026.pdf (daywise)
+2026-09-18 13:44:14,878 [INFO] Unchanged since last run, skipping re-parse: causelist_17092026.pdf
+2026-09-18 13:44:14,878 [INFO] Downloading causelist_18092026.pdf (daywise)
+2026-09-18 13:44:15,493 [INFO] Unchanged since last run, skipping re-parse: causelist_18092026.pdf
+2026-09-18 13:44:15,493 [INFO] Downloading causelist_19092026.pdf (daywise)
+2026-09-18 13:44:16,014 [INFO] Unchanged since last run, skipping re-parse: causelist_19092026.pdf
+2026-09-18 13:44:16,014 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-18 13:44:24,331 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-18 13:44:24,331 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-18 13:44:24,509 [WARNING] Could not download https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_14092026/rjcourtsgr.pdf: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-09-18 13:44:24,578 [INFO] Fetching live display board
+2026-09-18 13:44:28,094 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "6", "item": "18", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "11", "item": "87", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR IILYAS NAZIR LAWAY AAG IS REQUIRED IN THIS COURT."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-18 13:44:28,096 [INFO] Added 0 new match(es). Total saved: 69. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

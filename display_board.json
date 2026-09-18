@@ -3,49 +3,28 @@
     "idle": false,
     "courts": [
       {
-        "court": "2",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE RAJESH SEKHRI"
+        "court": "6",
+        "item": "18",
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
       },
       {
-        "court": "4",
-        "item": "68",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "9",
-        "item": "98",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      }
-    ],
-    "raw_status_rows": [],
-    "messages": []
-  },
-  "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "2",
-        "item": "3",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR.  JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "5",
-        "item": "14",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "192",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+        "court": "11",
+        "item": "87",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "1",
-        "text": "The Court Proceedings will commence from 10:30AM."
+        "id": "11",
+        "text": "MR IILYAS NAZIR LAWAY AAG IS REQUIRED IN THIS COURT."
       }
     ]
+  },
+  "Jammu Wing": {
+    "idle": true,
+    "courts": [],
+    "raw_status_rows": [],
+    "messages": []
   }
 }
