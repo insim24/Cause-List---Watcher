@@ -3,28 +3,34 @@
     "idle": false,
     "courts": [
       {
-        "court": "6",
-        "item": "18",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+        "court": "10",
+        "item": "15",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
       },
       {
         "court": "11",
-        "item": "87",
+        "item": "30",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      }
+    ],
+    "raw_status_rows": [],
+    "messages": []
+  },
+  "Jammu Wing": {
+    "idle": false,
+    "courts": [
+      {
+        "court": "7",
+        "item": "5",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "11",
-        "text": "MR IILYAS NAZIR LAWAY AAG IS REQUIRED IN THIS COURT."
+        "id": "3",
+        "text": "MR VISHAL SHARMA DSGI is required in court in item no.56"
       }
     ]
-  },
-  "Jammu Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": []
   }
 }

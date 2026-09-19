@@ -3017,3 +3017,33 @@
 2026-09-18 13:44:24,578 [INFO] Fetching live display board
 2026-09-18 13:44:28,094 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "6", "item": "18", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "11", "item": "87", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR IILYAS NAZIR LAWAY AAG IS REQUIRED IN THIS COURT."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-18 13:44:28,096 [INFO] Added 0 new match(es). Total saved: 69. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-19 09:12:27,756 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-19 09:12:27,757 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-19 09:12:28,888 [INFO] Found 16 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-09-19 09:12:28,888 [INFO] Downloading Supplementary%20Cause%20List%20-%2019.09.2026.pdf (supplementary)
+2026-09-19 09:12:29,263 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2019.09.2026.pdf
+2026-09-19 09:12:29,263 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2019.09.2026.pdf (supplementary)
+2026-09-19 09:12:29,578 [INFO] Supplementary%20Cause%20List%20-2-%2019.09.2026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-09-19 09:12:29,578 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2019.09.2026.pdf (supplementary)
+2026-09-19 09:12:29,848 [INFO] No case entries found in Supplementary%20Cause%20List%20-3-%2019.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-19 09:12:29,848 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-19 09:12:30,381 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-19 09:12:30,381 [INFO] Downloading causelist_14092026.pdf (daywise)
+2026-09-19 09:12:31,181 [INFO] Unchanged since last run, skipping re-parse: causelist_14092026.pdf
+2026-09-19 09:12:31,181 [INFO] Downloading causelist_15092026.pdf (daywise)
+2026-09-19 09:12:31,981 [INFO] Unchanged since last run, skipping re-parse: causelist_15092026.pdf
+2026-09-19 09:12:31,981 [INFO] Downloading causelist_16092026.pdf (daywise)
+2026-09-19 09:12:32,781 [INFO] Unchanged since last run, skipping re-parse: causelist_16092026.pdf
+2026-09-19 09:12:32,781 [INFO] Downloading causelist_17092026.pdf (daywise)
+2026-09-19 09:12:33,531 [INFO] Unchanged since last run, skipping re-parse: causelist_17092026.pdf
+2026-09-19 09:12:33,531 [INFO] Downloading causelist_18092026.pdf (daywise)
+2026-09-19 09:12:34,135 [INFO] Unchanged since last run, skipping re-parse: causelist_18092026.pdf
+2026-09-19 09:12:34,135 [INFO] Downloading causelist_19092026.pdf (daywise)
+2026-09-19 09:12:34,581 [INFO] Unchanged since last run, skipping re-parse: causelist_19092026.pdf
+2026-09-19 09:12:34,581 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-19 09:12:40,487 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-19 09:12:40,487 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-19 09:12:40,781 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-19 09:12:40,783 [INFO] Fetching live display board
+2026-09-19 09:12:42,924 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "10", "item": "15", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "30", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "7", "item": "5", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "3", "text": "MR VISHAL SHARMA DSGI is required in court in item no.56"}]}}
+2026-09-19 09:12:42,924 [INFO] Added 0 new match(es). Total saved: 69. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
