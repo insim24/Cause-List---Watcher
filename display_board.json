@@ -3,13 +3,8 @@
     "idle": false,
     "courts": [
       {
-        "court": "10",
-        "item": "15",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
         "court": "11",
-        "item": "30",
+        "item": "35",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
@@ -17,14 +12,8 @@
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "7",
-        "item": "5",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
