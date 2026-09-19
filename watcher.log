@@ -3088,3 +3088,28 @@
 2026-09-19 13:18:46,528 [INFO]   -> [Syed Manzoor] 2026-09-25 | Court 11 | Sr 47 | CM(6454/2024) IN WP(C) 928/2023 INTERIM RELIEF CM(2171/2023) CM(2172/2023)
 2026-09-19 13:18:46,528 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-09-26 | Court 1 | Sr 8 | CM(68/2025) IN LPA 7/2025 C/DELAY CM(69/2025) CM(70/2025)
 2026-09-19 13:18:46,528 [INFO]   -> [Syed Manzoor] 2026-09-26 | Court 9 | Sr 12 | WP(C) 463/2025 CM(1095/2025) CM(4969/2026) c/w i)CCP(S) 109/2025 ii)CCP(S) 167/2026
+2026-09-19 14:34:43,407 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-19 14:34:43,407 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-19 14:34:44,454 [INFO] Found 12 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-09-19 14:34:44,455 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.09.2026.pdf (supplementary)
+2026-09-19 14:34:44,719 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.09.2026.pdf
+2026-09-19 14:34:44,719 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-19 14:34:45,190 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-19 14:34:45,191 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-19 14:34:46,169 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-19 14:34:46,169 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-19 14:34:50,722 [INFO] causelist_22092026.pdf: 447 case row(s) read, 1 potential match(es)
+2026-09-19 14:34:50,722 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-19 14:34:51,869 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-19 14:34:51,869 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-19 14:34:52,569 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-19 14:34:52,569 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-19 14:34:53,017 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-19 14:34:53,017 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-19 14:34:57,893 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-19 14:34:57,893 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-19 14:34:58,119 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-19 14:34:58,121 [INFO] Fetching live display board
+2026-09-19 14:35:00,375 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "35", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "3", "text": "MR VISHAL SHARMA DSGI is required in court in item no.56"}]}}
+2026-09-19 14:35:00,376 [INFO] Added 0 new match(es). Total saved: 78. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-19 14:35:00,376 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-22 | Court 12 | Sr 22 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
