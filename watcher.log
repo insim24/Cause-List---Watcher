@@ -3167,3 +3167,31 @@
 2026-09-21 10:25:15,271 [INFO] Fetching live display board
 2026-09-21 10:25:19,216 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "18", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "2", "item": "1", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "4", "item": "53", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "52", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "14", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "15", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "27", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR ILLYAS NAZIR LAWAY GA IS REQUIRED IN THIS COURT MMEDIATELY."}, {"id": "10", "text": "Immediate presence of Mr.  (parvaiz lone ) is required in court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "58", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "3", "item": "41", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "21", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "187", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": []}}
 2026-09-21 10:25:19,218 [INFO] Added 0 new match(es). Total saved: 78. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-21 10:29:26,212 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-21 10:29:26,212 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-21 10:29:27,578 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-21 10:29:27,579 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.09.2026.pdf (supplementary)
+2026-09-21 10:29:27,889 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.09.2026.pdf
+2026-09-21 10:29:27,889 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2021.09.2026.pdf (supplementary)
+2026-09-21 10:29:28,198 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-1-%2021.09.2026.pdf
+2026-09-21 10:29:28,198 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2021.09.2026.pdf (supplementary)
+2026-09-21 10:29:28,510 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2021.09.2026.pdf
+2026-09-21 10:29:28,510 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-21 10:29:28,957 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-21 10:29:28,957 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-21 10:29:29,614 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-21 10:29:29,614 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-21 10:29:30,046 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-21 10:29:30,047 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-21 10:29:30,505 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-21 10:29:30,505 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-21 10:29:30,909 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-21 10:29:30,910 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-21 10:29:31,311 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-21 10:29:31,311 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-21 10:29:33,920 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-21 10:29:33,920 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-21 10:29:34,234 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-21 10:29:34,236 [INFO] Fetching live display board
+2026-09-21 10:29:39,177 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "18", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "2", "item": "1", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "4", "item": "56", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "52", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "14", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "15", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "27", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR ILLYAS NAZIR LAWAY GA IS REQUIRED IN THIS COURT MMEDIATELY."}, {"id": "10", "text": "Immediate presence of Mr.  (parvaiz lone ) is required in court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "63", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "3", "item": "41", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "21", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "188", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": []}}
+2026-09-21 10:29:39,179 [INFO] Added 0 new match(es). Total saved: 78. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
