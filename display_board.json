@@ -3,8 +3,23 @@
     "idle": false,
     "courts": [
       {
+        "court": "1",
+        "item": "16",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+      },
+      {
+        "court": "4",
+        "item": "15",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "10",
+        "item": "24",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
         "court": "11",
-        "item": "35",
+        "item": "7",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
@@ -12,13 +27,39 @@
     "messages": []
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "2",
+        "item": "74",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      },
+      {
+        "court": "3",
+        "item": "14",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "18",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "170",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
+        "item": "9",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "3",
-        "text": "MR VISHAL SHARMA DSGI is required in court in item no.56"
+        "id": "1",
+        "text": "Jammu Matters will be taken up at 2PM."
       }
     ]
   }

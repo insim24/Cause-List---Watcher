@@ -3113,3 +3113,29 @@
 2026-09-19 14:35:00,375 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "35", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "3", "text": "MR VISHAL SHARMA DSGI is required in court in item no.56"}]}}
 2026-09-19 14:35:00,376 [INFO] Added 0 new match(es). Total saved: 78. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-09-19 14:35:00,376 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-22 | Court 12 | Sr 22 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-09-21 06:07:56,324 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-21 06:07:56,324 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-21 06:07:57,498 [INFO] Found 13 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-09-21 06:07:57,498 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.09.2026.pdf (supplementary)
+2026-09-21 06:07:57,743 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.09.2026.pdf
+2026-09-21 06:07:57,744 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2021.09.2026.pdf (supplementary)
+2026-09-21 06:07:58,073 [INFO] Supplementary%20Cause%20List%20-1-%2021.09.2026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-09-21 06:07:58,073 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-21 06:07:58,412 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-21 06:07:58,412 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-21 06:07:58,901 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-21 06:07:58,902 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-21 06:07:59,212 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-21 06:07:59,212 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-21 06:07:59,511 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-21 06:07:59,511 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-21 06:07:59,761 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-21 06:07:59,761 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-21 06:08:00,011 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-21 06:08:00,011 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-21 06:08:01,523 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-21 06:08:01,523 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-21 06:08:01,767 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-21 06:08:01,770 [INFO] Fetching live display board
+2026-09-21 06:08:04,302 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "16", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "4", "item": "15", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "10", "item": "24", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "7", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "74", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "3", "item": "14", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "18", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "170", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "9", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu Matters will be taken up at 2PM."}]}}
+2026-09-21 06:08:04,303 [INFO] Added 0 new match(es). Total saved: 78. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
