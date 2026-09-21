@@ -590,8 +590,13 @@
     "last_seen": "2026-09-19T14:34:46.978733"
   },
   "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_21092026/Supplementary%20Cause%20List%20-1-%2021.09.2026.pdf": {
-    "hash": "21d29acda70d4baa6de946f2301584f57ee1b5403127978b506841fcb9592cf4",
+    "hash": "bb242cfd6113beb1de41b46932de40e6db277e4661c9df382e10c50f43389ed8",
     "parser_version": "4-grouped-people",
-    "last_seen": "2026-09-21T06:07:57.988558"
+    "last_seen": "2026-09-21T10:25:10.385092"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_21092026/Supplementary%20Cause%20List%20-2-%2021.09.2026.pdf": {
+    "hash": "8cefe93ae1a96b7df1a91f2d9b67dc11d5955c02717dc40b43a37167157fcb29",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-21T10:25:10.834936"
   }
 }

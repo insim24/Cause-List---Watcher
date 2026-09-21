@@ -4,63 +4,77 @@
     "courts": [
       {
         "court": "1",
-        "item": "16",
+        "item": "18",
         "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE M.A. CHOWDHARY"
       },
       {
+        "court": "2",
+        "item": "1",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      },
+      {
         "court": "4",
-        "item": "15",
+        "item": "53",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
+        "court": "9",
+        "item": "52",
+        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
         "court": "10",
-        "item": "24",
+        "item": "14",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
       },
       {
         "court": "11",
-        "item": "7",
+        "item": "15",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "12",
+        "item": "27",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "11",
+        "text": "MR ILLYAS NAZIR LAWAY GA IS REQUIRED IN THIS COURT MMEDIATELY."
+      },
+      {
+        "id": "10",
+        "text": "Immediate presence of Mr.  (parvaiz lone ) is required in court"
+      }
+    ]
   },
   "Jammu Wing": {
     "idle": false,
     "courts": [
       {
         "court": "2",
-        "item": "74",
+        "item": "58",
         "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       },
       {
         "court": "3",
-        "item": "14",
+        "item": "41",
         "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
       },
       {
         "court": "5",
-        "item": "18",
+        "item": "21",
         "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
       },
       {
         "court": "7",
-        "item": "170",
+        "item": "187",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "8",
-        "item": "9",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "1",
-        "text": "Jammu Matters will be taken up at 2PM."
-      }
-    ]
+    "messages": []
   }
 }
