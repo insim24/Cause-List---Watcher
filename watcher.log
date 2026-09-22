@@ -3286,3 +3286,33 @@
 2026-09-22 09:39:26,184 [INFO]   -> [Syed Manzoor] 2026-09-25 | Court 11 | Sr 47 | CM(6454/2024) IN WP(C) 928/2023 INTERIM RELIEF CM(2171/2023) CM(2172/2023)
 2026-09-22 09:39:26,184 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-09-26 | Court 1 | Sr 8 | CM(68/2025) IN LPA 7/2025 C/DELAY CM(69/2025) CM(70/2025)
 2026-09-22 09:39:26,185 [INFO]   -> [Syed Manzoor] 2026-09-26 | Court 9 | Sr 12 | WP(C) 463/2025 CM(1095/2025) CM(4969/2026) c/w i)CCP(S) 109/2025 ii)CCP(S) 167/2026
+2026-09-22 14:07:13,019 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-22 14:07:13,020 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-22 14:07:14,225 [INFO] Found 16 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-09-22 14:07:14,225 [INFO] Downloading Supplementary%20Cause%20List%20-%2022.09.2026.pdf (supplementary)
+2026-09-22 14:07:14,541 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2022.09.2026.pdf
+2026-09-22 14:07:14,542 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf (supplementary)
+2026-09-22 14:07:14,955 [INFO] Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf: 11 case row(s) read, 0 potential match(es)
+2026-09-22 14:07:14,955 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2022.09.2026.pdf (supplementary)
+2026-09-22 14:07:15,285 [INFO] No case entries found in Supplementary%20Cause%20List%20-3-%2022.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-22 14:07:15,285 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-22 14:07:15,642 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-22 14:07:15,642 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-22 14:07:15,917 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-22 14:07:15,917 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-22 14:07:16,466 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-22 14:07:16,466 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-22 14:07:16,891 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-22 14:07:16,892 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-22 14:07:17,241 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-22 14:07:17,241 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-22 14:07:17,541 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-22 14:07:17,542 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-22 14:07:17,841 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-22 14:07:17,841 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-22 14:07:20,095 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-22 14:07:20,095 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-22 14:07:20,372 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-22 14:07:20,374 [INFO] Fetching live display board
+2026-09-22 14:07:24,321 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "17", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr. asif ahmad bhat in item 86 is required in court"}, {"id": "9", "text": "Immediate presence of Govt advocates is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-22 14:07:24,322 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
