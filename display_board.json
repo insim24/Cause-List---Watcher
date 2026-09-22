@@ -3,32 +3,97 @@
     "idle": false,
     "courts": [
       {
+        "court": "1",
+        "item": "5",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
+      },
+      {
+        "court": "4",
+        "item": "48",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "6",
+        "item": "73",
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+      },
+      {
+        "court": "9",
+        "item": "16",
+        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
         "court": "10",
-        "item": "14",
+        "item": "21",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
       },
       {
         "court": "11",
-        "item": "134",
+        "item": "92",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "12",
+        "item": "13",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "11",
-        "text": "MR ILLYAS NAZIR LAWAY GA IS REQUIRED IN THIS COURT MMEDIATELY."
+        "id": "10",
+        "text": "Immediate presence of Mr.  shafqat ) is required in court"
       },
       {
-        "id": "10",
-        "text": "Immediate presence of Mr.  (parvaiz lone ) is required in court"
+        "id": "9",
+        "text": "Immediate presence of Govt advocates is required in court"
       }
     ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "1",
+        "item": "5",
+        "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
+      },
+      {
+        "court": "2",
+        "item": "22",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      },
+      {
+        "court": "3",
+        "item": "44",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "14",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "231",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
+        "item": "12",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      }
+    ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "8",
+        "text": "Mentioned matters 60,78,81,115 to be taken up after 3.30pm"
+      },
+      {
+        "id": "3",
+        "text": "MR RAMAN SHARMA AAG is required in court in item no.138"
+      }
+    ]
   }
 }

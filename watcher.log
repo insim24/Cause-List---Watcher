@@ -3249,3 +3249,40 @@
 2026-09-21 15:59:06,798 [INFO] Fetching live display board
 2026-09-21 15:59:10,981 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "10", "item": "14", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "134", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR ILLYAS NAZIR LAWAY GA IS REQUIRED IN THIS COURT MMEDIATELY."}, {"id": "10", "text": "Immediate presence of Mr.  (parvaiz lone ) is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-21 15:59:10,982 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-22 09:38:47,957 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-22 09:38:47,957 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-22 09:38:49,435 [INFO] Found 15 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-22 09:38:49,435 [INFO] Downloading Supplementary%20Cause%20List%20-%2022.09.2026.pdf (supplementary)
+2026-09-22 09:38:49,946 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2022.09.2026.pdf
+2026-09-22 09:38:49,946 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf (supplementary)
+2026-09-22 09:38:50,424 [INFO] Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-09-22 09:38:50,424 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-22 09:38:51,086 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-22 09:38:51,086 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-22 09:38:51,437 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-22 09:38:51,437 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-22 09:38:52,875 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-22 09:38:52,875 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-22 09:38:53,933 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-22 09:38:53,933 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-22 09:38:54,644 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-22 09:38:54,644 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-22 09:38:55,510 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-22 09:38:55,510 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-22 09:38:56,230 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-22 09:38:56,230 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-22 09:39:20,728 [INFO] entirelist_sgr.pdf: 2018 case row(s) read, 9 potential match(es)
+2026-09-22 09:39:20,728 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-22 09:39:22,222 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-22 09:39:22,225 [INFO] Fetching live display board
+2026-09-22 09:39:26,182 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "5", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}, {"court": "4", "item": "48", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "6", "item": "73", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "9", "item": "16", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "21", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "92", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "13", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.  shafqat ) is required in court"}, {"id": "9", "text": "Immediate presence of Govt advocates is required in court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "1", "item": "5", "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}, {"court": "2", "item": "22", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "3", "item": "44", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "14", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "231", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "12", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters 60,78,81,115 to be taken up after 3.30pm"}, {"id": "3", "text": "MR RAMAN SHARMA AAG is required in court in item no.138"}]}}
+2026-09-22 09:39:26,184 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-22 09:39:26,184 [INFO]   -> [Owais Ashraf] 2026-09-21 | Court 4 | Sr 15 | CM(M) 310/2025 CM(4908/2025) Caveat 1867/2025
+2026-09-22 09:39:26,184 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-21 | Court 10 | Sr 54 | WP(C) 1394/2024 CM(3769/2024)
+2026-09-22 09:39:26,184 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-09-21 | Court 11 | Sr 111 | WP(C) 1860/2025 CM(3210/2026) CM(4907/2025)
+2026-09-22 09:39:26,184 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-09-22 | Court 12 | Sr 22 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-09-22 09:39:26,184 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Owais Ashraf] 2026-09-24 | Court 1 | Sr 49 | LPA 53/2023 in[OWP 53/2015] CM(1340/2023)
+2026-09-22 09:39:26,184 [INFO]   -> [Owais Ashraf] 2026-09-24 | Court 10 | Sr 55 | Mac App 7/2023 CM(4200/2023) CM(562/2023) CM(6941/2023)
+2026-09-22 09:39:26,184 [INFO]   -> [Syed Manzoor] 2026-09-25 | Court 11 | Sr 47 | CM(6454/2024) IN WP(C) 928/2023 INTERIM RELIEF CM(2171/2023) CM(2172/2023)
+2026-09-22 09:39:26,184 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-09-26 | Court 1 | Sr 8 | CM(68/2025) IN LPA 7/2025 C/DELAY CM(69/2025) CM(70/2025)
+2026-09-22 09:39:26,185 [INFO]   -> [Syed Manzoor] 2026-09-26 | Court 9 | Sr 12 | WP(C) 463/2025 CM(1095/2025) CM(4969/2026) c/w i)CCP(S) 109/2025 ii)CCP(S) 167/2026
