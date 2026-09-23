@@ -1,13 +1,7 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "11",
-        "item": "17",
-        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {

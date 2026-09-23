@@ -3316,3 +3316,33 @@
 2026-09-22 14:07:20,374 [INFO] Fetching live display board
 2026-09-22 14:07:24,321 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "17", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr. asif ahmad bhat in item 86 is required in court"}, {"id": "9", "text": "Immediate presence of Govt advocates is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-22 14:07:24,322 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-23 09:45:58,031 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-23 09:45:58,031 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-23 09:45:59,164 [INFO] Found 16 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-09-23 09:45:59,165 [INFO] Downloading Supplementary%20Cause%20List%20-%2022.09.2026.pdf (supplementary)
+2026-09-23 09:45:59,520 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2022.09.2026.pdf
+2026-09-23 09:45:59,520 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf (supplementary)
+2026-09-23 09:45:59,778 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf
+2026-09-23 09:45:59,778 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2022.09.2026.pdf (supplementary)
+2026-09-23 09:46:00,027 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2022.09.2026.pdf
+2026-09-23 09:46:00,027 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-23 09:46:00,519 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-23 09:46:00,519 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-23 09:46:00,767 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-23 09:46:00,767 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-23 09:46:01,749 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-23 09:46:01,749 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-23 09:46:02,379 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-23 09:46:02,379 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-23 09:46:03,116 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-23 09:46:03,116 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-23 09:46:03,811 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-23 09:46:03,811 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-23 09:46:04,378 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-23 09:46:04,378 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-23 09:46:11,039 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-23 09:46:11,039 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-23 09:46:11,341 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-23 09:46:11,344 [INFO] Fetching live display board
+2026-09-23 09:46:12,733 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr. asif ahmad bhat in item 86 is required in court"}, {"id": "9", "text": "Immediate presence of Govt advocates is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-23 09:46:12,734 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
