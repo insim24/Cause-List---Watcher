@@ -3346,3 +3346,33 @@
 2026-09-23 09:46:11,344 [INFO] Fetching live display board
 2026-09-23 09:46:12,733 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr. asif ahmad bhat in item 86 is required in court"}, {"id": "9", "text": "Immediate presence of Govt advocates is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-23 09:46:12,734 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-23 14:19:28,106 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-23 14:19:28,106 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-23 14:19:29,432 [INFO] Found 16 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-09-23 14:19:29,432 [INFO] Downloading Supplementary%20Cause%20List%20-%2022.09.2026.pdf (supplementary)
+2026-09-23 14:19:29,949 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2022.09.2026.pdf
+2026-09-23 14:19:29,949 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf (supplementary)
+2026-09-23 14:19:30,264 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2022.09.2026.pdf
+2026-09-23 14:19:30,264 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2022.09.2026.pdf (supplementary)
+2026-09-23 14:19:30,525 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2022.09.2026.pdf
+2026-09-23 14:19:30,525 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-23 14:19:31,040 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-23 14:19:31,040 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-23 14:19:31,300 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-23 14:19:31,300 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-23 14:19:32,327 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-23 14:19:32,328 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-23 14:19:33,125 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-23 14:19:33,125 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-23 14:19:33,963 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-23 14:19:33,963 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-23 14:19:34,735 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-23 14:19:34,736 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-23 14:19:35,503 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-23 14:19:35,503 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-23 14:19:43,167 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-23 14:19:43,167 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-23 14:19:44,386 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-23 14:19:44,388 [INFO] Fetching live display board
+2026-09-23 14:19:45,987 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr. asif ahmad bhat in item 86 is required in court"}, {"id": "9", "text": "Immediate presence of Govt advocates is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-23 14:19:46,005 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
