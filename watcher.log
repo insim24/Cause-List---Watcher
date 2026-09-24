@@ -3406,3 +3406,33 @@
 2026-09-24 09:44:12,874 [INFO] Fetching live display board
 2026-09-24 09:44:14,657 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "9", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "15", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "3", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "1", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "8", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}, {"court": "3", "item": "1", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SHAHZAD AZEEM"}, {"court": "5", "item": "1", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "8", "item": "14", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "10", "item": "4", "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today dated 24/09/26 are as follow 19,58,66,76 and 99 , to be taken up after 3.30PM , Inform the opposite counsel in advance"}]}}
 2026-09-24 09:44:14,659 [INFO] Added 0 new match(es). Total saved: 80. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-24 14:18:38,761 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-24 14:18:38,762 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-24 14:18:39,978 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-24 14:18:39,978 [INFO] Downloading Supplementary%20Cause%20List%20-%2025.09.2026.pdf (supplementary)
+2026-09-24 14:18:40,804 [INFO] Supplementary%20Cause%20List%20-%2025.09.2026.pdf: 70 case row(s) read, 1 potential match(es)
+2026-09-24 14:18:40,805 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2025.09.2026.pdf (supplementary)
+2026-09-24 14:18:41,338 [INFO] Spl.Supplementary%20Cause%20List%20-%2025.09.2026.pdf: 14 case row(s) read, 1 potential match(es)
+2026-09-24 14:18:41,339 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-24 14:18:41,683 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-24 14:18:41,684 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-24 14:18:41,947 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-24 14:18:41,947 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-24 14:18:42,483 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-24 14:18:42,483 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-24 14:18:42,883 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-24 14:18:42,883 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-24 14:18:43,283 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-24 14:18:43,283 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-24 14:18:43,634 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-24 14:18:43,634 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-24 14:18:43,933 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-24 14:18:43,933 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-24 14:18:46,145 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-24 14:18:46,145 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-24 14:18:46,408 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-24 14:18:46,410 [INFO] Fetching live display board
+2026-09-24 14:18:48,619 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "62", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR MOHSIN QADIRI SR AAG AND MR FAHEEM NISAR SHAH AAG ARE REQUIRED IN THIS COURT."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "10", "item": "4", "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": []}}
+2026-09-24 14:18:48,620 [INFO] Added 2 new match(es). Total saved: 82. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-24 14:18:48,620 [INFO]   -> [Owais Ashraf] 2026-09-25 | Court 11 | Sr 110 | WP(C) 2423/2026 CM(6569/2026)
+2026-09-24 14:18:48,620 [INFO]   -> [Syed Manzoor] 2026-09-25 | Court 4 | Sr 1 | LPA 74/2020 in[SWP 381/2011] CM(4775/2025) CM(4062/2025) CM(2759/2020) CM(5356/2026) CM(217/2022) CM(2281/2022) CM(2758/2020) CM(2208/2020) CM(2002/2023) c/w i)LPA 82/2020 CM(2329/2022) CM(2629/2020) CM(472/2022) ii)LPA 117/2020 THE HIGH COURT SUPPLEMENTARY-1 a) BEFORE NOTICE b) AFTER NOTICE MATTERS

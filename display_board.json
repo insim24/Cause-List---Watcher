@@ -3,52 +3,22 @@
     "idle": false,
     "courts": [
       {
-        "court": "4",
-        "item": "9",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "9",
-        "item": "15",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "3",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
         "court": "11",
-        "item": "1",
+        "item": "62",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "11",
+        "text": "MR MOHSIN QADIRI SR AAG AND MR FAHEEM NISAR SHAH AAG ARE REQUIRED IN THIS COURT."
+      }
+    ]
   },
   "Jammu Wing": {
     "idle": false,
     "courts": [
-      {
-        "court": "2",
-        "item": "8",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
-      },
-      {
-        "court": "3",
-        "item": "1",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SHAHZAD AZEEM"
-      },
-      {
-        "court": "5",
-        "item": "1",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "8",
-        "item": "14",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
       {
         "court": "10",
         "item": "4",
@@ -56,11 +26,6 @@
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "Mentioned matters for today dated 24/09/26 are as follow 19,58,66,76 and 99 , to be taken up after 3.30PM , Inform the opposite counsel in advance"
-      }
-    ]
+    "messages": []
   }
 }
