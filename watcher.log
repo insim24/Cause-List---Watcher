@@ -3497,3 +3497,31 @@
 2026-09-25 14:42:13,602 [INFO] Added 2 new match(es). Total saved: 84. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-09-25 14:42:13,602 [INFO]   -> [Owais Ashraf] 2026-09-26 | Court 11 | Sr 60 | WP(C) 2441/2026 CM(6610/2026)
 2026-09-25 14:42:13,602 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-26 | Court 12 | Sr 73 | CrlM(1806/2026) IN CRM(M) 792/2026 DISPENSING CrlM(1807/2026) b) AFTER NOTICE MATTERS COURT NO. : 12
+2026-09-25 18:37:03,516 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-25 18:37:03,516 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-25 18:37:04,682 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-25 18:37:04,682 [INFO] Downloading Supplementary%20Cause%20List%20-%2026.09.2026.pdf (supplementary)
+2026-09-25 18:37:04,975 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2026.09.2026.pdf
+2026-09-25 18:37:04,975 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2026.09.2026.pdf (supplementary)
+2026-09-25 18:37:05,233 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2026.09.2026.pdf
+2026-09-25 18:37:05,233 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-25 18:37:05,775 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-25 18:37:05,775 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-25 18:37:06,032 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-25 18:37:06,033 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-25 18:37:07,308 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-25 18:37:07,308 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-25 18:37:08,074 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-25 18:37:08,074 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-25 18:37:08,929 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-25 18:37:08,929 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-25 18:37:09,694 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-25 18:37:09,694 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-25 18:37:10,206 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-25 18:37:10,206 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-25 18:37:18,482 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-25 18:37:18,482 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-25 18:37:19,565 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-25 18:37:19,568 [INFO] Fetching live display board
+2026-09-25 18:37:20,958 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Adv. Areeb Kawoosa and Adv.  Ateeb Kawoosa is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-25 18:37:20,959 [INFO] Added 0 new match(es). Total saved: 84. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
