@@ -3,16 +3,41 @@
     "idle": false,
     "courts": [
       {
+        "court": "4",
+        "item": "1",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "5",
+        "item": "2",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR, HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
+        "court": "6",
+        "item": "30",
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+      },
+      {
+        "court": "10",
+        "item": "25",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
         "court": "11",
-        "item": "62",
+        "item": "104",
         "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "12",
+        "item": "8",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "11",
-        "text": "MR MOHSIN QADIRI SR AAG AND MR FAHEEM NISAR SHAH AAG ARE REQUIRED IN THIS COURT."
+        "id": "4",
+        "text": "Immediate presence of Adv. Areeb Kawoosa and Adv.  Ateeb Kawoosa is required in court"
       }
     ]
   },
@@ -20,9 +45,24 @@
     "idle": false,
     "courts": [
       {
-        "court": "10",
-        "item": "4",
-        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
+        "court": "3",
+        "item": "24",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "25",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "143",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "13",
+        "item": "36",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
