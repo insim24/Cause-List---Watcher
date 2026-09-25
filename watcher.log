@@ -3467,3 +3467,33 @@
 2026-09-25 10:00:51,695 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "5", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR, HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "6", "item": "30", "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "10", "item": "25", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "104", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "8", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Adv. Areeb Kawoosa and Adv.  Ateeb Kawoosa is required in court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "24", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "25", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "143", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "13", "item": "36", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": []}}
 2026-09-25 10:00:51,696 [INFO] Added 0 new match(es). Total saved: 82. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-09-25 10:00:51,696 [INFO]   -> [Owais Ashraf] 2026-09-25 | Court 11 | Sr 110 | WP(C) 2423/2026 CM(6569/2026)
+2026-09-25 14:42:02,858 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-25 14:42:02,858 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-25 14:42:04,109 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-09-25 14:42:04,109 [INFO] Downloading Supplementary%20Cause%20List%20-%2026.09.2026.pdf (supplementary)
+2026-09-25 14:42:04,847 [INFO] Supplementary%20Cause%20List%20-%2026.09.2026.pdf: 56 case row(s) read, 2 potential match(es)
+2026-09-25 14:42:04,847 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2026.09.2026.pdf (supplementary)
+2026-09-25 14:42:05,127 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2026.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-25 14:42:05,127 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-25 14:42:05,522 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-25 14:42:05,522 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-25 14:42:05,775 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-25 14:42:05,776 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-25 14:42:06,372 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-25 14:42:06,372 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-25 14:42:06,771 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-25 14:42:06,771 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-25 14:42:07,172 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-25 14:42:07,172 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-25 14:42:07,522 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-25 14:42:07,522 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-25 14:42:07,821 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-25 14:42:07,822 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-25 14:42:09,920 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-25 14:42:09,920 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-25 14:42:10,174 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-25 14:42:10,177 [INFO] Fetching live display board
+2026-09-25 14:42:13,601 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "18", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Adv. Areeb Kawoosa and Adv.  Ateeb Kawoosa is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-25 14:42:13,602 [INFO] Added 2 new match(es). Total saved: 84. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-25 14:42:13,602 [INFO]   -> [Owais Ashraf] 2026-09-26 | Court 11 | Sr 60 | WP(C) 2441/2026 CM(6610/2026)
+2026-09-25 14:42:13,602 [INFO]   -> [Syed Mohtasim, Saqib Fayaz] 2026-09-26 | Court 12 | Sr 73 | CrlM(1806/2026) IN CRM(M) 792/2026 DISPENSING CrlM(1807/2026) b) AFTER NOTICE MATTERS COURT NO. : 12
