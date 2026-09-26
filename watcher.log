@@ -3525,3 +3525,38 @@
 2026-09-25 18:37:19,568 [INFO] Fetching live display board
 2026-09-25 18:37:20,958 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Immediate presence of Adv. Areeb Kawoosa and Adv.  Ateeb Kawoosa is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-09-25 18:37:20,959 [INFO] Added 0 new match(es). Total saved: 84. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-26 09:42:46,867 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-26 09:42:46,867 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-26 09:42:48,040 [INFO] Found 18 relevant causelist link(s) on the page (14 after filtering by list_types)
+2026-09-26 09:42:48,040 [INFO] Downloading Supplementary%20Cause%20List%20-%2026.09.2026.pdf (supplementary)
+2026-09-26 09:42:48,304 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2026.09.2026.pdf
+2026-09-26 09:42:48,304 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2026.09.2026.pdf (supplementary)
+2026-09-26 09:42:48,774 [INFO] Supplementary%20Cause%20List%20-2-%2026.09.2026.pdf: 21 case row(s) read, 1 potential match(es)
+2026-09-26 09:42:48,774 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2026.09.2026.pdf (supplementary)
+2026-09-26 09:42:49,066 [INFO] Supplementary%20Cause%20List%20-3-%2026.09.2026.pdf: 3 case row(s) read, 0 potential match(es)
+2026-09-26 09:42:49,066 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2026.09.2026.pdf (supplementary)
+2026-09-26 09:42:49,345 [INFO] No case entries found in Supplementary%20Cause%20List%20-1-%2026.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-26 09:42:49,345 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2026.09.2026.pdf (supplementary)
+2026-09-26 09:42:49,603 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2026.09.2026.pdf
+2026-09-26 09:42:49,604 [INFO] Downloading SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf (supplementary)
+2026-09-26 09:42:49,954 [INFO] Unchanged since last run, skipping re-parse: SPECIAL%20MEDIATION%20DRIVE-MEDIATION%20FOR%20THE%20NATION%203.0.pdf
+2026-09-26 09:42:49,954 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf (supplementary)
+2026-09-26 09:42:50,212 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2024.09.2026.pdf
+2026-09-26 09:42:50,212 [INFO] Downloading causelist_21092026.pdf (daywise)
+2026-09-26 09:42:50,725 [INFO] Unchanged since last run, skipping re-parse: causelist_21092026.pdf
+2026-09-26 09:42:50,725 [INFO] Downloading causelist_22092026.pdf (daywise)
+2026-09-26 09:42:51,054 [INFO] Unchanged since last run, skipping re-parse: causelist_22092026.pdf
+2026-09-26 09:42:51,054 [INFO] Downloading causelist_24092026.pdf (daywise)
+2026-09-26 09:42:51,354 [INFO] Unchanged since last run, skipping re-parse: causelist_24092026.pdf
+2026-09-26 09:42:51,354 [INFO] Downloading causelist_25092026.pdf (daywise)
+2026-09-26 09:42:51,654 [INFO] Unchanged since last run, skipping re-parse: causelist_25092026.pdf
+2026-09-26 09:42:51,654 [INFO] Downloading causelist_26092026.pdf (daywise)
+2026-09-26 09:42:51,954 [INFO] Unchanged since last run, skipping re-parse: causelist_26092026.pdf
+2026-09-26 09:42:51,954 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-26 09:42:54,034 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-26 09:42:54,034 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-26 09:42:54,293 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-26 09:42:54,295 [INFO] Fetching live display board
+2026-09-26 09:42:57,643 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "42", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "4", "item": "48", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "35", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "11", "item": "64", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "19", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "7", "item": "122", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "47", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "13", "item": "15", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu Matters will be taken up immediately after the Supplementary List of Srinagar"}]}}
+2026-09-26 09:42:57,644 [INFO] Added 1 new match(es). Total saved: 85. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-26 09:42:57,644 [INFO]   -> [Owais Ashraf] 2026-09-26 | Court 11 | Sr 76 | WP(C) 2423/2026 CM(6569/2026)
