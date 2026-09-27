@@ -223,6 +223,31 @@ TEMPLATE = """<!DOCTYPE html>
   .board-msg:first-of-type{{border-top:none;}}
   .board-empty{{font-size:12px;color:var(--parchment-faint);}}
   .board-stale-note{{font-size:10.5px;color:var(--parchment-faint);margin-top:6px;}}
+  button.board-court-row{{width:100%;text-align:left;color:inherit;cursor:pointer;}}
+  button.board-court-row:hover,button.board-court-row:focus-visible{{border-color:var(--brass-line);outline:none;}}
+  .board-court-hint{{display:block;font-size:10px;color:var(--parchment-faint);margin-top:4px;}}
+
+  /* ---- court list panel (opened from the live board) ---- */
+  .court-modal{{position:fixed;inset:0;z-index:50;background:rgba(5,10,14,.72);display:flex;
+    align-items:center;justify-content:center;padding:16px;}}
+  .court-modal[hidden]{{display:none;}}
+  .court-panel{{background:var(--ink-800);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);
+    width:min(960px,100%);max-height:88vh;display:flex;flex-direction:column;}}
+  .court-panel-head{{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+    padding:14px 18px;border-bottom:1px solid var(--line);}}
+  .court-panel-head h3{{font-family:var(--font-serif);font-size:17px;margin:0;}}
+  .court-panel-sub{{font-size:11.5px;color:var(--parchment-dim);margin-top:3px;line-height:1.4;}}
+  .court-panel-actions{{display:flex;gap:8px;flex:none;}}
+  .court-panel-body{{overflow:auto;padding:12px 18px 18px;}}
+  .court-panel-note{{font-size:12px;color:var(--parchment-dim);margin:4px 0 10px;}}
+  .court-panel-err{{font-size:12.5px;color:var(--seal);padding:12px 0;}}
+  table.court-list{{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:14px;}}
+  table.court-list th{{text-align:left;font-family:var(--font-mono);font-size:10px;letter-spacing:.6px;
+    text-transform:uppercase;color:var(--brass);padding:7px 8px;border-bottom:1px solid var(--line);}}
+  table.court-list td{{padding:7px 8px;border-bottom:1px solid var(--line-soft);vertical-align:top;}}
+  table.court-list tr.is-current td{{background:var(--seal-soft);}}
+  table.court-list tr.is-current td:first-child{{box-shadow:inset 3px 0 0 var(--seal);}}
+  table.court-list tr.is-mine td{{background:var(--brass-soft);}}
 
   /* ---- sortable table (All cases) ---- */
   .table-scroll{{overflow-x:auto;}}
@@ -299,6 +324,22 @@ TEMPLATE = """<!DOCTYPE html>
   <div class="stats-row" id="statsRow"></div>
 
   <div class="board-row" id="boardRow" style="display:none"></div>
+
+  <div class="court-modal" id="courtModal" hidden role="dialog" aria-modal="true" aria-labelledby="courtModalTitle">
+    <div class="court-panel">
+      <div class="court-panel-head">
+        <div>
+          <h3 id="courtModalTitle"></h3>
+          <div class="court-panel-sub" id="courtModalSub"></div>
+        </div>
+        <div class="court-panel-actions">
+          <button class="chip-btn" id="courtModalRefresh" type="button">Refresh</button>
+          <button class="chip-btn" id="courtModalClose" type="button" aria-label="Close">&#10005;</button>
+        </div>
+      </div>
+      <div class="court-panel-body" id="courtModalBody"></div>
+    </div>
+  </div>
 
   <div class="reminder-toasts" id="reminderToasts"></div>
 
@@ -691,7 +732,10 @@ function renderBoard(){{
     if (!w.idle && w.courts && w.courts.length){{
       body += w.courts.map(function(c){{
         var coram = c.coram ? '<div class="board-court-coram">'+esc(c.coram)+'</div>' : '';
-        return '<div class="board-court-row"><div><span>Court <b>'+esc(c.court)+'</b></span>'+coram+'</div><span>Item <b>'+esc(c.item)+'</b></span></div>';
+        return '<button type="button" class="board-court-row" data-wing="'+esc(name)+'" data-court="'+esc(c.court)+'">'+
+          '<div><span>Court <b>'+esc(c.court)+'</b></span>'+coram+
+          '<span class="board-court-hint">View today\\u2019s list \\u203A</span></div>'+
+          '<span>Item <b>'+esc(c.item)+'</b></span></button>';
       }}).join('');
     }} else if (!w.idle && w.raw_status_rows && w.raw_status_rows.length){{
       body += w.raw_status_rows.map(function(l){{ return '<div class="board-court-row">'+esc(l)+'</div>'; }}).join('');
@@ -738,6 +782,8 @@ function pollBoard(){{
       BOARD = data;
       boardUpdatedAt = Date.now();
       renderBoard();
+      if (openCourt && openCourtData) renderCourtList(openCourtData);
+      else if (openCourt) renderCourtListHeader();
       checkCaseReminders();
     }})
     .catch(function(err){{
@@ -745,6 +791,119 @@ function pollBoard(){{
       console.warn('Live board poll failed:', err.message);
     }});
 }}
+
+// ---- court list panel: click a court on the live board to see its whole list ----
+var COURT_LIST_ENDPOINT = 'https://causelist-watcher-oauth.vercel.app/api/court-list';
+var openCourt = null;
+var openCourtData = null;
+
+function boardCourt(wing, court){{
+  var w = BOARD && BOARD[wing];
+  var list = (w && w.courts) || [];
+  for (var i = 0; i < list.length; i++) if (String(list[i].court) === String(court)) return list[i];
+  return null;
+}}
+
+function normCaseNo(s){{ return String(s||'').toUpperCase().replace(/[^A-Z0-9]/g, ''); }}
+
+function firstNumber(cells){{
+  for (var i = 0; i < cells.length; i++) if (/^\\d+$/.test(cells[i])) return cells[i];
+  return null;
+}}
+
+function renderCourtListHeader(){{
+  var c = boardCourt(openCourt.wing, openCourt.court);
+  document.getElementById('courtModalTitle').textContent = 'Court ' + openCourt.court + ' \\u2014 ' + openCourt.wing;
+  var sub = [];
+  if (c && c.coram) sub.push(c.coram);
+  if (c && c.item) sub.push('Now calling item ' + c.item);
+  else sub.push('Not on the live board right now');
+  document.getElementById('courtModalSub').textContent = sub.join(' \\u00B7 ');
+  return c;
+}}
+
+function renderCourtList(data, scrollToCurrent){{
+  var c = renderCourtListHeader();
+  var current = c && c.item ? String(c.item) : null;
+  var today = todayIso();
+  var mine = MATCHES.filter(function(m){{ return m.date === today && String(m.court) === String(openCourt.court); }});
+  var mineSr = mine.map(function(m){{ return String(m.sr||''); }}).filter(Boolean);
+  var mineCase = mine.map(function(m){{ return normCaseNo(m.caseNo); }}).filter(function(s){{ return s.length > 3; }});
+
+  var html = '';
+  if (data.notice) html += '<div class="court-panel-note">'+esc(data.notice)+'</div>';
+  if (!data.tables || !data.tables.length){{
+    html += '<div class="court-panel-err">The court\\u2019s page loaded but had no case list in it.</div>';
+  }}
+  (data.tables || []).forEach(function(t){{
+    html += '<div class="table-scroll"><table class="court-list">';
+    t.rows.forEach(function(r){{
+      if (r.header){{
+        html += '<tr>' + r.cells.map(function(x){{ return '<th>'+esc(x)+'</th>'; }}).join('') + '</tr>';
+        return;
+      }}
+      var sr = firstNumber(r.cells);
+      var rowText = normCaseNo(r.cells.join(' '));
+      var cls = [];
+      if (current && sr === current) cls.push('is-current');
+      if ((sr && mineSr.indexOf(sr) !== -1) || mineCase.some(function(n){{ return rowText.indexOf(n) !== -1; }})) cls.push('is-mine');
+      html += '<tr'+(cls.length ? ' class="'+cls.join(' ')+'"' : '')+'>' +
+        r.cells.map(function(x){{ return '<td>'+esc(x)+'</td>'; }}).join('') + '</tr>';
+    }});
+    html += '</table></div>';
+  }});
+  var body = document.getElementById('courtModalBody');
+  body.innerHTML = html;
+  var cur = scrollToCurrent && body.querySelector('tr.is-current');
+  if (cur) cur.scrollIntoView({{block: 'center'}});
+}}
+
+function loadCourtList(){{
+  if (!openCourt) return;
+  var req = openCourt;
+  openCourtData = null;
+  renderCourtListHeader();
+  document.getElementById('courtModalBody').innerHTML = '<div class="court-panel-note">Loading the court\\u2019s list from the High Court site\\u2026</div>';
+  var url = COURT_LIST_ENDPOINT + '?wing=' + encodeURIComponent(req.wing) + '&court=' + encodeURIComponent(req.court);
+  fetch(url, {{cache: 'no-store'}})
+    .then(function(resp){{ return resp.json().catch(function(){{ return {{error: 'status ' + resp.status}}; }}); }})
+    .then(function(data){{
+      if (openCourt !== req) return;
+      if (!data || data.error) throw new Error(data && data.error || 'bad response');
+      openCourtData = data;
+      renderCourtList(data, true);
+    }})
+    .catch(function(err){{
+      if (openCourt !== req) return;
+      document.getElementById('courtModalBody').innerHTML =
+        '<div class="court-panel-err">Couldn\\u2019t load this court\\u2019s list: '+esc(err.message)+'</div>';
+    }});
+}}
+
+function openCourtList(wing, court){{
+  openCourt = {{wing: wing, court: court}};
+  document.getElementById('courtModal').hidden = false;
+  loadCourtList();
+}}
+
+function closeCourtList(){{
+  openCourt = null;
+  openCourtData = null;
+  document.getElementById('courtModal').hidden = true;
+}}
+
+document.getElementById('boardRow').addEventListener('click', function(ev){{
+  var btn = ev.target.closest('button.board-court-row');
+  if (btn) openCourtList(btn.getAttribute('data-wing'), btn.getAttribute('data-court'));
+}});
+document.getElementById('courtModalClose').addEventListener('click', closeCourtList);
+document.getElementById('courtModalRefresh').addEventListener('click', loadCourtList);
+document.getElementById('courtModal').addEventListener('click', function(ev){{
+  if (ev.target === this) closeCourtList();
+}});
+document.addEventListener('keydown', function(ev){{
+  if (ev.key === 'Escape' && openCourt) closeCourtList();
+}});
 
 function startBoardPolling(){{
   pollBoard();

@@ -92,4 +92,4 @@ function parseDisplayBoard(html) {
   return result;
 }
 
-module.exports = { parseDisplayBoard };
+module.exports = { parseDisplayBoard, decodeEntities, cellText };
