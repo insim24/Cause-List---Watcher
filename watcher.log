@@ -3605,3 +3605,23 @@
 2026-09-26 13:49:42,051 [INFO]   -> [Syed Manzoor] 2026-10-01 | Court 9 | Sr 47 | OWP 31/2015 IA(1/2015[53/2015]) CM(2051/2025) CM(2054/2025) CM(7179/2024)
 2026-09-26 13:49:42,051 [INFO]   -> [Syed Manzoor] 2026-10-01 | Court 11 | Sr 2 | WP(C) 1319/2025 CM(3514/2025)
 2026-09-26 13:49:42,051 [INFO]   -> [Syed Mohtasim] 2026-10-01 | Court 30 | Sr 1 | RFA 92/2026 CM(5096/2026) Caveat 1131/2026
+2026-09-27 05:37:14,346 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-27 05:37:14,346 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-27 05:37:15,480 [INFO] Found 10 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-09-27 05:37:15,480 [INFO] Downloading Supplementary%20Cause%20List%20-%2028.09.2026.pdf (supplementary)
+2026-09-27 05:37:15,721 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2028.09.2026.pdf
+2026-09-27 05:37:15,721 [INFO] Downloading causelist_28092026.pdf (daywise)
+2026-09-27 05:37:16,244 [INFO] Unchanged since last run, skipping re-parse: causelist_28092026.pdf
+2026-09-27 05:37:16,245 [INFO] Downloading causelist_29092026.pdf (daywise)
+2026-09-27 05:37:16,483 [WARNING] Could not download https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_28092026/causelist_29092026.pdf: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-09-27 05:37:16,484 [INFO] Downloading causelist_30092026.pdf (daywise)
+2026-09-27 05:37:17,772 [INFO] Unchanged since last run, skipping re-parse: causelist_30092026.pdf
+2026-09-27 05:37:17,772 [INFO] Downloading causelist_01102026.pdf (daywise)
+2026-09-27 05:37:18,231 [INFO] Unchanged since last run, skipping re-parse: causelist_01102026.pdf
+2026-09-27 05:37:18,231 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-27 05:37:19,734 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-27 05:37:19,734 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-27 05:37:19,986 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-27 05:37:19,991 [INFO] Fetching live display board
+2026-09-27 05:37:20,933 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu Matters will be taken up immediately after the Supplementary List of Srinagar"}]}}
+2026-09-27 05:37:20,934 [INFO] Added 0 new match(es). Total saved: 98. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
