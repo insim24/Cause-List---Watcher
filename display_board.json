@@ -1,19 +1,31 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": []
-  },
-  "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "11",
+        "item": "133",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "1",
-        "text": "Jammu Matters will be taken up immediately after the Supplementary List of Srinagar"
+        "id": "10",
+        "text": "Immediate presence of Mr.  (advocate Irshad Rasheed) is required in court"
       }
     ]
+  },
+  "Jammu Wing": {
+    "idle": false,
+    "courts": [
+      {
+        "court": "4",
+        "item": "1",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR.  JUSTICE SANJAY DHAR"
+      }
+    ],
+    "raw_status_rows": [],
+    "messages": []
   }
 }
