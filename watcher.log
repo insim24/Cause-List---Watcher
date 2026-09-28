@@ -3661,3 +3661,26 @@
 2026-09-28 11:28:08,994 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-10-01 | Court 1 | Sr 33 | LPA 231/2022 in[WP(C) 2186/2021]
 2026-09-28 11:28:08,994 [INFO]   -> [Syed Manzoor] 2026-10-01 | Court 9 | Sr 47 | OWP 31/2015 IA(1/2015[53/2015]) CM(2051/2025) CM(2054/2025) CM(7179/2024)
 2026-09-28 11:28:08,994 [INFO]   -> [Syed Manzoor] 2026-10-01 | Court 11 | Sr 2 | WP(C) 1319/2025 CM(3514/2025)
+2026-09-28 17:46:52,706 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-28 17:46:52,707 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-28 17:46:53,861 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-09-28 17:46:53,861 [INFO] Downloading Supplementary%20Cause%20List%20-%2029.09.2026.pdf (supplementary)
+2026-09-28 17:46:54,776 [INFO] Supplementary%20Cause%20List%20-%2029.09.2026.pdf: 65 case row(s) read, 1 potential match(es)
+2026-09-28 17:46:54,776 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2029.09.2026.pdf (supplementary)
+2026-09-28 17:46:55,050 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2029.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-28 17:46:55,051 [INFO] Downloading causelist_28092026.pdf (daywise)
+2026-09-28 17:46:56,034 [INFO] Unchanged since last run, skipping re-parse: causelist_28092026.pdf
+2026-09-28 17:46:56,034 [INFO] Downloading causelist_29092026.pdf (daywise)
+2026-09-28 17:46:57,017 [INFO] Unchanged since last run, skipping re-parse: causelist_29092026.pdf
+2026-09-28 17:46:57,017 [INFO] Downloading causelist_30092026.pdf (daywise)
+2026-09-28 17:46:58,245 [INFO] Unchanged since last run, skipping re-parse: causelist_30092026.pdf
+2026-09-28 17:46:58,245 [INFO] Downloading causelist_01102026.pdf (daywise)
+2026-09-28 17:46:58,985 [INFO] Unchanged since last run, skipping re-parse: causelist_01102026.pdf
+2026-09-28 17:46:58,985 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-28 17:47:03,771 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-28 17:47:03,771 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-28 17:47:04,025 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-28 17:47:04,028 [INFO] Fetching live display board
+2026-09-28 17:47:07,057 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-09-28 17:47:07,059 [INFO] Added 1 new match(es). Total saved: 99. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-28 17:47:07,059 [INFO]   -> [Owais Ashraf] 2026-09-29 | Court 11 | Sr 84 | CM(6558/2026) IN WP(C) 2232/2026 IMPLEADMENT CM(6066/2026) CM(6559/2026)
