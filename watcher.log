@@ -3710,3 +3710,25 @@
 2026-09-29 11:08:53,964 [INFO] Fetching live display board
 2026-09-29 11:08:58,224 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "65", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "8", "item": "1", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "9", "item": "24", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "11", "item": "54", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "7", "item": "183", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "81", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "12", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}, {"court": "13", "item": "77", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "mentioned matters : 80,81,89,120,123,130,131,132"}]}}
 2026-09-29 11:08:58,225 [INFO] Added 0 new match(es). Total saved: 99. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-29 16:03:53,058 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-29 16:03:53,058 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-29 16:03:54,342 [INFO] Found 11 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-09-29 16:03:54,343 [INFO] Downloading Supplementary%20Cause%20List%20-%2030.09.2026.pdf (supplementary)
+2026-09-29 16:03:55,140 [INFO] Supplementary%20Cause%20List%20-%2030.09.2026.pdf: 62 case row(s) read, 0 potential match(es)
+2026-09-29 16:03:55,140 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2030.09.2026.pdf (supplementary)
+2026-09-29 16:03:55,514 [INFO] Mediation%20Supplementary%20Cause%20List%20-%2030.09.2026.pdf: 9 case row(s) read, 0 potential match(es)
+2026-09-29 16:03:55,514 [INFO] Downloading causelist_28092026.pdf (daywise)
+2026-09-29 16:03:56,157 [INFO] Unchanged since last run, skipping re-parse: causelist_28092026.pdf
+2026-09-29 16:03:56,157 [INFO] Downloading causelist_29092026.pdf (daywise)
+2026-09-29 16:03:56,507 [INFO] Unchanged since last run, skipping re-parse: causelist_29092026.pdf
+2026-09-29 16:03:56,507 [INFO] Downloading causelist_30092026.pdf (daywise)
+2026-09-29 16:03:56,957 [INFO] Unchanged since last run, skipping re-parse: causelist_30092026.pdf
+2026-09-29 16:03:56,957 [INFO] Downloading causelist_01102026.pdf (daywise)
+2026-09-29 16:03:57,357 [INFO] Unchanged since last run, skipping re-parse: causelist_01102026.pdf
+2026-09-29 16:03:57,357 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-29 16:03:59,167 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-29 16:03:59,167 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-29 16:03:59,447 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-29 16:03:59,450 [INFO] Fetching live display board
+2026-09-29 16:04:03,426 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "65", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "8", "item": "1", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "9", "item": "24", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "8", "item": "81", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "12", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "mentioned matters : 80,81,89,120,123,130,131,132"}]}}
+2026-09-29 16:04:03,427 [INFO] Added 0 new match(es). Total saved: 99. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
