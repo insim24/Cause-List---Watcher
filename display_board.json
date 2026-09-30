@@ -4,28 +4,18 @@
     "courts": [
       {
         "court": "4",
-        "item": "87",
+        "item": "92",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
         "court": "9",
-        "item": "104",
+        "item": "83",
         "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
       },
       {
         "court": "10",
-        "item": "78",
+        "item": "49",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "12",
-        "item": "108",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      },
-      {
-        "court": "30",
-        "item": "2",
-        "coram": "REGISTRAR JUDICIAL"
       }
     ],
     "raw_status_rows": [],
@@ -35,33 +25,38 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "6",
-        "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
         "court": "2",
-        "item": "71",
+        "item": "67",
         "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
       },
       {
+        "court": "3",
+        "item": "1",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "4",
+        "item": "1",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
         "court": "5",
-        "item": "141",
+        "item": "136",
         "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
       },
       {
-        "court": "6",
-        "item": "162",
-        "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
+        "court": "7",
+        "item": "185",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       },
       {
         "court": "8",
-        "item": "120",
+        "item": "10",
         "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
       },
       {
         "court": "13",
-        "item": "144",
+        "item": "135",
         "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
@@ -69,7 +64,7 @@
     "messages": [
       {
         "id": "8",
-        "text": "mentioned matters : 80,81,89,120,123,130,131,132"
+        "text": "mentioned matters for today: 66,77,103,106,,115 , Inform the opposite counsel"
       }
     ]
   }

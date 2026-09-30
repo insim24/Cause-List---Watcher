@@ -3754,3 +3754,33 @@
 2026-09-30 05:28:08,890 [INFO] Fetching live display board
 2026-09-30 05:28:10,634 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "87", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "104", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "78", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "12", "item": "108", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}, {"court": "30", "item": "2", "coram": "REGISTRAR JUDICIAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "1", "item": "6", "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "2", "item": "71", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}, {"court": "5", "item": "141", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "6", "item": "162", "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "8", "item": "120", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "13", "item": "144", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "mentioned matters : 80,81,89,120,123,130,131,132"}]}}
 2026-09-30 05:28:10,635 [INFO] Added 0 new match(es). Total saved: 99. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-09-30 10:54:44,262 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-09-30 10:54:44,263 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-09-30 10:54:45,639 [INFO] Found 16 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-09-30 10:54:45,639 [INFO] Downloading Supplementary%20Cause%20List%20-%2030.09.2026.pdf (supplementary)
+2026-09-30 10:54:46,052 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2030.09.2026.pdf
+2026-09-30 10:54:46,052 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2030.09.2026.pdf (supplementary)
+2026-09-30 10:54:46,559 [INFO] Supplementary%20Cause%20List%20-1-%2030.09.2026.pdf: 12 case row(s) read, 0 potential match(es)
+2026-09-30 10:54:46,559 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2030.09.2026.pdf (supplementary)
+2026-09-30 10:54:46,951 [INFO] Supplementary%20Cause%20List%20-2-%2030.09.2026.pdf: 7 case row(s) read, 0 potential match(es)
+2026-09-30 10:54:46,951 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2030.09.2026.pdf (supplementary)
+2026-09-30 10:54:47,331 [INFO] Supplementary%20Cause%20List%20-3-%2030.09.2026.pdf: 7 case row(s) read, 0 potential match(es)
+2026-09-30 10:54:47,332 [INFO] Downloading Supplementary%20Cause%20List%20-4-%2030.09.2026.pdf (supplementary)
+2026-09-30 10:54:47,656 [INFO] No case entries found in Supplementary%20Cause%20List%20-4-%2030.09.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-09-30 10:54:47,656 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2030.09.2026.pdf (supplementary)
+2026-09-30 10:54:47,966 [INFO] Unchanged since last run, skipping re-parse: Mediation%20Supplementary%20Cause%20List%20-%2030.09.2026.pdf
+2026-09-30 10:54:47,966 [INFO] Downloading causelist_28092026.pdf (daywise)
+2026-09-30 10:54:48,602 [INFO] Unchanged since last run, skipping re-parse: causelist_28092026.pdf
+2026-09-30 10:54:48,602 [INFO] Downloading causelist_29092026.pdf (daywise)
+2026-09-30 10:54:49,102 [INFO] Unchanged since last run, skipping re-parse: causelist_29092026.pdf
+2026-09-30 10:54:49,102 [INFO] Downloading causelist_30092026.pdf (daywise)
+2026-09-30 10:54:49,502 [INFO] Unchanged since last run, skipping re-parse: causelist_30092026.pdf
+2026-09-30 10:54:49,502 [INFO] Downloading causelist_01102026.pdf (daywise)
+2026-09-30 10:54:49,902 [INFO] Unchanged since last run, skipping re-parse: causelist_01102026.pdf
+2026-09-30 10:54:49,902 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-09-30 10:54:51,831 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-09-30 10:54:51,831 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-09-30 10:54:52,150 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-09-30 10:54:52,153 [INFO] Fetching live display board
+2026-09-30 10:54:56,757 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "92", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "83", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "49", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "67", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}, {"court": "3", "item": "1", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "4", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "5", "item": "136", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "185", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "10", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "13", "item": "135", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "mentioned matters for today: 66,77,103,106,,115 , Inform the opposite counsel"}]}}
+2026-09-30 10:54:56,758 [INFO] Added 0 new match(es). Total saved: 99. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
