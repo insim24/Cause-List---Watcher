@@ -4,18 +4,28 @@
     "courts": [
       {
         "court": "4",
-        "item": "65",
+        "item": "87",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
-        "court": "8",
-        "item": "1",
-        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
+        "court": "9",
+        "item": "104",
+        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
       },
       {
-        "court": "9",
-        "item": "24",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+        "court": "10",
+        "item": "78",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "12",
+        "item": "108",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      },
+      {
+        "court": "30",
+        "item": "2",
+        "coram": "REGISTRAR JUDICIAL"
       }
     ],
     "raw_status_rows": [],
@@ -25,19 +35,34 @@
     "idle": false,
     "courts": [
       {
-        "court": "3",
-        "item": "1",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+        "court": "1",
+        "item": "6",
+        "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "2",
+        "item": "71",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
+      },
+      {
+        "court": "5",
+        "item": "141",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "6",
+        "item": "162",
+        "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
       },
       {
         "court": "8",
-        "item": "81",
+        "item": "120",
         "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
       },
       {
-        "court": "12",
-        "item": "2",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+        "court": "13",
+        "item": "144",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
