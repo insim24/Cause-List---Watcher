@@ -768,5 +768,10 @@
     "hash": "cd828977263e859ca4ff45f0d64c5f8059684287305f4eb77fea0876875b7a74",
     "parser_version": "4-grouped-people",
     "last_seen": "2026-09-30T10:54:47.641025"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Sept/weeklycauselist_28092026/Supplementary%20Cause%20List%20-%2001.10.2026.pdf": {
+    "hash": "db2cc83ae1aa337a5235daba50c861a9652f1d9e661cb17cf6215ec260c404f7",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-09-30T16:02:10.631980"
   }
 }

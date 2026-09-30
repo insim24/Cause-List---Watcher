@@ -3,16 +3,6 @@
     "idle": false,
     "courts": [
       {
-        "court": "4",
-        "item": "92",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "9",
-        "item": "83",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
         "court": "10",
         "item": "49",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
@@ -25,39 +15,14 @@
     "idle": false,
     "courts": [
       {
-        "court": "2",
-        "item": "67",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
-      },
-      {
         "court": "3",
         "item": "1",
         "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
       },
       {
-        "court": "4",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL, HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "5",
-        "item": "136",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "185",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
         "court": "8",
         "item": "10",
         "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
-        "court": "13",
-        "item": "135",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
