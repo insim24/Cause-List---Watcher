@@ -3826,3 +3826,25 @@
 2026-10-01 11:24:02,301 [INFO] Fetching live display board
 2026-10-01 11:24:04,545 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "73", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "5", "text": "Mr. PD Dy AG is required in the court"}]}}
 2026-10-01 11:24:04,546 [INFO] Added 0 new match(es). Total saved: 99. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-01 12:14:37,624 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-01 12:14:37,624 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-01 12:14:38,930 [INFO] Found 12 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-10-01 12:14:38,930 [INFO] Downloading Supplementary%20Cause%20List%20-%2001.10.2026.pdf (supplementary)
+2026-10-01 12:14:39,213 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2001.10.2026.pdf
+2026-10-01 12:14:39,213 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2001.10.2026.pdf (supplementary)
+2026-10-01 12:14:39,493 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-1-%2001.10.2026.pdf
+2026-10-01 12:14:39,493 [INFO] Downloading causelist_28092026.pdf (daywise)
+2026-10-01 12:14:40,128 [INFO] Unchanged since last run, skipping re-parse: causelist_28092026.pdf
+2026-10-01 12:14:40,128 [INFO] Downloading causelist_29092026.pdf (daywise)
+2026-10-01 12:14:40,545 [INFO] Unchanged since last run, skipping re-parse: causelist_29092026.pdf
+2026-10-01 12:14:40,545 [INFO] Downloading causelist_30092026.pdf (daywise)
+2026-10-01 12:14:40,945 [INFO] Unchanged since last run, skipping re-parse: causelist_30092026.pdf
+2026-10-01 12:14:40,945 [INFO] Downloading causelist_01102026.pdf (daywise)
+2026-10-01 12:14:41,345 [INFO] Unchanged since last run, skipping re-parse: causelist_01102026.pdf
+2026-10-01 12:14:41,345 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-01 12:14:43,300 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-01 12:14:43,300 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-01 12:14:43,594 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-01 12:14:43,597 [INFO] Fetching live display board
+2026-10-01 12:14:45,959 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "73", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "5", "text": "Mr. PD Dy AG is required in the court"}]}}
+2026-10-01 12:14:45,961 [INFO] Added 0 new match(es). Total saved: 99. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
