@@ -1,4 +1,4 @@
-const { findCourtForm, parseTables, pageNotice } = require('./_court-list-parser.js');
+const { findCourtForm, parseTables, parseLegend, pageNotice } = require('./_court-list-parser.js');
 
 const ALLOWED_ORIGIN = 'https://insim24.github.io';
 const BOARD_URL = 'https://jkhc.gov.in/dis/';
@@ -99,7 +99,7 @@ module.exports = async (req, res) => {
     }
 
     res.setHeader('Cache-Control', 's-maxage=30, stale-while-revalidate=60');
-    res.status(200).json({ wing, court, notice, tables, source: target.toString() });
+    res.status(200).json({ wing, court, notice, tables, legend: parseLegend(detailHtml), source: target.toString() });
   } catch (err) {
     console.error('court-list fetch failed:', err);
     res.status(502).json({ error: 'fetch failed' });
