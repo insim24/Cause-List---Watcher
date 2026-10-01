@@ -3,33 +3,22 @@
     "idle": false,
     "courts": [
       {
-        "court": "10",
-        "item": "49",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+        "court": "11",
+        "item": "73",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
     "raw_status_rows": [],
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "1",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "8",
-        "item": "10",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "8",
-        "text": "mentioned matters for today: 66,77,103,106,,115 , Inform the opposite counsel"
+        "id": "5",
+        "text": "Mr. PD Dy AG is required in the court"
       }
     ]
   }
