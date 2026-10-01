@@ -27,4 +27,6 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add cases_auto.json manifest.json causelist_dashboard.html display_board.json watcher.log
           git diff --cached --quiet || git commit -m "Auto-update causelist data"
+          # next_dates.json can be committed from the dashboard while this runs
+          git pull --rebase origin main
           git push
