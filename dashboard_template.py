@@ -392,7 +392,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <div class="card">
     <div class="all-head">
-      <h2>All cases ({count})</h2>
+      <h2>All cases (<span id="allCount">{count}</span>)</h2>
       <input type="text" id="searchBox" placeholder="Search by court no., case no., date&hellip;" />
     </div>
     <div class="next-date-sync" id="nextDateSync"></div>
@@ -831,8 +831,10 @@ function nextDateCellHtml(e){{
 }}
 
 function tableRowHtml(e){{
+  var earlier = (e.earlierDates && e.earlierDates.length) ?
+    '<div class="nd-note">earlier: '+e.earlierDates.map(function(d){{ return esc(fmtDateShort(d)); }}).join(', ')+'</div>' : '';
   return '<tr>'+
-    '<td class="mono">'+esc(e.date||'\\u2014')+'</td>'+
+    '<td class="mono">'+esc(e.date||'\\u2014')+earlier+'</td>'+
     '<td class="mono">'+esc(e.court||'\\u2014')+'</td>'+
     nextDateCellHtml(e)+
     '<td class="mono">'+esc(e.sr||'\\u2014')+'</td>'+
@@ -843,16 +845,64 @@ function tableRowHtml(e){{
     '</tr>';
 }}
 
-function renderAllTable(q){{
-  var list = filtered().map(function(e){{
-    var id = nextDateId(e);
-    var mine = nextDates[id] || '', site = nextDates['site:' + id] || '';
-    return Object.assign({{}}, e, {{nextDate: mine || site, siteNextDate: site, nextDateFromSite: !mine && !!site}});
+// All cases shows each case once, on its latest hearing. A case is identified
+// by its first main case number: the number sits outside round brackets
+// ("WP(C) 1319/2025"; "CM(5339/2026)" is an application inside it), and
+// anything in square brackets is a related lower-court case, so it's skipped.
+function caseKey(caseNo){{
+  var s = String(caseNo||'').replace(/\\[[^\\]]*\\]/g, ' ');
+  var re = /([A-Za-z][A-Za-z.]*(?:\\([A-Za-z]+\\))?)[\\s-]*(\\d+)\\s*\\/\\s*(\\d{{4}})/g, m;
+  while ((m = re.exec(s)) !== null){{
+    var before = s.slice(0, m.index);
+    if ((before.match(/\\(/g) || []).length > (before.match(/\\)/g) || []).length) continue;
+    return m[1].toUpperCase().replace(/[^A-Z]/g, '') + parseInt(m[2], 10) + '/' + m[3];
+  }}
+  return null;
+}}
+function effectiveNextDate(e){{
+  var id = nextDateId(e);
+  var mine = nextDates[id] || '', site = nextDates['site:' + id] || '';
+  return {{nextDate: mine || site, siteNextDate: site, nextDateFromSite: !mine && !!site}};
+}}
+function groupByCase(list){{
+  var groups = {{}}, order = [];
+  list.forEach(function(e){{
+    var k = caseKey(e.caseNo) || ('name:' + String(e.caseName||'').toUpperCase().replace(/[^A-Z]/g, ''));
+    if (!groups[k]){{ groups[k] = []; order.push(k); }}
+    groups[k].push(e);
   }});
+  return order.map(function(k){{
+    var rows = groups[k].slice().sort(function(a,b){{ return String(b.date||'').localeCompare(String(a.date||'')); }});
+    var latest = Object.assign({{}}, rows[0], effectiveNextDate(rows[0]));
+    var people = [];
+    rows.forEach(function(r){{
+      (r.people || (r.person ? [r.person] : [])).forEach(function(p){{ if (people.indexOf(p) === -1) people.push(p); }});
+    }});
+    latest.people = people;
+    latest.person = people.join(', ');
+    // case names sometimes pick up page-header text from the PDF; the shortest is the clean one
+    rows.forEach(function(r){{
+      if (r.caseName && (!latest.caseName || r.caseName.length < latest.caseName.length)) latest.caseName = r.caseName;
+    }});
+    // no next date on the latest hearing: use one set on an earlier hearing, if it's still ahead of it
+    if (!latest.nextDate){{
+      rows.slice(1).forEach(function(r){{
+        var nd = effectiveNextDate(r);
+        if (nd.nextDate && nd.nextDate > (latest.date||'') && nd.nextDate > (latest.nextDate||'')) Object.assign(latest, nd);
+      }});
+    }}
+    latest.earlierDates = rows.slice(1).map(function(r){{ return r.date; }}).filter(Boolean);
+    return latest;
+  }});
+}}
+
+function renderAllTable(q){{
+  var list = groupByCase(filtered());
+  document.getElementById('allCount').textContent = list.length;
   if (q){{
     q = q.toLowerCase();
     list = list.filter(function(e){{
-      return ((e.court||'')+(e.sr||'')+(e.caseNo||'')+(e.caseName||'')+(e.date||'')+(e.snippet||'')+(e.person||'')+(e.bench||'')+(e.nextDate||'')).toLowerCase().indexOf(q)!==-1;
+      return ((e.court||'')+(e.sr||'')+(e.caseNo||'')+(e.caseName||'')+(e.date||'')+(e.snippet||'')+(e.person||'')+(e.bench||'')+(e.nextDate||'')+(e.earlierDates||[]).join(' ')).toLowerCase().indexOf(q)!==-1;
     }});
   }}
   list.sort(cmpBy(sortState.key, sortState.dir));

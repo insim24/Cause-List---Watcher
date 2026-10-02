@@ -135,21 +135,36 @@ def merge_matches(existing, new_results):
     def key(r):
         return (r.get("date"), r.get("court"), primary_case_id(r.get("caseNo")))
 
-    index = {key(r): r for r in existing}
+    def absorb(target, r):
+        merged = list(target.get("people", []))
+        for p in r.get("people", []):
+            if p not in merged:
+                merged.append(p)
+        target["people"] = merged
+        target["person"] = ", ".join(merged)
+        # prefer whichever version actually has these set
+        for f in ("sr", "bench", "benchType", "listType", "caseName"):
+            if not target.get(f) and r.get(f):
+                target[f] = r[f]
+
+    # Guard: if the saved list ever holds two rows for the same hearing,
+    # fold them together here rather than carrying the duplicate forward.
+    index = {}
+    deduped = []
+    for r in existing:
+        k = key(r)
+        if k in index:
+            absorb(index[k], r)
+        else:
+            index[k] = r
+            deduped.append(r)
+    existing[:] = deduped
+
     added = 0
     for r in new_results:
         k = key(r)
         if k in index:
-            target = index[k]
-            merged = list(target.get("people", []))
-            for p in r.get("people", []):
-                if p not in merged:
-                    merged.append(p)
-            target["people"] = merged
-            target["person"] = ", ".join(merged)
-            # prefer whichever version actually has a serial number set
-            if not target.get("sr") and r.get("sr"):
-                target["sr"] = r["sr"]
+            absorb(index[k], r)
         else:
             r = dict(r)
             r["id"] = "-".join(str(x) for x in k) + f"-{added}-{int(time.time())}"
