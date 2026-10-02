@@ -1,6 +1,6 @@
 // "All cases" shows each case once, on its latest hearing date.
 // Runs the real dashboard against a snapshot of cases_auto.json taken on
-// 2026-10-02 (99 hearings of 70 cases). Needs jsdom + python; skipped without jsdom.
+// 2026-10-02 (99 hearings of 69 cases). Needs jsdom + python; skipped without jsdom.
 // Run: node --test dbtest/test_all_cases.js
 
 const test = require('node:test');
@@ -56,8 +56,8 @@ test('each case appears once, on its latest date', { skip: !JSDOM && 'jsdom not 
   const { w, doc, rows, errors } = await loadDashboard(MATCHES);
   assert.deepStrictEqual(errors, []);
   assert.strictEqual(MATCHES.length, 99);
-  assert.strictEqual(rows.length, 70);
-  assert.strictEqual(doc.getElementById('allCount').textContent, '70');
+  assert.strictEqual(rows.length, 69);
+  assert.strictEqual(doc.getElementById('allCount').textContent, '69');
 
   // no case key shown twice
   const keys = rows.map((r) => w.caseKey(r.caseNo));
@@ -83,16 +83,34 @@ test('different cases are never merged', { skip: !JSDOM && 'jsdom not installed'
   assert.strictEqual(w.caseKey('CM(M) 161/2026 CM(2889/2026) Caveat 312/2026'), 'CMM161/2026');
   // a lower-court case in [..] isn't either
   assert.strictEqual(w.caseKey('LPA 74/2020 in[SWP 381/2011] CM(4775/2025)'), 'LPA74/2020');
-  // same parties, different case numbers (FAO vs RFA) stay separate
-  const zam = rows.filter((r) => r.caseName.startsWith('ZAMROODA'));
-  assert.deepStrictEqual(zam.map((r) => w.caseKey(r.caseNo)).sort(), ['FAO26/2026', 'RFA92/2026']);
-  // every hearing in a merged group really is the same case number
-  const byKey = {};
-  MATCHES.forEach((m) => { (byKey[w.caseKey(m.caseNo)] = byKey[w.caseKey(m.caseNo)] || []).push(m); });
-  Object.values(byKey).forEach((g) => {
-    const nums = new Set(g.map((m) => w.caseKey(m.caseNo)));
-    assert.strictEqual(nums.size, 1);
+  // every merged group is one case number, or numbers tied by a shared caveat
+  // (FAO 26/2026 converted to RFA 92/2026, both under Caveat 1131/2026)
+  const groups = {};
+  MATCHES.forEach((m) => {
+    const shown = w.groupByCase([m].concat(MATCHES.filter((x) => x !== m)))[0];
+    const k = shown.caseNo + '@' + shown.date;
+    (groups[k] = groups[k] || new Set()).add(m);
   });
+  Object.values(groups).forEach((g) => {
+    const hearings = [...g];
+    const nums = new Set(hearings.map((m) => w.caseKey(m.caseNo)));
+    if (nums.size === 1) return;
+    const caveatSets = hearings.map((m) => new Set(w.caveatKeys(m.caseNo)));
+    const shared = [...caveatSets[0]].filter((c) => caveatSets.every((s) => s.has(c)));
+    assert.ok(shared.length, 'group without a shared caveat: ' + [...nums].join(', '));
+  });
+  const multiNumber = Object.values(groups).filter((g) => new Set([...g].map((m) => w.caseKey(m.caseNo))).size > 1);
+  assert.strictEqual(multiNumber.length, 1, 'only the FAO -> RFA conversion spans two case numbers');
+});
+
+test('converted case (FAO -> RFA) shows once under its new number', { skip: !JSDOM && 'jsdom not installed' }, async () => {
+  const { w, rows } = await loadDashboard(MATCHES);
+  assert.strictEqual(w.caseKey('FAO 26/2026 CM(5096/2026) Caveat 1131/2026'), 'FAO26/2026');
+  assert.deepStrictEqual([...w.caveatKeys('RFA 92/2026 CM(5096/2026) Caveat 1131/2026')], ['CAVEAT1131/2026']);
+  const zam = rows.filter((r) => r.caseName.startsWith('ZAMROODA'));
+  assert.strictEqual(zam.length, 1);
+  assert.match(zam[0].caseNo, /^RFA 92\/2026/);
+  assert.match(zam[0].date, /^2026-10-01earlier: 18 Sept?, 11 Aug$/);
 });
 
 test('merged row: people unioned, clean name, next date carried forward', { skip: !JSDOM && 'jsdom not installed' }, async () => {
