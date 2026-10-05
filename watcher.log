@@ -4163,3 +4163,23 @@
 2026-10-05 12:03:53,769 [INFO] Fetching live display board
 2026-10-05 12:03:57,161 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "28", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}], "raw_status_rows": [], "messages": [{"id": "12", "text": "mention matters 103. 117.120, 140,141 are being taken up for consideration"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu matter will be taken at 10:30 AM."}, {"id": "5", "text": "Mr. Eishaan Didichi is required in the court immediately"}]}}
 2026-10-05 12:03:57,162 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-05 18:44:22,043 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-05 18:44:22,043 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-05 18:44:23,284 [INFO] Found 9 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-10-05 18:44:23,284 [INFO] Downloading Supplementary%20Cause%20List%20-%2006.10.2026.pdf (supplementary)
+2026-10-05 18:44:24,913 [INFO] Supplementary%20Cause%20List%20-%2006.10.2026.pdf: 66 case row(s) read, 0 potential match(es)
+2026-10-05 18:44:24,913 [INFO] Downloading causelist_05102026.pdf (daywise)
+2026-10-05 18:44:25,296 [INFO] Unchanged since last run, skipping re-parse: causelist_05102026.pdf
+2026-10-05 18:44:25,296 [INFO] Downloading causelist_06102026.pdf (daywise)
+2026-10-05 18:44:25,646 [INFO] Unchanged since last run, skipping re-parse: causelist_06102026.pdf
+2026-10-05 18:44:25,646 [INFO] Downloading causelist_08102026.pdf (daywise)
+2026-10-05 18:44:25,946 [INFO] Unchanged since last run, skipping re-parse: causelist_08102026.pdf
+2026-10-05 18:44:25,946 [INFO] Downloading causelist_09102026.pdf (daywise)
+2026-10-05 18:44:26,296 [INFO] Unchanged since last run, skipping re-parse: causelist_09102026.pdf
+2026-10-05 18:44:26,296 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-05 18:44:28,189 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-05 18:44:28,189 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-05 18:44:28,441 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-05 18:44:28,445 [INFO] Fetching live display board
+2026-10-05 18:44:48,963 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7fa026217610>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
+2026-10-05 18:44:48,965 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
