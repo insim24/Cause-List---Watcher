@@ -1,14 +1,34 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "1",
+        "item": "28",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      }
+    ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "12",
+        "text": "mention matters 103. 117.120, 140,141 are being taken up for consideration"
+      }
+    ]
   },
   "Jammu Wing": {
     "idle": true,
     "courts": [],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "1",
+        "text": "Jammu matter will be taken at 10:30 AM."
+      },
+      {
+        "id": "5",
+        "text": "Mr. Eishaan Didichi is required in the court immediately"
+      }
+    ]
   }
 }
