@@ -3,16 +3,20 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "28",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+        "court": "11",
+        "item": "171",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
+        "id": "10",
+        "text": "Immediate presence of Mr.  SHAFQAT NAZIR is required in court"
+      },
+      {
         "id": "12",
-        "text": "mention matters 103. 117.120, 140,141 are being taken up for consideration"
+        "text": "Be it notified that mentioned items 74,62, 148,140,75 ,98 ,131,132 & 145 will be taken up for consideration after break - respective advocates are requested to appear in the cases"
       }
     ]
   },
@@ -20,15 +24,6 @@
     "idle": true,
     "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "1",
-        "text": "Jammu matter will be taken at 10:30 AM."
-      },
-      {
-        "id": "5",
-        "text": "Mr. Eishaan Didichi is required in the court immediately"
-      }
-    ]
+    "messages": []
   }
 }

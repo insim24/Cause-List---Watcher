@@ -4183,3 +4183,31 @@
 2026-10-05 18:44:28,445 [INFO] Fetching live display board
 2026-10-05 18:44:48,963 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Max retries exceeded with url: /dis/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkhc.gov.in', port=443) at 0x7fa026217610>, 'Connection to jkhc.gov.in timed out. (connect timeout=20)'))
 2026-10-05 18:44:48,965 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-06 11:49:05,330 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-06 11:49:05,330 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-06 11:49:06,458 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-10-06 11:49:06,458 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2006.10.2026.pdf (supplementary)
+2026-10-06 11:49:06,775 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2006.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-06 11:49:06,775 [INFO] Downloading Supplementary%20Cause%20List%20-%2006.10.2026.pdf (supplementary)
+2026-10-06 11:49:07,651 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2006.10.2026.pdf
+2026-10-06 11:49:07,651 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2006.10.2026.pdf (supplementary)
+2026-10-06 11:49:07,909 [INFO] No case entries found in Supplementary%20Cause%20List%20-1-%2006.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-06 11:49:07,909 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2006.10.2026.pdf (supplementary)
+2026-10-06 11:49:08,197 [INFO] Supplementary%20Cause%20List%20-2-%2006.10.2026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-10-06 11:49:08,197 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2006.10.2026.pdf (supplementary)
+2026-10-06 11:49:08,455 [INFO] Supplementary%20Cause%20List%20-3-%2006.10.2026.pdf: 2 case row(s) read, 0 potential match(es)
+2026-10-06 11:49:08,455 [INFO] Downloading causelist_05102026.pdf (daywise)
+2026-10-06 11:49:08,750 [INFO] Unchanged since last run, skipping re-parse: causelist_05102026.pdf
+2026-10-06 11:49:08,750 [INFO] Downloading causelist_06102026.pdf (daywise)
+2026-10-06 11:49:09,050 [INFO] Unchanged since last run, skipping re-parse: causelist_06102026.pdf
+2026-10-06 11:49:09,050 [INFO] Downloading causelist_08102026.pdf (daywise)
+2026-10-06 11:49:09,300 [INFO] Unchanged since last run, skipping re-parse: causelist_08102026.pdf
+2026-10-06 11:49:09,300 [INFO] Downloading causelist_09102026.pdf (daywise)
+2026-10-06 11:49:09,550 [INFO] Unchanged since last run, skipping re-parse: causelist_09102026.pdf
+2026-10-06 11:49:09,550 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-06 11:49:11,299 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-06 11:49:11,299 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-06 11:49:11,542 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-06 11:49:11,545 [INFO] Fetching live display board
+2026-10-06 11:49:15,562 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "171", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.  SHAFQAT NAZIR is required in court"}, {"id": "12", "text": "Be it notified that mentioned items 74,62, 148,140,75 ,98 ,131,132 & 145 will be taken up for consideration after break - respective advocates are requested to appear in the cases"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-10-06 11:49:15,563 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
