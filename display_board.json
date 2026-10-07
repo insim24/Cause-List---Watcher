@@ -15,9 +15,30 @@
     ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "2",
+        "item": "3",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MA CHOWDHARY"
+      },
+      {
+        "court": "3",
+        "item": "6",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "8",
+        "item": "1",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      }
+    ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "2",
+        "text": "presence of DEWAKAR SHARMA Dy AG is required in court no 2"
+      }
+    ]
   }
 }
