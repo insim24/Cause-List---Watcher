@@ -4261,3 +4261,25 @@
 2026-10-07 07:55:24,288 [INFO] Fetching live display board
 2026-10-07 07:55:28,385 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.  SHAFQAT NAZIR is required in court"}, {"id": "12", "text": "Be it notified that mentioned items 74,62, 148,140,75 ,98 ,131,132 & 145 will be taken up for consideration after break - respective advocates are requested to appear in the cases"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "3", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "3", "item": "6", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "8", "item": "1", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": [{"id": "2", "text": "presence of DEWAKAR SHARMA Dy AG is required in court no 2"}]}}
 2026-10-07 07:55:28,386 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-07 11:32:32,059 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-07 11:32:32,059 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-07 11:32:33,231 [INFO] Found 10 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-10-07 11:32:33,231 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2008.10.2026.pdf (supplementary)
+2026-10-07 11:32:33,479 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2008.10.2026.pdf
+2026-10-07 11:32:33,479 [INFO] Downloading Supplementary%20Cause%20List%20-%2008.10.2026.pdf (supplementary)
+2026-10-07 11:32:33,725 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2008.10.2026.pdf
+2026-10-07 11:32:33,725 [INFO] Downloading causelist_05102026.pdf (daywise)
+2026-10-07 11:32:34,397 [INFO] Unchanged since last run, skipping re-parse: causelist_05102026.pdf
+2026-10-07 11:32:34,397 [INFO] Downloading causelist_06102026.pdf (daywise)
+2026-10-07 11:32:34,746 [INFO] Unchanged since last run, skipping re-parse: causelist_06102026.pdf
+2026-10-07 11:32:34,747 [INFO] Downloading causelist_08102026.pdf (daywise)
+2026-10-07 11:32:35,046 [INFO] Unchanged since last run, skipping re-parse: causelist_08102026.pdf
+2026-10-07 11:32:35,046 [INFO] Downloading causelist_09102026.pdf (daywise)
+2026-10-07 11:32:35,347 [INFO] Unchanged since last run, skipping re-parse: causelist_09102026.pdf
+2026-10-07 11:32:35,347 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-07 11:32:37,293 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-07 11:32:37,294 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-07 11:32:37,540 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-07 11:32:37,543 [INFO] Fetching live display board
+2026-10-07 11:32:42,394 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.  SHAFQAT NAZIR is required in court"}, {"id": "12", "text": "Be it notified that mentioned items 74,62, 148,140,75 ,98 ,131,132 & 145 will be taken up for consideration after break - respective advocates are requested to appear in the cases"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-10-07 11:32:42,396 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
