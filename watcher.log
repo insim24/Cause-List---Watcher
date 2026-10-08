@@ -4327,3 +4327,29 @@
 2026-10-08 06:25:30,894 [INFO] Fetching live display board
 2026-10-08 06:25:32,518 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "4", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "4", "item": "14", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "10", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "11", "item": "4", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "12", "item": "7", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}, {"court": "14", "item": "22", "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}, {"court": "30", "item": "5", "coram": "REGISTRAR JUDICIAL"}], "raw_status_rows": [], "messages": [{"id": "12", "text": "mentioned item number  50 will be taken up for consideration after lunch break, counsels requested to remain present."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "2", "item": "6", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "3", "item": "5", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "7", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "8", "item": "21", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "13", "item": "6", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "After Notice matters in regular list will be taken up first. serial No. 51 and 52"}, {"id": "5", "text": "Mr. Ravinder Gupta AAG is required in the court immediately"}]}}
 2026-10-08 06:25:32,519 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-08 11:47:29,076 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-08 11:47:29,076 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-08 11:47:30,279 [INFO] Found 12 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-10-08 11:47:30,279 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2008.10.2026.pdf (supplementary)
+2026-10-08 11:47:30,538 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2008.10.2026.pdf
+2026-10-08 11:47:30,538 [INFO] Downloading Supplementary%20Cause%20List%20-%2008.10.2026.pdf (supplementary)
+2026-10-08 11:47:30,795 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2008.10.2026.pdf
+2026-10-08 11:47:30,796 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2008.10.2026.pdf (supplementary)
+2026-10-08 11:47:31,156 [INFO] Supplementary%20Cause%20List%20-1-%2008.10.2026.pdf: 10 case row(s) read, 0 potential match(es)
+2026-10-08 11:47:31,156 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2008.10.2026.pdf (supplementary)
+2026-10-08 11:47:31,425 [INFO] No case entries found in Supplementary%20Cause%20List%20-2-%2008.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-08 11:47:31,425 [INFO] Downloading causelist_05102026.pdf (daywise)
+2026-10-08 11:47:32,026 [INFO] Unchanged since last run, skipping re-parse: causelist_05102026.pdf
+2026-10-08 11:47:32,026 [INFO] Downloading causelist_06102026.pdf (daywise)
+2026-10-08 11:47:32,537 [INFO] Unchanged since last run, skipping re-parse: causelist_06102026.pdf
+2026-10-08 11:47:32,537 [INFO] Downloading causelist_08102026.pdf (daywise)
+2026-10-08 11:47:32,872 [INFO] Unchanged since last run, skipping re-parse: causelist_08102026.pdf
+2026-10-08 11:47:32,872 [INFO] Downloading causelist_09102026.pdf (daywise)
+2026-10-08 11:47:33,222 [INFO] Unchanged since last run, skipping re-parse: causelist_09102026.pdf
+2026-10-08 11:47:33,222 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-08 11:47:35,148 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-08 11:47:35,148 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-08 11:47:35,406 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-08 11:47:35,409 [INFO] Fetching live display board
+2026-10-08 11:47:37,857 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "60", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-10-08 11:47:37,858 [INFO] Added 0 new match(es). Total saved: 110. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
