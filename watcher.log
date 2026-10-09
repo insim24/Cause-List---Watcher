@@ -4378,3 +4378,33 @@
 2026-10-08 16:48:12,762 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "11", "item": "60", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-10-08 16:48:12,764 [INFO] Added 1 new match(es). Total saved: 111. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-10-08 16:48:12,764 [INFO]   -> [Syed Manzoor] 2026-10-09 | Court 4 | Sr 2 | LPA 74/2020 in[SWP 381/2011] CM(4775/2025) CM(4062/2025) CM(2759/2020) CM(5356/2026) CM(217/2022) CM(2281/2022) CM(2758/2020) CM(2208/2020) CM(2002/2023) c/w COURT NO. : 4 i)LPA 82/2020 CM(2329/2022) CM(2629/2020) CM(472/2022) ii)LPA 117/2020 THE HIGH COURT SUPPLEMENTARY-1 HON'BLE a) BEFORE NOTICE b) AFTER NOTICE MATTERS
+2026-10-09 11:40:08,073 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-09 11:40:08,073 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-09 11:40:09,344 [INFO] Found 15 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-10-09 11:40:09,344 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2009.10.2026.pdf (supplementary)
+2026-10-09 11:40:09,658 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2009.10.2026.pdf
+2026-10-09 11:40:09,658 [INFO] Downloading Supplementary%20Cause%20List%20-%2009.10.2026.pdf (supplementary)
+2026-10-09 11:40:10,008 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2009.10.2026.pdf
+2026-10-09 11:40:10,009 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2009.10.2026.pdf (supplementary)
+2026-10-09 11:40:10,352 [INFO] No case entries found in Supplementary%20Cause%20List%20-1-%2009.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-09 11:40:10,353 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2009.10.2026.pdf (supplementary)
+2026-10-09 11:40:10,752 [INFO] Supplementary%20Cause%20List%20-2-%2009.10.2026.pdf: 10 case row(s) read, 0 potential match(es)
+2026-10-09 11:40:10,752 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2009.10.2026.pdf (supplementary)
+2026-10-09 11:40:11,043 [INFO] No case entries found in Supplementary%20Cause%20List%20-3-%2009.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-09 11:40:11,043 [INFO] Downloading Mediation%20Supplementary%20Cause%20List%20-%2030.09.2026.pdf (supplementary)
+2026-10-09 11:40:11,322 [WARNING] Could not download https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_05102026/Mediation%20Supplementary%20Cause%20List%20-%2030.09.2026.pdf: 404 Client Error: Not Found for url: https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_05102026/Mediation%20Supplementary%20Cause%20List%20-%2030.09.2026.pdf
+2026-10-09 11:40:11,322 [INFO] Downloading causelist_05102026.pdf (daywise)
+2026-10-09 11:40:11,908 [INFO] Unchanged since last run, skipping re-parse: causelist_05102026.pdf
+2026-10-09 11:40:11,909 [INFO] Downloading causelist_06102026.pdf (daywise)
+2026-10-09 11:40:12,358 [INFO] Unchanged since last run, skipping re-parse: causelist_06102026.pdf
+2026-10-09 11:40:12,358 [INFO] Downloading causelist_08102026.pdf (daywise)
+2026-10-09 11:40:12,658 [INFO] Unchanged since last run, skipping re-parse: causelist_08102026.pdf
+2026-10-09 11:40:12,659 [INFO] Downloading causelist_09102026.pdf (daywise)
+2026-10-09 11:40:13,008 [INFO] Unchanged since last run, skipping re-parse: causelist_09102026.pdf
+2026-10-09 11:40:13,008 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-09 11:40:15,297 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-09 11:40:15,297 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-09 11:40:15,576 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-09 11:40:15,664 [INFO] Fetching live display board
+2026-10-09 11:40:20,266 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "2", "item": "1", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR"}, {"court": "11", "item": "189", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "14", "item": "23", "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}], "raw_status_rows": [], "messages": [{"id": "2", "text": "Matters listed before Special DB comprising of Honble Mr Justice Sanjeev Kumar and  Honble Mr Justice Mohammad Yousuf Wani will be taken up at 4 PM"}, {"id": "11", "text": "Matters listed before Special DB comprising of Honble Mr Justice Sanjeev Kumar and  Honble Mr Justice Mohammad Yousuf Wani will be taken up at 4 PM"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-10-09 11:40:20,268 [INFO] Added 0 new match(es). Total saved: 111. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
