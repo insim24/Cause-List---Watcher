@@ -918,5 +918,10 @@
     "hash": "cbc4a8b1d9c2c47ce591d5da36841fdf0b336c89bd6b6ff5b510998cd4a0ca35",
     "parser_version": "4-grouped-people",
     "last_seen": "2026-10-09T16:14:31.929461"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_12102026/causelist_13102026.pdf": {
+    "hash": "f7affbf26c66454eb60e22a35804b398b449f55556e42ccab25f455c47371c43",
+    "parser_version": "4-grouped-people",
+    "last_seen": "2026-10-09T16:16:10.386808"
   }
 }
