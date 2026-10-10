@@ -1,23 +1,7 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "2",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR"
-      },
-      {
-        "court": "11",
-        "item": "198",
-        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "14",
-        "item": "23",
-        "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
