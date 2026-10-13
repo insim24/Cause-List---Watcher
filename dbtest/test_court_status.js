@@ -13,7 +13,7 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const { parseDisplayBoard } = require(path.join(ROOT, 'api/_display-board-parser.js'));
-const { parseTables, parseLegend, findCourtForm, isoFromCourtDate } = require(path.join(ROOT, 'api/_court-list-parser.js'));
+const { parseTables, parseLegend, findCourtForm, isoFromCourtDate, listName } = require(path.join(ROOT, 'api/_court-list-parser.js'));
 
 const BOARD_HTML = fs.readFileSync(path.join(__dirname, 'fixture_active.html'), 'utf8');
 const COURT_HTML = fs.readFileSync(path.join(__dirname, 'fixture_court_active.html'), 'utf8');
@@ -60,6 +60,28 @@ test('court page rows: every case tagged with its status', () => {
   assert.strictEqual(bySr(1).nextDate, '2026-11-02');
   assert.strictEqual(bySr(74).section, 'Supplementary-1');
   assert.strictEqual(bySr(74).caseNo, 'WP(C)-752/2026');
+});
+
+test('Sr No runs on across lists: Regular 1-73, Supplementary-1 from 74', () => {
+  const rows = caseRows(parseTables(COURT_HTML));
+  const srs = (section) => rows.filter((r) => r.section === section).map((r) => Number(r.sr));
+  assert.deepStrictEqual(srs('Regular'), Array.from({ length: 73 }, (_, i) => i + 1));
+  assert.deepStrictEqual(srs('Supplementary-1'), [74]);
+  assert.strictEqual(new Set(rows.map((r) => r.sr)).size, rows.length, 'no Sr No repeats on the page');
+});
+
+test('list names from section headers, not just Supplementary-1', () => {
+  const coram = "CORAM:HON'BLE MR. JUSTICE X ";
+  assert.strictEqual(listName(coram + 'CAUSELIST:REGULAR CAUSELIST'), 'Regular');
+  assert.strictEqual(listName(coram + ' CAUSELIST:SUPPLEMENTARY-1 CAUSELIST'), 'Supplementary-1');
+  assert.strictEqual(listName(coram + 'CAUSELIST:SUPPLEMENTARY - 2 CAUSELIST'), 'Supplementary-2');
+  assert.strictEqual(listName(coram + 'CAUSELIST:SPL. SUPPLEMENTARY CAUSELIST'), 'Spl. Supplementary');
+  assert.strictEqual(listName(coram + 'CAUSE LIST : SPECIAL SUPPLEMENTARY-3'), 'Special Supplementary-3');
+  assert.strictEqual(listName('SR NO CASE TITLE'), '');
+
+  const html = COURT_HTML.replace('CAUSELIST:SUPPLEMENTARY-1 CAUSELIST', 'CAUSELIST:SPL. SUPPLEMENTARY-2 CAUSELIST');
+  const sr74 = caseRows(parseTables(html)).find((r) => r.sr === '74');
+  assert.strictEqual(sr74.section, 'Spl. Supplementary-2');
 });
 
 test('01/01/5000 is "no date set"', () => {
@@ -161,14 +183,14 @@ test('dashboard: statuses, "now at", scoped fetches, next-date pre-fill', { skip
   assert.match(courtListCalls[0], /court=11\b/);
 
   const board = doc.getElementById('boardRow').textContent;
-  assert.match(board, /Now at Sr 73/);
+  assert.match(board, /Now at Sr 73\s*Regular/);
   assert.match(board, /Your Sr 1\s*Hearing Complete/);
   assert.match(board, /Your Sr 20\s*To Be Heard/);
 
   const widget = [...doc.querySelectorAll('#todayWidgetBody .tw-row')].map((r) => r.textContent);
   const wRow = (sr) => widget.find((t) => t.startsWith(String(sr) + 'Crt'));
   assert.match(wRow(1), /Hearing Complete/);
-  assert.match(wRow(73), /Hearing Complete.*court at Sr 73/);
+  assert.match(wRow(73), /Hearing Complete.*court at Sr 73\s*Regular/);
   assert.match(wRow(20), /To Be Heard/);
   assert.doesNotMatch(wRow(4), /Hearing|To Be Heard/, 'court 99 has no status (not sitting)');
 
@@ -195,6 +217,26 @@ test('dashboard: statuses, "now at", scoped fetches, next-date pre-fill', { skip
   assert.ok(pRow(73).classList.contains('is-current'));
   assert.ok(pRow(20).classList.contains('st-to_be_heard'));
   assert.strictEqual(pRow(5).cells[3].textContent, '');
+  assert.match(doc.getElementById('courtModalSub').textContent, /Now calling item 73 \(Regular list\)/);
+
+  // court moves on to the supplementary list
+  const movedOn = parseDisplayBoard(BOARD_HTML);
+  movedOn['Srinagar Wing'].courts[0].item = '74';
+  w.fetch = (url) => (String(url).includes('/api/display-board') ? json(movedOn) : fakeFetch(url));
+  w.pollBoard();
+  await new Promise((r) => setTimeout(r, 200));
+  assert.match(doc.getElementById('boardRow').textContent, /Now at Sr 74\s*Supplementary-1/);
+  assert.match(doc.getElementById('courtModalSub').textContent, /Now calling item 74 \(Supplementary-1 list\)/);
+  assert.match([...doc.querySelectorAll('#todayWidgetBody .tw-row')].map((r) => r.textContent).find((t) => t.startsWith('20Crt')), /court at Sr 74\s*Supplementary-1/);
+
+  // a page that restarted numbering would make a bare Sr ambiguous: say so, don't guess
+  const dup = { tables: [{ rows: [
+    { header: false, cells: [], sr: '1', section: 'Regular' },
+    { header: false, cells: [], sr: '1', section: 'Supplementary-2' },
+  ] }] };
+  assert.deepStrictEqual([...w.listsForSr(dup, '1')], ['Regular', 'Supplementary-2']);
+  assert.match(w.nowAtListHtml(dup, '1'), /class="now-list unsure".*Regular or Supplementary-2/);
+  assert.strictEqual(w.nowAtListHtml(dup, '9'), '');
   assert.deepStrictEqual(errors, []);
   w.close();
 });

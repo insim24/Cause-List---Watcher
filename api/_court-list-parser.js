@@ -128,6 +128,16 @@ function cellValue(cellHtml) {
   return btn ? (attr(btn[0], 'value') || '').trim() : '';
 }
 
+// The list a section header introduces, in the same form causelist_core uses
+// for listType: "CAUSELIST:SUPPLEMENTARY - 2 CAUSELIST" -> "Supplementary-2",
+// "CAUSELIST:SPL. SUPPLEMENTARY CAUSELIST" -> "Spl. Supplementary".
+function listName(headerText) {
+  const m = /CAUSE\s*LIST\s*:\s*(.+?)(?:\s*CAUSE\s*LIST)?\s*$/i.exec(String(headerText || ''));
+  if (!m) return '';
+  return m[1].replace(/\s*-\s*/g, '-').replace(/\s+/g, ' ').trim().toLowerCase()
+    .replace(/(^|[\s\-.(])([a-z])/g, (_, p, c) => p + c.toUpperCase());
+}
+
 // Turns every <table> on the court's page into rows of cell text.
 // Each row is {header: bool, cells: [...]}; empty rows are dropped. Case rows
 // (Sr No first) also get {sr, caseNo, title, nextDate, nextDateRaw, section,
@@ -153,8 +163,8 @@ function parseTables(html) {
       const header = cellTags.every((c) => /^<th/i.test(c) || /class\s*=\s*"td_head"/i.test(c));
       const row = { header, cells };
       if (header) {
-        const list = /CAUSELIST\s*:\s*(.+?)\s*CAUSELIST/i.exec(cells.join(' '));
-        if (list) section = list[1].trim().toLowerCase().replace(/(^|-)\w/g, (c) => c.toUpperCase());
+        const list = listName(cells.join(' '));
+        if (list) section = list;
       } else if (/^\d+$/.test(cells[0] || '') && cells.length >= 4) {
         const color = backgroundOf(/<tr\b[^>]*>/i.exec(rm[0])[0]);
         row.sr = cells[0];
@@ -184,4 +194,4 @@ function pageNotice(html) {
   return cellText(text);
 }
 
-module.exports = { findCourtForm, parseTables, parseLegend, pageNotice, splitWings, isoFromCourtDate };
+module.exports = { findCourtForm, parseTables, parseLegend, pageNotice, splitWings, isoFromCourtDate, listName };

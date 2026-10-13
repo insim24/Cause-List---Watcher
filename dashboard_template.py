@@ -226,6 +226,13 @@ TEMPLATE = """<!DOCTYPE html>
   button.board-court-row{{width:100%;text-align:left;color:inherit;cursor:pointer;}}
   button.board-court-row:hover,button.board-court-row:focus-visible{{border-color:var(--brass-line);outline:none;}}
   .board-court-hint{{display:block;font-size:10px;color:var(--parchment-faint);margin-top:4px;}}
+  .board-now{{flex-shrink:0;text-align:right;white-space:nowrap;}}
+  .board-now .now-list{{display:block;margin:4px 0 0 auto;width:max-content;}}
+  /* which list (Regular / Supplementary-N) the court's current Sr No belongs to */
+  .now-list{{display:inline-block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.5px;
+    text-transform:uppercase;padding:1px 6px;border-radius:4px;border:1px solid var(--line);
+    color:var(--parchment-dim);background:var(--ink-800);line-height:1.4;vertical-align:middle;}}
+  .now-list.unsure{{border-style:dashed;}}
 
   /* ---- court list panel (opened from the live board) ---- */
   .court-modal{{position:fixed;inset:0;z-index:50;background:rgba(5,10,14,.72);display:flex;
@@ -1002,7 +1009,7 @@ function renderBoard(){{
         return '<button type="button" class="board-court-row" data-wing="'+esc(name)+'" data-court="'+esc(c.court)+'">'+
           '<div><span>Court <b>'+esc(c.court)+'</b></span>'+coram+mineHtml+
           '<span class="board-court-hint">View today\\u2019s list \\u203A</span></div>'+
-          '<span>Now at Sr <b>'+esc(c.item)+'</b></span></button>';
+          '<span class="board-now">Now at Sr <b>'+esc(c.item)+'</b>'+nowAtListHtml(courtPageData(name, c.court), c.item)+'</span></button>';
       }}).join('');
     }} else if (!w.idle && w.raw_status_rows && w.raw_status_rows.length){{
       body += w.raw_status_rows.map(function(l){{ return '<div class="board-court-row">'+esc(l)+'</div>'; }}).join('');
@@ -1049,6 +1056,7 @@ function pollBoard(){{
       BOARD = data;
       boardUpdatedAt = Date.now();
       renderBoard();
+      renderTodayWidget();   // its "court at Sr" line follows the board
       if (openCourt && openCourtData) renderCourtList(openCourtData);
       else if (openCourt) renderCourtListHeader();
       checkCaseReminders();
@@ -1134,7 +1142,34 @@ function courtRowForMatch(m, data){{
   }}
   return bySr.length === 1 ? bySr[0] : null;
 }}
-// {{status, row, nowAt, ahead}} for a tracked case today; fields are null when unknown.
+// The court page's data for this court, from the status fetch or the open panel.
+function courtPageData(wing, court){{
+  var cd = myCourtData[String(court)];
+  if (cd && cd.data) return cd.data;
+  if (openCourt && openCourtData && openCourt.wing === wing && String(openCourt.court) === String(court)) return openCourtData;
+  return null;
+}}
+// Which list(s) the court page puts this Sr No in ("Regular", "Supplementary-1", ...).
+// The board only gives a bare Sr No; it is unambiguous while numbering runs on
+// across lists (as on the court pages seen so far), but if a page ever repeats
+// a number in two lists both names are returned rather than guessing.
+function listsForSr(data, sr){{
+  var lists = [];
+  if (!data || sr == null) return lists;
+  caseRows(data).forEach(function(r){{
+    if (r.sr === String(sr) && r.section && lists.indexOf(r.section) === -1) lists.push(r.section);
+  }});
+  return lists;
+}}
+function nowAtListHtml(data, sr){{
+  var lists = listsForSr(data, sr);
+  if (!lists.length) return '';
+  return '<span class="now-list'+(lists.length > 1 ? ' unsure' : '')+'"'+
+    (lists.length > 1 ? ' title="This Sr No appears in more than one list on the court\\u2019s page"' : '')+'>'+
+    esc(lists.join(' or '))+'</span>';
+}}
+
+// {{status, row, nowAt, nowList, ahead}} for a tracked case today; fields are null when unknown.
 function liveCaseInfo(m){{
   var entry = boardEntryFor(m.court);
   var nowAt = entry && entry.court.item ? String(entry.court.item) : null;
@@ -1146,14 +1181,15 @@ function liveCaseInfo(m){{
     var a = parseFloat(m.sr), n = parseFloat(nowAt);
     if (!isNaN(a) && !isNaN(n) && a >= n) ahead = a - n;
   }}
-  return {{status: status, row: row, nowAt: nowAt, ahead: ahead, onBoard: !!entry}};
+  var nowList = nowAt && cd && cd.data ? nowAtListHtml(cd.data, nowAt) : '';
+  return {{status: status, row: row, nowAt: nowAt, nowList: nowList, ahead: ahead, onBoard: !!entry}};
 }}
 function liveCaseParts(info, withNowAt){{
   var parts = [];
   if (info.status) parts.push(statusPill(info.status));
   if (info.ahead === 0) parts.push('<span class="st-pill st-now">Now</span>');
   else if (info.ahead != null) parts.push('<span>'+info.ahead+' ahead</span>');
-  if (withNowAt && info.nowAt) parts.push('<span>court at Sr '+esc(info.nowAt)+'</span>');
+  if (withNowAt && info.nowAt) parts.push('<span>court at Sr '+esc(info.nowAt)+'</span>'+info.nowList);
   return parts.join('');
 }}
 function liveCaseLineHtml(info){{
@@ -1214,7 +1250,10 @@ function renderCourtListHeader(){{
   document.getElementById('courtModalTitle').textContent = 'Court ' + openCourt.court + ' \\u2014 ' + openCourt.wing;
   var sub = [];
   if (c && c.coram) sub.push(c.coram);
-  if (c && c.item) sub.push('Now calling item ' + c.item);
+  if (c && c.item){{
+    var lists = listsForSr(openCourtData, c.item);
+    sub.push('Now calling item ' + c.item + (lists.length ? ' (' + lists.join(' or ') + ' list)' : ''));
+  }}
   else sub.push('Not on the live board right now');
   document.getElementById('courtModalSub').textContent = sub.join(' \\u00B7 ');
   return c;
@@ -1284,6 +1323,7 @@ function loadCourtList(){{
       if (!data || data.error) throw new Error(data && data.error || 'bad response');
       openCourtData = data;
       renderCourtList(data, true);
+      renderBoard();   // the board card can now say which list "Now at Sr" is in
       if (myCasesToday(req.court).length){{
         myCourtData[String(req.court)] = {{data: data, at: Date.now()}};
         recordSiteNextDates(req.court, data);
