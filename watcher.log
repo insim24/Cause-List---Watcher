@@ -4594,3 +4594,23 @@
 2026-10-13 17:03:58,773 [INFO] Fetching live display board
 2026-10-13 17:04:03,278 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "12", "text": "mentioned items 50,75,77,95,122 & 142 will be taken up for consideration after lunch break"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-10-13 17:04:03,280 [INFO] Added 0 new match(es). Total saved: 123. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-13 17:30:17,010 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-13 17:30:17,010 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-13 17:30:18,247 [INFO] Found 9 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-10-13 17:30:18,247 [INFO] Downloading Supplementary%20Cause%20List%20-%2014.10.2026.pdf (supplementary)
+2026-10-13 17:30:18,722 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2014.10.2026.pdf
+2026-10-13 17:30:18,722 [INFO] Downloading causelist_12102026.pdf (daywise)
+2026-10-13 17:30:19,322 [INFO] Unchanged since last run, skipping re-parse: causelist_12102026.pdf
+2026-10-13 17:30:19,322 [INFO] Downloading causelist_13102026.pdf (daywise)
+2026-10-13 17:30:19,721 [INFO] Unchanged since last run, skipping re-parse: causelist_13102026.pdf
+2026-10-13 17:30:19,721 [INFO] Downloading causelist_14102026.pdf (daywise)
+2026-10-13 17:30:20,121 [INFO] Unchanged since last run, skipping re-parse: causelist_14102026.pdf
+2026-10-13 17:30:20,121 [INFO] Downloading causelist_15102026.pdf (daywise)
+2026-10-13 17:30:20,471 [INFO] Unchanged since last run, skipping re-parse: causelist_15102026.pdf
+2026-10-13 17:30:20,472 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-13 17:30:22,264 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-13 17:30:22,265 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-13 17:30:22,542 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-13 17:30:22,546 [INFO] Fetching live display board
+2026-10-13 17:30:28,026 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "12", "text": "mentioned items 50,75,77,95,122 & 142 will be taken up for consideration after lunch break"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-10-13 17:30:28,028 [INFO] Added 0 new match(es). Total saved: 123. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
