@@ -72,11 +72,33 @@
     display:flex;align-items:center;gap:7px;transition:.15s;}
   .fetch-btn:hover{opacity:.85;}
   .fetch-btn:disabled{opacity:.55;cursor:default;}
-  .fetch-status{font-size:12px;color:var(--parchment-dim);}
-  .fetch-status.ok{color:#7FBF7F;}
+  .fetch-status{font-size:12px;color:var(--parchment-dim);order:1;flex-basis:100%;}
+  .fetch-status:empty{display:none;}
+  /* green pulled toward the theme's text colour: >= 5:1 on every theme */
+  .fetch-status.ok{color:#7FBF7F;color:color-mix(in srgb,#3D9A40 60%,var(--parchment));}
   .fetch-status.err{color:var(--seal);}
   .fetch-status a{color:inherit;text-decoration:underline;}
   .fetch-manual-link{font-size:11px;color:var(--parchment-faint);text-decoration:underline;cursor:pointer;}
+
+  /* ---- search the cause lists by case title (saved searches) ---- */
+  .title-search{display:flex;align-items:center;gap:6px;margin:0;flex:0 1 310px;min-width:0;}
+  .title-search input{background:var(--ink-800);border:1px solid var(--line);color:var(--parchment);
+    border-radius:6px;padding:7px 10px;font-size:12.5px;flex:1 1 auto;width:0;min-width:0;font-family:inherit;}
+  .title-search .fetch-btn{flex-shrink:0;}
+  .title-search input::placeholder{color:var(--parchment-faint);}
+  .title-search input:focus{outline:none;border-color:var(--brass);}
+  .title-watch-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:-12px 0 22px;font-size:12px;}
+  .title-watch-row[hidden]{display:none;}
+  .title-watch-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--parchment-faint);}
+  .title-watch{display:inline-flex;align-items:center;gap:4px;background:var(--brass-soft);color:var(--brass);
+    border:1px solid var(--brass-line);border-radius:999px;padding:2px 4px 2px 10px;margin:0 6px 4px 0;}
+  .title-watch button{background:none;border:none;color:inherit;cursor:pointer;font-size:14px;line-height:1;
+    padding:0 5px;border-radius:50%;}
+  .title-watch button:hover,.title-watch button:focus-visible{background:var(--brass-line);outline:none;}
+  .title-watch-note{font-size:11px;color:var(--parchment-faint);}
+  .found-by{display:inline-block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.5px;text-transform:uppercase;
+    padding:1px 6px;border-radius:4px;border:1px solid var(--brass-line);color:var(--brass);background:var(--brass-soft);
+    vertical-align:middle;white-space:nowrap;}
 
   /* ---- case reminders ---- */
   .reminder-row{display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap;}
@@ -216,6 +238,13 @@
   button.board-court-row{width:100%;text-align:left;color:inherit;cursor:pointer;}
   button.board-court-row:hover,button.board-court-row:focus-visible{border-color:var(--brass-line);outline:none;}
   .board-court-hint{display:block;font-size:10px;color:var(--parchment-faint);margin-top:4px;}
+  .board-now{flex-shrink:0;text-align:right;white-space:nowrap;}
+  .board-now .now-list{display:block;margin:4px 0 0 auto;width:max-content;}
+  /* which list (Regular / Supplementary-N) the court's current Sr No belongs to */
+  .now-list{display:inline-block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.5px;
+    text-transform:uppercase;padding:1px 6px;border-radius:4px;border:1px solid var(--line);
+    color:var(--parchment-dim);background:var(--ink-800);line-height:1.4;vertical-align:middle;}
+  .now-list.unsure{border-style:dashed;}
 
   /* ---- court list panel (opened from the live board) ---- */
   .court-modal{position:fixed;inset:0;z-index:50;background:rgba(5,10,14,.72);display:flex;
@@ -317,7 +346,7 @@
       <div class="seal">§</div>
       <div>
         <h1>My Causelist Docket</h1>
-        <p class="hero-sub">Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf &middot; <span id="lastChecked">last checked 13 Oct 2026, 05:30 PM</span></p>
+        <p class="hero-sub">Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf &middot; <span id="lastChecked">last checked 13 Oct 2026, 11:06 PM</span></p>
       </div>
       <div class="theme-picker">
         <button class="theme-gear-btn" id="themeGearBtn" title="Choose theme" aria-label="Choose theme">&#9881;</button>
@@ -329,8 +358,17 @@
 
   <div class="fetch-row">
     <button class="fetch-btn" id="fetchBtn"><span>&#8635;</span><span>Fetch cases</span></button>
+    <form class="title-search" id="titleSearchForm" autocomplete="off">
+      <input type="search" id="titleSearchInput" placeholder="Case title or party name" aria-label="Case title or party name to search the cause lists for" />
+      <button type="submit" class="fetch-btn" id="titleSearchBtn"><span>Search</span></button>
+    </form>
     <span class="fetch-status" id="fetchStatus"></span>
     <a href="#" class="fetch-manual-link" id="manualTokenLink">or paste a token manually</a>
+  </div>
+  <div class="title-watch-row" id="titleWatchRow" hidden>
+    <span class="title-watch-label">Saved searches</span>
+    <span id="titleWatchList"></span>
+    <span class="title-watch-note">Checked against every cause list on each fetch (whole words, any case).</span>
   </div>
 
   <div class="reminder-row" id="reminderRow" style="display:none">
@@ -496,16 +534,34 @@ var calCursor = (function(){
   return new Date();
 })();
 
+// A case is saved because it names a tracked advocate (config.json "people")
+// and/or because its title matched a search saved from the Search box ("titles").
+function searchLabel(t){ return 'Search: ' + t; }
+function matchLabels(m){
+  return (m.people||[]).concat((m.titles||[]).map(searchLabel));
+}
+// "Syed Mohtasim" / "Search: Abdul Rashid Sofi" / both, for the who-column.
+function foundByText(e){
+  return matchLabels(e).join(', ');
+}
+function foundByHtml(e){
+  var parts = [];
+  if (e.person) parts.push(esc(e.person));
+  (e.titles||[]).forEach(function(t){ parts.push('<span class="found-by" title="Found by your saved search">Search: '+esc(t)+'</span>'); });
+  return parts.join(' ');
+}
+
 function filtered(){
-  return selectedPerson ? MATCHES.filter(function(m){return m.people && m.people.indexOf(selectedPerson)!==-1;}) : MATCHES;
+  return selectedPerson ? MATCHES.filter(function(m){return matchLabels(m).indexOf(selectedPerson)!==-1;}) : MATCHES;
 }
 
 function renderChips(){
-  var people = Array.from(new Set(MATCHES.reduce(function(acc,m){return acc.concat(m.people||[]);},[])));
+  var people = Array.from(new Set(MATCHES.reduce(function(acc,m){return acc.concat(matchLabels(m));},[])));
   var box = document.getElementById('personChips');
+  if (selectedPerson && people.indexOf(selectedPerson) === -1) selectedPerson = null;
   if (people.length < 2){ box.style.display='none'; return; }
   box.style.display='flex';
-  var html = '<button class="chip-btn'+(!selectedPerson?' active':'')+'" data-p="">All advocates</button>';
+  var html = '<button class="chip-btn'+(!selectedPerson?' active':'')+'" data-p="">All</button>';
   people.forEach(function(p){
     html += '<button class="chip-btn'+(selectedPerson===p?' active':'')+'" data-p="'+esc(p)+'">'+esc(p)+'</button>';
   });
@@ -543,6 +599,9 @@ function renderStats(){
 
 function docketHtml(e){
   var personRow = e.person ? '<div><span>Advocate</span>'+esc(e.person)+'</div>' : '';
+  if ((e.titles||[]).length) personRow += '<div><span>Found by</span>'+(e.titles||[]).map(function(t){
+    return '<span class="found-by">Search: '+esc(t)+'</span>';
+  }).join(' ')+'</div>';
   var benchText = e.bench || '';
   if (e.benchType) benchText = (benchText ? benchText+' ' : '') + '('+e.benchType+')';
   var benchRow = benchText ? '<div><span>Bench</span>'+esc(benchText)+'</div>' : '';
@@ -641,7 +700,7 @@ var TABLE_COLS = [
   {key:'sr', label:'Sr No'},
   {key:'caseNo', label:'Case No'},
   {key:'caseName', label:'Case Name'},
-  {key:'person', label:'Advocate'},
+  {key:'person', label:'Advocate / Search'},
   {key:'bench', label:'Bench'}
 ];
 var sortState = {key:'date', dir:'desc'};
@@ -653,7 +712,7 @@ function numOrText(v){
 function cmpBy(key, dir){
   var mul = dir==='asc' ? 1 : -1;
   return function(a,b){
-    var av = a[key]||'', bv = b[key]||'';
+    var av = key==='person' ? foundByText(a) : (a[key]||''), bv = key==='person' ? foundByText(b) : (b[key]||'');
     var an = numOrText(av), bn = numOrText(bv);
     if (an!==null && bn!==null) return (an-bn)*mul;
     return String(av).localeCompare(String(bv)) * mul;
@@ -726,24 +785,53 @@ function utf8ToB64(s){
   for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
   return btoa(bin);
 }
-// Returns {dates, sha}; sha is null when the file doesn't exist yet.
-function fetchNextDatesFile(){
+// A JSON file the dashboard keeps in the repo (next_dates.json,
+// title_watches.json). Returns {data, sha}; sha is null when the file doesn't
+// exist yet or there's no token (read anonymously, read-only).
+function fetchSyncedFile(path, empty){
   if (ghToken()){
-    return ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + NEXT_DATES_PATH + '?ref=' + GH_BRANCH, {cache: 'no-store'})
+    return ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + path + '?ref=' + GH_BRANCH, {cache: 'no-store'})
       .then(function(resp){
-        if (resp.status === 404) return {dates: {}, sha: null};
+        if (resp.status === 404) return {data: empty, sha: null};
         if (!resp.ok) throw new Error('status ' + resp.status);
         return resp.json().then(function(data){
-          return {dates: JSON.parse(b64ToUtf8(data.content) || '{}'), sha: data.sha};
+          var text = b64ToUtf8(data.content);
+          return {data: text ? JSON.parse(text) : empty, sha: data.sha};
         });
       });
   }
-  return fetch('https://raw.githubusercontent.com/' + GH_OWNER + '/' + GH_REPO + '/' + GH_BRANCH + '/' + NEXT_DATES_PATH + '?t=' + Date.now(), {cache: 'no-store'})
+  return fetch('https://raw.githubusercontent.com/' + GH_OWNER + '/' + GH_REPO + '/' + GH_BRANCH + '/' + path + '?t=' + Date.now(), {cache: 'no-store'})
     .then(function(resp){
-      if (resp.status === 404) return {dates: {}, sha: null};
+      if (resp.status === 404) return {data: empty, sha: null};
       if (!resp.ok) throw new Error('status ' + resp.status);
-      return resp.json().then(function(d){ return {dates: d, sha: null}; });
+      return resp.json().then(function(d){ return {data: d, sha: null}; });
     });
+}
+// Writes a synced file back with the signed-in user's token. `change` gets the
+// latest content and returns the new content; on a conflict (someone else
+// saved in between) it's re-read and `change` applied again.
+function saveSyncedFile(path, empty, message, change, attempt){
+  attempt = attempt || 0;
+  return fetchSyncedFile(path, empty).then(function(f){
+    var next = change(f.data);
+    var body = {message: message, content: utf8ToB64(JSON.stringify(next, null, 2) + '\n'), branch: GH_BRANCH};
+    if (f.sha) body.sha = f.sha;
+    return ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + path, {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(resp){
+      if ((resp.status === 409 || resp.status === 422) && attempt < 3) return saveSyncedFile(path, empty, message, change, attempt + 1);
+      if (resp.status === 401 || resp.status === 403 || resp.status === 404){
+        throw new Error('GitHub refused the save (status ' + resp.status + '). Sign in again with GitHub \u2014 a pasted token needs Contents: write.');
+      }
+      if (!resp.ok) throw new Error('GitHub returned status ' + resp.status);
+      return next;
+    });
+  });
+}
+function fetchNextDatesFile(){
+  return fetchSyncedFile(NEXT_DATES_PATH, {}).then(function(f){ return {dates: f.data || {}, sha: f.sha}; });
 }
 function loadNextDates(){
   if (nextDatesSaving) return Promise.resolve();
@@ -830,7 +918,7 @@ function tableRowHtml(e){
     '<td class="mono">'+esc(e.sr||'\u2014')+'</td>'+
     '<td class="mono wrap-cell">'+esc(e.caseNo||'\u2014')+'</td>'+
     '<td class="wrap-cell">'+esc(e.caseName||'\u2014')+'</td>'+
-    '<td>'+esc(e.person||'\u2014')+'</td>'+
+    '<td>'+(foundByHtml(e)||'\u2014')+'</td>'+
     '<td>'+esc(e.bench||'\u2014')+'</td>'+
     '</tr>';
 }
@@ -892,6 +980,9 @@ function groupByCase(list){
     });
     latest.people = people;
     latest.person = people.join(', ');
+    var titles = [];
+    rows.forEach(function(r){ (r.titles||[]).forEach(function(t){ if (titles.indexOf(t) === -1) titles.push(t); }); });
+    latest.titles = titles;
     // case names sometimes pick up page-header text from the PDF; the shortest is the clean one
     rows.forEach(function(r){
       if (r.caseName && (!latest.caseName || r.caseName.length < latest.caseName.length)) latest.caseName = r.caseName;
@@ -914,7 +1005,7 @@ function renderAllTable(q){
   if (q){
     q = q.toLowerCase();
     list = list.filter(function(e){
-      return ((e.court||'')+(e.sr||'')+(e.caseNo||'')+(e.caseName||'')+(e.date||'')+(e.snippet||'')+(e.person||'')+(e.bench||'')+(e.nextDate||'')+(e.earlierDates||[]).join(' ')).toLowerCase().indexOf(q)!==-1;
+      return ((e.court||'')+(e.sr||'')+(e.caseNo||'')+(e.caseName||'')+(e.date||'')+(e.snippet||'')+foundByText(e)+(e.bench||'')+(e.nextDate||'')+(e.earlierDates||[]).join(' ')).toLowerCase().indexOf(q)!==-1;
     });
   }
   list.sort(cmpBy(sortState.key, sortState.dir));
@@ -953,7 +1044,7 @@ function renderTodayWidget(){
     return;
   }
   body.innerHTML = list.map(function(e){
-    var advLine = e.person ? '<div class="tw-adv">'+esc(e.person)+'</div>' : '';
+    var advLine = foundByHtml(e) ? '<div class="tw-adv">'+foundByHtml(e)+'</div>' : '';
     return '<div class="tw-row">'+
       '<div class="tw-sr">'+esc(e.sr||'\u2014')+'</div>'+
       '<div class="tw-court">Crt<b>'+esc(e.court||'\u2014')+'</b></div>'+
@@ -992,7 +1083,7 @@ function renderBoard(){
         return '<button type="button" class="board-court-row" data-wing="'+esc(name)+'" data-court="'+esc(c.court)+'">'+
           '<div><span>Court <b>'+esc(c.court)+'</b></span>'+coram+mineHtml+
           '<span class="board-court-hint">View today\u2019s list \u203A</span></div>'+
-          '<span>Now at Sr <b>'+esc(c.item)+'</b></span></button>';
+          '<span class="board-now">Now at Sr <b>'+esc(c.item)+'</b>'+nowAtListHtml(courtPageData(name, c.court), c.item)+'</span></button>';
       }).join('');
     } else if (!w.idle && w.raw_status_rows && w.raw_status_rows.length){
       body += w.raw_status_rows.map(function(l){ return '<div class="board-court-row">'+esc(l)+'</div>'; }).join('');
@@ -1039,6 +1130,7 @@ function pollBoard(){
       BOARD = data;
       boardUpdatedAt = Date.now();
       renderBoard();
+      renderTodayWidget();   // its "court at Sr" line follows the board
       if (openCourt && openCourtData) renderCourtList(openCourtData);
       else if (openCourt) renderCourtListHeader();
       checkCaseReminders();
@@ -1124,7 +1216,34 @@ function courtRowForMatch(m, data){
   }
   return bySr.length === 1 ? bySr[0] : null;
 }
-// {status, row, nowAt, ahead} for a tracked case today; fields are null when unknown.
+// The court page's data for this court, from the status fetch or the open panel.
+function courtPageData(wing, court){
+  var cd = myCourtData[String(court)];
+  if (cd && cd.data) return cd.data;
+  if (openCourt && openCourtData && openCourt.wing === wing && String(openCourt.court) === String(court)) return openCourtData;
+  return null;
+}
+// Which list(s) the court page puts this Sr No in ("Regular", "Supplementary-1", ...).
+// The board only gives a bare Sr No; it is unambiguous while numbering runs on
+// across lists (as on the court pages seen so far), but if a page ever repeats
+// a number in two lists both names are returned rather than guessing.
+function listsForSr(data, sr){
+  var lists = [];
+  if (!data || sr == null) return lists;
+  caseRows(data).forEach(function(r){
+    if (r.sr === String(sr) && r.section && lists.indexOf(r.section) === -1) lists.push(r.section);
+  });
+  return lists;
+}
+function nowAtListHtml(data, sr){
+  var lists = listsForSr(data, sr);
+  if (!lists.length) return '';
+  return '<span class="now-list'+(lists.length > 1 ? ' unsure' : '')+'"'+
+    (lists.length > 1 ? ' title="This Sr No appears in more than one list on the court\u2019s page"' : '')+'>'+
+    esc(lists.join(' or '))+'</span>';
+}
+
+// {status, row, nowAt, nowList, ahead} for a tracked case today; fields are null when unknown.
 function liveCaseInfo(m){
   var entry = boardEntryFor(m.court);
   var nowAt = entry && entry.court.item ? String(entry.court.item) : null;
@@ -1136,14 +1255,15 @@ function liveCaseInfo(m){
     var a = parseFloat(m.sr), n = parseFloat(nowAt);
     if (!isNaN(a) && !isNaN(n) && a >= n) ahead = a - n;
   }
-  return {status: status, row: row, nowAt: nowAt, ahead: ahead, onBoard: !!entry};
+  var nowList = nowAt && cd && cd.data ? nowAtListHtml(cd.data, nowAt) : '';
+  return {status: status, row: row, nowAt: nowAt, nowList: nowList, ahead: ahead, onBoard: !!entry};
 }
 function liveCaseParts(info, withNowAt){
   var parts = [];
   if (info.status) parts.push(statusPill(info.status));
   if (info.ahead === 0) parts.push('<span class="st-pill st-now">Now</span>');
   else if (info.ahead != null) parts.push('<span>'+info.ahead+' ahead</span>');
-  if (withNowAt && info.nowAt) parts.push('<span>court at Sr '+esc(info.nowAt)+'</span>');
+  if (withNowAt && info.nowAt) parts.push('<span>court at Sr '+esc(info.nowAt)+'</span>'+info.nowList);
   return parts.join('');
 }
 function liveCaseLineHtml(info){
@@ -1204,7 +1324,10 @@ function renderCourtListHeader(){
   document.getElementById('courtModalTitle').textContent = 'Court ' + openCourt.court + ' \u2014 ' + openCourt.wing;
   var sub = [];
   if (c && c.coram) sub.push(c.coram);
-  if (c && c.item) sub.push('Now calling item ' + c.item);
+  if (c && c.item){
+    var lists = listsForSr(openCourtData, c.item);
+    sub.push('Now calling item ' + c.item + (lists.length ? ' (' + lists.join(' or ') + ' list)' : ''));
+  }
   else sub.push('Not on the live board right now');
   document.getElementById('courtModalSub').textContent = sub.join(' \u00B7 ');
   return c;
@@ -1274,6 +1397,7 @@ function loadCourtList(){
       if (!data || data.error) throw new Error(data && data.error || 'bad response');
       openCourtData = data;
       renderCourtList(data, true);
+      renderBoard();   // the board card can now say which list "Now at Sr" is in
       if (myCasesToday(req.court).length){
         myCourtData[String(req.court)] = {data: data, at: Date.now()};
         recordSiteNextDates(req.court, data);
@@ -1397,16 +1521,21 @@ function completeGithubOauthIfNeeded(){
     setGhToken(data.access_token);
     ghStatus('Signed in.', 'ok');
     loadNextDates();
-    if (pendingFetch){
+    var pendingSearch = sessionStorage.getItem('pending_title_search');
+    sessionStorage.removeItem('pending_title_search');
+    if (pendingSearch){
+      loadTitleWatches().then(function(){ runTitleSearch(pendingSearch); });
+    } else if (pendingFetch){
       triggerFetch();
     }
   }).catch(function(err){
     ghStatus('Sign-in error: ' + err.message, 'err');
   });
 }
+var ghStatusLead = '';   // prefixed to fetch progress while a search runs it
 function ghStatus(msg, kind, link){
   var el = document.getElementById('fetchStatus');
-  el.textContent = msg;
+  el.textContent = ghStatusLead + msg;
   el.className = 'fetch-status' + (kind ? ' ' + kind : '');
   if (link){
     var a = document.createElement('a');
@@ -1474,12 +1603,13 @@ function refreshDataFromRepo(){
 }
 function triggerFetch(){
   var token = ensureGhToken();
-  if (!token){ startGithubSignIn(true); return; }
+  if (!token){ startGithubSignIn(true); return Promise.resolve(false); }
   var btn = document.getElementById('fetchBtn');
   btn.disabled = true;
   var startedAt = Date.now();
   ghStatus('Triggering a fresh fetch\u2026', '');
-  ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/actions/workflows/' + GH_WORKFLOW + '/dispatches', {
+  // resolves true once the run succeeded and fresh data is on the page
+  return ghApi('/repos/' + GH_OWNER + '/' + GH_REPO + '/actions/workflows/' + GH_WORKFLOW + '/dispatches', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({ref: GH_BRANCH})
@@ -1496,17 +1626,122 @@ function triggerFetch(){
   }).then(function(run){
     return pollRunUntilDone(run);
   }).then(function(run){
-    if (!run) return;
+    if (!run) return false;
     if (run.conclusion !== 'success'){
       ghStatus('Run finished with status: ' + run.conclusion + '.', 'err', run.html_url);
-      return;
+      return false;
     }
     ghStatus('Run succeeded \u2014 pulling fresh data\u2026', '');
-    return refreshDataFromRepo();
+    return refreshDataFromRepo().then(function(){ return true; });
   }).catch(function(err){
     ghStatus('Error: ' + err.message, 'err');
-  }).then(function(){
+    return false;
+  }).then(function(ok){
     btn.disabled = false;
+    return ok;
+  });
+}
+
+// ---- saved case-title searches ----
+// Search saves the term to title_watches.json in the repo (same signed-in
+// GitHub write as next dates), then runs a fetch: the watcher checks the title
+// of every case in every cause list it reads against the saved terms and keeps
+// the hits in cases_auto.json, tagged with the search that found them. So
+// results only exist after that run, and only for lists published right now;
+// the search stays saved and is re-checked on every later fetch.
+var TITLE_WATCHES_PATH = 'title_watches.json';
+var MIN_SEARCH_LEN = 3;   // same rule as build_title_watches() in the watcher
+var titleWatches = [];    // [{term, added}]
+
+function normWords(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function sameTerm(a, b){ return normWords(a) === normWords(b); }
+
+function renderTitleWatches(){
+  var row = document.getElementById('titleWatchRow');
+  row.hidden = !titleWatches.length;
+  document.getElementById('titleWatchList').innerHTML = titleWatches.map(function(w, i){
+    return '<span class="title-watch">'+esc(w.term)+
+      '<button type="button" data-unwatch="'+i+'" title="Remove this saved search" aria-label="Remove saved search '+esc(w.term)+'">&times;</button></span>';
+  }).join('');
+  row.querySelectorAll('[data-unwatch]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var w = titleWatches[Number(btn.getAttribute('data-unwatch'))];
+      if (w) removeTitleWatch(w.term);
+    });
+  });
+}
+function loadTitleWatches(){
+  return fetchSyncedFile(TITLE_WATCHES_PATH, []).then(function(f){
+    titleWatches = Array.isArray(f.data) ? f.data.filter(function(w){ return w && w.term; }) : [];
+    renderTitleWatches();
+  }).catch(function(err){
+    console.warn('Saved searches load failed:', err.message);
+  });
+}
+function saveTitleWatches(message, change){
+  return saveSyncedFile(TITLE_WATCHES_PATH, [], message, function(list){
+    return change(Array.isArray(list) ? list.slice() : []);
+  }).then(function(list){
+    titleWatches = list;
+    renderTitleWatches();
+  });
+}
+
+function searchOutcome(term){
+  var hits = MATCHES.filter(function(m){ return (m.titles||[]).some(function(t){ return sameTerm(t, term); }); });
+  if (!hits.length){
+    ghStatus('No case titled \u201C' + term + '\u201D in the cause lists published right now. The search stays saved and is checked on every fetch (twice a day, Mon\u2013Sat).', '');
+    return;
+  }
+  selectedPerson = searchLabel(hits[0].titles.filter(function(t){ return sameTerm(t, term); })[0]);
+  renderEverything();
+  ghStatus('Found ' + hits.length + ' case' + (hits.length === 1 ? '' : 's') + ' for \u201C' + term + '\u201D \u2014 shown below.', 'ok');
+}
+
+function runTitleSearch(term){
+  term = String(term||'').replace(/\s+/g, ' ').trim();
+  if (normWords(term).length < MIN_SEARCH_LEN){
+    ghStatus('Type at least ' + MIN_SEARCH_LEN + ' letters of a case title or party name.', 'err');
+    return;
+  }
+  if (!ghToken()){
+    // saving needs the same GitHub sign-in as Fetch; pick up again after it
+    sessionStorage.setItem('pending_title_search', term);
+    startGithubSignIn(false);
+    return;
+  }
+  var btn = document.getElementById('titleSearchBtn');
+  btn.disabled = true;
+  var already = titleWatches.some(function(w){ return sameTerm(w.term, term); });
+  ghStatus('Saving search\u2026', '');
+  saveTitleWatches('Search cause lists for "' + term + '"', function(list){
+    if (!list.some(function(w){ return sameTerm(w.term, term); })) list.push({term: term, added: todayIso()});
+    return list;
+  }).then(function(){
+    document.getElementById('titleSearchInput').value = '';
+    // the fetch reports its own progress; keep it clear the search is saved
+    ghStatusLead = (already ? 'Search already saved' : 'Search saved') + ', looking for it now (a minute or two) \u00B7 ';
+    return triggerFetch().then(function(ok){
+      ghStatusLead = '';
+      if (ok) searchOutcome(term);
+      else document.getElementById('fetchStatus').appendChild(document.createTextNode(
+        ' Your search for \u201C' + term + '\u201D is saved and will be checked on the next fetch.'));
+    });
+  }, function(err){
+    ghStatus('Couldn\u2019t save the search: ' + err.message, 'err');
+  }).then(function(){
+    ghStatusLead = '';
+    btn.disabled = false;
+  });
+}
+function removeTitleWatch(term){
+  ghStatus('Removing saved search\u2026', '');
+  saveTitleWatches('Remove cause list search "' + term + '"', function(list){
+    return list.filter(function(w){ return !sameTerm(w.term, term); });
+  }).then(function(){
+    ghStatus('Removed \u201C' + term + '\u201D. Cases found only by it drop off at the next fetch.', 'ok');
+  }, function(err){
+    ghStatus('Couldn\u2019t remove the search: ' + err.message, 'err');
   });
 }
 
@@ -1529,6 +1764,7 @@ function tickMatchesStatus(){
 function pollMatches(){
   if (document.hidden) return;
   loadNextDates();
+  loadTitleWatches();
   fetch(MATCHES_ENDPOINT, {cache: 'no-store'})
     .then(function(resp){
       if (!resp.ok) throw new Error('status ' + resp.status);
@@ -1730,7 +1966,11 @@ document.getElementById('backToUpcoming').addEventListener('click', function(){
   renderAgenda();
 });
 document.getElementById('searchBox').addEventListener('input', function(e){ renderAllTable(e.target.value); });
-document.getElementById('fetchBtn').addEventListener('click', triggerFetch);
+document.getElementById('fetchBtn').addEventListener('click', function(){ triggerFetch(); });
+document.getElementById('titleSearchForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  runTitleSearch(document.getElementById('titleSearchInput').value);
+});
 document.getElementById('manualTokenLink').addEventListener('click', function(e){
   e.preventDefault();
   promptForManualToken();

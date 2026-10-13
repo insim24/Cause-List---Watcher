@@ -31,6 +31,7 @@ from causelist_core import (
     CAUSELIST_PAGE,
     PARSER_VERSION,
     build_people,
+    build_title_watches,
     extract_entries_from_pdf,
     find_causelist_links,
     guess_date_from_filename,
@@ -48,6 +49,8 @@ DASHBOARD_FILE = os.path.join(HERE, "causelist_dashboard.html")
 DISPLAY_BOARD_FILE = os.path.join(HERE, "display_board.json")
 LOG_FILE = os.path.join(HERE, "watcher.log")
 CONFIG_FILE = os.path.join(HERE, "config.json")
+# Ad-hoc case-title searches, written by the dashboard's Search button.
+TITLE_WATCH_FILE = os.path.join(HERE, "title_watches.json")
 
 HEADERS = {
     "User-Agent": (
@@ -120,6 +123,33 @@ def download_pdf(session, url, dest_path):
     return hashlib.sha256(resp.content).hexdigest()
 
 
+def _matched_by(r):
+    return (["advocate"] if r.get("people") else []) + (["search"] if r.get("titles") else [])
+
+
+def prune_titles(existing, titles):
+    """Drops search tags for searches since removed from the dashboard, and
+    any case that was only saved because of one."""
+    live = set(titles)
+    kept = []
+    for r in existing:
+        if r.get("titles"):
+            r["titles"] = [t for t in r["titles"] if t in live]
+        if r.get("people") or r.get("person") or r.get("titles"):
+            r["matchedBy"] = _matched_by(r) or ["advocate"]
+            kept.append(r)
+    removed = len(existing) - len(kept)
+    existing[:] = kept
+    return removed
+
+
+def watch_key(people, titles):
+    """Changes whenever what we look for changes, so already-seen PDFs get
+    searched again for a new name or title (not just new PDFs)."""
+    terms = sorted(t.lower() for p in people for t in p["terms"] if t) + ["title:" + t.lower() for t in sorted(titles)]
+    return hashlib.sha256("\n".join(terms).encode("utf-8")).hexdigest()[:16]
+
+
 def merge_matches(existing, new_results):
     """Dedup key is (date, court, normalized primary case id) — NOT the raw
     sr/caseNo strings, since those can vary slightly between the daywise and
@@ -142,6 +172,12 @@ def merge_matches(existing, new_results):
                 merged.append(p)
         target["people"] = merged
         target["person"] = ", ".join(merged)
+        titles = list(target.get("titles", []))
+        for t in r.get("titles", []):
+            if t not in titles:
+                titles.append(t)
+        target["titles"] = titles
+        target["matchedBy"] = _matched_by(target)
         # prefer whichever version actually has these set
         for f in ("sr", "bench", "benchType", "listType", "caseName"):
             if not target.get(f) and r.get(f):
@@ -182,7 +218,11 @@ def run(dry_run=False):
     matches = load_json(DATA_FILE, [])
     people = build_people(cfg)
     people_label = ", ".join(p["person"] for p in people)
+    titles = build_title_watches(load_json(TITLE_WATCH_FILE, []))
     logging.info("Watching for: %s", people_label)
+    if titles:
+        logging.info("Saved title searches: %s", ", ".join(titles))
+    wkey = watch_key(people, titles)
 
     session = requests.Session()
     logging.info("Fetching %s", CAUSELIST_PAGE)
@@ -216,12 +256,14 @@ def run(dry_run=False):
             continue
 
         prev = manifest.get(link["url"])
-        if prev and prev.get("hash") == file_hash and prev.get("parser_version") == PARSER_VERSION:
+        if (prev and prev.get("hash") == file_hash and prev.get("parser_version") == PARSER_VERSION
+                and prev.get("watch_key") == wkey):
             logging.info("Unchanged since last run, skipping re-parse: %s", fname)
             continue
         manifest[link["url"]] = {
             "hash": file_hash,
             "parser_version": PARSER_VERSION,
+            "watch_key": wkey,
             "last_seen": datetime.now().isoformat(),
         }
 
@@ -236,7 +278,7 @@ def run(dry_run=False):
             logging.info("No case entries found in %s (empty, scanned, or an unrecognized layout) — skipping", fname)
             continue
 
-        results = match_people(entries, people, fname)
+        results = match_people(entries, people, fname, titles)
         logging.info("%s: %d case row(s) read, %d potential match(es)", fname, len(entries), len(results))
         new_results_total.extend(results)
 
@@ -244,6 +286,9 @@ def run(dry_run=False):
         logging.info("Dry run — nothing saved. Would have added up to %d match(es).", len(new_results_total))
         return
 
+    pruned = prune_titles(matches, titles)
+    if pruned:
+        logging.info("Removed %d case(s) found only by searches that have since been removed", pruned)
     matches, added = merge_matches(matches, new_results_total)
     save_json(DATA_FILE, matches)
     save_json(MANIFEST_FILE, manifest)
@@ -271,7 +316,7 @@ def run(dry_run=False):
     for r in new_results_total:
         logging.info(
             "  -> [%s] %s | Court %s | Sr %s | %s",
-            r.get("person"), r.get("date"), r.get("court"), r.get("sr"), r.get("caseNo"),
+            r.get("person") or ("search: " + ", ".join(r.get("titles", []))), r.get("date"), r.get("court"), r.get("sr"), r.get("caseNo"),
         )
 
 

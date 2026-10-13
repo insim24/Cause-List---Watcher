@@ -320,23 +320,51 @@ def extract_entries_from_pdf(path, fallback_date=""):
     return entries
 
 
-def match_people(entries, people, source_name=""):
+MIN_TITLE_WATCH_LEN = 3
+
+
+def _norm_words(s):
+    """Lowercase, punctuation to spaces: "STATE OF J AND K AND ORS." and
+    "state of j and k and ors" compare equal."""
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", str(s or "").lower()).split())
+
+
+def build_title_watches(raw):
+    """Search terms saved from the dashboard (title_watches.json):
+    [{"term": "...", "added": "YYYY-MM-DD"}, ...]. Returns the distinct
+    terms, ignoring ones too short to mean anything."""
+    terms = []
+    for item in raw or []:
+        term = item.get("term") if isinstance(item, dict) else item
+        term = " ".join(str(term or "").split())
+        if len(_norm_words(term)) >= MIN_TITLE_WATCH_LEN and term.lower() not in (t.lower() for t in terms):
+            terms.append(term)
+    return terms
+
+
+def match_people(entries, people, source_name="", titles=()):
     """Checks each entry's advocate AND case-name text for tracked
     names/aliases (covers both use cases: tracking yourself as counsel, or
-    as a named party). If more than one tracked person appears on the same
+    as a named party), and its case title against the dashboard's saved
+    title searches. If more than one tracked person / search hits the same
     case, returns ONE result listing all of them — not a duplicate row per
-    person."""
+    person. 'matchedBy' records how it was found: "advocate" (a tracked
+    person from config.json) and/or "search" (a saved title search)."""
     results = []
     for e in entries:
         haystack = (e.get("advocate", "") + " " + e.get("caseName", "")).lower()
         matched = [p["person"] for p in people if any(term and term.lower() in haystack for term in p["terms"])]
-        if not matched:
+        title = " " + _norm_words(e.get("caseName", "")) + " "
+        hit_titles = [t for t in titles if " " + _norm_words(t) + " " in title]
+        if not matched and not hit_titles:
             continue
         if not (e.get("caseNo") or e.get("caseName")):
             continue  # nothing identifiable about this row — likely a parsing artifact, not a real case
         results.append({
             "person": ", ".join(matched),
             "people": matched,
+            "titles": hit_titles,
+            "matchedBy": (["advocate"] if matched else []) + (["search"] if hit_titles else []),
             "court": e.get("court", ""),
             "sr": e.get("sr", ""),
             "bench": e.get("bench", ""),

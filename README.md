@@ -156,6 +156,28 @@ or GitHub Actions, to fetch and parse the PDFs). So to view it on iPad:
   This snapshot won't update on its own; you'd redo this each time you want
   fresh data.
 
+## Searching by case title
+
+The **Search** box next to *Fetch cases* finds cases by title or party name
+(e.g. `Abdul Rashid Sofi`) in the same High Court cause list PDFs the watcher
+already reads — no eCourts / CAPTCHA involved. It needs the same GitHub
+sign-in as Fetch:
+
+1. The term is saved to `title_watches.json` in this repo (written from your
+   browser with your GitHub sign-in, like next hearing dates).
+2. A fetch is started straight away. The watcher checks the title of *every*
+   case in every cause list it downloads against the saved terms (whole
+   words, case and punctuation ignored), as well as your advocates from
+   `config.json`.
+3. When the run finishes (a minute or two) the hits appear in the usual
+   cards and table, tagged *Search: …* and filterable by that chip. Each
+   saved case records how it was found in `matchedBy`
+   (`"advocate"` and/or `"search"`).
+
+Only lists currently published on the site are searched, so a search with no
+hits stays saved and is re-checked on every fetch. Removing a saved search
+(the × on it) drops the cases it alone found at the next fetch.
+
 ## Notes on accuracy
 
 Court No. / Sr. No. / Case No. are extracted heuristically from the text
@@ -171,6 +193,7 @@ actual PDF if something looks off.
 - `dashboard_template.py` — generates `causelist_dashboard.html`
 - `config.json` — your name/settings (create this from `config.example.json`)
 - `cases_auto.json` — accumulated saved matches (created after first run)
+- `title_watches.json` — case-title searches saved from the dashboard's Search box
 - `manifest.json` — tracks which PDFs were already processed (created after first run)
 - `causelist_dashboard.html` — the viewable result (created/updated after each run)
 - `watcher.log` — run history / errors
