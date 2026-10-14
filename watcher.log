@@ -4903,3 +4903,24 @@
 2026-10-14 14:37:03,686 [INFO] Fetching live display board
 2026-10-14 14:37:08,008 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "12", "text": "Mentioned items - 43,46,52,58,71,79,81,87,88,115,122 & 124 will be taken up for consideration after lunch break"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "Fresh Matters of Jammu will be taken after the Fresh Matters of Srinagar."}]}}
 2026-10-14 14:37:08,011 [INFO] Added 0 new match(es). Total saved: 124. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-14 17:47:06,387 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-14 17:47:06,387 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA
+2026-10-14 17:47:06,387 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-14 17:47:07,592 [INFO] Found 9 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-10-14 17:47:07,592 [INFO] Downloading Supplementary%20Cause%20List%20-%2015.10.2026.pdf (supplementary)
+2026-10-14 17:47:07,840 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2015.10.2026.pdf
+2026-10-14 17:47:07,840 [INFO] Downloading causelist_12102026.pdf (daywise)
+2026-10-14 17:47:08,402 [INFO] Unchanged since last run, skipping re-parse: causelist_12102026.pdf
+2026-10-14 17:47:08,402 [INFO] Downloading causelist_13102026.pdf (daywise)
+2026-10-14 17:47:08,893 [INFO] Unchanged since last run, skipping re-parse: causelist_13102026.pdf
+2026-10-14 17:47:08,893 [INFO] Downloading causelist_14102026.pdf (daywise)
+2026-10-14 17:47:09,384 [INFO] Unchanged since last run, skipping re-parse: causelist_14102026.pdf
+2026-10-14 17:47:09,384 [INFO] Downloading causelist_15102026.pdf (daywise)
+2026-10-14 17:47:09,652 [INFO] Unchanged since last run, skipping re-parse: causelist_15102026.pdf
+2026-10-14 17:47:09,652 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-14 17:47:11,178 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-14 17:47:11,178 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-14 17:47:11,426 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-14 17:47:11,431 [INFO] Fetching live display board
+2026-10-14 17:47:15,851 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "12", "text": "Mentioned items - 43,46,52,58,71,79,81,87,88,115,122 & 124 will be taken up for consideration after lunch break"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "Fresh Matters of Jammu will be taken after the Fresh Matters of Srinagar."}]}}
+2026-10-14 17:47:15,853 [INFO] Added 0 new match(es). Total saved: 124. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
