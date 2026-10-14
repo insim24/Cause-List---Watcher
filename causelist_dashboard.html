@@ -40,7 +40,9 @@
   .hero{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;
     padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px;}
   .hero-left{display:flex;gap:16px;align-items:center;}
-  .theme-picker{position:relative;flex:none;z-index:65;}
+  /* no z-index here: only the open panel (z 65) needs to sit above the Today's
+     Board widget; the gear itself stays under the widget if it's dragged over it */
+  .theme-picker{position:relative;flex:none;}
   .theme-gear-btn{background:transparent;border:1px solid var(--line);
     color:var(--parchment-dim);width:32px;height:32px;border-radius:50%;cursor:pointer;
     font-size:15px;transition:.15s;}
@@ -203,6 +205,16 @@
   .tw-count{font-family:var(--font-mono);font-size:10.5px;color:var(--brass);background:var(--brass-soft);
     padding:2px 7px;border-radius:999px;}
   .tw-toggle{background:none;border:none;color:var(--parchment-dim);font-size:13px;cursor:pointer;padding:2px 4px;}
+  .tw-head-right{display:flex;align-items:center;gap:2px;}
+  /* drag by the header (wide screens only; see the Today's Board drag code) */
+  .tw-grip{display:none;width:8px;height:13px;flex:none;margin-right:1px;
+    background:radial-gradient(circle,var(--parchment-faint) 1.3px,transparent 1.6px) 0 0/4px 4.4px;}
+  .tw-reset{display:none;}
+  #todayWidget.tw-draggable .tw-grip{display:block;}
+  #todayWidget.tw-draggable.tw-moved .tw-reset{display:inline-block;}
+  #todayWidget.tw-draggable .tw-head{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;}
+  #todayWidget.tw-dragging{z-index:60;box-shadow:0 22px 48px rgba(0,0,0,0.6);border-color:var(--brass);}
+  #todayWidget.tw-dragging .tw-head{cursor:grabbing;}
   #todayWidgetBody{overflow-y:auto;padding:11px 13px;}
   .tw-row{display:grid;grid-template-columns:34px 44px 1fr;gap:9px;align-items:start;
     padding:8px 0;border-bottom:1px solid var(--line-soft);}
@@ -331,11 +343,15 @@
   <div id="todayWidget">
     <div class="tw-head" id="twHead">
       <div class="tw-head-left">
+        <span class="tw-grip" aria-hidden="true" title="Drag to move"></span>
         <span class="tw-dot idle" id="twDot"></span>
         <span class="tw-title">Today's Board</span>
         <span class="tw-count" id="twCount">0</span>
       </div>
-      <button class="tw-toggle" id="twToggle">&#8722;</button>
+      <div class="tw-head-right">
+        <button type="button" class="tw-toggle tw-reset" id="twReset" title="Move back to the top-right corner" aria-label="Reset Today's Board position">&#8634;</button>
+        <button type="button" class="tw-toggle" id="twToggle" aria-label="Collapse or expand Today's Board">&#8722;</button>
+      </div>
     </div>
     <div id="todayWidgetBody"></div>
     <div class="tw-note">Ordered by serial number within each court. While a court is sitting, each case's status comes from that court's page on the High Court display board, and "court at Sr" is the item the board shows now — the site notes there can be a time lag, so confirm at the court.</div>
@@ -346,7 +362,7 @@
       <div class="seal">§</div>
       <div>
         <h1>My Causelist Docket</h1>
-        <p class="hero-sub">Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf &middot; <span id="lastChecked">last checked 14 Oct 2026, 03:56 AM</span></p>
+        <p class="hero-sub">Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf &middot; <span id="lastChecked">last checked 14 Oct 2026, 10:01 AM</span></p>
       </div>
       <div class="theme-picker">
         <button class="theme-gear-btn" id="themeGearBtn" title="Choose theme" aria-label="Choose theme">&#9881;</button>
@@ -1943,10 +1959,137 @@ document.getElementById('twToggle').addEventListener('click', function(e){
   this.innerHTML = document.getElementById('todayWidget').classList.contains('collapsed') ? '&#9633;' : '&#8722;';
 });
 document.getElementById('twHead').addEventListener('click', function(){
+  if (twSuppressClick){ twSuppressClick = false; return; }   // that "click" ended a drag
   document.getElementById('todayWidget').classList.toggle('collapsed');
   document.getElementById('twToggle').innerHTML =
     document.getElementById('todayWidget').classList.contains('collapsed') ? '&#9633;' : '&#8722;';
 });
+
+// ---- Today's Board: drag it by its header (wide screens only) ----
+// Pointer Events cover mouse, touch and pen in one path. Below 1180px the
+// widget is a static banner in the page flow, so dragging is off there and any
+// inline position is cleared. The position is saved as offsets from the
+// nearest viewport corner to the header's top-left/right, so it lands in the
+// same corner on a different-sized screen, then gets clamped to keep the
+// header on screen.
+var TW_POS_KEY = 'today_widget_pos';
+var TW_DRAG_SLOP = 6;   // px of movement before a press counts as a drag
+var twEl = document.getElementById('todayWidget');
+var twHeadEl = document.getElementById('twHead');
+// same breakpoint as the CSS banner rule; plain width check where matchMedia is missing
+var twBannerMQ = window.matchMedia ? window.matchMedia('(max-width:1180px)')
+  : {get matches(){ return window.innerWidth <= 1180; }};
+var twPos = null;       // {h:'left'|'right', v:'top'|'bottom', x, y} or null = default spot
+var twDrag = null;      // the press in progress
+var twSuppressClick = false;
+
+function twViewport(){
+  return {w: document.documentElement.clientWidth, h: window.innerHeight};
+}
+function twLoadPos(){
+  try {
+    var p = JSON.parse(localStorage.getItem(TW_POS_KEY) || 'null');
+    if (p && (p.h === 'left' || p.h === 'right') && (p.v === 'top' || p.v === 'bottom') && isFinite(p.x) && isFinite(p.y)) return p;
+  } catch (e) { /* storage unavailable or bad JSON: use the default spot */ }
+  return null;
+}
+function twSavePos(p){
+  try {
+    if (p) localStorage.setItem(TW_POS_KEY, JSON.stringify(p));
+    else localStorage.removeItem(TW_POS_KEY);
+  } catch (e) { /* the position just won't survive a reload */ }
+}
+// Keep the whole width and at least the header inside the viewport.
+function twClamp(left, top){
+  var vp = twViewport();
+  var w = twEl.offsetWidth, headH = twHeadEl.offsetHeight;
+  return {
+    left: Math.round(Math.min(Math.max(0, left), Math.max(0, vp.w - w))),
+    top: Math.round(Math.min(Math.max(0, top), Math.max(0, vp.h - headH))),
+  };
+}
+function twPlace(left, top){
+  var c = twClamp(left, top);
+  twEl.style.left = c.left + 'px';
+  twEl.style.top = c.top + 'px';
+  twEl.style.right = 'auto';
+  return c;
+}
+function twClearInline(){
+  twEl.style.removeProperty('left');
+  twEl.style.removeProperty('top');
+  twEl.style.removeProperty('right');
+}
+function twCornerPos(left, top){
+  var vp = twViewport(), w = twEl.offsetWidth;
+  var right = left + w > vp.w / 2 + w / 2;   // nearer the right edge?
+  var bottom = top > vp.h / 2;
+  return {
+    h: right ? 'right' : 'left', x: right ? vp.w - (left + w) : left,
+    v: bottom ? 'bottom' : 'top', y: bottom ? vp.h - top : top,
+  };
+}
+// Applies the current mode: banner (static, no drag) or floating (saved spot or default).
+function twApply(){
+  var floating = !twBannerMQ.matches;
+  twEl.classList.toggle('tw-draggable', floating);
+  twEl.classList.toggle('tw-moved', !!twPos);
+  if (!floating || !twPos){ twClearInline(); return; }
+  var vp = twViewport(), w = twEl.offsetWidth;
+  twPlace(twPos.h === 'right' ? vp.w - w - twPos.x : twPos.x,
+          twPos.v === 'bottom' ? vp.h - twPos.y : twPos.y);
+}
+function twResetPos(){
+  twPos = null;
+  twSavePos(null);
+  twApply();
+}
+function twEndDrag(e){
+  if (!twDrag) return;
+  var moved = twDrag.moved;
+  if (twHeadEl.hasPointerCapture && twHeadEl.hasPointerCapture(twDrag.id)) twHeadEl.releasePointerCapture(twDrag.id);
+  twDrag = null;
+  twEl.classList.remove('tw-dragging');
+  if (!moved) return;   // a tap: let the click toggle collapse as usual
+  twSuppressClick = true;
+  var r = twEl.getBoundingClientRect();
+  twPos = twCornerPos(r.left, r.top);
+  twSavePos(twPos);
+  twEl.classList.add('tw-moved');
+}
+
+twHeadEl.addEventListener('pointerdown', function(e){
+  twSuppressClick = false;   // a drag that never produced a click must not eat this one
+  if (twBannerMQ.matches || twDrag) return;
+  if (e.pointerType === 'mouse' && e.button !== 0) return;
+  if (e.target.closest('button')) return;   // collapse / reset buttons keep their own clicks
+  var r = twEl.getBoundingClientRect();
+  twDrag = {id: e.pointerId, x0: e.clientX, y0: e.clientY, left0: r.left, top0: r.top, moved: false};
+  twHeadEl.setPointerCapture(e.pointerId);
+});
+twHeadEl.addEventListener('pointermove', function(e){
+  if (!twDrag || e.pointerId !== twDrag.id) return;
+  var dx = e.clientX - twDrag.x0, dy = e.clientY - twDrag.y0;
+  if (!twDrag.moved){
+    if (Math.abs(dx) <= TW_DRAG_SLOP && Math.abs(dy) <= TW_DRAG_SLOP) return;
+    twDrag.moved = true;
+    twEl.classList.add('tw-dragging');
+  }
+  twPlace(twDrag.left0 + dx, twDrag.top0 + dy);
+});
+twHeadEl.addEventListener('pointerup', twEndDrag);
+twHeadEl.addEventListener('pointercancel', twEndDrag);
+twHeadEl.addEventListener('lostpointercapture', twEndDrag);
+document.getElementById('twReset').addEventListener('click', function(e){
+  e.stopPropagation();
+  twResetPos();
+});
+window.addEventListener('resize', twApply);
+window.addEventListener('orientationchange', twApply);
+if (twBannerMQ.addEventListener) twBannerMQ.addEventListener('change', twApply);
+else if (twBannerMQ.addListener) twBannerMQ.addListener(twApply);
+twPos = twLoadPos();
+twApply();
 document.querySelectorAll('[data-calnav]').forEach(function(btn){
   btn.addEventListener('click', function(){
     var dir = btn.getAttribute('data-calnav')==='prev' ? -1 : 1;
