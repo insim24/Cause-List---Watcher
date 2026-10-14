@@ -1,19 +1,81 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "1",
+        "item": "7",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "4",
+        "item": "59",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "9",
+        "item": "64",
+        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
+        "court": "12",
+        "item": "4",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      },
+      {
+        "court": "14",
+        "item": "20",
+        "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "12",
-        "text": "mentioned items 50,75,77,95,122 & 142 will be taken up for consideration after lunch break"
+        "text": "Mentioned items - 43,46,52,58,71,79,81,87,88,115,122 & 124 will be taken up for consideration after lunch break"
       }
     ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "2",
+        "item": "17",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MA CHOWDHARY"
+      },
+      {
+        "court": "3",
+        "item": "8",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "11",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "162",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
+        "item": "88",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      },
+      {
+        "court": "13",
+        "item": "11",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      }
+    ],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "1",
+        "text": "Fresh Matters of Jammu will be taken after the Fresh Matters of Srinagar."
+      }
+    ]
   }
 }
