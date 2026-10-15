@@ -3,9 +3,9 @@
     "idle": false,
     "courts": [
       {
-        "court": "4",
-        "item": "21",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+        "court": "8",
+        "item": "1",
+        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
       }
     ],
     "raw_status_rows": [],
@@ -19,14 +19,6 @@
         "text": "The supplementary list will be addressed JUST NOW"
       },
       {
-        "id": "11",
-        "text": "Mr Mohsin Qadri Sr aag and Ms Masooda Jan Sr Adv is required in this court immediately"
-      },
-      {
-        "id": "12",
-        "text": "supplementary cause list 1 will be taken up first for consideration"
-      },
-      {
         "id": "1",
         "text": "The court proceedings are scheduled to commence at 12 noon. All the Advocates are informed to appear before Court 10."
       }
@@ -36,26 +28,46 @@
     "idle": false,
     "courts": [
       {
+        "court": "2",
+        "item": "1",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      },
+      {
         "court": "3",
         "item": "71",
         "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
       },
       {
         "court": "5",
-        "item": "85",
+        "item": "9",
         "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "6",
+        "item": "9",
+        "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
       },
       {
         "court": "7",
         "item": "73",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
+        "item": "29",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      },
+      {
+        "court": "13",
+        "item": "5",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "5",
-        "text": "Mr.Abhinav Sharma Sr. Adv is required in item 85"
+        "text": "Mr. Pawan Dev Singh DyAG is required in court immediately"
       }
     ]
   }
