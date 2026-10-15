@@ -4975,3 +4975,28 @@
 2026-10-15 08:13:42,968 [INFO] Fetching live display board
 2026-10-15 08:13:45,586 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "21", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "The court proceedings are scheduled after DB WITH HONBLE CJ"}, {"id": "9", "text": "The supplementary list will be addressed JUST NOW"}, {"id": "11", "text": "Mr Mohsin Qadri Sr aag and Ms Masooda Jan Sr Adv is required in this court immediately"}, {"id": "12", "text": "supplementary cause list 1 will be taken up first for consideration"}, {"id": "1", "text": "The court proceedings are scheduled to commence at 12 noon. All the Advocates are informed to appear before Court 10."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "71", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "85", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "73", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "5", "text": "Mr.Abhinav Sharma Sr. Adv is required in item 85"}]}}
 2026-10-15 08:13:45,588 [INFO] Added 0 new match(es). Total saved: 125. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-15 08:41:33,360 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-15 08:41:33,360 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA
+2026-10-15 08:41:33,360 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-15 08:41:34,583 [INFO] Found 11 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-10-15 08:41:34,584 [INFO] Downloading Supplementary%20Cause%20List%20-%2015.10.2026.pdf (supplementary)
+2026-10-15 08:41:34,849 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2015.10.2026.pdf
+2026-10-15 08:41:34,849 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2015.10.2026.pdf (supplementary)
+2026-10-15 08:41:35,147 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-1-%2015.10.2026.pdf
+2026-10-15 08:41:35,147 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2015.10.2026.pdf (supplementary)
+2026-10-15 08:41:35,412 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2015.10.2026.pdf
+2026-10-15 08:41:35,412 [INFO] Downloading causelist_12102026.pdf (daywise)
+2026-10-15 08:41:35,947 [INFO] Unchanged since last run, skipping re-parse: causelist_12102026.pdf
+2026-10-15 08:41:35,947 [INFO] Downloading causelist_13102026.pdf (daywise)
+2026-10-15 08:41:36,472 [INFO] Unchanged since last run, skipping re-parse: causelist_13102026.pdf
+2026-10-15 08:41:36,472 [INFO] Downloading causelist_14102026.pdf (daywise)
+2026-10-15 08:41:36,997 [INFO] Unchanged since last run, skipping re-parse: causelist_14102026.pdf
+2026-10-15 08:41:36,997 [INFO] Downloading causelist_15102026.pdf (daywise)
+2026-10-15 08:41:37,347 [INFO] Unchanged since last run, skipping re-parse: causelist_15102026.pdf
+2026-10-15 08:41:37,347 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-15 08:41:39,005 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-15 08:41:39,005 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-15 08:41:39,289 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-15 08:41:39,296 [INFO] Fetching live display board
+2026-10-15 08:41:41,592 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "21", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "The court proceedings are scheduled after DB WITH HONBLE CJ"}, {"id": "9", "text": "The supplementary list will be addressed JUST NOW"}, {"id": "11", "text": "Mr Mohsin Qadri Sr aag and Ms Masooda Jan Sr Adv is required in this court immediately"}, {"id": "12", "text": "supplementary cause list 1 will be taken up first for consideration"}, {"id": "1", "text": "The court proceedings are scheduled to commence at 12 noon. All the Advocates are informed to appear before Court 10."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "71", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "85", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "7", "item": "73", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "5", "text": "Mr.Abhinav Sharma Sr. Adv is required in item 85"}]}}
+2026-10-15 08:41:41,594 [INFO] Added 0 new match(es). Total saved: 125. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
