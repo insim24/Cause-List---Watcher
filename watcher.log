@@ -5148,3 +5148,14 @@
 2026-10-17 12:40:43,970 [INFO] Fetching live display board
 2026-10-17 12:40:45,039 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "The court proceedings are scheduled after DB WITH HONBLE CJ"}, {"id": "9", "text": "The supplementary list will be addressed JUST NOW"}, {"id": "1", "text": "The court proceedings are scheduled to commence at 12 noon. All the Advocates are informed to appear before Court 10."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-10-17 12:40:45,040 [INFO] Added 0 new match(es). Total saved: 127. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-17 12:41:53,818 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-17 12:41:53,818 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA
+2026-10-17 12:41:53,818 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-17 12:41:54,890 [INFO] Found 4 relevant causelist link(s) on the page (2 after filtering by list_types)
+2026-10-17 12:41:54,890 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.10.2026.pdf (supplementary)
+2026-10-17 12:41:55,120 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.10.2026.pdf
+2026-10-17 12:41:55,120 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2021.10.2026.pdf (supplementary)
+2026-10-17 12:41:55,350 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2021.10.2026.pdf
+2026-10-17 12:41:55,354 [INFO] Fetching live display board
+2026-10-17 12:41:56,667 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "The court proceedings are scheduled after DB WITH HONBLE CJ"}, {"id": "9", "text": "The supplementary list will be addressed JUST NOW"}, {"id": "1", "text": "The court proceedings are scheduled to commence at 12 noon. All the Advocates are informed to appear before Court 10."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-10-17 12:41:56,669 [INFO] Added 0 new match(es). Total saved: 127. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
