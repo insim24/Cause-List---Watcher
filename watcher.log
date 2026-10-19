@@ -5211,3 +5211,24 @@
 2026-10-19 04:56:05,405 [INFO]   -> [Syed Manzoor] 2026-10-22 | Court 14 | Sr 47 | WP(C) 1319/2025 CM(3514/2025)
 2026-10-19 04:56:05,405 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 9 | Sr 3 | HCP 122/2026
 2026-10-19 04:56:05,405 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 9 | Sr 123 | WP(C) 2441/2026 CM(6610/2026) c/w i)WP(C) 2232/2026 CM(6066/2026) CM(6559/2026)
+2026-10-19 04:57:32,824 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-19 04:57:32,824 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA
+2026-10-19 04:57:32,825 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-19 04:57:34,000 [INFO] Found 9 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-10-19 04:57:34,000 [INFO] Downloading Supplementary%20Cause%20List%20-%2021.10.2026.pdf (supplementary)
+2026-10-19 04:57:34,255 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2021.10.2026.pdf
+2026-10-19 04:57:34,255 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2021.10.2026.pdf (supplementary)
+2026-10-19 04:57:34,511 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2021.10.2026.pdf
+2026-10-19 04:57:34,511 [INFO] Downloading causelist_21102026.pdf (daywise)
+2026-10-19 04:57:35,908 [INFO] Unchanged since last run, skipping re-parse: causelist_21102026.pdf
+2026-10-19 04:57:35,908 [INFO] Downloading causelist_22102026.pdf (daywise)
+2026-10-19 04:57:36,206 [INFO] Unchanged since last run, skipping re-parse: causelist_22102026.pdf
+2026-10-19 04:57:36,206 [INFO] Downloading causelist_23102026.pdf (daywise)
+2026-10-19 04:57:36,506 [INFO] Unchanged since last run, skipping re-parse: causelist_23102026.pdf
+2026-10-19 04:57:36,506 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-19 04:57:39,065 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-19 04:57:39,065 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-19 04:57:39,320 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-19 04:57:39,323 [INFO] Fetching live display board
+2026-10-19 04:57:40,674 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "The court proceedings are scheduled after DB WITH HONBLE CJ"}, {"id": "9", "text": "The supplementary list will be addressed JUST NOW"}, {"id": "1", "text": "The court proceedings are scheduled to commence at 12 noon. All the Advocates are informed to appear before Court 10."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-10-19 04:57:40,675 [INFO] Added 0 new match(es). Total saved: 137. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
