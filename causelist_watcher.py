@@ -43,6 +43,7 @@ from display_board import fetch_display_board
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DOWNLOAD_DIR = os.path.join(HERE, "downloads")
+CERTS_DIR = os.path.join(HERE, "certs")   # extra trusted roots for the court sites (see court_ca_bundle)
 DATA_FILE = os.path.join(HERE, "cases_auto.json")
 MANIFEST_FILE = os.path.join(HERE, "manifest.json")
 DASHBOARD_FILE = os.path.join(HERE, "causelist_dashboard.html")
@@ -121,6 +122,28 @@ def download_pdf(session, url, dest_path):
     with open(dest_path, "wb") as f:
         f.write(resp.content)
     return hashlib.sha256(resp.content).hexdigest()
+
+
+def court_ca_bundle():
+    """CA bundle for this script's requests (which only go to the court's
+    sites): certifi's current roots plus the extra ones in certs/. Both court
+    sites chain to emSign Root CA - G1, which certifi dropped in 2026.10.18
+    while browsers and Windows still trust it, so without this every request
+    fails with CERTIFICATE_VERIFY_FAILED."""
+    import certifi
+
+    extra = sorted(f for f in os.listdir(CERTS_DIR) if f.endswith(".pem")) if os.path.isdir(CERTS_DIR) else []
+    if not extra:
+        return certifi.where()
+    path = os.path.join(DOWNLOAD_DIR, "_ca_bundle.pem")
+    os.makedirs(DOWNLOAD_DIR, exist_ok=True)
+    with open(path, "w", encoding="ascii") as out:
+        with open(certifi.where(), encoding="ascii") as f:
+            out.write(f.read())
+        for name in extra:
+            with open(os.path.join(CERTS_DIR, name), encoding="ascii") as f:
+                out.write("\n" + f.read())
+    return path
 
 
 def _matched_by(r):
@@ -225,6 +248,7 @@ def run(dry_run=False):
     wkey = watch_key(people, titles)
 
     session = requests.Session()
+    session.verify = court_ca_bundle()
     logging.info("Fetching %s", CAUSELIST_PAGE)
     try:
         html = fetch_page(session)
