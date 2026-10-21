@@ -5343,3 +5343,24 @@
 2026-10-21 09:50:48,605 [INFO] Fetching live display board
 2026-10-21 09:50:52,307 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "15", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "4", "item": "97", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "8", "item": "1", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "9", "item": "38", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "65", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "14", "item": "34", "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.  (advocate) mr mohammad ismail is required in court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "74", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "15", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "6", "item": "1", "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"}, {"court": "7", "item": "17", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "8", "item": "57", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "13", "item": "50", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "LADAKH CASES WILL BE HEARD FIRST."}]}}
 2026-10-21 09:50:52,308 [INFO] Added 0 new match(es). Total saved: 137. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-21 14:34:52,508 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-21 14:34:52,508 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA
+2026-10-21 14:34:52,509 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-21 14:34:53,713 [INFO] Found 9 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-10-21 14:34:53,713 [INFO] Downloading Supplementary%20Cause%20List%20-%2022.10.2026.pdf (supplementary)
+2026-10-21 14:34:54,270 [INFO] Supplementary%20Cause%20List%20-%2022.10.2026.pdf: 16 case row(s) read, 0 potential match(es)
+2026-10-21 14:34:54,270 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2022.10.2026.pdf (supplementary)
+2026-10-21 14:34:54,654 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2022.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-21 14:34:54,654 [INFO] Downloading causelist_21102026.pdf (daywise)
+2026-10-21 14:34:55,859 [INFO] Unchanged since last run, skipping re-parse: causelist_21102026.pdf
+2026-10-21 14:34:55,860 [INFO] Downloading causelist_22102026.pdf (daywise)
+2026-10-21 14:34:56,129 [INFO] Unchanged since last run, skipping re-parse: causelist_22102026.pdf
+2026-10-21 14:34:56,130 [INFO] Downloading causelist_23102026.pdf (daywise)
+2026-10-21 14:34:56,400 [INFO] Unchanged since last run, skipping re-parse: causelist_23102026.pdf
+2026-10-21 14:34:56,400 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-21 14:34:59,064 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-21 14:34:59,064 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-21 14:34:59,334 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-21 14:34:59,339 [INFO] Fetching live display board
+2026-10-21 14:35:03,436 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "8", "item": "1", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "9", "item": "52", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.  (advocate) mr mohammad ismail is required in court"}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "7", "item": "201", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "LADAKH CASES WILL BE HEARD FIRST."}, {"id": "5", "text": "Mr Farhan Mirza Advocate is required in court"}, {"id": "8", "text": "mentioned matters are 74,86,119,120,126,128,150,153,154,158,167,178 shall be taken at 3:30"}]}}
+2026-10-21 14:35:03,438 [INFO] Added 0 new match(es). Total saved: 137. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

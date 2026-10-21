@@ -3,34 +3,14 @@
     "idle": false,
     "courts": [
       {
-        "court": "1",
-        "item": "15",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "4",
-        "item": "97",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
         "court": "8",
         "item": "1",
         "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
       },
       {
         "court": "9",
-        "item": "38",
+        "item": "52",
         "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "65",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "14",
-        "item": "34",
-        "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
       }
     ],
     "raw_status_rows": [],
@@ -45,34 +25,9 @@
     "idle": false,
     "courts": [
       {
-        "court": "3",
-        "item": "74",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "5",
-        "item": "15",
-        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "6",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
-      },
-      {
         "court": "7",
-        "item": "17",
+        "item": "201",
         "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "8",
-        "item": "57",
-        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
-        "court": "13",
-        "item": "50",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
@@ -80,6 +35,14 @@
       {
         "id": "1",
         "text": "LADAKH CASES WILL BE HEARD FIRST."
+      },
+      {
+        "id": "5",
+        "text": "Mr Farhan Mirza Advocate is required in court"
+      },
+      {
+        "id": "8",
+        "text": "mentioned matters are 74,86,119,120,126,128,150,153,154,158,167,178 shall be taken at 3:30"
       }
     ]
   }
