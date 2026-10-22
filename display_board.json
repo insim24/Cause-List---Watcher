@@ -3,46 +3,51 @@
     "idle": false,
     "courts": [
       {
-        "court": "8",
-        "item": "1",
-        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+        "court": "1",
+        "item": "4",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "4",
+        "item": "15",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
         "court": "9",
-        "item": "52",
+        "item": "9",
         "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
+        "court": "10",
+        "item": "7",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "14",
+        "item": "6",
+        "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "10",
-        "text": "Immediate presence of Mr.  (advocate) mr mohammad ismail is required in court"
+        "text": "Immediate presence of Mr.   zahid khan (advocate)  in serial no 2  is required in court"
+      },
+      {
+        "id": "14",
+        "text": "ALL THE LEARNED ADVOCATES ARE REQUESTED TO MAKE THE MENTION ABOUT URGENT MATTERS BEFORE 10:30AM AND THE MENTIONED MATTERS WILL BE TAKEN UP FOR  HEARING SERIALY AT 4 PM ."
       }
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "7",
-        "item": "201",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "1",
-        "text": "LADAKH CASES WILL BE HEARD FIRST."
-      },
-      {
-        "id": "5",
-        "text": "Mr Farhan Mirza Advocate is required in court"
-      },
-      {
-        "id": "8",
-        "text": "mentioned matters are 74,86,119,120,126,128,150,153,154,158,167,178 shall be taken at 3:30"
+        "text": "-"
       }
     ]
   }
