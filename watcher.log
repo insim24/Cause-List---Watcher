@@ -5475,3 +5475,26 @@
 2026-10-22 09:51:28,894 [INFO] Fetching live display board
 2026-10-22 09:51:30,596 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "1", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "4", "item": "1", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "9", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "7", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}, {"court": "14", "item": "9", "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.   zahid khan (advocate)  in serial no 2  is required in court"}, {"id": "14", "text": "ALL THE LEARNED ADVOCATES ARE REQUESTED TO MAKE THE MENTION ABOUT URGENT MATTERS BEFORE 10:30AM AND THE MENTIONED MATTERS WILL BE TAKEN UP FOR  HEARING SERIALY AT 4 PM ."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "-"}]}}
 2026-10-22 09:51:30,598 [INFO] Added 0 new match(es). Total saved: 138. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-22 14:36:17,517 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-22 14:36:17,518 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-22 14:36:17,518 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-22 14:36:18,809 [INFO] Found 9 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-10-22 14:36:18,809 [INFO] Downloading Supplementary%20Cause%20List%20-%2023.10.2026.pdf (supplementary)
+2026-10-22 14:36:20,280 [INFO] Supplementary%20Cause%20List%20-%2023.10.2026.pdf: 98 case row(s) read, 2 potential match(es)
+2026-10-22 14:36:20,280 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2023.10.2026.pdf (supplementary)
+2026-10-22 14:36:20,645 [INFO] Spl.Supplementary%20Cause%20List%20-%2023.10.2026.pdf: 8 case row(s) read, 0 potential match(es)
+2026-10-22 14:36:20,645 [INFO] Downloading causelist_21102026.pdf (daywise)
+2026-10-22 14:36:21,680 [INFO] Unchanged since last run, skipping re-parse: causelist_21102026.pdf
+2026-10-22 14:36:21,680 [INFO] Downloading causelist_22102026.pdf (daywise)
+2026-10-22 14:36:21,983 [INFO] Unchanged since last run, skipping re-parse: causelist_22102026.pdf
+2026-10-22 14:36:21,983 [INFO] Downloading causelist_23102026.pdf (daywise)
+2026-10-22 14:36:22,288 [INFO] Unchanged since last run, skipping re-parse: causelist_23102026.pdf
+2026-10-22 14:36:22,288 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-22 14:36:25,154 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-22 14:36:25,154 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-22 14:36:25,448 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-22 14:36:25,452 [INFO] Fetching live display board
+2026-10-22 14:36:27,430 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.   zahid khan (advocate)  in serial no 2  is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "-"}]}}
+2026-10-22 14:36:27,432 [INFO] Added 2 new match(es). Total saved: 140. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-22 14:36:27,432 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 10 | Sr 72 | HCP 146/2026
+2026-10-22 14:36:27,432 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 11 | Sr 51 | CRM(M) 879/2026 CrlM(2006/2026)

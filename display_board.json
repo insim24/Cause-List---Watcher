@@ -1,42 +1,12 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "1",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "4",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "9",
-        "item": "9",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "7",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "14",
-        "item": "9",
-        "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "10",
         "text": "Immediate presence of Mr.   zahid khan (advocate)  in serial no 2  is required in court"
-      },
-      {
-        "id": "14",
-        "text": "ALL THE LEARNED ADVOCATES ARE REQUESTED TO MAKE THE MENTION ABOUT URGENT MATTERS BEFORE 10:30AM AND THE MENTIONED MATTERS WILL BE TAKEN UP FOR  HEARING SERIALY AT 4 PM ."
       }
     ]
   },
