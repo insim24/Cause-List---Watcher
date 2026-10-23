@@ -5603,3 +5603,26 @@
 2026-10-23 13:21:44,470 [INFO] Fetching live display board
 2026-10-23 13:21:48,888 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "45", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today 56,63 and 85 to be taken up after 3.30 PM . Inform the opposite counsels in advance"}, {"id": "2", "text": "Immediate presence of PD Singh DYAG is required"}, {"id": "1", "text": "-"}]}}
 2026-10-23 13:21:48,890 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-23 14:20:23,902 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-23 14:20:23,902 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-23 14:20:23,903 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-23 14:20:34,360 [INFO] Found 10 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-10-23 14:20:34,360 [INFO] Downloading Supplementary%20Cause%20List%20-%2027.10.2026.pdf (supplementary)
+2026-10-23 14:20:34,635 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2027.10.2026.pdf
+2026-10-23 14:20:34,635 [INFO] Downloading causelist_27102026.pdf (daywise)
+2026-10-23 14:20:35,274 [INFO] Unchanged since last run, skipping re-parse: causelist_27102026.pdf
+2026-10-23 14:20:35,274 [INFO] Downloading causelist_28102026.pdf (daywise)
+2026-10-23 14:20:35,881 [INFO] Unchanged since last run, skipping re-parse: causelist_28102026.pdf
+2026-10-23 14:20:35,881 [INFO] Downloading causelist_29102026.pdf (daywise)
+2026-10-23 14:20:36,273 [INFO] Unchanged since last run, skipping re-parse: causelist_29102026.pdf
+2026-10-23 14:20:36,273 [INFO] Downloading causelist_30102026.pdf (daywise)
+2026-10-23 14:20:36,674 [INFO] Unchanged since last run, skipping re-parse: causelist_30102026.pdf
+2026-10-23 14:20:36,674 [INFO] Downloading causelist_31102026.pdf (daywise)
+2026-10-23 14:20:36,974 [INFO] Unchanged since last run, skipping re-parse: causelist_31102026.pdf
+2026-10-23 14:20:36,974 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-23 14:20:38,937 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-23 14:20:38,937 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-23 14:20:39,212 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-23 14:20:39,216 [INFO] Fetching live display board
+2026-10-23 14:20:44,554 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "45", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today 56,63 and 85 to be taken up after 3.30 PM . Inform the opposite counsels in advance"}, {"id": "2", "text": "Immediate presence of PD Singh DYAG is required"}, {"id": "1", "text": "-"}]}}
+2026-10-23 14:20:44,555 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
