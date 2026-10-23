@@ -5498,3 +5498,32 @@
 2026-10-22 14:36:27,432 [INFO] Added 2 new match(es). Total saved: 140. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-10-22 14:36:27,432 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 10 | Sr 72 | HCP 146/2026
 2026-10-22 14:36:27,432 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 11 | Sr 51 | CRM(M) 879/2026 CrlM(2006/2026)
+2026-10-23 09:45:26,030 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-23 09:45:26,030 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-23 09:45:26,031 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-23 09:45:27,284 [INFO] Found 13 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-10-23 09:45:27,284 [INFO] Downloading Supplementary%20Cause%20List%20-%2023.10.2026.pdf (supplementary)
+2026-10-23 09:45:28,680 [INFO] Supplementary%20Cause%20List%20-%2023.10.2026.pdf: 98 case row(s) read, 2 potential match(es)
+2026-10-23 09:45:28,680 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2023.10.2026.pdf (supplementary)
+2026-10-23 09:45:28,989 [INFO] No case entries found in Supplementary%20Cause%20List%20-2-%2023.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-23 09:45:28,989 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2023.10.2026.pdf (supplementary)
+2026-10-23 09:45:29,312 [INFO] Supplementary%20Cause%20List%20-3-%2023.10.2026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-10-23 09:45:29,312 [INFO] Downloading Supplementary%20Cause%20List%20-4-%2023.10.2026.pdf (supplementary)
+2026-10-23 09:45:29,599 [INFO] No case entries found in Supplementary%20Cause%20List%20-4-%2023.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-23 09:45:29,599 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2023.10.2026.pdf (supplementary)
+2026-10-23 09:45:29,870 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2023.10.2026.pdf
+2026-10-23 09:45:29,871 [INFO] Downloading causelist_21102026.pdf (daywise)
+2026-10-23 09:45:31,068 [INFO] Unchanged since last run, skipping re-parse: causelist_21102026.pdf
+2026-10-23 09:45:31,068 [INFO] Downloading causelist_22102026.pdf (daywise)
+2026-10-23 09:45:31,366 [INFO] Unchanged since last run, skipping re-parse: causelist_22102026.pdf
+2026-10-23 09:45:31,366 [INFO] Downloading causelist_23102026.pdf (daywise)
+2026-10-23 09:45:31,666 [INFO] Unchanged since last run, skipping re-parse: causelist_23102026.pdf
+2026-10-23 09:45:31,666 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-23 09:45:34,386 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-23 09:45:34,386 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-23 09:45:34,658 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-23 09:45:34,663 [INFO] Fetching live display board
+2026-10-23 09:45:55,504 [WARNING] Could not fetch the live display board (non-fatal): HTTPSConnectionPool(host='jkhc.gov.in', port=443): Read timed out. (read timeout=20)
+2026-10-23 09:45:55,506 [INFO] Added 0 new match(es). Total saved: 140. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-23 09:45:55,506 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 10 | Sr 72 | HCP 146/2026
+2026-10-23 09:45:55,506 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 11 | Sr 51 | CRM(M) 879/2026 CrlM(2006/2026)
