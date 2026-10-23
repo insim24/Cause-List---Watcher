@@ -1095,5 +1095,53 @@
     "parser_version": "4-grouped-people",
     "watch_key": "72f2cb68ea0f70d8",
     "last_seen": "2026-10-23T09:45:29.583539"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/Supplementary%20Cause%20List%20-%2027.10.2026.pdf": {
+    "hash": "baa9438f431155e86e4fd4cc064241cd11acbbec8748d7577fa17ae7164b1c7e",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:19:58.910288"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/causelist_27102026.pdf": {
+    "hash": "7c961f8bf5bd32c97846c215e98d03c7af811160de7126f252fc657dc8d63ca7",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:19:59.739702"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/causelist_28102026.pdf": {
+    "hash": "1632d3239f71c1675c49d7c286ee6d363ab0fdd325a277e096242f23b0ae03e0",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:20:03.287737"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/causelist_29102026.pdf": {
+    "hash": "1c608578fcad4761d4d08dce6173141959769a1cb7f63321128f7f2f234fc577",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:20:07.087798"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/causelist_30102026.pdf": {
+    "hash": "409d0034f39b2a861cb8bddf07618fda11b503894f07dadf847f6d1137ac12ab",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:20:10.487621"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/causelist_31102026.pdf": {
+    "hash": "a9e48ce845e0cf59129ccb2ce399684485235f36cb56d9e35e1a49c729d61552",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:20:13.890031"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/entirelist_sgr.pdf": {
+    "hash": "61914d122891b2f64e03ca9e8a3d6b20e36d8ae86868961d538b85ef7e875d98",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:20:18.173329"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/rjcourtsgr.pdf": {
+    "hash": "50b6703127738ef5879ceae218d703da173a32fefc9246bcd35c220626d74199",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-23T13:20:33.640518"
   }
 }

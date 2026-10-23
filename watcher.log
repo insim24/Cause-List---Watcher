@@ -5527,3 +5527,56 @@
 2026-10-23 09:45:55,506 [INFO] Added 0 new match(es). Total saved: 140. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-10-23 09:45:55,506 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 10 | Sr 72 | HCP 146/2026
 2026-10-23 09:45:55,506 [INFO]   -> [Owais Ashraf] 2026-10-23 | Court 11 | Sr 51 | CRM(M) 879/2026 CrlM(2006/2026)
+2026-10-23 13:19:57,274 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-23 13:19:57,275 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-23 13:19:57,275 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-23 13:19:58,605 [INFO] Found 10 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-10-23 13:19:58,605 [INFO] Downloading Supplementary%20Cause%20List%20-%2027.10.2026.pdf (supplementary)
+2026-10-23 13:19:58,984 [INFO] Supplementary%20Cause%20List%20-%2027.10.2026.pdf: 7 case row(s) read, 0 potential match(es)
+2026-10-23 13:19:58,984 [INFO] Downloading causelist_27102026.pdf (daywise)
+2026-10-23 13:20:02,646 [INFO] causelist_27102026.pdf: 612 case row(s) read, 1 potential match(es)
+2026-10-23 13:20:02,646 [INFO] Downloading causelist_28102026.pdf (daywise)
+2026-10-23 13:20:06,672 [INFO] causelist_28102026.pdf: 613 case row(s) read, 3 potential match(es)
+2026-10-23 13:20:06,672 [INFO] Downloading causelist_29102026.pdf (daywise)
+2026-10-23 13:20:10,062 [INFO] causelist_29102026.pdf: 379 case row(s) read, 4 potential match(es)
+2026-10-23 13:20:10,062 [INFO] Downloading causelist_30102026.pdf (daywise)
+2026-10-23 13:20:13,533 [INFO] causelist_30102026.pdf: 545 case row(s) read, 5 potential match(es)
+2026-10-23 13:20:13,533 [INFO] Downloading causelist_31102026.pdf (daywise)
+2026-10-23 13:20:15,962 [INFO] causelist_31102026.pdf: 379 case row(s) read, 2 potential match(es)
+2026-10-23 13:20:15,962 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-23 13:20:32,409 [INFO] entirelist_sgr.pdf: 2528 case row(s) read, 15 potential match(es)
+2026-10-23 13:20:32,409 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-23 13:20:33,705 [INFO] No case entries found in rjcourtsgr.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-23 13:20:33,709 [INFO] Fetching live display board
+2026-10-23 13:20:39,165 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "4", "item": "45", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today 56,63 and 85 to be taken up after 3.30 PM . Inform the opposite counsels in advance"}, {"id": "2", "text": "Immediate presence of PD Singh DYAG is required"}, {"id": "1", "text": "-"}]}}
+2026-10-23 13:20:39,167 [INFO] Added 15 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-27 | Court 4 | Sr 63 | CM(M) 9/2026 CM(63/2026)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-10-28 | Court 10 | Sr 39 | RFA 94/2024 CM(2765/2026) CM(3963/2025) CM(5023/2025) CM(7756/2024) CM(7757/2024)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-10-28 | Court 11 | Sr 82 | CM(5099/2026) IN RFA 41/2023 C/DELAY CM(5100/2026) CM(7796/2023)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-10-28 | Court 11 | Sr 106 | CCP(S) 475/2024 in[OWP 1369/2014]
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-29 | Court 1 | Sr 50 | LPA 176/2019 in[HCP 178/2018] CM(4593/2019) c/w i)CM(M) 201/2022 CM(2033/2019[1/2019]) CM(928/2020) ii)CM(M) 202/2022 IA(1/2018) IA(2/2018) iii)LPA 115/2023 CM(3692/2023) iv)CrlA(D) 61/2024 CrlM(1372/2024) CrlM(1221/2024) CrlM(1222/2024) v)CrlA(D) 71/2024 CrlM(1525/2024) CrlM(1526/2024) vi)CrlA(D) 20/2025 CrlM(257/2025) COURT NO. : 1 vii)CrlA(D) 118/2025 CrlM(2093/2025) CrlM(2094/2025) viii)CrlA(D) 119/2025 CrlM(2106/2025) CrlM(2107/2025) ix)CrlA(D) 122/2025 CrlM(2130/2025) CrlM(2131/2025)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-10-29 | Court 1 | Sr 53 | LPA 329/2019 in[OWP 623/2011] CM(2646/2025) CM(7685/2019) c/w i)LPA 136/2019 CM(1781/2023) CM(1783/2023) CM(4329/2019) ii)LPA 211/2019 CM(3297/2022) CM(5271/2019) iii)LPA 268/2019 CM(6764/2019)
+2026-10-23 13:20:39,167 [INFO]   -> [search: FAYAZ AHMAD PEERZADA] 2026-10-29 | Court 9 | Sr 15 | MA 86/2012 c/w COURT NO. : 9 i)MA 85/2012 IA(1/2012[295/2012])
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-29 | Court 12 | Sr 69 | CrlA(AS) 25/2025 CrlM(778/2025) CrlM(779/2025)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim] 2026-10-30 | Court 9 | Sr 40 | RFA 92/2026 CM(5096/2026) Caveat 1131/2026
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-30 | Court 10 | Sr 67 | CM(816/2026) IN RFA 11/2026 C/DELAY CM(817/2026)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-30 | Court 11 | Sr 69 | CM(6454/2024) IN WP(C) 928/2023 INTERIM RELIEF CM(2171/2023) CM(2172/2023)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-30 | Court 12 | Sr 12 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-30 | Court 14 | Sr 33 | CRM(M) 156/2026 CrlM(365/2026)
+2026-10-23 13:20:39,167 [INFO]   -> [Owais Ashraf] 2026-10-31 | Court 9 | Sr 5 | HCP 122/2026
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-31 | Court 9 | Sr 24 | WP(C) 463/2025 CM(1095/2025) CM(4969/2026) c/w i)CCP(S) 109/2025 ii)CCP(S) 167/2026 COURT NO. : 9
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-27 | Court 4 | Sr 63 | CM(M) 9/2026 CM(63/2026)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-10-28 | Court 10 | Sr 39 | RFA 94/2024 CM(2765/2026) CM(3963/2025) CM(5023/2025) CM(7756/2024) CM(7757/2024)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-10-28 | Court 11 | Sr 82 | CM(5099/2026) IN RFA 41/2023 C/DELAY CM(5100/2026) CM(7796/2023)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-10-28 | Court 11 | Sr 106 | CCP(S) 475/2024 in[OWP 1369/2014]
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-29 | Court 1 | Sr 50 | LPA 176/2019 in[HCP 178/2018] CM(4593/2019) c/w i)CM(M) 201/2022 CM(2033/2019[1/2019]) CM(928/2020) ii)CM(M) 202/2022 IA(1/2018) IA(2/2018) iii)LPA 115/2023 CM(3692/2023) iv)CrlA(D) 61/2024 CrlM(1372/2024) CrlM(1221/2024) CrlM(1222/2024) v)CrlA(D) 71/2024 CrlM(1525/2024) CrlM(1526/2024) vi)CrlA(D) 20/2025 CrlM(257/2025) COURT NO. : 1 vii)CrlA(D) 118/2025 CrlM(2093/2025) CrlM(2094/2025) viii)CrlA(D) 119/2025 CrlM(2106/2025) CrlM(2107/2025) ix)CrlA(D) 122/2025 CrlM(2130/2025) CrlM(2131/2025)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-10-29 | Court 1 | Sr 53 | LPA 329/2019 in[OWP 623/2011] CM(2646/2025) CM(7685/2019) c/w i)LPA 136/2019 CM(1781/2023) CM(1783/2023) CM(4329/2019) ii)LPA 211/2019 CM(3297/2022) CM(5271/2019) iii)LPA 268/2019 CM(6764/2019)
+2026-10-23 13:20:39,167 [INFO]   -> [search: FAYAZ AHMAD PEERZADA] 2026-10-29 | Court 9 | Sr 15 | MA 86/2012 c/w COURT NO. : 9 i)MA 85/2012 IA(1/2012[295/2012])
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-29 | Court 12 | Sr 69 | CrlA(AS) 25/2025 CrlM(778/2025) CrlM(779/2025)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim] 2026-10-30 | Court 9 | Sr 40 | RFA 92/2026 CM(5096/2026) Caveat 1131/2026
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-30 | Court 10 | Sr 67 | CM(816/2026) IN RFA 11/2026 C/DELAY CM(817/2026)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-30 | Court 11 | Sr 69 | CM(6454/2024) IN WP(C) 928/2023 INTERIM RELIEF CM(2171/2023) CM(2172/2023)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-30 | Court 12 | Sr 12 | CRM(M) 374/2022 CrlM(1069/2022)
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-10-30 | Court 14 | Sr 33 | CRM(M) 156/2026 CrlM(365/2026)
+2026-10-23 13:20:39,167 [INFO]   -> [Owais Ashraf] 2026-10-31 | Court 9 | Sr 5 | HCP 122/2026
+2026-10-23 13:20:39,167 [INFO]   -> [Syed Manzoor] 2026-10-31 | Court 9 | Sr 24 | WP(C) 463/2025 CM(1095/2025) CM(4969/2026) c/w i)CCP(S) 109/2025 ii)CCP(S) 167/2026 COURT NO. : 9

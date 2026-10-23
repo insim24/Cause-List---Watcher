@@ -1,20 +1,29 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": [
+    "idle": false,
+    "courts": [
       {
-        "id": "10",
-        "text": "Immediate presence of Mr.   zahid khan (advocate)  in serial no 2  is required in court"
+        "court": "4",
+        "item": "45",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       }
-    ]
+    ],
+    "raw_status_rows": [],
+    "messages": []
   },
   "Jammu Wing": {
     "idle": true,
     "courts": [],
     "raw_status_rows": [],
     "messages": [
+      {
+        "id": "8",
+        "text": "Mentioned matters for today 56,63 and 85 to be taken up after 3.30 PM . Inform the opposite counsels in advance"
+      },
+      {
+        "id": "2",
+        "text": "Immediate presence of PD Singh DYAG is required"
+      },
       {
         "id": "1",
         "text": "-"
