@@ -1,26 +1,92 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": []
-  },
-  "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "1",
+        "item": "1",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
+      },
+      {
+        "court": "9",
+        "item": "92",
+        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
+        "court": "10",
+        "item": "42",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "11",
+        "item": "13",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      },
+      {
+        "court": "12",
+        "item": "44",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
+        "id": "10",
+        "text": "Immediate presence of Mr.   ILYAS LAWAY GA (advocate) is required in court"
+      },
+      {
+        "id": "9",
+        "text": "Immediate presence of Mr.  (Ilyas Laway) is required in court"
+      }
+    ]
+  },
+  "Jammu Wing": {
+    "idle": false,
+    "courts": [
+      {
+        "court": "2",
+        "item": "66",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MA CHOWDHARY"
+      },
+      {
+        "court": "3",
+        "item": "24",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "24",
+        "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "156",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      },
+      {
+        "court": "8",
+        "item": "121",
+        "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"
+      },
+      {
+        "court": "13",
+        "item": "23",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      }
+    ],
+    "raw_status_rows": [],
+    "messages": [
+      {
+        "id": "1",
+        "text": "Jammu matters will be taken at 2PM."
+      },
+      {
         "id": "8",
-        "text": "Mentioned matters for today 56,63 and 85 to be taken up after 3.30 PM . Inform the opposite counsels in advance"
+        "text": "Mentioned matters for today are as follow 62,88,96,104,121 and 126 , inform the opposite counsels in advance"
       },
       {
         "id": "2",
-        "text": "Immediate presence of PD Singh DYAG is required"
-      },
-      {
-        "id": "1",
-        "text": "-"
+        "text": "Ajay Vaid Advocate  Jagpaul Advocate  and Ravi Abrol Advocate is required in item no.39"
       }
     ]
   }
