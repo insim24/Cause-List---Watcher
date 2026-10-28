@@ -5768,3 +5768,32 @@
 2026-10-27 15:29:35,561 [INFO] Fetching live display board
 2026-10-27 15:29:40,842 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "10", "item": "42", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": [{"id": "10", "text": "Immediate presence of Mr.   ILYAS LAWAY GA (advocate) is required in court"}, {"id": "9", "text": "Immediate presence of Mr.  (Ilyas Laway) is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "Jammu matters will be taken at 2PM."}, {"id": "8", "text": "Mentioned matters for today are as follow 62,88,96,104,121 and 126 , inform the opposite counsels in advance"}]}}
 2026-10-27 15:29:40,844 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-28 10:59:53,063 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-28 10:59:53,063 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-28 10:59:53,064 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-28 10:59:54,279 [INFO] Found 14 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-10-28 10:59:54,279 [INFO] Downloading Supplementary%20Cause%20List%20-%2028.10.2026.pdf (supplementary)
+2026-10-28 10:59:54,660 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2028.10.2026.pdf
+2026-10-28 10:59:54,660 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2028.10.2026.pdf (supplementary)
+2026-10-28 10:59:55,093 [INFO] Supplementary%20Cause%20List%20-2-%2028.10.2026.pdf: 13 case row(s) read, 0 potential match(es)
+2026-10-28 10:59:55,093 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2028.10.2026.pdf (supplementary)
+2026-10-28 10:59:55,372 [INFO] Supplementary%20Cause%20List%20-3-%2028.10.2026.pdf: 3 case row(s) read, 0 potential match(es)
+2026-10-28 10:59:55,372 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2028.10.2026.pdf (supplementary)
+2026-10-28 10:59:55,613 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2028.10.2026.pdf
+2026-10-28 10:59:55,613 [INFO] Downloading causelist_27102026.pdf (daywise)
+2026-10-28 10:59:55,960 [INFO] Unchanged since last run, skipping re-parse: causelist_27102026.pdf
+2026-10-28 10:59:55,960 [INFO] Downloading causelist_28102026.pdf (daywise)
+2026-10-28 10:59:56,210 [INFO] Unchanged since last run, skipping re-parse: causelist_28102026.pdf
+2026-10-28 10:59:56,210 [INFO] Downloading causelist_29102026.pdf (daywise)
+2026-10-28 10:59:56,450 [INFO] Unchanged since last run, skipping re-parse: causelist_29102026.pdf
+2026-10-28 10:59:56,451 [INFO] Downloading causelist_30102026.pdf (daywise)
+2026-10-28 10:59:56,691 [INFO] Unchanged since last run, skipping re-parse: causelist_30102026.pdf
+2026-10-28 10:59:56,691 [INFO] Downloading causelist_31102026.pdf (daywise)
+2026-10-28 10:59:56,932 [INFO] Unchanged since last run, skipping re-parse: causelist_31102026.pdf
+2026-10-28 10:59:56,932 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-28 10:59:58,593 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-28 10:59:58,593 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-28 10:59:58,835 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-28 10:59:58,840 [INFO] Fetching live display board
+2026-10-28 11:00:07,080 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "2", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "4", "item": "45", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "198", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "75", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "7", "item": "156", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today are as follow 92,96 and 101 , inform the opposite counsels in advance"}, {"id": "5", "text": "Mr. Eischan didichi GA is required in the court immediately"}, {"id": "3", "text": "Advocate for petitioner is required in s.no.137and 138 in court no.3"}]}}
+2026-10-28 11:00:07,083 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

@@ -3,35 +3,51 @@
     "idle": false,
     "courts": [
       {
+        "court": "2",
+        "item": "2",
+        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+      },
+      {
+        "court": "4",
+        "item": "45",
+        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
+      },
+      {
+        "court": "9",
+        "item": "198",
+        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+      },
+      {
         "court": "10",
-        "item": "42",
+        "item": "75",
         "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      }
+    ],
+    "raw_status_rows": [],
+    "messages": []
+  },
+  "Jammu Wing": {
+    "idle": false,
+    "courts": [
+      {
+        "court": "7",
+        "item": "156",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "10",
-        "text": "Immediate presence of Mr.   ILYAS LAWAY GA (advocate) is required in court"
-      },
-      {
-        "id": "9",
-        "text": "Immediate presence of Mr.  (Ilyas Laway) is required in court"
-      }
-    ]
-  },
-  "Jammu Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "1",
-        "text": "Jammu matters will be taken at 2PM."
-      },
-      {
         "id": "8",
-        "text": "Mentioned matters for today are as follow 62,88,96,104,121 and 126 , inform the opposite counsels in advance"
+        "text": "Mentioned matters for today are as follow 92,96 and 101 , inform the opposite counsels in advance"
+      },
+      {
+        "id": "5",
+        "text": "Mr. Eischan didichi GA is required in the court immediately"
+      },
+      {
+        "id": "3",
+        "text": "Advocate for petitioner is required in s.no.137and 138 in court no.3"
       }
     ]
   }
