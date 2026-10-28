@@ -16,25 +16,14 @@
         "court": "9",
         "item": "198",
         "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "75",
-        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
       }
     ],
     "raw_status_rows": [],
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "7",
-        "item": "156",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {

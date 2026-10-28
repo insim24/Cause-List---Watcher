@@ -5797,3 +5797,28 @@
 2026-10-28 10:59:58,840 [INFO] Fetching live display board
 2026-10-28 11:00:07,080 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "2", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "4", "item": "45", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "198", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "10", "item": "75", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "7", "item": "156", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today are as follow 92,96 and 101 , inform the opposite counsels in advance"}, {"id": "5", "text": "Mr. Eischan didichi GA is required in the court immediately"}, {"id": "3", "text": "Advocate for petitioner is required in s.no.137and 138 in court no.3"}]}}
 2026-10-28 11:00:07,083 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-28 16:12:51,556 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-28 16:12:51,556 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-28 16:12:51,557 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-28 16:12:52,821 [INFO] Found 11 relevant causelist link(s) on the page (9 after filtering by list_types)
+2026-10-28 16:12:52,821 [INFO] Downloading Supplementary%20Cause%20List%20-%2029.10.2026.pdf (supplementary)
+2026-10-28 16:12:53,712 [INFO] Supplementary%20Cause%20List%20-%2029.10.2026.pdf: 25 case row(s) read, 0 potential match(es)
+2026-10-28 16:12:53,712 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2029.10.2026.pdf (supplementary)
+2026-10-28 16:12:54,045 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2029.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-28 16:12:54,045 [INFO] Downloading causelist_27102026.pdf (daywise)
+2026-10-28 16:12:54,350 [INFO] Unchanged since last run, skipping re-parse: causelist_27102026.pdf
+2026-10-28 16:12:54,350 [INFO] Downloading causelist_28102026.pdf (daywise)
+2026-10-28 16:12:54,650 [INFO] Unchanged since last run, skipping re-parse: causelist_28102026.pdf
+2026-10-28 16:12:54,650 [INFO] Downloading causelist_29102026.pdf (daywise)
+2026-10-28 16:12:54,950 [INFO] Unchanged since last run, skipping re-parse: causelist_29102026.pdf
+2026-10-28 16:12:54,950 [INFO] Downloading causelist_30102026.pdf (daywise)
+2026-10-28 16:12:55,250 [INFO] Unchanged since last run, skipping re-parse: causelist_30102026.pdf
+2026-10-28 16:12:55,250 [INFO] Downloading causelist_31102026.pdf (daywise)
+2026-10-28 16:12:55,530 [INFO] Unchanged since last run, skipping re-parse: causelist_31102026.pdf
+2026-10-28 16:12:55,530 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-28 16:12:57,500 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-28 16:12:57,500 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-28 16:12:57,779 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-28 16:12:57,783 [INFO] Fetching live display board
+2026-10-28 16:13:01,454 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "2", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "4", "item": "45", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "198", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today are as follow 92,96 and 101 , inform the opposite counsels in advance"}, {"id": "5", "text": "Mr. Eischan didichi GA is required in the court immediately"}, {"id": "3", "text": "Advocate for petitioner is required in s.no.137and 138 in court no.3"}]}}
+2026-10-28 16:13:01,455 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
