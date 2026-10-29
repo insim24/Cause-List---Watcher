@@ -5822,3 +5822,34 @@
 2026-10-28 16:12:57,783 [INFO] Fetching live display board
 2026-10-28 16:13:01,454 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "2", "item": "2", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE M.A. CHOWDHARY"}, {"court": "4", "item": "45", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "198", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "8", "text": "Mentioned matters for today are as follow 92,96 and 101 , inform the opposite counsels in advance"}, {"id": "5", "text": "Mr. Eischan didichi GA is required in the court immediately"}, {"id": "3", "text": "Advocate for petitioner is required in s.no.137and 138 in court no.3"}]}}
 2026-10-28 16:13:01,455 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-29 11:16:24,958 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-29 11:16:24,959 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-29 11:16:24,959 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-29 11:16:26,304 [INFO] Found 15 relevant causelist link(s) on the page (12 after filtering by list_types)
+2026-10-29 11:16:26,304 [INFO] Downloading Supplementary%20Cause%20List%20-%2029.10.2026.pdf (supplementary)
+2026-10-29 11:16:27,006 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2029.10.2026.pdf
+2026-10-29 11:16:27,006 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2029.10.2026.pdf (supplementary)
+2026-10-29 11:16:27,413 [INFO] Supplementary%20Cause%20List%20-1-%2029.10.2026.pdf: 10 case row(s) read, 0 potential match(es)
+2026-10-29 11:16:27,413 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2029.10.2026.pdf (supplementary)
+2026-10-29 11:16:27,738 [INFO] Supplementary%20Cause%20List%20-2-%2029.10.2026.pdf: 3 case row(s) read, 0 potential match(es)
+2026-10-29 11:16:27,738 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2029.10.2026.pdf (supplementary)
+2026-10-29 11:16:28,036 [INFO] No case entries found in Supplementary%20Cause%20List%20-3-%2029.10.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-10-29 11:16:28,036 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2029.10.2026.pdf (supplementary)
+2026-10-29 11:16:28,322 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2029.10.2026.pdf
+2026-10-29 11:16:28,322 [INFO] Downloading causelist_27102026.pdf (daywise)
+2026-10-29 11:16:28,657 [INFO] Unchanged since last run, skipping re-parse: causelist_27102026.pdf
+2026-10-29 11:16:28,657 [INFO] Downloading causelist_28102026.pdf (daywise)
+2026-10-29 11:16:28,956 [INFO] Unchanged since last run, skipping re-parse: causelist_28102026.pdf
+2026-10-29 11:16:28,956 [INFO] Downloading causelist_29102026.pdf (daywise)
+2026-10-29 11:16:29,243 [INFO] Unchanged since last run, skipping re-parse: causelist_29102026.pdf
+2026-10-29 11:16:29,243 [INFO] Downloading causelist_30102026.pdf (daywise)
+2026-10-29 11:16:29,530 [INFO] Unchanged since last run, skipping re-parse: causelist_30102026.pdf
+2026-10-29 11:16:29,530 [INFO] Downloading causelist_31102026.pdf (daywise)
+2026-10-29 11:16:29,817 [INFO] Unchanged since last run, skipping re-parse: causelist_31102026.pdf
+2026-10-29 11:16:29,817 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-29 11:16:31,793 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-29 11:16:31,793 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-29 11:16:32,079 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-29 11:16:32,084 [INFO] Fetching live display board
+2026-10-29 11:16:35,161 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "4", "item": "43", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "10", "item": "4", "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"}], "raw_status_rows": [], "messages": [{"id": "11", "text": "MR T. A. LONE DY.AG IS REQUIRED IN THIS COURT  IMMEDIATELY."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "13", "item": "4", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": []}}
+2026-10-29 11:16:35,163 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

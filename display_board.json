@@ -3,41 +3,44 @@
     "idle": false,
     "courts": [
       {
-        "court": "2",
-        "item": "2",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE M.A. CHOWDHARY"
+        "court": "3",
+        "item": "1",
+        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SANJAY DHAR"
       },
       {
         "court": "4",
-        "item": "45",
+        "item": "43",
         "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
       },
       {
-        "court": "9",
-        "item": "198",
-        "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"
+        "court": "10",
+        "item": "4",
+        "coram": "HON'BLE MR. JUSTICE RAJESH SEKHRI"
+      }
+    ],
+    "raw_status_rows": [],
+    "messages": [
+      {
+        "id": "11",
+        "text": "MR T. A. LONE DY.AG IS REQUIRED IN THIS COURT  IMMEDIATELY."
+      }
+    ]
+  },
+  "Jammu Wing": {
+    "idle": false,
+    "courts": [
+      {
+        "court": "3",
+        "item": "1",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA, HON'BLE MR.  JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "13",
+        "item": "4",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
     "messages": []
-  },
-  "Jammu Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "8",
-        "text": "Mentioned matters for today are as follow 92,96 and 101 , inform the opposite counsels in advance"
-      },
-      {
-        "id": "5",
-        "text": "Mr. Eischan didichi GA is required in the court immediately"
-      },
-      {
-        "id": "3",
-        "text": "Advocate for petitioner is required in s.no.137and 138 in court no.3"
-      }
-    ]
   }
 }
