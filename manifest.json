@@ -1209,5 +1209,17 @@
     "parser_version": "4-grouped-people",
     "watch_key": "72f2cb68ea0f70d8",
     "last_seen": "2026-10-29T16:21:10.835068"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/Supplementary%20Cause%20List%20-2-%2030.10.2026.pdf": {
+    "hash": "8e6bd901af0eb184ff8130e0a0b0be8496a63df57ea2171e0c40711c9b4fa898",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-30T11:11:32.607185"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/Supplementary%20Cause%20List%20-3-%2030.10.2026.pdf": {
+    "hash": "8800cdf751db5889e80c2719ed043ca62ec38b87a712cba023db647f10c7d0ca",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-30T11:11:33.006381"
   }
 }
