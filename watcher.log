@@ -5934,3 +5934,26 @@
 2026-10-30 11:11:36,324 [INFO] Fetching live display board
 2026-10-30 11:11:39,951 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "7", "coram": "HON'BLE THE CHIEF JUSTICE"}, {"court": "4", "item": "50", "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"}, {"court": "9", "item": "123", "coram": "HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "11", "item": "6", "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "5", "item": "116", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "8", "item": "100", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "13", "item": "117", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": []}}
 2026-10-30 11:11:39,953 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-30 16:08:52,768 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-30 16:08:52,768 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-30 16:08:52,768 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-30 16:08:54,020 [INFO] Found 10 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-10-30 16:08:54,020 [INFO] Downloading Supplementary%20Cause%20List%20-%2031.10.2026.pdf (supplementary)
+2026-10-30 16:08:54,854 [INFO] Supplementary%20Cause%20List%20-%2031.10.2026.pdf: 81 case row(s) read, 0 potential match(es)
+2026-10-30 16:08:54,854 [INFO] Downloading causelist_27102026.pdf (daywise)
+2026-10-30 16:08:55,406 [INFO] Unchanged since last run, skipping re-parse: causelist_27102026.pdf
+2026-10-30 16:08:55,406 [INFO] Downloading causelist_28102026.pdf (daywise)
+2026-10-30 16:08:55,756 [INFO] Unchanged since last run, skipping re-parse: causelist_28102026.pdf
+2026-10-30 16:08:55,756 [INFO] Downloading causelist_29102026.pdf (daywise)
+2026-10-30 16:08:56,056 [INFO] Unchanged since last run, skipping re-parse: causelist_29102026.pdf
+2026-10-30 16:08:56,056 [INFO] Downloading causelist_30102026.pdf (daywise)
+2026-10-30 16:08:56,327 [INFO] Unchanged since last run, skipping re-parse: causelist_30102026.pdf
+2026-10-30 16:08:56,327 [INFO] Downloading causelist_31102026.pdf (daywise)
+2026-10-30 16:08:56,598 [INFO] Unchanged since last run, skipping re-parse: causelist_31102026.pdf
+2026-10-30 16:08:56,598 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-30 16:08:58,470 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-30 16:08:58,470 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-30 16:08:58,741 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-30 16:08:58,745 [INFO] Fetching live display board
+2026-10-30 16:09:02,546 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "7", "coram": "HON'BLE THE CHIEF JUSTICE"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "5", "item": "116", "coram": "HON'BLE MR.  JUSTICE SANJAY DHAR"}, {"court": "8", "item": "100", "coram": "HON'BLE MS.  JUSTICE MOKSHA KHAJURIA KAZMI"}, {"court": "13", "item": "117", "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"}], "raw_status_rows": [], "messages": []}}
+2026-10-30 16:09:02,548 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
