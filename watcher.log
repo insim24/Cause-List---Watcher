@@ -6007,3 +6007,30 @@
 2026-10-31 06:47:09,418 [INFO] Fetching live display board
 2026-10-31 06:47:10,746 [INFO] Display board: {}
 2026-10-31 06:47:10,749 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-10-31 06:47:24,725 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-10-31 06:47:24,725 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-10-31 06:47:24,725 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-10-31 06:47:25,921 [INFO] Found 13 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-10-31 06:47:25,921 [INFO] Downloading Supplementary%20Cause%20List%20-%2031.10.2026.pdf (supplementary)
+2026-10-31 06:47:26,237 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2031.10.2026.pdf
+2026-10-31 06:47:26,238 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2031.10.2026.pdf (supplementary)
+2026-10-31 06:47:26,491 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2031.10.2026.pdf
+2026-10-31 06:47:26,491 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2031.10.2026.pdf (supplementary)
+2026-10-31 06:47:26,744 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2031.10.2026.pdf
+2026-10-31 06:47:26,744 [INFO] Downloading causelist_27102026.pdf (daywise)
+2026-10-31 06:47:27,188 [INFO] Unchanged since last run, skipping re-parse: causelist_27102026.pdf
+2026-10-31 06:47:27,188 [INFO] Downloading causelist_28102026.pdf (daywise)
+2026-10-31 06:47:27,487 [INFO] Unchanged since last run, skipping re-parse: causelist_28102026.pdf
+2026-10-31 06:47:27,487 [INFO] Downloading causelist_29102026.pdf (daywise)
+2026-10-31 06:47:27,787 [INFO] Unchanged since last run, skipping re-parse: causelist_29102026.pdf
+2026-10-31 06:47:27,788 [INFO] Downloading causelist_30102026.pdf (daywise)
+2026-10-31 06:47:28,041 [INFO] Unchanged since last run, skipping re-parse: causelist_30102026.pdf
+2026-10-31 06:47:28,041 [INFO] Downloading causelist_31102026.pdf (daywise)
+2026-10-31 06:47:28,293 [INFO] Unchanged since last run, skipping re-parse: causelist_31102026.pdf
+2026-10-31 06:47:28,294 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-10-31 06:47:30,040 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-10-31 06:47:30,041 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-10-31 06:47:30,293 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-10-31 06:47:30,297 [INFO] Fetching live display board
+2026-10-31 06:47:31,404 [INFO] Display board: {}
+2026-10-31 06:47:31,405 [INFO] Added 0 new match(es). Total saved: 155. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
