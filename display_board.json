@@ -1,1 +1,41 @@
-{}
+{
+  "Srinagar Wing": {
+    "idle": false,
+    "courts": [
+      {
+        "court": "11",
+        "item": "101",
+        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
+      }
+    ],
+    "raw_status_rows": [],
+    "messages": [
+      {
+        "id": "12",
+        "text": "Immediate presence of   sr. advocate Mr. G.A. lone is required in item 106."
+      }
+    ]
+  },
+  "Jammu Wing": {
+    "idle": false,
+    "courts": [
+      {
+        "court": "6",
+        "item": "1",
+        "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
+      },
+      {
+        "court": "7",
+        "item": "149",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      }
+    ],
+    "raw_status_rows": [],
+    "messages": [
+      {
+        "id": "2",
+        "text": "Presence of Sr. AAG Monika Kohli is required"
+      }
+    ]
+  }
+}

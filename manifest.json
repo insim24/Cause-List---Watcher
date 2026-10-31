@@ -1229,15 +1229,21 @@
     "last_seen": "2026-10-30T16:08:54.355999"
   },
   "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/Supplementary%20Cause%20List%20-2-%2031.10.2026.pdf": {
-    "hash": "3f60ca044cf0d2f2d5a48f563545f8fa393feaa8c8439ffddf6dfd4ff2db69f4",
+    "hash": "8aa136b59c6641d328e0034296733ce595485c3cd79b13a256c60b6a6c892569",
     "parser_version": "4-grouped-people",
     "watch_key": "72f2cb68ea0f70d8",
-    "last_seen": "2026-10-31T06:47:05.636772"
+    "last_seen": "2026-10-31T10:44:55.169828"
   },
   "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/Supplementary%20Cause%20List%20-3-%2031.10.2026.pdf": {
-    "hash": "87b395370e5b6b288032b4e9daf185c8455e41e55f227e609706b484a68c05a6",
+    "hash": "f61244fc600ca23cd9aa5edacf2790db5436e1a762a35b929f62be5931488893",
     "parser_version": "4-grouped-people",
     "watch_key": "72f2cb68ea0f70d8",
-    "last_seen": "2026-10-31T06:47:06.008274"
+    "last_seen": "2026-10-31T10:44:55.520996"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Oct/weeklycauselist_27102026/Supplementary%20Cause%20List%20-4-%2031.10.2026.pdf": {
+    "hash": "6678da7af2b90c0e83bde6c12cc83f989ee0a911694b000558f1c07a76e9b05e",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-10-31T10:44:55.795266"
   }
 }
