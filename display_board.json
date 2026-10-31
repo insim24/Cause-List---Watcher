@@ -1,13 +1,7 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "11",
-        "item": "101",
-        "coram": "HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
@@ -19,11 +13,6 @@
   "Jammu Wing": {
     "idle": false,
     "courts": [
-      {
-        "court": "6",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE MA CHOWDHARY"
-      },
       {
         "court": "7",
         "item": "149",
