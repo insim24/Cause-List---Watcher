@@ -6135,3 +6135,26 @@
 2026-10-31 15:28:00,192 [INFO] Fetching live display board
 2026-10-31 15:28:04,340 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "12", "text": "Immediate presence of   sr. advocate Mr. G.A. lone is required in item 106."}]}, "Jammu Wing": {"idle": false, "courts": [{"court": "7", "item": "149", "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
 2026-10-31 15:28:04,342 [INFO] Added 0 new match(es). Total saved: 168. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-01 10:54:57,853 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-01 10:54:57,854 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-11-01 10:54:57,855 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-01 10:54:59,107 [INFO] Found 10 relevant causelist link(s) on the page (8 after filtering by list_types)
+2026-11-01 10:54:59,107 [INFO] Downloading Supplementary%20Cause%20List%20-%2002.11.2026.pdf (supplementary)
+2026-11-01 10:54:59,377 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2002.11.2026.pdf
+2026-11-01 10:54:59,377 [INFO] Downloading causelist_02112026.pdf (daywise)
+2026-11-01 10:54:59,938 [INFO] Unchanged since last run, skipping re-parse: causelist_02112026.pdf
+2026-11-01 10:54:59,938 [INFO] Downloading causelist_03112026.pdf (daywise)
+2026-11-01 10:55:00,337 [INFO] Unchanged since last run, skipping re-parse: causelist_03112026.pdf
+2026-11-01 10:55:00,337 [INFO] Downloading causelist_04112026.pdf (daywise)
+2026-11-01 10:55:00,638 [INFO] Unchanged since last run, skipping re-parse: causelist_04112026.pdf
+2026-11-01 10:55:00,638 [INFO] Downloading causelist_05112026.pdf (daywise)
+2026-11-01 10:55:00,907 [INFO] Unchanged since last run, skipping re-parse: causelist_05112026.pdf
+2026-11-01 10:55:00,907 [INFO] Downloading causelist_06112026.pdf (daywise)
+2026-11-01 10:55:01,176 [INFO] Unchanged since last run, skipping re-parse: causelist_06112026.pdf
+2026-11-01 10:55:01,176 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-01 10:55:02,820 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-01 10:55:02,821 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-01 10:55:03,090 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-01 10:55:03,095 [INFO] Fetching live display board
+2026-11-01 10:55:04,546 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "12", "text": "Immediate presence of   sr. advocate Mr. G.A. lone is required in item 106."}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
+2026-11-01 10:55:04,548 [INFO] Added 0 new match(es). Total saved: 168. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html

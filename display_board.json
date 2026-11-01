@@ -11,14 +11,8 @@
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "7",
-        "item": "149",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
