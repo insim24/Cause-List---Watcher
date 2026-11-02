@@ -1,23 +1,7 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "65",
-        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
-      },
-      {
-        "court": "5",
-        "item": "111",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "8",
-        "item": "90",
-        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
@@ -27,14 +11,8 @@
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "10",
-        "item": "60",
-        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
