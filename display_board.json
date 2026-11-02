@@ -1,20 +1,46 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "3",
+        "item": "65",
+        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "111",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "8",
+        "item": "90",
+        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "12",
-        "text": "Immediate presence of   sr. advocate Mr. G.A. lone is required in item 106."
+        "id": "1",
+        "text": "The Division bench matters of Srinagar wing will be addressed first."
       }
     ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "10",
+        "item": "60",
+        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
+      {
+        "id": "1",
+        "text": "court will start at 10 am"
+      },
       {
         "id": "2",
         "text": "Presence of Sr. AAG Monika Kohli is required"
