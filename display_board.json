@@ -1,12 +1,27 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "3",
+        "item": "22",
+        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "13",
+        "item": "13",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
+        "id": "7",
+        "text": "“The regular matters are now being taken up."
+      },
+      {
         "id": "1",
-        "text": "The Division bench matters of Srinagar wing will be addressed first."
+        "text": "PIL No. 14/2012, pertaining to environmental concerns in Gulmarg, shall be taken up immediately after the lunch break. Learned counsels representing the respective parties are requested to kindly remain present in Court."
       }
     ]
   },
