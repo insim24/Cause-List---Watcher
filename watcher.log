@@ -6362,3 +6362,30 @@
 2026-11-05 12:56:51,003 [INFO]   -> [search: Syed iftikhar] 2026-11-06 | Court 2 | Sr 3 | SWP 1283/2016 IA(1/2016[01/2016]) c/w i)SWP 2224/2014
 2026-11-05 12:56:51,003 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-11-06 | Court 5 | Sr 18 | WP(C) 2934/2023 CM(6977/2023) COURT NO. : 5
 2026-11-05 12:56:51,003 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-11-06 | Court 7 | Sr 52 | WP(C) 876/2026
+2026-11-05 17:33:37,932 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-05 17:33:37,932 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-11-05 17:33:37,933 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-05 17:33:39,155 [INFO] Found 14 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-11-05 17:33:39,155 [INFO] Downloading Supplementary%20Cause%20List%20-%2006.11.2026.pdf (supplementary)
+2026-11-05 17:33:39,519 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2006.11.2026.pdf
+2026-11-05 17:33:39,519 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2006.11.2026.pdf (supplementary)
+2026-11-05 17:33:39,927 [INFO] Spl.Supplementary%20Cause%20List%20-%2006.11.2026.pdf: 11 case row(s) read, 0 potential match(es)
+2026-11-05 17:33:39,927 [INFO] Downloading DBSupplementary%20Cause%20List%20-%2006.11.2026.pdf (supplementary)
+2026-11-05 17:33:40,225 [INFO] No case entries found in DBSupplementary%20Cause%20List%20-%2006.11.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-11-05 17:33:40,225 [INFO] Downloading causelist_02112026.pdf (daywise)
+2026-11-05 17:33:40,669 [INFO] Unchanged since last run, skipping re-parse: causelist_02112026.pdf
+2026-11-05 17:33:40,669 [INFO] Downloading causelist_03112026.pdf (daywise)
+2026-11-05 17:33:41,019 [INFO] Unchanged since last run, skipping re-parse: causelist_03112026.pdf
+2026-11-05 17:33:41,019 [INFO] Downloading causelist_04112026.pdf (daywise)
+2026-11-05 17:33:41,319 [INFO] Unchanged since last run, skipping re-parse: causelist_04112026.pdf
+2026-11-05 17:33:41,319 [INFO] Downloading causelist_05112026.pdf (daywise)
+2026-11-05 17:33:41,602 [INFO] Unchanged since last run, skipping re-parse: causelist_05112026.pdf
+2026-11-05 17:33:41,602 [INFO] Downloading causelist_06112026.pdf (daywise)
+2026-11-05 17:33:41,884 [INFO] Unchanged since last run, skipping re-parse: causelist_06112026.pdf
+2026-11-05 17:33:41,884 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-05 17:33:43,553 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-05 17:33:43,554 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-05 17:33:43,830 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-05 17:33:43,898 [INFO] Fetching live display board
+2026-11-05 17:33:46,322 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "9", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": [{"id": "13", "text": "Immediate presence of Mr.  (Bikramdeep & Shahila) is required in court"}, {"id": "7", "text": "Immediate presence of MAHA MAJEED .  (advocate) is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
+2026-11-05 17:33:46,324 [INFO] Added 0 new match(es). Total saved: 169. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
