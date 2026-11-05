@@ -3,30 +3,20 @@
     "idle": false,
     "courts": [
       {
-        "court": "3",
-        "item": "2",
-        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA, HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
         "court": "5",
-        "item": "76",
+        "item": "9",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "6",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "1",
-        "text": "The Division Bench matters pertaining to the Srinagar Wing shall be taken up immediately after the break, at 2:10 PM. Learned counsels representing the respective parties are requested to remain present accordingly."
+        "id": "13",
+        "text": "Immediate presence of Mr.  (Bikramdeep & Shahila) is required in court"
       },
       {
         "id": "7",
-        "text": "Immediate presence of Mr. FAHIM NISAR SHAH (advocate) is required in court"
+        "text": "Immediate presence of MAHA MAJEED .  (advocate) is required in court"
       }
     ]
   },
