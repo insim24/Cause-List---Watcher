@@ -1,13 +1,7 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "6",
-        "item": "2",
-        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
