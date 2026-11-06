@@ -3,20 +3,16 @@
     "idle": false,
     "courts": [
       {
-        "court": "5",
-        "item": "9",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+        "court": "6",
+        "item": "2",
+        "coram": "HON'BLE MR. JUSTICE M.A. CHOWDHARY"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "13",
-        "text": "Immediate presence of Mr.  (Bikramdeep & Shahila) is required in court"
-      },
-      {
         "id": "7",
-        "text": "Immediate presence of MAHA MAJEED .  (advocate) is required in court"
+        "text": "SUPPLYMENTRY TO BE TAKEN AT 12 OCLOCK"
       }
     ]
   },
