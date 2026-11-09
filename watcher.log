@@ -6522,3 +6522,36 @@
 2026-11-07 15:50:40,581 [INFO] Fetching live display board
 2026-11-07 15:50:41,775 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "7", "text": "SUPPLYMENTRY TO BE TAKEN AT 12 OCLOCK"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
 2026-11-07 15:50:41,777 [INFO] Added 0 new match(es). Total saved: 170. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-09 13:38:22,006 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-09 13:38:22,006 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-11-09 13:38:22,007 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-09 13:38:23,482 [INFO] Found 17 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-11-09 13:38:23,483 [INFO] Downloading Supplementary%20Cause%20List%20-%2006.11.2026.pdf (supplementary)
+2026-11-09 13:38:23,864 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2006.11.2026.pdf
+2026-11-09 13:38:23,864 [INFO] Downloading Supplementary%20Cause%20List%20-1-%2006.11.2026.pdf (supplementary)
+2026-11-09 13:38:24,186 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-1-%2006.11.2026.pdf
+2026-11-09 13:38:24,186 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2006.11.2026.pdf (supplementary)
+2026-11-09 13:38:24,513 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-2-%2006.11.2026.pdf
+2026-11-09 13:38:24,513 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2006.11.2026.pdf (supplementary)
+2026-11-09 13:38:24,836 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-3-%2006.11.2026.pdf
+2026-11-09 13:38:24,836 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2006.11.2026.pdf (supplementary)
+2026-11-09 13:38:25,158 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2006.11.2026.pdf
+2026-11-09 13:38:25,159 [INFO] Downloading DBSupplementary%20Cause%20List%20-%2006.11.2026.pdf (supplementary)
+2026-11-09 13:38:25,481 [INFO] Unchanged since last run, skipping re-parse: DBSupplementary%20Cause%20List%20-%2006.11.2026.pdf
+2026-11-09 13:38:25,481 [INFO] Downloading causelist_02112026.pdf (daywise)
+2026-11-09 13:38:25,915 [INFO] Unchanged since last run, skipping re-parse: causelist_02112026.pdf
+2026-11-09 13:38:25,916 [INFO] Downloading causelist_03112026.pdf (daywise)
+2026-11-09 13:38:26,313 [INFO] Unchanged since last run, skipping re-parse: causelist_03112026.pdf
+2026-11-09 13:38:26,314 [INFO] Downloading causelist_04112026.pdf (daywise)
+2026-11-09 13:38:26,663 [INFO] Unchanged since last run, skipping re-parse: causelist_04112026.pdf
+2026-11-09 13:38:26,663 [INFO] Downloading causelist_05112026.pdf (daywise)
+2026-11-09 13:38:26,986 [INFO] Unchanged since last run, skipping re-parse: causelist_05112026.pdf
+2026-11-09 13:38:26,986 [INFO] Downloading causelist_06112026.pdf (daywise)
+2026-11-09 13:38:27,308 [INFO] Unchanged since last run, skipping re-parse: causelist_06112026.pdf
+2026-11-09 13:38:27,308 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-09 13:38:29,255 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-09 13:38:29,256 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-09 13:38:29,578 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-09 13:38:29,583 [INFO] Fetching live display board
+2026-11-09 13:38:30,981 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "7", "text": "SUPPLYMENTRY TO BE TAKEN AT 12 OCLOCK"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
+2026-11-09 13:38:30,983 [INFO] Added 0 new match(es). Total saved: 170. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
