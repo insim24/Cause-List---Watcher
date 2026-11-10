@@ -1365,5 +1365,41 @@
     "parser_version": "4-grouped-people",
     "watch_key": "72f2cb68ea0f70d8",
     "last_seen": "2026-11-06T12:43:51.124813"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_11112026/Supplementary%20Cause%20List%20-%2011.11.2026.pdf": {
+    "hash": "cd77eb9b833bf065799d2a1046d4437fb17035e72e356c31adb847c97ea1ab4e",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-11-10T10:55:02.188088"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_11112026/causelist_11112026.pdf": {
+    "hash": "053813e533ad767d7e35dd082bcaa4efc088f7d715f4453624ca23d9ed8d3ec0",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-11-10T10:55:02.875173"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_11112026/causelist_12112026.pdf": {
+    "hash": "9cb96b1d82950259512ff4ad398a977f74acc6b4f3d87f4d95782d573a788d55",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-11-10T10:55:05.015944"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_11112026/causelist_13112026.pdf": {
+    "hash": "7f6a62f0a01179f82a3f3ae91a84ae8ab52e67b07383738f8541d549dad9c8af",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-11-10T10:55:07.265667"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_11112026/entirelist_sgr.pdf": {
+    "hash": "a2d42daa295f929bd24142b65f85103b2b7d9902d1b4c3944740a3c002d02d83",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-11-10T10:55:11.040912"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_11112026/rjcourtsgr.pdf": {
+    "hash": "e8f8334845a763609f733d055f4fa2c07ba05ae02f33ce91c056d2cdc5963589",
+    "parser_version": "4-grouped-people",
+    "watch_key": "72f2cb68ea0f70d8",
+    "last_seen": "2026-11-10T10:55:18.973165"
   }
 }
