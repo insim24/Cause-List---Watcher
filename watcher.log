@@ -6648,3 +6648,22 @@
 2026-11-10 10:55:20,080 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-11-12 | Court 5 | Sr 3 | WP(C) 693/2024 CM(1853/2024)
 2026-11-10 10:55:20,080 [INFO]   -> [Syed Mohtasim] 2026-11-13 | Court 1 | Sr 3 | Arb P 13/2024
 2026-11-10 10:55:20,080 [INFO]   -> [Saqib Fayaz] 2026-11-13 | Court 11 | Sr 44 | CRM(M) 453/2025 CrlM(1086/2025)
+2026-11-10 13:15:23,146 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-10 13:15:23,146 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-11-10 13:15:23,147 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-10 13:15:24,268 [INFO] Found 8 relevant causelist link(s) on the page (6 after filtering by list_types)
+2026-11-10 13:15:24,269 [INFO] Downloading Supplementary%20Cause%20List%20-%2011.11.2026.pdf (supplementary)
+2026-11-10 13:15:24,509 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2011.11.2026.pdf
+2026-11-10 13:15:24,509 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-10 13:15:25,082 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-10 13:15:25,082 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-10 13:15:25,331 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-10 13:15:25,332 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-10 13:15:25,571 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-10 13:15:25,572 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-10 13:15:26,990 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-10 13:15:26,991 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-10 13:15:27,230 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-10 13:15:27,235 [INFO] Fetching live display board
+2026-11-10 13:15:28,560 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "7", "text": "SUPPLYMENTRY TO BE TAKEN AT 12 OCLOCK"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
+2026-11-10 13:15:28,561 [INFO] Added 0 new match(es). Total saved: 174. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
