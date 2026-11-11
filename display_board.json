@@ -4,13 +4,8 @@
     "courts": [
       {
         "court": "5",
-        "item": "57",
+        "item": "108",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "7",
-        "item": "46",
-        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
       }
     ],
     "raw_status_rows": [],
