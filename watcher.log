@@ -6743,3 +6743,22 @@
 2026-11-11 12:27:22,427 [INFO] Fetching live display board
 2026-11-11 12:27:25,020 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "108", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Presence of MR. H. SUHAIL ISHTIAQ Adv.  is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
 2026-11-11 12:27:25,023 [INFO] Added 0 new match(es). Total saved: 174. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-11 14:55:53,330 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-11 14:55:53,330 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar
+2026-11-11 14:55:53,331 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-11 14:55:54,519 [INFO] Found 8 relevant causelist link(s) on the page (6 after filtering by list_types)
+2026-11-11 14:55:54,519 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2012.11.2026.pdf (supplementary)
+2026-11-11 14:55:54,776 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2012.11.2026.pdf
+2026-11-11 14:55:54,776 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-11 14:55:55,408 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-11 14:55:55,408 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-11 14:55:55,709 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-11 14:55:55,709 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-11 14:55:56,008 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-11 14:55:56,008 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-11 14:55:57,529 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-11 14:55:57,529 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-11 14:55:57,800 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-11 14:55:57,809 [INFO] Fetching live display board
+2026-11-11 14:56:00,367 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "108", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": [{"id": "8", "text": "Presence of MR. H. SUHAIL ISHTIAQ Adv.  is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
+2026-11-11 14:56:00,369 [INFO] Added 0 new match(es). Total saved: 174. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
