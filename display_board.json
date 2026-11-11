@@ -1,12 +1,23 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "5",
+        "item": "57",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "46",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "7",
-        "text": "SUPPLYMENTRY TO BE TAKEN AT 12 OCLOCK"
+        "id": "8",
+        "text": "Presence of MR. H. SUHAIL ISHTIAQ Adv.  is required in court"
       }
     ]
   },
