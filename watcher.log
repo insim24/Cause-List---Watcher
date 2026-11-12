@@ -6865,3 +6865,34 @@
 2026-11-12 17:35:44,879 [INFO] Fetching live display board
 2026-11-12 17:35:47,293 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "13", "text": "Immediate presence of govt advocates are required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
 2026-11-12 17:35:47,295 [INFO] Added 0 new match(es). Total saved: 176. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-12 17:36:27,576 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-12 17:36:27,576 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-12 17:36:27,577 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-12 17:36:28,814 [INFO] Found 9 relevant causelist link(s) on the page (7 after filtering by list_types)
+2026-11-12 17:36:28,814 [INFO] Downloading Supplementary%20Cause%20List%20-%2013.11.2026.pdf (supplementary)
+2026-11-12 17:36:29,836 [INFO] Supplementary%20Cause%20List%20-%2013.11.2026.pdf: 119 case row(s) read, 2 potential match(es)
+2026-11-12 17:36:29,836 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2013.11.2026.pdf (supplementary)
+2026-11-12 17:36:30,279 [INFO] Spl.Supplementary%20Cause%20List%20-%2013.11.2026.pdf: 14 case row(s) read, 0 potential match(es)
+2026-11-12 17:36:30,279 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-12 17:36:33,339 [INFO] causelist_11112026.pdf: 450 case row(s) read, 1 potential match(es)
+2026-11-12 17:36:33,339 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-12 17:36:36,324 [INFO] causelist_12112026.pdf: 370 case row(s) read, 1 potential match(es)
+2026-11-12 17:36:36,324 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-12 17:36:39,556 [INFO] causelist_13112026.pdf: 550 case row(s) read, 2 potential match(es)
+2026-11-12 17:36:39,556 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-12 17:36:50,270 [INFO] entirelist_sgr.pdf: 1370 case row(s) read, 4 potential match(es)
+2026-11-12 17:36:50,270 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-12 17:36:51,268 [INFO] rjcourtsgr.pdf: 11 case row(s) read, 0 potential match(es)
+2026-11-12 17:36:51,273 [INFO] Fetching live display board
+2026-11-12 17:36:53,680 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "13", "text": "Immediate presence of govt advocates are required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "court will start at 10 am"}, {"id": "2", "text": "Presence of Sr. AAG Monika Kohli is required"}]}}
+2026-11-12 17:36:53,682 [INFO] Added 0 new match(es). Total saved: 176. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-12 17:36:53,682 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-11-13 | Court 5 | Sr 120 | CM(7865/2026) IN WP(C) 2748/2026 RECTIFICATION Caveat 2719/2026
+2026-11-12 17:36:53,682 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-11-13 | Court 8 | Sr 101 | CM(7866/2026) IN RFA 38/2023 BRINGING ON RECORD THE LEGAL HEIRS CM(7632/2023) Caveat 2795/2023
+2026-11-12 17:36:53,682 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-11-11 | Court 13 | Sr 53 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-11-12 17:36:53,682 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-11-12 | Court 5 | Sr 3 | WP(C) 693/2024 CM(1853/2024)
+2026-11-12 17:36:53,682 [INFO]   -> [Syed Mohtasim] 2026-11-13 | Court 1 | Sr 3 | Arb P 13/2024
+2026-11-12 17:36:53,682 [INFO]   -> [Saqib Fayaz] 2026-11-13 | Court 11 | Sr 44 | CRM(M) 453/2025 CrlM(1086/2025)
+2026-11-12 17:36:53,682 [INFO]   -> [Syed Mohtasim, Syed Manzoor] 2026-11-11 | Court 13 | Sr 53 | CRM(M) 333/2022 CrlM(226/2025) CrlM(988/2022)
+2026-11-12 17:36:53,682 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-11-12 | Court 5 | Sr 3 | WP(C) 693/2024 CM(1853/2024)
+2026-11-12 17:36:53,683 [INFO]   -> [Syed Mohtasim] 2026-11-13 | Court 1 | Sr 3 | Arb P 13/2024
+2026-11-12 17:36:53,683 [INFO]   -> [Saqib Fayaz] 2026-11-13 | Court 11 | Sr 44 | CRM(M) 453/2025 CrlM(1086/2025)
