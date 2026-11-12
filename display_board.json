@@ -1,18 +1,12 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "5",
-        "item": "108",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "8",
-        "text": "Presence of MR. H. SUHAIL ISHTIAQ Adv.  is required in court"
+        "id": "13",
+        "text": "Immediate presence of govt advocates are required in court"
       }
     ]
   },
