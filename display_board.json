@@ -3,25 +3,22 @@
     "idle": true,
     "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "13",
-        "text": "Immediate presence of govt advocates are required in court"
-      }
-    ]
+    "messages": []
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "3",
+        "item": "2",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "1",
-        "text": "court will start at 10 am"
-      },
-      {
-        "id": "2",
-        "text": "Presence of Sr. AAG Monika Kohli is required"
+        "text": "COURT 1 WILL COMMENCE AT 10:30 A.M"
       }
     ]
   }
