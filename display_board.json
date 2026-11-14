@@ -6,14 +6,8 @@
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "2",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
