@@ -7046,3 +7046,48 @@
 2026-11-14 06:35:23,348 [INFO] Fetching live display board
 2026-11-14 06:35:24,777 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "COURT 1 WILL COMMENCE AT 10:30 A.M"}]}}
 2026-11-14 06:35:24,779 [INFO] Added 0 new match(es). Total saved: 176. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-14 09:11:05,614 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-14 09:11:05,615 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-14 09:11:05,615 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-14 09:11:06,767 [INFO] Found 16 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-11-14 09:11:06,768 [INFO] Downloading supp_sgr_16112026.pdf (supplementary)
+2026-11-14 09:11:07,105 [INFO] supp_sgr_16112026.pdf: 4 case row(s) read, 0 potential match(es)
+2026-11-14 09:11:07,106 [INFO] Downloading causelist_16112026.pdf (daywise)
+2026-11-14 09:11:11,750 [INFO] causelist_16112026.pdf: 718 case row(s) read, 7 potential match(es)
+2026-11-14 09:11:11,750 [INFO] Downloading causelist_17112026.pdf (daywise)
+2026-11-14 09:11:15,735 [INFO] causelist_17112026.pdf: 542 case row(s) read, 0 potential match(es)
+2026-11-14 09:11:15,735 [INFO] Downloading causelist_18112026.pdf (daywise)
+2026-11-14 09:11:19,027 [INFO] causelist_18112026.pdf: 464 case row(s) read, 1 potential match(es)
+2026-11-14 09:11:19,027 [INFO] Downloading causelist_19112026.pdf (daywise)
+2026-11-14 09:11:21,756 [INFO] causelist_19112026.pdf: 327 case row(s) read, 2 potential match(es)
+2026-11-14 09:11:21,756 [INFO] Downloading causelist_20112026.pdf (daywise)
+2026-11-14 09:11:24,602 [INFO] causelist_20112026.pdf: 432 case row(s) read, 2 potential match(es)
+2026-11-14 09:11:24,602 [INFO] Downloading causelist_21112026.pdf (daywise)
+2026-11-14 09:11:25,525 [INFO] causelist_21112026.pdf: 72 case row(s) read, 0 potential match(es)
+2026-11-14 09:11:25,525 [INFO] Downloading rjcourt.pdf (registrar)
+2026-11-14 09:11:25,872 [INFO] rjcourt.pdf: 16 case row(s) read, 0 potential match(es)
+2026-11-14 09:11:25,872 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-14 09:11:26,130 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-14 09:11:26,130 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-14 09:11:26,387 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-14 09:11:26,387 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-14 09:11:26,644 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-14 09:11:26,644 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-14 09:11:28,161 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-14 09:11:28,161 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-14 09:11:28,417 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-14 09:11:28,422 [INFO] Fetching live display board
+2026-11-14 09:11:29,516 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "COURT 1 WILL COMMENCE AT 10:30 A.M"}]}}
+2026-11-14 09:11:29,518 [INFO] Added 12 new match(es). Total saved: 188. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-14 09:11:29,518 [INFO]   -> [Owais Ashraf] 2026-11-16 | Court 3 | Sr 181 | CM(M) 355/2025 CM(5372/2025)
+2026-11-14 09:11:29,518 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf] 2026-11-16 | Court 3 | Sr 197 | WP(C) 1385/2025 CM(3641/2025) CM(4854/2026)
+2026-11-14 09:11:29,518 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-11-16 | Court 3 | Sr 215 | WP(C) 2614/2025 CM(6907/2025)
+2026-11-14 09:11:29,518 [INFO]   -> [Owais Ashraf] 2026-11-16 | Court 5 | Sr 60 | WP(C) 2392/2026 CM(6500/2026)
+2026-11-14 09:11:29,518 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-11-16 | Court 8 | Sr 75 | OWP 1645/2018 IA(1/2018) CM(3783/2022) CM(5723/2026) CM(5724/2026) CM(5726/2026) CM(5727/2026) CM(5728/2026) CM(5730/2026)
+2026-11-14 09:11:29,518 [INFO]   -> [Owais Ashraf] 2026-11-16 | Court 13 | Sr 2 | CRM(M) 879/2026 CrlM(2006/2026)
+2026-11-14 09:11:29,518 [INFO]   -> [Syed Manzoor] 2026-11-16 | Court 13 | Sr 18 | CRM(M) 463/2021 CrlM(1492/2021) c/w i)CRM(M) 174/2022 CrlM(1271/2023) CrlM(569/2022)
+2026-11-14 09:11:29,518 [INFO]   -> [Owais Ashraf] 2026-11-18 | Court 3 | Sr 15 | CM(M) 310/2025 CM(4908/2025) Caveat 1867/2025
+2026-11-14 09:11:29,518 [INFO]   -> [Syed Manzoor] 2026-11-19 | Court 2 | Sr 29 | LPA 176/2019 in[HCP 178/2018] CM(4593/2019) c/w i)CM(M) 201/2022 CM(2033/2019[1/2019]) CM(928/2020) ii)CM(M) 202/2022 IA(1/2018) IA(2/2018) iii)LPA 115/2023 CM(3692/2023) iv)CrlA(D) 61/2024 CrlM(1372/2024) CrlM(1221/2024) CrlM(1222/2024) v)CrlA(D) 71/2024 CrlM(1525/2024) CrlM(1526/2024) vi)CrlA(D) 20/2025 CrlM(257/2025) vii)CrlA(D) 118/2025 CrlM(2093/2025) CrlM(2094/2025) viii)CrlA(D) 119/2025 CrlM(2106/2025) CrlM(2107/2025) ix)CrlA(D) 122/2025 CrlM(2130/2025) CrlM(2131/2025)
+2026-11-14 09:11:29,518 [INFO]   -> [search: FAYAZ AHMAD PEERZADA] 2026-11-19 | Court 5 | Sr 14 | MA 86/2012 c/w i)MA 85/2012 IA(1/2012[295/2012])
+2026-11-14 09:11:29,518 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-11-20 | Court 2 | Sr 9 | CM(816/2026) IN RFA 11/2026 C/DELAY CM(817/2026) c/w i)CM(M) 9/2026 CM(63/2026)
+2026-11-14 09:11:29,518 [INFO]   -> [Owais Ashraf] 2026-11-20 | Court 5 | Sr 41 | WP(C) 81/2024 CM(142/2024)
