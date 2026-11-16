@@ -7157,3 +7157,37 @@
 2026-11-14 15:57:22,628 [INFO] Fetching live display board
 2026-11-14 15:57:23,706 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "1", "text": "COURT 1 WILL COMMENCE AT 10:30 A.M"}]}}
 2026-11-14 15:57:23,708 [INFO] Added 0 new match(es). Total saved: 188. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-16 13:22:43,136 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-16 13:22:43,137 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-16 13:22:43,137 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-16 13:22:44,333 [INFO] Found 16 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-11-16 13:22:44,333 [INFO] Downloading Supplementary%20Cause%20List%20-%2017.11.2026.pdf (supplementary)
+2026-11-16 13:22:44,901 [INFO] Supplementary%20Cause%20List%20-%2017.11.2026.pdf: 45 case row(s) read, 1 potential match(es)
+2026-11-16 13:22:44,901 [INFO] Downloading causelist_16112026.pdf (daywise)
+2026-11-16 13:22:45,556 [INFO] Unchanged since last run, skipping re-parse: causelist_16112026.pdf
+2026-11-16 13:22:45,556 [INFO] Downloading causelist_17112026.pdf (daywise)
+2026-11-16 13:22:45,847 [INFO] Unchanged since last run, skipping re-parse: causelist_17112026.pdf
+2026-11-16 13:22:45,848 [INFO] Downloading causelist_18112026.pdf (daywise)
+2026-11-16 13:22:46,148 [INFO] Unchanged since last run, skipping re-parse: causelist_18112026.pdf
+2026-11-16 13:22:46,148 [INFO] Downloading causelist_19112026.pdf (daywise)
+2026-11-16 13:22:46,410 [INFO] Unchanged since last run, skipping re-parse: causelist_19112026.pdf
+2026-11-16 13:22:46,410 [INFO] Downloading causelist_20112026.pdf (daywise)
+2026-11-16 13:22:46,672 [INFO] Unchanged since last run, skipping re-parse: causelist_20112026.pdf
+2026-11-16 13:22:46,672 [INFO] Downloading causelist_21112026.pdf (daywise)
+2026-11-16 13:22:46,934 [INFO] Unchanged since last run, skipping re-parse: causelist_21112026.pdf
+2026-11-16 13:22:46,934 [INFO] Downloading rjcourt.pdf (registrar)
+2026-11-16 13:22:47,196 [INFO] Unchanged since last run, skipping re-parse: rjcourt.pdf
+2026-11-16 13:22:47,196 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-16 13:22:47,498 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-16 13:22:47,498 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-16 13:22:47,798 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-16 13:22:47,798 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-16 13:22:48,097 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-16 13:22:48,098 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-16 13:22:49,654 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-16 13:22:49,654 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-16 13:22:49,917 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-16 13:22:49,922 [INFO] Fetching live display board
+2026-11-16 13:22:52,456 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "2", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "2", "item": "51", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "36", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "8", "item": "80", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "JAMMU MATTERS WILL BE TAKEN UP AT 10:30 A.M"}]}}
+2026-11-16 13:22:52,457 [INFO] Added 1 new match(es). Total saved: 189. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-16 13:22:52,458 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-11-17 | Court 8 | Sr 148 | HCP 151/2026
