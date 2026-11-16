@@ -1,46 +1,14 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "2",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "2",
-        "item": "51",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "5",
-        "item": "36",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "8",
-        "item": "80",
-        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "3",
-        "item": "1",
-        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "1",
-        "text": "JAMMU MATTERS WILL BE TAKEN UP AT 10:30 A.M"
-      }
-    ]
+    "messages": []
   }
 }

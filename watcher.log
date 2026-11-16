@@ -7191,3 +7191,36 @@
 2026-11-16 13:22:52,456 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "2", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAHUL BHARTI"}, {"court": "2", "item": "51", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}, {"court": "5", "item": "36", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "8", "item": "80", "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "1", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}], "raw_status_rows": [], "messages": [{"id": "1", "text": "JAMMU MATTERS WILL BE TAKEN UP AT 10:30 A.M"}]}}
 2026-11-16 13:22:52,457 [INFO] Added 1 new match(es). Total saved: 189. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
 2026-11-16 13:22:52,458 [INFO]   -> [Syed Mohtasim, Saqib Fayaz, Owais Ashraf] 2026-11-17 | Court 8 | Sr 148 | HCP 151/2026
+2026-11-16 19:46:02,481 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-16 19:46:02,481 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-16 19:46:02,482 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-16 19:46:03,734 [INFO] Found 16 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-11-16 19:46:03,734 [INFO] Downloading Supplementary%20Cause%20List%20-%2017.11.2026.pdf (supplementary)
+2026-11-16 19:46:04,048 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2017.11.2026.pdf
+2026-11-16 19:46:04,049 [INFO] Downloading causelist_16112026.pdf (daywise)
+2026-11-16 19:46:04,748 [INFO] Unchanged since last run, skipping re-parse: causelist_16112026.pdf
+2026-11-16 19:46:04,749 [INFO] Downloading causelist_17112026.pdf (daywise)
+2026-11-16 19:46:05,048 [INFO] Unchanged since last run, skipping re-parse: causelist_17112026.pdf
+2026-11-16 19:46:05,048 [INFO] Downloading causelist_18112026.pdf (daywise)
+2026-11-16 19:46:05,350 [INFO] Unchanged since last run, skipping re-parse: causelist_18112026.pdf
+2026-11-16 19:46:05,350 [INFO] Downloading causelist_19112026.pdf (daywise)
+2026-11-16 19:46:05,648 [INFO] Unchanged since last run, skipping re-parse: causelist_19112026.pdf
+2026-11-16 19:46:05,648 [INFO] Downloading causelist_20112026.pdf (daywise)
+2026-11-16 19:46:05,948 [INFO] Unchanged since last run, skipping re-parse: causelist_20112026.pdf
+2026-11-16 19:46:05,948 [INFO] Downloading causelist_21112026.pdf (daywise)
+2026-11-16 19:46:06,229 [INFO] Unchanged since last run, skipping re-parse: causelist_21112026.pdf
+2026-11-16 19:46:06,229 [INFO] Downloading rjcourt.pdf (registrar)
+2026-11-16 19:46:06,510 [INFO] Unchanged since last run, skipping re-parse: rjcourt.pdf
+2026-11-16 19:46:06,510 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-16 19:46:06,798 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-16 19:46:06,798 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-16 19:46:07,098 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-16 19:46:07,098 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-16 19:46:07,398 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-16 19:46:07,398 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-16 19:46:09,072 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-16 19:46:09,072 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-16 19:46:09,367 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-16 19:46:09,372 [INFO] Fetching live display board
+2026-11-16 19:46:11,050 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-11-16 19:46:11,052 [INFO] Added 0 new match(es). Total saved: 189. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
