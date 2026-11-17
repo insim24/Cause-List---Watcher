@@ -1,18 +1,7 @@
 {
   "Srinagar Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "4",
-        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "5",
-        "item": "44",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": []
   },
