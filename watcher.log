@@ -7362,3 +7362,38 @@
 2026-11-18 13:40:28,850 [INFO] Fetching live display board
 2026-11-18 13:40:32,825 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "30", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "12", "item": "6", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "1", "item": "16", "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "9", "text": "mentioned matters- 45,48,81,82,83,86,101,104"}]}}
 2026-11-18 13:40:32,826 [INFO] Added 0 new match(es). Total saved: 189. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-18 18:18:22,022 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-18 18:18:22,022 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-18 18:18:22,023 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-18 18:18:23,223 [INFO] Found 17 relevant causelist link(s) on the page (14 after filtering by list_types)
+2026-11-18 18:18:23,223 [INFO] Downloading Supplementary%20Cause%20List%20-%2019.11.2026.pdf (supplementary)
+2026-11-18 18:18:23,713 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2019.11.2026.pdf
+2026-11-18 18:18:23,714 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2019.11.2026.pdf (supplementary)
+2026-11-18 18:18:23,963 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2019.11.2026.pdf
+2026-11-18 18:18:23,963 [INFO] Downloading causelist_16112026.pdf (daywise)
+2026-11-18 18:18:24,455 [INFO] Unchanged since last run, skipping re-parse: causelist_16112026.pdf
+2026-11-18 18:18:24,455 [INFO] Downloading causelist_17112026.pdf (daywise)
+2026-11-18 18:18:24,750 [INFO] Unchanged since last run, skipping re-parse: causelist_17112026.pdf
+2026-11-18 18:18:24,750 [INFO] Downloading causelist_18112026.pdf (daywise)
+2026-11-18 18:18:24,998 [INFO] Unchanged since last run, skipping re-parse: causelist_18112026.pdf
+2026-11-18 18:18:24,998 [INFO] Downloading causelist_19112026.pdf (daywise)
+2026-11-18 18:18:25,247 [INFO] Unchanged since last run, skipping re-parse: causelist_19112026.pdf
+2026-11-18 18:18:25,247 [INFO] Downloading causelist_20112026.pdf (daywise)
+2026-11-18 18:18:25,495 [INFO] Unchanged since last run, skipping re-parse: causelist_20112026.pdf
+2026-11-18 18:18:25,495 [INFO] Downloading causelist_21112026.pdf (daywise)
+2026-11-18 18:18:25,742 [INFO] Unchanged since last run, skipping re-parse: causelist_21112026.pdf
+2026-11-18 18:18:25,742 [INFO] Downloading rjcourt.pdf (registrar)
+2026-11-18 18:18:25,991 [INFO] Unchanged since last run, skipping re-parse: rjcourt.pdf
+2026-11-18 18:18:25,991 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-18 18:18:26,239 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-18 18:18:26,239 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-18 18:18:26,487 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-18 18:18:26,487 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-18 18:18:26,736 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-18 18:18:26,736 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-18 18:18:28,204 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-18 18:18:28,204 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-18 18:18:28,452 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-18 18:18:28,459 [INFO] Fetching live display board
+2026-11-18 18:18:32,526 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "30", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}, {"court": "12", "item": "6", "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "1", "item": "16", "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MR. JUSTICE RAHUL BHARTI"}], "raw_status_rows": [], "messages": [{"id": "9", "text": "mentioned matters- 45,48,81,82,83,86,101,104"}]}}
+2026-11-18 18:18:32,528 [INFO] Added 0 new match(es). Total saved: 189. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
