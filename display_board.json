@@ -3,73 +3,33 @@
     "idle": false,
     "courts": [
       {
-        "court": "2",
-        "item": "2",
-        "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"
-      },
-      {
-        "court": "3",
-        "item": "5",
-        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
-      },
-      {
         "court": "5",
-        "item": "131",
+        "item": "30",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
       },
       {
-        "court": "8",
-        "item": "11",
-        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
-        "court": "13",
-        "item": "31",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
+        "court": "12",
+        "item": "6",
+        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "13",
-        "text": "Immediate presence of govt advocates are  required in court"
-      }
-    ]
+    "messages": []
   },
   "Jammu Wing": {
     "idle": false,
     "courts": [
       {
         "court": "1",
-        "item": "3",
+        "item": "16",
         "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "4",
-        "item": "11",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "9",
-        "item": "14",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "132",
-        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "12",
-        "item": "148",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "9",
-        "text": "."
+        "text": "mentioned matters- 45,48,81,82,83,86,101,104"
       }
     ]
   }
