@@ -3,28 +3,17 @@
     "idle": false,
     "courts": [
       {
-        "court": "5",
-        "item": "30",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "12",
-        "item": "6",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
+        "court": "1",
+        "item": "3",
+        "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE RAHUL BHARTI"
       }
     ],
     "raw_status_rows": [],
     "messages": []
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "16",
-        "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MR. JUSTICE RAHUL BHARTI"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
     "messages": [
       {
