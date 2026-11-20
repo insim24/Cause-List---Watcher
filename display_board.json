@@ -1,19 +1,26 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "5",
+        "item": "84",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      }
+    ],
     "raw_status_rows": [],
     "messages": []
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
-    "raw_status_rows": [],
-    "messages": [
+    "idle": false,
+    "courts": [
       {
-        "id": "9",
-        "text": "mentioned matters- 45,48,81,82,83,86,101,104"
+        "court": "3",
+        "item": "2",
+        "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"
       }
-    ]
+    ],
+    "raw_status_rows": [],
+    "messages": []
   }
 }

@@ -7473,3 +7473,44 @@
 2026-11-19 18:30:21,402 [INFO] Fetching live display board
 2026-11-19 18:30:22,479 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "9", "text": "mentioned matters- 45,48,81,82,83,86,101,104"}]}}
 2026-11-19 18:30:22,481 [INFO] Added 0 new match(es). Total saved: 191. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-20 13:50:31,055 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-20 13:50:31,055 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-20 13:50:31,056 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-20 13:50:32,302 [INFO] Found 21 relevant causelist link(s) on the page (17 after filtering by list_types)
+2026-11-20 13:50:32,302 [INFO] Downloading FULL%20BENCH%20SUPPLY_20112026.pdf (supplementary)
+2026-11-20 13:50:32,984 [INFO] Unchanged since last run, skipping re-parse: FULL%20BENCH%20SUPPLY_20112026.pdf
+2026-11-20 13:50:32,984 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2020.11.2026.pdf (supplementary)
+2026-11-20 13:50:33,268 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2020.11.2026.pdf
+2026-11-20 13:50:33,268 [INFO] Downloading Supplementary%20Cause%20List%20-%2020.11.2026.pdf (supplementary)
+2026-11-20 13:50:33,548 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2020.11.2026.pdf
+2026-11-20 13:50:33,548 [INFO] Downloading Supplementary%20Cause%20List%20-2-%2020.11.2026.pdf (supplementary)
+2026-11-20 13:50:33,875 [INFO] No case entries found in Supplementary%20Cause%20List%20-2-%2020.11.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-11-20 13:50:33,875 [INFO] Downloading Supplementary%20Cause%20List%20-3-%2020.11.2026.pdf (supplementary)
+2026-11-20 13:50:34,174 [INFO] No case entries found in Supplementary%20Cause%20List%20-3-%2020.11.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-11-20 13:50:34,174 [INFO] Downloading causelist_16112026.pdf (daywise)
+2026-11-20 13:50:34,534 [INFO] Unchanged since last run, skipping re-parse: causelist_16112026.pdf
+2026-11-20 13:50:34,534 [INFO] Downloading causelist_17112026.pdf (daywise)
+2026-11-20 13:50:34,833 [INFO] Unchanged since last run, skipping re-parse: causelist_17112026.pdf
+2026-11-20 13:50:34,834 [INFO] Downloading causelist_18112026.pdf (daywise)
+2026-11-20 13:50:35,117 [INFO] Unchanged since last run, skipping re-parse: causelist_18112026.pdf
+2026-11-20 13:50:35,117 [INFO] Downloading causelist_19112026.pdf (daywise)
+2026-11-20 13:50:35,401 [INFO] Unchanged since last run, skipping re-parse: causelist_19112026.pdf
+2026-11-20 13:50:35,401 [INFO] Downloading causelist_20112026.pdf (daywise)
+2026-11-20 13:50:35,686 [INFO] Unchanged since last run, skipping re-parse: causelist_20112026.pdf
+2026-11-20 13:50:35,687 [INFO] Downloading causelist_21112026.pdf (daywise)
+2026-11-20 13:50:35,969 [INFO] Unchanged since last run, skipping re-parse: causelist_21112026.pdf
+2026-11-20 13:50:35,969 [INFO] Downloading rjcourt.pdf (registrar)
+2026-11-20 13:50:36,251 [INFO] Unchanged since last run, skipping re-parse: rjcourt.pdf
+2026-11-20 13:50:36,251 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-20 13:50:36,536 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-20 13:50:36,537 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-20 13:50:36,818 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-20 13:50:36,818 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-20 13:50:37,100 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-20 13:50:37,101 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-20 13:50:38,776 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-20 13:50:38,776 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-20 13:50:39,059 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-20 13:50:39,064 [INFO] Fetching live display board
+2026-11-20 13:50:43,007 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "5", "item": "84", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": []}, "Jammu Wing": {"idle": false, "courts": [{"court": "3", "item": "2", "coram": "HON'BLE MRS. JUSTICE SINDHU SHARMA"}], "raw_status_rows": [], "messages": []}}
+2026-11-20 13:50:43,009 [INFO] Added 0 new match(es). Total saved: 191. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
