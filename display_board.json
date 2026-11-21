@@ -4,63 +4,22 @@
     "courts": [
       {
         "court": "5",
-        "item": "2",
+        "item": "27",
         "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
-      },
-      {
-        "court": "8",
-        "item": "21",
-        "coram": "HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI"
-      },
-      {
-        "court": "13",
-        "item": "1",
-        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "5",
-        "text": "cases listed in supplementary list of court 3 will be taken up after regular cause list cases of court 5 are over"
+        "id": "13",
+        "text": "Immediate presence of  adv owaise majeed dar  is required in court"
       }
     ]
   },
   "Jammu Wing": {
-    "idle": false,
-    "courts": [
-      {
-        "court": "1",
-        "item": "32",
-        "coram": "HON'BLE THE CHIEF JUSTICE, HON'BLE MR. JUSTICE RAHUL BHARTI"
-      },
-      {
-        "court": "4",
-        "item": "35",
-        "coram": "HON'BLE MR. JUSTICE RAJNESH OSWAL"
-      },
-      {
-        "court": "9",
-        "item": "5",
-        "coram": "HON'BLE MR.  JUSTICE WASIM SADIQ NARGAL"
-      },
-      {
-        "court": "10",
-        "item": "30",
-        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
-      },
-      {
-        "court": "12",
-        "item": "35",
-        "coram": "HON'BLE MR. JUSTICE SANJAY PARIHAR"
-      }
-    ],
+    "idle": true,
+    "courts": [],
     "raw_status_rows": [],
-    "messages": [
-      {
-        "id": "1",
-        "text": "DB MATTERS WILL BE TAKEN UP AT 11:00 A.M"
-      }
-    ]
+    "messages": []
   }
 }
