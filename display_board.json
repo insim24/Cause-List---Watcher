@@ -3,16 +3,21 @@
     "idle": false,
     "courts": [
       {
-        "court": "5",
-        "item": "27",
-        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+        "court": "3",
+        "item": "40",
+        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "13",
+        "item": "35",
+        "coram": "HON'BLE MR. JUSTICE SHAHZAD AZEEM"
       }
     ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "13",
-        "text": "Immediate presence of  adv owaise majeed dar  is required in court"
+        "id": "7",
+        "text": "Immediate presence of Mr.  ( FAHIM NISAR SHAH advocate) is required in court"
       }
     ]
   },
@@ -20,6 +25,11 @@
     "idle": true,
     "courts": [],
     "raw_status_rows": [],
-    "messages": []
+    "messages": [
+      {
+        "id": "4",
+        "text": "Mr Dewakar Sharma DyAG is required in court in S No 220"
+      }
+    ]
   }
 }
