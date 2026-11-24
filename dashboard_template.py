@@ -210,6 +210,14 @@ TEMPLATE = """<!DOCTYPE html>
   .link-btn:hover{{text-decoration:underline;}}
 
   .agenda-head{{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:6px;}}
+  .agenda-head-right{{display:flex;align-items:center;gap:6px;}}
+  .collapsible-head{{cursor:pointer;user-select:none;}}
+  .panel-toggle{{line-height:1;}}
+  #agendaCard.collapsed #agendaBody{{display:none;}}
+  #agendaCard.collapsed .agenda-head{{margin-bottom:0;}}
+  .wing-card.collapsed .wing-body{{display:none;}}
+  .wing-card.collapsed h3{{margin-bottom:0;}}
+  .wing-card h3 .panel-toggle{{margin-left:auto;}}
   .agenda-day-group{{margin-bottom:18px;}}
   .agenda-day-group:last-child{{margin-bottom:0;}}
   .agenda-day-label{{font-family:var(--font-mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;
@@ -351,6 +359,7 @@ TEMPLATE = """<!DOCTYPE html>
   /* ---- sortable table (All cases) ---- */
   .table-scroll{{overflow-x:auto;}}
   table.case-table{{width:100%;border-collapse:collapse;font-size:13px;min-width:860px;}}
+  table.all-cases-table{{min-width:700px;}}
   table.case-table th{{text-align:left;font-family:var(--font-mono);font-size:10px;letter-spacing:.8px;
     text-transform:uppercase;color:var(--brass);padding:9px 10px;border-bottom:1px solid var(--line);
     cursor:pointer;white-space:nowrap;user-select:none;}}
@@ -373,12 +382,33 @@ TEMPLATE = """<!DOCTYPE html>
     #todayWidget{{position:static;width:auto;max-height:none;margin-bottom:20px;box-shadow:var(--shadow);}}
     #todayWidgetBody{{max-height:280px;}}
   }}
-  .cn-name{{display:none;font-family:var(--font-body,inherit);font-size:12px;color:var(--parchment);margin-top:4px;}}
-  .case-orders-link{{display:inline-block;margin-top:4px;font-size:11px;color:var(--brass);text-decoration:underline;cursor:pointer;
-    background:none;border:none;padding:0;font-family:inherit;}}
   .orders-jump{{font-size:12px;color:var(--brass);align-self:center;}}
+  /* All Cases: Case | Next Date | Order */
+  table.case-table td.case-cell{{min-width:200px;max-width:340px;}}
+  .case-title{{font-weight:600;color:var(--parchment);line-height:1.4;}}
+  .case-no{{font-family:var(--font-mono);font-size:11px;color:var(--parchment-dim);margin-top:3px;}}
+  /* connected matters can make a 1,000+ character name: clamp until "more" */
+  .case-cell:not(.case-open) .case-title{{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}}
+  .case-cell:not(.case-open) .case-no{{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}}
+  .case-more{{font-size:11px;color:var(--brass);text-decoration:underline;cursor:pointer;background:none;border:none;padding:0;margin-top:3px;font-family:inherit;}}
+  table.all-cases-table td:first-child{{max-width:130px;}}
+  table.all-cases-table td:first-child .nd-note{{white-space:normal;}}
+  table.case-table td.order-cell{{min-width:240px;max-width:420px;white-space:normal;}}
+  .ord-meta{{font-family:var(--font-mono);font-size:11px;color:var(--parchment-dim);}}
+  .ord-gist{{font-size:12px;line-height:1.45;color:var(--parchment);margin-top:3px;}}
+  .ord-none{{font-size:12px;color:var(--parchment-faint);}}
+  .ord-links{{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:5px;}}
+  .ord-link{{font-size:11px;color:var(--brass);text-decoration:underline;cursor:pointer;background:none;border:none;padding:0;font-family:inherit;}}
+  .ord-full{{white-space:pre-wrap;font-size:12px;line-height:1.5;color:var(--parchment);max-height:260px;overflow:auto;margin-top:6px;
+    padding:8px 10px;border:1px solid var(--line-soft);border-radius:6px;background:var(--ink-850);}}
+  tr.group-row td{{font-family:var(--font-mono);font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--parchment-dim);
+    background:var(--ink-850);padding:6px 10px;}}
+  tr.group-row.group-today td{{color:var(--ink-900);background:var(--brass);font-weight:700;}}
+  table.case-table tr.group-row:hover td{{background:var(--ink-850);}}
+  table.case-table tr.group-row.group-today:hover td{{background:var(--brass);}}
+  tr.today-row > td:first-child{{box-shadow:inset 3px 0 0 var(--brass);}}
+  .today-note{{color:var(--brass);font-weight:600;}}
   @media (max-width:900px){{
-    .cn-name{{display:block;}}   /* the Case Name column is off-screen here */
     table.case-table td .nd-note{{white-space:normal;}}   /* "earlier: ..." no longer widens the Date column */
     .main-grid{{grid-template-columns:1fr;}}
     .stats-row{{grid-template-columns:repeat(2,1fr);}}
@@ -483,10 +513,13 @@ TEMPLATE = """<!DOCTYPE html>
       <button class="link-btn" id="todayBtn">Jump to today</button>
     </div>
 
-    <div class="card">
-      <div class="agenda-head">
+    <div class="card" id="agendaCard">
+      <div class="agenda-head collapsible-head" id="agendaHead" title="Click to minimize or expand">
         <h2 id="agendaTitle">Upcoming</h2>
-        <button class="link-btn" id="backToUpcoming" style="display:none">&larr; back to upcoming</button>
+        <span class="agenda-head-right">
+          <button class="link-btn" id="backToUpcoming" style="display:none">&larr; back to upcoming</button>
+          <button type="button" class="tw-toggle panel-toggle" id="agendaToggle" aria-expanded="true" aria-controls="agendaBody" aria-label="Minimize or expand Upcoming">&#8722;</button>
+        </span>
       </div>
       <div id="agendaBody"></div>
     </div>
@@ -499,7 +532,7 @@ TEMPLATE = """<!DOCTYPE html>
     </div>
     <div class="next-date-sync" id="nextDateSync"></div>
     <div class="table-scroll">
-      <table class="case-table">
+      <table class="case-table all-cases-table">
         <thead><tr id="tableHead"></tr></thead>
         <tbody id="tableBody"></tbody>
       </table>
@@ -782,15 +815,13 @@ function renderAgenda(){{
   body.innerHTML = dates.slice(0,7).map(function(d){{return agendaGroupHtml(d, groups[d]);}}).join('');
 }}
 
+// All Cases shows only these; court, Sr No, bench and advocate are still
+// searched (renderAllTable) and the advocate chips still filter the rows.
 var TABLE_COLS = [
   {{key:'date', label:'Date'}},
-  {{key:'court', label:'Court No'}},
+  {{key:'caseTitle', label:'Case'}},           // case name (case number under it)
   {{key:'nextDate', label:'Next Date of Hearing'}},
-  {{key:'sr', label:'Sr No'}},
-  {{key:'caseNo', label:'Case No'}},
-  {{key:'caseName', label:'Case Name'}},
-  {{key:'person', label:'Advocate / Search'}},
-  {{key:'bench', label:'Bench'}}
+  {{key:'orderDate', label:'Order'}}           // latest order: date, gist, full text
 ];
 var sortState = {{key:'date', dir:'desc'}};
 
@@ -1034,17 +1065,67 @@ function shortCellHtml(v, max){{
 function tableRowHtml(e){{
   var earlier = (e.earlierDates && e.earlierDates.length) ?
     '<div class="nd-note">earlier: '+e.earlierDates.map(function(d){{ return esc(fmtDateShort(d)); }}).join(', ')+'</div>' : '';
-  return '<tr>'+
-    '<td class="mono">'+esc(e.date||'\\u2014')+earlier+'</td>'+
-    '<td class="mono">'+shortCellHtml(e.court, 8)+'</td>'+
+  var alsoToday = e.hasToday && e.date !== todayIso() ? '<div class="nd-note today-note">also listed today</div>' : '';
+  var title = e.caseName || e.caseNo || '\\u2014';
+  return '<tr'+(e.hasToday ? ' class="today-row"' : '')+'>'+
+    '<td class="mono">'+esc(e.date||'\\u2014')+alsoToday+earlier+'</td>'+
+    '<td class="wrap-cell case-cell" title="'+esc(title)+'"><div class="case-title">'+esc(title)+'</div>'+
+      (e.caseName && e.caseNo ? '<div class="case-no">'+esc(e.caseNo)+'</div>' : '')+
+      (title.length + (e.caseNo||'').length > 160 ? '<button type="button" class="case-more" data-case-more>more</button>' : '')+'</td>'+
     nextDateCellHtml(e)+
-    '<td class="mono">'+shortCellHtml(e.sr, 8)+'</td>'+
-    '<td class="mono wrap-cell">'+esc(e.caseNo||'\\u2014')+
-      (e.caseName ? '<div class="cn-name">'+esc(e.caseName)+'</div>' : '')+caseOrdersLinkHtml(e)+'</td>'+
-    '<td class="wrap-cell">'+esc(e.caseName||'\\u2014')+'</td>'+
-    '<td>'+(foundByHtml(e)||'\\u2014')+'</td>'+
-    '<td>'+esc(e.bench||'\\u2014')+'</td>'+
+    '<td class="order-cell">'+orderCellHtml(e)+'</td>'+
     '</tr>'+caseDetailRowHtml(e);
+}}
+
+// The Order column: the latest order's date and the gist of what it says,
+// with its full text one click away (opened inside the cell, scrollable,
+// so a long order can't stretch the table), its PDF, and the case's other
+// orders. Full texts come from latest_orders.json.
+var expandedOrderText = {{}};   // caseKey() -> true while the full text is shown
+function orderGist(text){{
+  var t = String(text || '');
+  // the operative part follows the last "ORDER" heading (often spaced
+  // "O R D E R") and its date; fall back to the start of the text
+  var re = /\\bO\\s?R\\s?D\\s?E\\s?R\\b/g, m, at = -1;
+  while ((m = re.exec(t)) !== null) at = re.lastIndex;
+  var s = at >= 0 ? t.slice(at) : t;
+  // "(ORDER)\\n21.09.2026\\n01. ..." : drop the heading's ")" and the order date
+  s = s.replace(/^[\\s:.()\\-]*(\\d{{1,2}}[.\\-\\/]\\d{{1,2}}[.\\-\\/]\\d{{2,4}})?[\\s:.()\\-]*/, '');
+  // stop at the signature: "(YASH PAUL BOURNEY) JUDGE SRINAGAR 05.10.2026"
+  // (or "JAMMU (SANJAY DHAR) (TASHI RABSTAN) 28.01.2021 JUDGE")
+  var sig = /(?:\\b(?:SRINAGAR|JAMMU)\\b\\s*:?\\s*)?\\(\\s*[A-Z][^()]{{2,60}}\\)\\s*(?:\\(\\s*[A-Z][^()]{{2,60}}\\)\\s*)*(?:\\d{{1,2}}[.\\-\\/]\\d{{1,2}}[.\\-\\/]\\d{{2,4}}\\s*)?(?:JUDGE|CHIEF\\s+JUSTICE|REGISTRAR)/i.exec(s);
+  if (sig && sig.index > 0) s = s.slice(0, sig.index);
+  s = s.replace(/\\s+/g, ' ').trim();
+  return s.length > 180 ? s.slice(0, 180).replace(/\\s\\S*$/, '') + '\\u2026' : s;
+}}
+// No latest_orders.json entry (e.g. before the first order run writes it):
+// date, PDF and the case's orders from orders_index.json, without the text.
+function latestFromIndex(ck){{
+  var info = ORDERS_BY_CASE[ck];
+  if (!info || !info.orders.length) return null;
+  var o = info.orders[0];
+  return {{date: o.date, no: o.no, judge: o.judge, pdf: o.pdf, next_date: o.nextDate, text: '', no_text: o.noText, textMissing: !o.noText}};
+}}
+function orderCellHtml(e){{
+  var ck = caseKey(e.caseNo), lo = e.latestOrder, info = ORDERS_BY_CASE[ck];
+  if (!lo) return '<span class="ord-none">No orders yet</span>';
+  var html = '<div class="ord-meta">'+esc(fmtOrderDate(lo.date))+(lo.no != null ? ' \\u00b7 No. '+esc(lo.no) : '')+'</div>';
+  if (lo.textMissing){{
+    html += '<div class="ord-none">Text appears after the next order check \\u2014 open the PDF meanwhile.</div>';
+  }} else if (lo.no_text || !lo.text){{
+    html += '<div class="cd-flag">Scanned image \\u2014 no text extracted yet</div>';
+  }} else {{
+    html += '<div class="ord-gist">'+esc(orderGist(lo.text))+'</div>';
+  }}
+  var links = [];
+  if (lo.text && !lo.no_text) links.push('<button type="button" class="ord-link" data-order-text="'+esc(ck)+'" aria-expanded="'+(expandedOrderText[ck] ? 'true' : 'false')+'">'+
+    (expandedOrderText[ck] ? 'Hide full text \\u25b4' : 'Full text \\u25be')+'</button>');
+  if (lo.pdf) links.push('<a class="ord-link" href="'+esc(lo.pdf)+'" target="_blank" rel="noopener">PDF</a>');
+  if (info) links.push('<button type="button" class="ord-link" data-orders-case="'+esc(ck)+'" aria-expanded="'+(expandedCases[ck] ? 'true' : 'false')+'">'+
+    (expandedCases[ck] ? '\\u25be ' : '\\u25b8 ')+'All '+info.count+' order'+(info.count === 1 ? '' : 's')+'</button>');
+  html += '<div class="ord-links">'+links.join('')+'</div>';
+  if (expandedOrderText[ck] && lo.text) html += '<div class="ord-full">'+esc(lo.text)+'</div>';
+  return html;
 }}
 
 // All cases shows each case once, on its latest hearing. A case is identified
@@ -1119,6 +1200,11 @@ function groupByCase(list){{
       }});
     }}
     latest.earlierDates = rows.slice(1).map(function(r){{ return r.date; }}).filter(Boolean);
+    var today = todayIso();
+    latest.hasToday = rows.some(function(r){{ return r.date === today; }});
+    latest.caseTitle = latest.caseName || latest.caseNo || '';
+    latest.latestOrder = LATEST_ORDERS[caseKey(latest.caseNo)] || latestFromIndex(caseKey(latest.caseNo));
+    latest.orderDate = latest.latestOrder ? latest.latestOrder.date || '' : '';
     latest.orderNext = orderNextFor(latest);
     if (latest.orderNext && !latest.nextDate){{   // pre-fill only; nothing is saved
       latest.nextDate = latest.orderNext.date;
@@ -1133,14 +1219,27 @@ function renderAllTable(q){{
   document.getElementById('allCount').textContent = list.length;
   if (q){{
     q = q.toLowerCase();
+    // every field, shown or not: court, Sr No, bench and advocate aren't
+    // columns any more, and the latest order's full text is searched too
     list = list.filter(function(e){{
-      return ((e.court||'')+(e.sr||'')+(e.caseNo||'')+(e.caseName||'')+(e.date||'')+(e.snippet||'')+foundByText(e)+(e.bench||'')+(e.nextDate||'')+(e.earlierDates||[]).join(' ')).toLowerCase().indexOf(q)!==-1;
+      return ((e.court||'')+(e.sr||'')+(e.caseNo||'')+(e.caseName||'')+(e.date||'')+(e.snippet||'')+foundByText(e)+(e.bench||'')+(e.nextDate||'')+(e.earlierDates||[]).join(' ')+
+        ' '+(e.latestOrder ? (e.latestOrder.date||'')+' '+(e.latestOrder.text||'') : '')).toLowerCase().indexOf(q)!==-1;
     }});
   }}
   list.sort(cmpBy(sortState.key, sortState.dir));
+  // cases listed today go first, whatever the sort, under their own heading
+  var today = list.filter(function(e){{ return e.hasToday; }});
+  var rest = list.filter(function(e){{ return !e.hasToday; }});
+  var cols = TABLE_COLS.length, html = '';
+  if (today.length){{
+    html += '<tr class="group-row group-today"><td colspan="'+cols+'">Today \\u00b7 '+esc(fmtOrderDate(todayIso()))+
+      ' \\u00b7 '+today.length+' case'+(today.length === 1 ? '' : 's')+'</td></tr>' + today.map(tableRowHtml).join('');
+    if (rest.length) html += '<tr class="group-row"><td colspan="'+cols+'">All other cases</td></tr>';
+  }}
+  html += rest.map(tableRowHtml).join('');
   var body = document.getElementById('tableBody');
-  body.innerHTML = list.length ? list.map(tableRowHtml).join('') :
-    '<tr><td colspan="8"><div class="empty-state">No cases found.</div></td></tr>';
+  body.innerHTML = list.length ? html :
+    '<tr><td colspan="'+cols+'"><div class="empty-state">No cases found.</div></td></tr>';
   body.querySelectorAll('[data-nextid]').forEach(function(inp){{
     inp.addEventListener('change', function(){{
       setNextDate(inp.getAttribute('data-nextid'), inp.value);
@@ -1182,6 +1281,23 @@ function renderTodayWidget(){{
       '<div class="tw-case">'+esc(e.caseName||e.caseNo||'\\u2014')+advLine+liveCaseLineHtml(liveCaseInfo(e))+'</div>'+
       '</div>';
   }}).join('');
+}}
+
+// Minimized panels (Upcoming, each wing of Live Court Status) stay as you left
+// them across visits; saved per panel in localStorage like the theme.
+function isMinimized(key){{
+  try {{ return localStorage.getItem('minimized:' + key) === '1'; }} catch (e){{ return false; }}
+}}
+function setMinimized(key, on){{
+  try {{ if (on) localStorage.setItem('minimized:' + key, '1'); else localStorage.removeItem('minimized:' + key); }} catch (e){{}}
+}}
+function toggleIconHtml(collapsed){{ return collapsed ? '&#9633;' : '&#8722;'; }}
+function applyAgendaMinimized(){{
+  var on = isMinimized('agenda');
+  document.getElementById('agendaCard').classList.toggle('collapsed', on);
+  var btn = document.getElementById('agendaToggle');
+  btn.innerHTML = toggleIconHtml(on);
+  btn.setAttribute('aria-expanded', on ? 'false' : 'true');
 }}
 
 function renderBoard(){{
@@ -1226,8 +1342,12 @@ function renderBoard(){{
         return '<div class="board-msg">'+esc(m.text)+'</div>';
       }}).join('');
     }}
-    return '<div class="card wing-card"><h3>'+esc(name)+' '+badge+'</h3>'+body+
-      '<div class="board-stale-note">'+boardStatusText()+'</div></div>';
+    var min = isMinimized('wing:' + name);
+    return '<div class="card wing-card'+(min ? ' collapsed' : '')+'">'+
+      '<h3 class="collapsible-head" data-wing-head="'+esc(name)+'" title="Click to minimize or expand">'+esc(name)+' '+badge+
+      '<button type="button" class="tw-toggle panel-toggle" aria-expanded="'+(min ? 'false' : 'true')+'" aria-label="Minimize or expand '+esc(name)+'">'+
+      toggleIconHtml(min)+'</button></h3>'+
+      '<div class="wing-body">'+body+'<div class="board-stale-note">'+boardStatusText()+'</div></div></div>';
   }}).join('');
 }}
 
@@ -1857,20 +1977,13 @@ var ORDERS_WORKFLOW = 'orders.yml';
 var ORDERS_PAGE = 50;
 var ORDERS = [];
 var ORDERS_BY_CASE = {{}};  // caseKey() -> {{key, count, latest}}, for the links in All cases
+var LATEST_ORDERS = {{}};   // caseKey() -> latest order with full text (latest_orders.json)
 var ordersStatus = null;
 var ordersShowAll = false;
 
 var expandedCases = {{}};   // caseKey() -> true while its orders panel is open
 var lastOrderText = {{}};   // .txt path -> text (or null while loading)
 
-function caseOrdersLinkHtml(e){{
-  var ck = caseKey(e.caseNo), info = ORDERS_BY_CASE[ck];
-  if (!info) return '';
-  return '<div><button type="button" class="case-orders-link" data-orders-case="'+esc(ck)+'" aria-expanded="'+(expandedCases[ck] ? 'true' : 'false')+'">'+
-    (expandedCases[ck] ? '\\u25be ' : '\\u25b8 ')+info.count+' order'+(info.count === 1 ? '' : 's')+
-    (info.latest ? ' \\u00b7 latest '+esc(fmtOrderDate(info.latest)) : '')+'</button>'+
-    (info.noText ? '<div class="cd-flag">'+info.noText+' scanned, no text yet</div>' : '')+'</div>';
-}}
 function toggleCaseOrders(ck){{
   if (expandedCases[ck]) delete expandedCases[ck]; else expandedCases[ck] = true;
   renderAllTable(document.getElementById('searchBox').value);
@@ -1897,7 +2010,7 @@ function caseDetailRowHtml(e){{
     var t = lastOrderText[last.text];
     lastHtml = '<div class="cd-last-text" data-last-text="'+esc(last.text)+'">'+(typeof t === 'string' ? esc(t) : 'Loading\\u2026')+'</div>';
   }}
-  return '<tr class="case-detail"><td colspan="8"><div class="cd-box">'+
+  return '<tr class="case-detail"><td colspan="'+TABLE_COLS.length+'"><div class="cd-box">'+
     '<div class="cd-head"><div class="cd-title">'+esc(e.caseName || info.key)+'</div>'+
     '<div class="cd-meta"><span>'+esc(info.key)+'</span><span>Next date of hearing: <b>'+nd+'</b></span></div></div>'+
     (info.noText ? '<div class="cd-flag cd-flag-block">'+info.noText+' of these orders '+(info.noText === 1 ? 'is a scanned image' : 'are scanned images')+
@@ -1956,10 +2069,19 @@ function fmtOrderDate(iso){{
   if (!m) return iso || '';
   return new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString('en-IN', {{day: 'numeric', month: 'short', year: 'numeric'}});
 }}
+var ordersLoading = false, ordersLoadedOnce = false;
 function loadOrders(){{
-  return Promise.all([fetchRawJson('orders_index.json', {{}}), fetchRawJson('orders_status.json', null)]).then(function(res){{
+  ordersLoading = true;
+  return Promise.all([fetchRawJson('orders_index.json', {{}}), fetchRawJson('orders_status.json', null),
+                      // optional: without it the Order column just shows no text
+                      fetchRawJson('latest_orders.json', {{}}).catch(function(){{ return {{}}; }})]).then(function(res){{
     var cases = (res[0] && res[0].cases) || {{}};
     ordersStatus = res[1];
+    LATEST_ORDERS = {{}};
+    Object.keys(res[2] || {{}}).forEach(function(key){{
+      var ck = caseKey(key);
+      if (ck) LATEST_ORDERS[ck] = res[2][key];
+    }});
     var fresh = {{}};
     ((ordersStatus && ordersStatus.new_orders) || []).forEach(function(o){{ fresh[o.case + '#' + o.no] = true; }});
     ORDERS = [];
@@ -1987,10 +2109,14 @@ function loadOrders(){{
     document.getElementById('ordersJump').hidden = !ORDERS.length;
     renderOrders();
     renderAllTable(document.getElementById('searchBox').value);  // adds the "N orders" links
+    ordersLoadedOnce = true;
     return ordersStatus;
   }}).catch(function(err){{
     console.warn('Orders load failed:', err.message);
     return null;
+  }}).then(function(st){{
+    ordersLoading = false;
+    return st;
   }});
 }}
 function renderOrdersNote(){{
@@ -2231,11 +2357,32 @@ function pollMatches(){{
     .catch(function(err){{
       console.warn('Matches refresh failed:', err.message);
     }});
+  refreshOrdersIfChanged();
+}}
+// The orders data was only loaded once, so new orders (and the Order column,
+// "N orders" links and next dates read from orders) stayed stale until a
+// reload. orders_status.json is small: re-read the ~1 MB index only when
+// it shows a newer order run.
+function refreshOrdersIfChanged(){{
+  if (ordersLoading) return Promise.resolve();
+  return fetchRawJson('orders_status.json', null).then(function(st){{
+    var seen = ordersStatus && ordersStatus.last_run;
+    if (!ordersLoadedOnce || (st && st.last_run && st.last_run !== seen)) return loadOrders();
+  }}).catch(function(err){{
+    console.warn('Orders refresh failed:', err.message);
+  }});
+}}
+// "Today" (stats, agenda, today's cases at the top of All Cases) must roll
+// over at midnight even if a poll fails or brings nothing new.
+var renderedDay = null;
+function rerenderIfDayChanged(){{
+  if (renderedDay !== null && renderedDay !== todayIso()) renderEverything();
 }}
 function startMatchesPolling(){{
   pollMatches();
   setInterval(pollMatches, MATCHES_POLL_MS);
   setInterval(tickMatchesStatus, 1000);
+  setInterval(rerenderIfDayChanged, 60 * 1000);
   document.addEventListener('visibilitychange', function(){{
     if (!document.hidden) pollMatches();
   }});
@@ -2378,6 +2525,7 @@ function initReminders(){{
 }}
 
 function renderEverything(){{
+  renderedDay = todayIso();
   renderChips();
   renderStats();
   renderBoard();
@@ -2388,6 +2536,19 @@ function renderEverything(){{
   renderAllTable(document.getElementById('searchBox').value);
 }}
 
+document.getElementById('agendaHead').addEventListener('click', function(e){{
+  if (e.target.closest('#backToUpcoming')) return;   // that button does its own thing
+  setMinimized('agenda', !isMinimized('agenda'));
+  applyAgendaMinimized();
+}});
+applyAgendaMinimized();
+document.getElementById('boardRow').addEventListener('click', function(e){{
+  var head = e.target.closest('[data-wing-head]');
+  if (!head) return;
+  var key = 'wing:' + head.getAttribute('data-wing-head');
+  setMinimized(key, !isMinimized(key));
+  renderBoard();
+}});
 document.getElementById('twToggle').addEventListener('click', function(e){{
   e.stopPropagation();
   document.getElementById('todayWidget').classList.toggle('collapsed');
@@ -2550,6 +2711,19 @@ document.getElementById('ordersSearch').addEventListener('input', function(){{ r
 document.getElementById('tableBody').addEventListener('click', function(e){{
   var btn = e.target.closest('[data-orders-case]');
   if (btn){{ toggleCaseOrders(btn.getAttribute('data-orders-case')); return; }}
+  var more = e.target.closest('[data-case-more]');
+  if (more){{   // show or clamp a long case name in place
+    var open = more.closest('.case-cell').classList.toggle('case-open');
+    more.textContent = open ? 'less' : 'more';
+    return;
+  }}
+  var full = e.target.closest('[data-order-text]');
+  if (full){{
+    var ck = full.getAttribute('data-order-text');
+    if (expandedOrderText[ck]) delete expandedOrderText[ck]; else expandedOrderText[ck] = true;
+    renderAllTable(document.getElementById('searchBox').value);
+    return;
+  }}
   var accept = e.target.closest('[data-nd-accept]');
   if (accept){{   // you said yes: the order's date becomes your entry
     setNextDate(accept.getAttribute('data-nd-accept'), accept.getAttribute('data-nd-date'));
@@ -2591,9 +2765,8 @@ renderThemePanel(loadSavedTheme());
 completeGithubOauthIfNeeded();
 renderEverything();
 startBoardPolling();
-startMatchesPolling();
-loadOrders();
-if (document.hidden) loadNextDates();  // polling skips hidden tabs; still load once
+startMatchesPolling();   // also loads the orders (refreshOrdersIfChanged)
+if (document.hidden){{ loadNextDates(); refreshOrdersIfChanged(); }}  // polling skips hidden tabs; still load once
 initReminders();
 </script>
 </body>

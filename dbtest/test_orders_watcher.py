@@ -159,6 +159,25 @@ class CheckCase(unittest.TestCase):
         self.assertEqual(rec["next_date"], "2026-12-10")
         self.assertEqual(ow.backfill_next_dates({"K 1/2024": entry}), 0)
 
+    def test_latest_orders_has_the_newest_order_and_its_text(self):
+        d = os.path.join(self.tmp, "orders", "K")
+        os.makedirs(d)
+        for name, body in (("001.txt", "first"), ("002.txt", "List on 10.12.2026."), ("003.txt", "same-day other")):
+            with open(os.path.join(d, name), "w", encoding="utf-8") as f:
+                f.write(body)
+        o = lambda no, date, **kw: dict(no=no, date=date, pdf=f"orders/K/{no:03d}.pdf", text=f"orders/K/{no:03d}.txt", judge="J", **kw)
+        cases = {
+            "K 1/2024": {"orders": [o(1, "2026-01-05"), o(3, "2026-11-01"), o(2, "2026-11-01", next_date="2026-12-10"),
+                                    o(4, "2026-11-20", duplicate_of=3)]},
+            "S 2/2024": {"orders": [o(1, "2026-02-02", no_text=True)]},
+            "N 3/2024": {"orders": []},
+        }
+        latest = ow.latest_orders(cases)
+        self.assertEqual(sorted(latest), ["K 1/2024", "S 2/2024"])
+        self.assertEqual((latest["K 1/2024"]["no"], latest["K 1/2024"]["text"]), (3, "same-day other"))
+        self.assertEqual(latest["S 2/2024"]["text"], "")
+        self.assertTrue(latest["S 2/2024"]["no_text"])
+
     def test_no_download_leaves_orders_unseen(self):
         entry = {"status": "linked", "cino": "C", "case_no": "1", "court_code": "2"}
         portal = FakePortal(history_html([(1, "03-07-2024", "a")]), {self.url("a"): pdf_bytes("x")})

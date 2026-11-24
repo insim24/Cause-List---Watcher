@@ -187,7 +187,8 @@ test('dashboard: Search saves the term, runs a fetch, then shows the hits', { sk
   const rows = [...doc.querySelectorAll('#tableBody tr')];
   assert.strictEqual(rows.length, 1);
   assert.match(rows[0].textContent, /WP\(C\) 3319\/2025/);
-  assert.strictEqual(rows[0].cells[6].querySelector('.found-by').textContent, 'Search: Abdul Rashid Sofi');
+  // All Cases no longer has an Advocate / Search column: the active chip
+  // above (and the docket card below) say how the case was found
   assert.match(doc.getElementById('titleWatchList').textContent, /Abdul Rashid Sofi/);
   assert.strictEqual(doc.getElementById('titleWatchRow').hidden, false);
   assert.strictEqual(doc.getElementById('titleSearchInput').value, '');

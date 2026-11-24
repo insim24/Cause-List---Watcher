@@ -39,6 +39,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CASES_FILE = os.path.join(HERE, "cases_auto.json")
 INDEX_FILE = os.path.join(HERE, "orders_index.json")
 STATUS_FILE = os.path.join(HERE, "orders_status.json")
+# The most recent order of each case with its full text, for the dashboard's
+# All Cases "Order" column (small enough to load with the page).
+LATEST_FILE = os.path.join(HERE, "latest_orders.json")
 ORDERS_DIR = os.path.join(HERE, "orders")
 LOG_FILE = os.path.join(HERE, "orders.log")
 # {"old number": "new number"} for cases eCourts has renumbered, e.g. an FAO
@@ -263,6 +266,29 @@ def backfill_next_dates(cases):
     return n
 
 
+def latest_orders(cases):
+    """{case key: the case's most recent order, with its full text}. Among
+    orders on the same date the highest-numbered one wins. Re-uploads and
+    orders whose PDF couldn't be read as text are skipped for the text, but
+    a scanned latest order is still listed (flagged no_text)."""
+    out = {}
+    for key, entry in cases.items():
+        orders = [o for o in entry.get("orders", []) if o.get("pdf") and not o.get("duplicate_of")]
+        if not orders:
+            continue
+        o = max(orders, key=lambda r: (r.get("date") or "", r.get("no") or 0))
+        text = ""
+        if o.get("text") and not o.get("no_text"):
+            path = os.path.join(HERE, o["text"])
+            if os.path.exists(path):
+                with open(path, encoding="utf-8") as f:
+                    text = f.read().strip()
+        out[key] = {"date": o.get("date"), "no": o.get("no"), "judge": o.get("judge", ""),
+                    "pdf": o.get("pdf"), "next_date": o.get("next_date"), "text": text,
+                    "no_text": not text}
+    return out
+
+
 def link_case(portal, key, entry):
     code = portal.type_code(entry["type"])
     if not code:
@@ -425,6 +451,8 @@ def run(only=None, download=True, manual_captcha=False):
 
     index["updated"] = now_iso()
     save_json(INDEX_FILE, index)
+    if not only:  # a one-case run would otherwise drop every other case
+        save_json(LATEST_FILE, latest_orders({k: cases[k] for k in tracked}))
     linked = sum(1 for k in tracked if cases[k].get("status") == "linked")
     if tracked and linked == 0 and status["link_failures"]:
         status.update(ok=False, problem={"kind": "link_failed",

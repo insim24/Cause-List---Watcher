@@ -212,9 +212,15 @@ The **Fetch new orders** button on the dashboard runs it on GitHub Actions
 orders are marked NEW in the dashboard's Court orders card, which can search
 case, party, judge, date and order text.
 
-In the dashboard's **All cases** table, "N orders" under a case opens its
-orders (each with its PDF) and the full text of the most recent one. Scanned
-orders with no text are flagged.
+The dashboard's **All cases** table shows Date, Case (name, with the number
+under it), Next Date of Hearing and Order. Cases listed today are pinned at
+the top. The Order column shows the latest order's date and gist, with
+"Full text" opening the whole order in the cell, its PDF, and "All N
+orders" for the case's other orders. Its text comes from
+`latest_orders.json`, which the order check writes on every run. Court, Sr
+No, bench and advocate aren't columns, but the search box still searches
+them (and the order text), and the advocate chips still filter the table.
+Scanned orders with no text are flagged.
 
 **Next date from orders.** `order_dates.py` reads the next-hearing date out
 of each order ("List on 26.07.2024", "List again on 31st October, 2024", "Put
@@ -230,7 +236,8 @@ If eCourts renumbers a case (e.g. an FAO converted to an RFA), add it to
 is tracked.
 
 Files: `orders/<case>/<NNN>_<date>.pdf` and `.txt`, `orders_index.json`
-(every case's CNR and orders), `orders_status.json` (the last run, for the
+(every case's CNR and orders), `latest_orders.json` (each case's latest
+order with its full text), `orders_status.json` (the last run, for the
 dashboard), `orders.log`.
 
 ## Notes on accuracy

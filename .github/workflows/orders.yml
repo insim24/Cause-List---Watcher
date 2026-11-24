@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "causelist-bot"
           git config user.email "actions@users.noreply.github.com"
-          for f in orders orders_index.json orders_status.json orders.log; do
+          for f in orders orders_index.json orders_status.json latest_orders.json orders.log; do
             if [ -e "$f" ]; then git add "$f"; fi
           done
           git diff --cached --quiet || git commit -m "Fetch new orders"

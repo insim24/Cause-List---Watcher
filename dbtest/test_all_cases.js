@@ -42,13 +42,22 @@ async function loadDashboard(matches, nextDates) {
   windows.push(dom.window);
   await new Promise((r) => setTimeout(r, 100));
   const doc = dom.window.document;
-  const rows = [...doc.querySelectorAll('#tableBody tr')].map((tr) => ({
-    date: tr.cells[0].textContent,
-    caseNo: tr.cells[4].textContent,
-    caseName: tr.cells[5].textContent,
-    people: tr.cells[6].textContent,
-    nextDate: tr.querySelector('input.next-date') && tr.querySelector('input.next-date').value,
-  }));
+  // columns: Date | Case (name, number under it) | Next Date | Order. Advocates
+  // aren't a column any more, so they're read from the row's underlying entry.
+  const grouped = dom.window.groupByCase(dom.window.filtered());
+  const rows = [...doc.querySelectorAll('#tableBody tr:not(.group-row):not(.case-detail)')].map((tr) => {
+    const no = tr.querySelector('.case-no');
+    const title = tr.querySelector('.case-title').textContent;
+    const caseNo = no ? no.textContent : title;
+    const entry = grouped.find((g) => g.caseNo === caseNo) || {};
+    return {
+      date: tr.cells[0].textContent,
+      caseNo,
+      caseName: no ? title : '',
+      people: entry.person || '',
+      nextDate: tr.querySelector('input.next-date') && tr.querySelector('input.next-date').value,
+    };
+  });
   return { w: dom.window, doc, rows, errors };
 }
 

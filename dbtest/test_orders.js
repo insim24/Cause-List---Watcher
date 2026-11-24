@@ -40,10 +40,11 @@ const STATUS = { last_run: '2026-11-24T05:00:00+00:00', ok: true, cases_total: 3
   new_orders: [{ case: 'WP(C) 1/2024', no: 2, date: '2024-10-23' }],
   unlinked: [{ case: 'FAO 26/2026', status: 'not_found', why: 'no matching record on the portal' }] };
 
-async function load({ index, status, indexAfterRun, runConclusion, token, nextDates, texts }) {
+async function load({ index, status, indexAfterRun, runConclusion, token, nextDates, texts, latest, matches, storage }) {
   const repo = { 'orders_index.json': index == null ? null : JSON.stringify(index),
     'orders_status.json': status == null ? null : JSON.stringify(status),
-    'cases_auto.json': JSON.stringify(MATCHES) };
+    'latest_orders.json': latest == null ? null : JSON.stringify(latest),
+    'cases_auto.json': JSON.stringify(matches || MATCHES) };
   const dispatched = [];
   const json = (body, code) => Promise.resolve({ ok: (code || 200) < 300, status: code || 200, json: () => Promise.resolve(body) });
   function fakeFetch(url, opts) {
@@ -74,6 +75,7 @@ async function load({ index, status, indexAfterRun, runConclusion, token, nextDa
       Object.defineProperty(w.document, 'hidden', { value: false });
       if (token) w.localStorage.setItem('gh_pat', 't');
       if (nextDates) w.localStorage.setItem('next_hearing_dates', JSON.stringify(nextDates));
+      Object.entries(storage || {}).forEach(([k, v]) => w.localStorage.setItem(k, v));
       w.fetch = fakeFetch;
       w.Notification = { permission: 'default', requestPermission: () => Promise.resolve('default') };
       w.Element.prototype.scrollIntoView = function () {};
@@ -85,7 +87,7 @@ async function load({ index, status, indexAfterRun, runConclusion, token, nextDa
   await new Promise((r) => setTimeout(r, 150));
   const doc = dom.window.document;
   const rows = () => [...doc.querySelectorAll('#ordersBody tr')].map((tr) => tr.textContent);
-  return { w: dom.window, doc, errors, dispatched, rows };
+  return { w: dom.window, doc, errors, dispatched, rows, repo };
 }
 
 const opt = { skip: !JSDOM && 'jsdom not installed' };
@@ -149,39 +151,156 @@ function caseIndex(lastOrder) {
 const caseRow = (doc) => [...doc.querySelectorAll('#tableBody tr')].find((r) => /CRM\(M\) 333\/2022/.test(r.textContent) && !r.classList.contains('case-detail'));
 const settle = () => new Promise((r) => setTimeout(r, 60));
 
-test('All cases: name under the number, and an orders panel with the last order text', opt, async () => {
-  const texts = { 'orders/WP_C_1_2024/002_2026-11-01.txt': LAST_TEXT };
-  const { doc, errors } = await load({ index: caseIndex(), status: STATUS, texts });
-  const tr = caseRow(doc);
-  assert.match(tr.querySelector('.cn-name').textContent, /SABZAR AHMAD BADDER/);
-  const link = tr.querySelector('[data-orders-case]');
-  assert.match(link.textContent, /2 orders · latest 1 Nov 2026/);
-  link.click();
-  await settle();
-  const panel = caseRow(doc).nextElementSibling;
-  assert.ok(panel.classList.contains('case-detail'));
-  assert.match(panel.querySelector('.cd-title').textContent, /SABZAR AHMAD BADDER/);
-  assert.match(panel.querySelector('.cd-meta').textContent, /CRM\(M\) 333\/2022.*Next date of hearing: 10 Dec 2026 \(from the last order\)/);
-  const orderRows = panel.querySelectorAll('table.cd-orders tbody tr');
-  assert.strictEqual(orderRows.length, 2);
-  assert.match(orderRows[0].textContent, /1 Nov 2026/);           // newest first
-  assert.ok(orderRows[0].querySelector('a.cd-pdf').getAttribute('href').endsWith('.pdf'));
-  assert.match(panel.querySelector('.cd-last-head').textContent, /Last order — 1 Nov 2026/);
-  assert.strictEqual(panel.querySelector('.cd-last-text').textContent, LAST_TEXT);
-  caseRow(doc).querySelector('[data-orders-case]').click();      // closes again
-  assert.ok(!caseRow(doc).nextElementSibling || !caseRow(doc).nextElementSibling.classList.contains('case-detail'));
+const LATEST = { 'CRM(M) 333/2022': { date: '2026-11-01', no: 2, judge: 'J', pdf: 'orders/WP_C_1_2024/002_2026-11-01.pdf',
+  next_date: '2026-12-10', text: LAST_TEXT, no_text: false } };
+const row = (doc, re) => [...doc.querySelectorAll('#tableBody tr:not(.group-row):not(.case-detail)')].find((r) => re.test(r.textContent));
+const todayIsoStr = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const TODAY_CASE = { person: 'Syed Mohtasim', people: ['Syed Mohtasim'], court: '2', sr: '5', caseNo: 'WP(C) 7777/2026',
+  caseName: 'TODAY PARTY Vs STATE', bench: 'HON\'BLE MR. JUSTICE Z', date: todayIsoStr(), source: 't', id: 'today-1' };
+
+test('All Cases columns: Date, Case (name over number), Next Date, Order', opt, async () => {
+  const { doc, errors } = await load({ index: caseIndex(), status: STATUS, latest: LATEST });
+  assert.deepStrictEqual([...doc.querySelectorAll('#tableHead th')].map((th) => th.textContent.trim().replace(/\s*[▲▼]$/, '')),
+    ['Date', 'Case', 'Next Date of Hearing', 'Order']);
+  const tr = row(doc, /CRM\(M\) 333\/2022/);
+  assert.strictEqual(tr.cells.length, 4);
+  assert.strictEqual(tr.querySelector('.case-title').textContent, 'SABZAR AHMAD BADDER Vs GHULAM QADIR BADDER');
+  assert.match(tr.querySelector('.case-no').textContent, /^CRM\(M\) 333\/2022/);
+  assert.doesNotMatch(tr.textContent, /Syed Mohtasim|JUSTICE/);   // advocate and bench aren't shown
   assert.deepStrictEqual(errors, []);
 });
 
-test('a scanned order with no text is flagged, not left blank', opt, async () => {
-  const { doc } = await load({ index: caseIndex({ no_text: true, text: undefined, next_date: null }), status: STATUS });
-  assert.match(caseRow(doc).textContent, /1 scanned, no text yet/);
-  caseRow(doc).querySelector('[data-orders-case]').click();
-  const panel = caseRow(doc).nextElementSibling;
+test('Order column: date and gist, full text opens inside the cell, all orders in the panel', opt, async () => {
+  const texts = { 'orders/WP_C_1_2024/002_2026-11-01.txt': LAST_TEXT };
+  const { doc } = await load({ index: caseIndex(), status: STATUS, latest: LATEST, texts });
+  const cell = () => row(doc, /CRM\(M\) 333\/2022/).cells[3];
+  assert.strictEqual(cell().querySelector('.ord-meta').textContent, '1 Nov 2026 · No. 2');
+  assert.strictEqual(cell().querySelector('.ord-gist').textContent, 'Heard. Reply be filed within two weeks. List on 10.12.2026.');
+  assert.strictEqual(cell().querySelector('.ord-full'), null);
+  // real order layouts: "(ORDER)" heading + date, and the judge's signature, are left out
+  const { w } = await load({ index: caseIndex(), status: STATUS });
+  assert.strictEqual(w.orderGist("HON'BLE MR JUSTICE X, JUDGE\n(ORDER)\n21.09.2026\n01. Rejoinder in two weeks. 02. List on 13.10.2026.\n(RAJESH SEKHRI)\nJUDGE\nSRINAGAR\n21.09.2026"),
+    '01. Rejoinder in two weeks. 02. List on 13.10.2026.');
+  assert.strictEqual(w.orderGist('O R D E R 28.01.2021\nList on 15.03.2021.\nJAMMU (SANJAY DHAR) (TASHI RABSTAN) 28.01.2021 JUDGE JUDGE'),
+    'List on 15.03.2021.');
+  cell().querySelector('[data-order-text]').click();
+  assert.strictEqual(cell().querySelector('.ord-full').textContent, LAST_TEXT);
+  assert.match(cell().querySelector('[data-order-text]').textContent, /Hide full text/);
+  cell().querySelector('[data-order-text]').click();
+  assert.strictEqual(cell().querySelector('.ord-full'), null);
+  assert.ok(cell().querySelector('a.ord-link').getAttribute('href').endsWith('.pdf'));
+  cell().querySelector('[data-orders-case]').click();
+  await settle();
+  const panel = row(doc, /CRM\(M\) 333\/2022/).nextElementSibling;
+  assert.ok(panel.classList.contains('case-detail'));
+  assert.strictEqual(panel.querySelector('td').getAttribute('colspan'), '4');
+  assert.strictEqual(panel.querySelectorAll('table.cd-orders tbody tr').length, 2);
+  assert.strictEqual(panel.querySelector('.cd-last-text').textContent, LAST_TEXT);
+});
+
+test('a scanned latest order is flagged in the Order column and the panel', opt, async () => {
+  const latest = { 'CRM(M) 333/2022': Object.assign({}, LATEST['CRM(M) 333/2022'], { text: '', no_text: true }) };
+  const { doc } = await load({ index: caseIndex({ no_text: true, text: undefined, next_date: null }), status: STATUS, latest });
+  const tr = row(doc, /CRM\(M\) 333\/2022/);
+  assert.match(tr.cells[3].textContent, /Scanned image — no text extracted yet/);
+  assert.strictEqual(tr.querySelector('[data-order-text]'), null);
+  tr.querySelector('[data-orders-case]').click();
+  const panel = row(doc, /CRM\(M\) 333\/2022/).nextElementSibling;
   assert.match(panel.textContent, /1 of these orders is a scanned image with no text extracted yet/);
-  assert.match(panel.querySelector('table.cd-orders tbody tr').textContent, /scanned image, no text extracted yet/);
   assert.match(panel.textContent, /This order is a scanned image — no text has been extracted from it yet/);
-  assert.strictEqual(panel.querySelector('.cd-last-text'), null);
+});
+
+test('without latest_orders.json the Order column still shows the order, PDF and list', opt, async () => {
+  const { doc } = await load({ index: caseIndex(), status: STATUS });
+  const cell = row(doc, /CRM\(M\) 333\/2022/).cells[3];
+  assert.strictEqual(cell.querySelector('.ord-meta').textContent, '1 Nov 2026 · No. 2');
+  assert.match(cell.textContent, /Text appears after the next order check/);
+  assert.ok(cell.querySelector('a.ord-link'));
+  assert.match(cell.querySelector('[data-orders-case]').textContent, /All 2 orders/);
+});
+
+test('search covers hidden fields and order text; advocate chips still filter', opt, async () => {
+  const { w, doc } = await load({ index: caseIndex(), status: STATUS, latest: LATEST, matches: MATCHES.concat([TODAY_CASE]) });
+  const box = doc.getElementById('searchBox');
+  const search = (q) => { box.value = q; box.dispatchEvent(new w.Event('input')); return [...doc.querySelectorAll('#tableBody tr:not(.group-row):not(.case-detail)')]; };
+  assert.deepStrictEqual(search('reply be filed').map((r) => r.querySelector('.case-no').textContent.slice(0, 15)), ['CRM(M) 333/2022']);
+  assert.ok(search('justice z').some((r) => /7777\/2026/.test(r.textContent)));        // bench
+  assert.ok(search('mohtasim').length > 1);                                            // advocate
+  search('');
+  const all = doc.querySelectorAll('#tableBody tr:not(.group-row):not(.case-detail)').length;
+  const chip = [...doc.querySelectorAll('#personChips .chip-btn')].find((b) => b.textContent === 'Owais Ashraf');
+  chip.click();
+  const filtered = [...doc.querySelectorAll('#tableBody tr:not(.group-row):not(.case-detail)')];
+  assert.ok(filtered.length > 0 && filtered.length < all);
+  const grouped = w.groupByCase(w.filtered());
+  assert.ok(grouped.every((g) => /Owais Ashraf/.test(g.person)));
+});
+
+test('sorting: Case sorts by case name; today\'s cases stay pinned on top', opt, async () => {
+  const { w, doc } = await load({ index: caseIndex(), status: STATUS, latest: LATEST, matches: MATCHES.concat([TODAY_CASE]) });
+  const th = [...doc.querySelectorAll('#tableHead th')].find((t) => /^Case/.test(t.textContent));
+  th.click();   // ascending by name
+  const body = [...doc.querySelectorAll('#tableBody tr')];
+  assert.match(body[0].textContent, /^Today · /);
+  assert.match(body[1].textContent, /TODAY PARTY/);
+  assert.ok(body[1].classList.contains('today-row'));
+  assert.strictEqual(body[2].textContent, 'All other cases');
+  const names = body.slice(3).filter((r) => !r.classList.contains('case-detail')).map((r) => r.querySelector('.case-title').textContent);
+  assert.deepStrictEqual(names, names.slice().sort((a, b) => a.localeCompare(b)));
+  // midnight passes with the page open: no poll needed, today's group moves on
+  const realToday = w.todayIso;
+  w.todayIso = () => '2099-01-01';
+  w.rerenderIfDayChanged();
+  assert.strictEqual(doc.querySelector('#tableBody .group-today'), null);
+  w.todayIso = realToday;
+});
+
+test('the 5-minute poll refreshes All Cases and the order data', opt, async () => {
+  const fresh = JSON.parse(JSON.stringify(LATEST));
+  fresh['CRM(M) 333/2022'] = Object.assign({}, fresh['CRM(M) 333/2022'], { date: '2026-11-20', no: 3, text: 'ORDER 20.11.2026\nDisposed of.' });
+  const { w, doc, repo } = await load({ index: caseIndex(), status: STATUS, latest: LATEST });
+  repo['latest_orders.json'] = JSON.stringify(fresh);
+  repo['orders_status.json'] = JSON.stringify(Object.assign({}, STATUS, { last_run: '2026-11-24T13:30:00+00:00' }));
+  repo['cases_auto.json'] = JSON.stringify(MATCHES.concat([TODAY_CASE]));
+  w.pollMatches();
+  await new Promise((r) => setTimeout(r, 200));
+  assert.ok(row(doc, /TODAY PARTY/), 'new case shown');
+  assert.strictEqual(row(doc, /CRM\(M\) 333\/2022/).cells[3].querySelector('.ord-gist').textContent, 'Disposed of.');
+});
+
+test('Upcoming minimizes from its header and stays minimized on the next visit', opt, async () => {
+  let r = await load({ index: caseIndex(), status: STATUS });
+  const card = () => r.doc.getElementById('agendaCard');
+  assert.ok(!card().classList.contains('collapsed'));
+  r.doc.getElementById('agendaTitle').click();
+  assert.ok(card().classList.contains('collapsed'));
+  assert.strictEqual(r.doc.getElementById('agendaToggle').getAttribute('aria-expanded'), 'false');
+  assert.strictEqual(r.w.localStorage.getItem('minimized:agenda'), '1');
+  r = await load({ index: caseIndex(), status: STATUS, storage: { 'minimized:agenda': '1' } });
+  assert.ok(card().classList.contains('collapsed'));
+  r.doc.getElementById('agendaToggle').click();
+  assert.ok(!card().classList.contains('collapsed'));
+  assert.strictEqual(r.w.localStorage.getItem('minimized:agenda'), null);
+});
+
+test('each wing card minimizes on its own and stays so across refreshes and visits', opt, async () => {
+  const BOARD = { 'Srinagar Wing': { idle: true }, 'Jammu Wing': { idle: true } };
+  let r = await load({ index: caseIndex(), status: STATUS });
+  r.w.BOARD = BOARD; r.w.renderBoard();
+  const wing = (name) => [...r.doc.querySelectorAll('.wing-card')].find((c) => c.querySelector('h3').textContent.startsWith(name));
+  wing('Jammu Wing').querySelector('.panel-toggle').click();
+  assert.ok(wing('Jammu Wing').classList.contains('collapsed'));
+  assert.ok(!wing('Srinagar Wing').classList.contains('collapsed'));
+  r.w.renderBoard();   // the live board re-renders every 15s
+  assert.ok(wing('Jammu Wing').classList.contains('collapsed'));
+  assert.strictEqual(r.w.localStorage.getItem('minimized:wing:Jammu Wing'), '1');
+  assert.strictEqual(r.w.localStorage.getItem('minimized:wing:Srinagar Wing'), null);
+  r = await load({ index: caseIndex(), status: STATUS, storage: { 'minimized:wing:Srinagar Wing': '1' } });
+  r.w.BOARD = BOARD; r.w.renderBoard();
+  assert.ok(wing('Srinagar Wing').classList.contains('collapsed'));
+  assert.ok(!wing('Jammu Wing').classList.contains('collapsed'));
+  wing('Srinagar Wing').querySelector('h3').click();
+  assert.ok(!wing('Srinagar Wing').classList.contains('collapsed'));
 });
 
 test('next date: an empty field is pre-filled from the last order, and nothing is saved', opt, async () => {
