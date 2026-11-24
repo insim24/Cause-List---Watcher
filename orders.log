@@ -2117,3 +2117,8 @@
 2026-11-24 07:32:44,608 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
 2026-11-24 07:32:56,448 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
 2026-11-24 07:34:14,585 INFO Done: 115/115 cases linked, 0 new orders
+2026-11-24 08:08:00,279 WARNING MA 85/2012 order 17: not a PDF (140 bytes), will retry next run
+2026-11-24 08:08:03,848 WARNING MA 86/2012 order 21: not a PDF (82 bytes), will retry next run
+2026-11-24 08:09:07,539 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
+2026-11-24 08:09:12,424 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
+2026-11-24 08:10:22,785 INFO Done: 115/115 cases linked, 0 new orders
