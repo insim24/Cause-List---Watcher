@@ -7924,3 +7924,32 @@
 2026-11-24 08:04:21,049 [INFO] Fetching live display board
 2026-11-24 08:04:22,203 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "7", "text": "Immediate presence of Mr.  ( FAHIM NISAR SHAH advocate) is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Mr Dewakar Sharma DyAG is required in court in S No 220"}]}}
 2026-11-24 08:04:22,206 [INFO] Added 0 new match(es). Total saved: 206. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-24 09:46:19,287 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-24 09:46:19,287 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-24 09:46:19,288 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-24 09:46:20,582 [INFO] Found 13 relevant causelist link(s) on the page (11 after filtering by list_types)
+2026-11-24 09:46:20,582 [INFO] Downloading Supplementary%20Cause%20List%20-%2025.11.2026.pdf (supplementary)
+2026-11-24 09:46:20,865 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2025.11.2026.pdf
+2026-11-24 09:46:20,865 [INFO] Downloading causelist_23112026.pdf (daywise)
+2026-11-24 09:46:21,465 [INFO] Unchanged since last run, skipping re-parse: causelist_23112026.pdf
+2026-11-24 09:46:21,465 [INFO] Downloading causelist_26112026.pdf (daywise)
+2026-11-24 09:46:21,764 [INFO] Unchanged since last run, skipping re-parse: causelist_26112026.pdf
+2026-11-24 09:46:21,764 [INFO] Downloading causelist_27112026.pdf (daywise)
+2026-11-24 09:46:22,115 [INFO] Unchanged since last run, skipping re-parse: causelist_27112026.pdf
+2026-11-24 09:46:22,115 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-24 09:46:23,476 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-24 09:46:23,476 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-24 09:46:23,745 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-24 09:46:23,745 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-24 09:46:24,016 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-24 09:46:24,016 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-24 09:46:24,286 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-24 09:46:24,287 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-24 09:46:24,558 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-24 09:46:24,558 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-24 09:46:26,153 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-24 09:46:26,153 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-24 09:46:26,423 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-24 09:46:26,429 [INFO] Fetching live display board
+2026-11-24 09:46:27,818 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "7", "text": "Immediate presence of Mr.  ( FAHIM NISAR SHAH advocate) is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "4", "text": "Mr Dewakar Sharma DyAG is required in court in S No 220"}]}}
+2026-11-24 09:46:27,820 [INFO] Added 0 new match(es). Total saved: 206. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
