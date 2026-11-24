@@ -20,7 +20,7 @@ CAUSELIST_PAGE = BASE + "/causelistk.php"
 # forces re-parsing even of files whose content hasn't changed — otherwise a
 # PDF fetched once under old, buggy parsing logic would stay wrong forever,
 # since "unchanged since last run" would keep skipping it.
-PARSER_VERSION = "4-grouped-people"
+PARSER_VERSION = "5-split-column-fix"
 
 PRIMARY_CASE_RE = re.compile(r"[A-Za-z()/\s]{2,20}?\d{1,6}/\d{4}")
 
@@ -230,6 +230,26 @@ def _learn_column_thresholds(all_lines):
     if len(votes) < 4:
         return None
     top4 = sorted(x for x, _ in votes.most_common(4))
+    if all(b - a > 6 for a, b in zip(top4, top4[1:])):
+        return top4
+    # Two of the "columns" are really one whose starts straddle two 3pt
+    # buckets (411 and 414 in the 26.11.2026 list). Counted apart, both made
+    # the top four and pushed the real Sr No column out, so the whole list
+    # parsed as one runaway entry. Only then, merge buckets within 6pt into
+    # one column at its most common position; lists that already split
+    # cleanly are left exactly as they were.
+    merged = []  # [position, votes, votes at position]
+    for x in sorted(votes):
+        if merged and x - merged[-1][0] <= 6:
+            m = merged[-1]
+            m[1] += votes[x]
+            if votes[x] > m[2]:
+                m[0], m[2] = x, votes[x]
+        else:
+            merged.append([x, votes[x], votes[x]])
+    if len(merged) < 4:
+        return None
+    top4 = sorted(m[0] for m in sorted(merged, key=lambda m: -m[1])[:4])
     return top4
 
 
