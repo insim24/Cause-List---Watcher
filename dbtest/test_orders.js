@@ -255,6 +255,39 @@ test('sorting: Case sorts by case name; today\'s cases stay pinned on top', opt,
   w.todayIso = realToday;
 });
 
+test('no case today: the next hearing date with cases is pinned on top, as on the calendar', opt, async () => {
+  const d = new Date(); d.setDate(d.getDate() + 1);
+  const tomorrow = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const next = (no, extra) => Object.assign({}, TODAY_CASE, { caseNo: 'WP(C) ' + no + '/2026', caseName: 'NEXT ' + no + ' Vs STATE', date: tomorrow, id: 'n' + no }, extra || {});
+  // the third is listed tomorrow AND again later: its row shows the later
+  // date, but it's still one of tomorrow's cases
+  const later = Object.assign({}, next(3), { date: '2099-01-05', id: 'n3b' });
+  const { w, doc } = await load({ index: caseIndex(), status: STATUS, matches: MATCHES.concat([next(1), next(2), next(3), later]) });
+  const body = () => [...doc.querySelectorAll('#tableBody tr')];
+  assert.match(body()[0].textContent, /^Next hearing · .* · 3 cases$/);
+  assert.deepStrictEqual(body().slice(1, 4).map((r) => r.querySelector('.case-title').textContent).sort(), ['NEXT 1 Vs STATE', 'NEXT 2 Vs STATE', 'NEXT 3 Vs STATE']);
+  assert.ok(body().slice(1, 4).every((r) => r.classList.contains('today-row')));
+  assert.strictEqual(body()[4].textContent, 'All other cases');
+  // only the pinned rows are marked (map's index must not count as "pinned")
+  assert.ok(body().slice(5).every((r) => !r.classList.contains('today-row')));
+  // the rest really are in date order (newest first by default); dates used
+  // to all compare equal because parseFloat("2026-11-27") is 2026
+  const dates = body().slice(5).map((r) => r.cells[0].textContent.slice(0, 10));
+  assert.deepStrictEqual(dates, dates.slice().sort().reverse());
+  assert.strictEqual(dates[0], MATCHES.map((m) => m.date).sort().pop());
+  // picking a calendar day narrows All Cases to that day, with a chip to undo it
+  w.selectedDate = tomorrow; w.renderAllTable('');
+  assert.strictEqual(doc.querySelectorAll('#tableBody tr:not(.group-row)').length, 3);
+  assert.strictEqual(doc.querySelector('#tableBody .group-row'), null);
+  const chip = doc.getElementById('allDateFilter');
+  assert.strictEqual(chip.style.display, 'inline-flex');
+  assert.match(chip.textContent, / · 3 cases$/);
+  chip.click();
+  assert.strictEqual(w.selectedDate, null);
+  assert.strictEqual(chip.style.display, 'none');
+  assert.match(body()[0].textContent, /^Next hearing/);
+});
+
 test('the 5-minute poll refreshes All Cases and the order data', opt, async () => {
   const fresh = JSON.parse(JSON.stringify(LATEST));
   fresh['CRM(M) 333/2022'] = Object.assign({}, fresh['CRM(M) 333/2022'], { date: '2026-11-20', no: 3, text: 'ORDER 20.11.2026\nDisposed of.' });

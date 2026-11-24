@@ -241,6 +241,11 @@ TEMPLATE = """<!DOCTYPE html>
   #searchBox{{flex:1;min-width:240px;background:var(--ink-700);border:1px solid var(--line);
     color:var(--parchment);padding:10px 13px;border-radius:6px;font-size:14px;}}
   #searchBox:focus{{outline:2px solid var(--brass);outline-offset:1px;}}
+  .date-filter-chip{{display:inline-flex;align-items:center;gap:7px;background:var(--brass-soft);
+    border:1px solid var(--brass-line);color:var(--brass);padding:6px 11px;border-radius:999px;
+    font-size:12.5px;font-family:var(--font-sans);cursor:pointer;white-space:nowrap;}}
+  .date-filter-chip:hover{{background:var(--brass-line);}}
+  .date-filter-chip::after{{content:'\\2715';font-size:10px;opacity:0.75;}}
 
   .empty-state{{text-align:center;padding:34px 10px;color:var(--parchment-dim);}}
   .footer-note{{font-size:11px;color:var(--parchment-faint);text-align:center;margin-top:22px;}}
@@ -528,6 +533,7 @@ TEMPLATE = """<!DOCTYPE html>
   <div class="card">
     <div class="all-head">
       <h2>All cases (<span id="allCount">{count}</span>)</h2>
+      <button type="button" class="date-filter-chip" id="allDateFilter" style="display:none" title="Show all dates"></button>
       <input type="text" id="searchBox" placeholder="Search by court no., case no., date&hellip;" />
     </div>
     <div class="next-date-sync" id="nextDateSync"></div>
@@ -763,8 +769,18 @@ function renderCalendar(){{
       selectedDate = iso;
       renderCalendar();
       renderAgenda();
+      renderAllTable(document.getElementById('searchBox').value);
     }});
   }});
+}}
+
+// Clears the calendar's date selection everywhere it applies: the agenda
+// panel, the calendar grid highlight, and the All Cases filter chip.
+function clearDateFilter(){{
+  selectedDate = null;
+  renderCalendar();
+  renderAgenda();
+  renderAllTable(document.getElementById('searchBox').value);
 }}
 
 function groupByDate(list){{
@@ -825,9 +841,13 @@ var TABLE_COLS = [
 ];
 var sortState = {{key:'date', dir:'desc'}};
 
+// A number only if the whole value is one ("106"), never just its first
+// part: parseFloat read every date "2026-11-27" as 2026, so all dates sorted
+// as equal and the Date column was never actually in date order.
 function numOrText(v){{
-  var n = parseFloat(v);
-  return isNaN(n) ? null : n;
+  var s = String(v == null ? '' : v).trim();
+  if (!s || !/^-?\\d+(\\.\\d+)?$/.test(s)) return null;
+  return Number(s);
 }}
 function cmpBy(key, dir){{
   var mul = dir==='asc' ? 1 : -1;
@@ -1062,12 +1082,12 @@ function shortCellHtml(v, max){{
   return '<span class="clipped" title="'+esc(s.slice(0, 2000))+'">'+esc(s.slice(0, max))+'\\u2026</span>';
 }}
 
-function tableRowHtml(e){{
+function tableRowHtml(e, pinned){{
   var earlier = (e.earlierDates && e.earlierDates.length) ?
     '<div class="nd-note">earlier: '+e.earlierDates.map(function(d){{ return esc(fmtDateShort(d)); }}).join(', ')+'</div>' : '';
   var alsoToday = e.hasToday && e.date !== todayIso() ? '<div class="nd-note today-note">also listed today</div>' : '';
   var title = e.caseName || e.caseNo || '\\u2014';
-  return '<tr'+(e.hasToday ? ' class="today-row"' : '')+'>'+
+  return '<tr'+((e.hasToday || pinned) ? ' class="today-row"' : '')+'>'+
     '<td class="mono">'+esc(e.date||'\\u2014')+alsoToday+earlier+'</td>'+
     '<td class="wrap-cell case-cell" title="'+esc(title)+'"><div class="case-title">'+esc(title)+'</div>'+
       (e.caseName && e.caseNo ? '<div class="case-no">'+esc(e.caseNo)+'</div>' : '')+
@@ -1214,9 +1234,24 @@ function groupByCase(list){{
   }});
 }}
 
+// A case can be grouped around several hearing dates (see groupByCase):
+// e.date is only the latest one, so matching a calendar day has to check
+// earlierDates too, or a case listed that day under an older sitting would
+// silently disappear from the filtered All Cases view.
+function caseListedOn(e, iso){{
+  return e.date === iso || (e.earlierDates || []).indexOf(iso) !== -1;
+}}
+function updateAllDateFilterChip(n){{
+  var chip = document.getElementById('allDateFilter');
+  if (!selectedDate){{ chip.style.display = 'none'; return; }}
+  chip.style.display = 'inline-flex';
+  chip.textContent = fmtDate(selectedDate)+' \\u00b7 '+n+' case'+(n === 1 ? '' : 's');
+}}
 function renderAllTable(q){{
   var list = groupByCase(filtered());
+  if (selectedDate) list = list.filter(function(e){{ return caseListedOn(e, selectedDate); }});
   document.getElementById('allCount').textContent = list.length;
+  updateAllDateFilterChip(list.length);
   if (q){{
     q = q.toLowerCase();
     // every field, shown or not: court, Sr No, bench and advocate aren't
@@ -1227,16 +1262,29 @@ function renderAllTable(q){{
     }});
   }}
   list.sort(cmpBy(sortState.key, sortState.dir));
-  // cases listed today go first, whatever the sort, under their own heading
-  var today = list.filter(function(e){{ return e.hasToday; }});
-  var rest = list.filter(function(e){{ return !e.hasToday; }});
   var cols = TABLE_COLS.length, html = '';
-  if (today.length){{
-    html += '<tr class="group-row group-today"><td colspan="'+cols+'">Today \\u00b7 '+esc(fmtOrderDate(todayIso()))+
-      ' \\u00b7 '+today.length+' case'+(today.length === 1 ? '' : 's')+'</td></tr>' + today.map(tableRowHtml).join('');
-    if (rest.length) html += '<tr class="group-row"><td colspan="'+cols+'">All other cases</td></tr>';
+  var row = function(e){{ return tableRowHtml(e); }};   // not .map(tableRowHtml): map's index would land in "pinned"
+  if (selectedDate){{
+    // already narrowed to one calendar day: a pinned group would just repeat it
+    html += list.map(row).join('');
+  }} else {{
+    // Pin the date the calendar and the "Next Hearing" card point at: today
+    // if today has cases, otherwise the nearest upcoming date that does
+    // (today 0 and tomorrow 3: those 3 go on top, whatever the sort).
+    var today = todayIso();
+    var future = filtered().map(function(m){{ return m.date; }}).filter(function(d){{ return d && d >= today; }}).sort();
+    var pinDate = future.length ? future[0] : null;
+    var pinned = pinDate ? list.filter(function(e){{ return caseListedOn(e, pinDate); }}) : [];
+    var rest = pinned.length ? list.filter(function(e){{ return !caseListedOn(e, pinDate); }}) : list;
+    if (pinned.length){{
+      var pinLabel = (pinDate === today ? 'Today' : 'Next hearing') + ' \\u00b7 ' + esc(fmtOrderDate(pinDate));
+      html += '<tr class="group-row group-today"><td colspan="'+cols+'">'+pinLabel+
+        ' \\u00b7 '+pinned.length+' case'+(pinned.length === 1 ? '' : 's')+'</td></tr>' +
+        pinned.map(function(e){{ return tableRowHtml(e, true); }}).join('');
+      if (rest.length) html += '<tr class="group-row"><td colspan="'+cols+'">All other cases</td></tr>';
+    }}
+    html += rest.map(row).join('');
   }}
-  html += rest.map(tableRowHtml).join('');
   var body = document.getElementById('tableBody');
   body.innerHTML = list.length ? html :
     '<tr><td colspan="'+cols+'"><div class="empty-state">No cases found.</div></td></tr>';
@@ -2698,11 +2746,13 @@ document.getElementById('todayBtn').addEventListener('click', function(){{
   selectedDate = todayIso();
   renderCalendar();
   renderAgenda();
+  renderAllTable(document.getElementById('searchBox').value);
 }});
 document.getElementById('backToUpcoming').addEventListener('click', function(){{
-  selectedDate = null;
-  renderCalendar();
-  renderAgenda();
+  clearDateFilter();
+}});
+document.getElementById('allDateFilter').addEventListener('click', function(){{
+  clearDateFilter();
 }});
 document.getElementById('searchBox').addEventListener('input', function(e){{ renderAllTable(e.target.value); }});
 document.getElementById('fetchBtn').addEventListener('click', function(){{ triggerFetch(); }});
