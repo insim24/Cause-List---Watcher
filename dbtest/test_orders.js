@@ -130,6 +130,24 @@ test('Fetch new orders dispatches orders.yml and shows the new orders', opt, asy
   assert.strictEqual(doc.getElementById('ordersBtn').disabled, false);
 });
 
+test('All cases links each case to its orders and shows its name under the number', opt, async () => {
+  const index = JSON.parse(JSON.stringify(INDEX));
+  index.cases['CRM(M) 333/2022'] = { status: 'linked', parties: 'SABZAR vs GHULAM', orders: [order(1, '2026-03-01'), order(2, '2026-09-21')] };
+  const { doc, rows } = await load({ index, status: STATUS });
+  const tr = [...doc.querySelectorAll('#tableBody tr')].find((r) => /CRM\(M\) 333\/2022/.test(r.textContent));
+  assert.match(tr.querySelector('.cn-name').textContent, /SABZAR AHMAD BADDER/);
+  const link = tr.querySelector('[data-orders-case]');
+  assert.match(link.textContent, /2 orders · latest 21 Sept? 2026/);
+  assert.ok(!doc.getElementById('ordersJump').hidden);
+  link.click();
+  assert.strictEqual(rows().length, 2);
+  assert.ok(rows().every((r) => /CRM\(M\) 333\/2022/.test(r)));
+  assert.strictEqual(doc.getElementById('ordersFilter').hidden, false);
+  doc.getElementById('ordersFilterClear').click();
+  assert.strictEqual(rows().length, 5);
+  assert.strictEqual(doc.getElementById('ordersFilter').hidden, true);
+});
+
 test('a failed order run says so and re-enables the button', opt, async () => {
   const { doc } = await load({ index: INDEX, status: STATUS, runConclusion: 'failure', token: true });
   doc.getElementById('ordersBtn').click();
