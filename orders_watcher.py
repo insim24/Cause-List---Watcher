@@ -93,7 +93,7 @@ def cases_in_entry(case_no_text):
     out = []
     for m in CASE_TOKEN.finditer(text):
         ctype, number, year = m.group(1), m.group(2), m.group(3)
-        if norm_type(ctype) in NOT_CASE_TYPES:
+        if any(word in norm_type(ctype) for word in NOT_CASE_TYPES):  # e.g. "RECTIFICATION Caveat"
             continue
         out.append((ctype, int(number), year))
     return out

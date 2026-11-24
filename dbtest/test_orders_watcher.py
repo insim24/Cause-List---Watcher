@@ -43,6 +43,7 @@ class CasesInEntry(unittest.TestCase):
     def test_bracketed_parent_case_and_caveat_ignored(self):
         self.assertEqual(ow.cases_in_entry("LPASW 26/2019[LPA 42/2019]"), [("LPASW", 26, "2019")])
         self.assertEqual(ow.cases_in_entry("FAO 26/2026 CM(5096/2026) Caveat 1131/2026"), [("FAO", 26, "2026")])
+        self.assertEqual(ow.cases_in_entry("RECTIFICATION Caveat 2719/2026"), [])
 
     def test_two_word_types(self):
         self.assertEqual(ow.cases_in_entry("Arb P 13/2024 CM(1/2024)"), [("Arb P", 13, "2024")])
