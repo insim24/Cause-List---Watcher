@@ -2106,3 +2106,8 @@
 2026-11-24 06:16:11,804 INFO New order: WP(C) 33/2023 #3 (2023-03-09)
 2026-11-24 06:16:11,805 INFO New order: WP(C) 33/2023 #4 (2023-04-17)
 2026-11-24 06:16:27,045 INFO Done: 115/117 cases linked, 98 new orders
+2026-11-24 06:31:17,078 WARNING MA 85/2012 order 17: not a PDF (140 bytes), will retry next run
+2026-11-24 06:31:22,017 WARNING MA 86/2012 order 21: not a PDF (82 bytes), will retry next run
+2026-11-24 06:32:29,554 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
+2026-11-24 06:32:33,766 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
+2026-11-24 06:33:25,029 INFO Done: 115/115 cases linked, 0 new orders
