@@ -40,6 +40,9 @@ INDEX_FILE = os.path.join(HERE, "orders_index.json")
 STATUS_FILE = os.path.join(HERE, "orders_status.json")
 ORDERS_DIR = os.path.join(HERE, "orders")
 LOG_FILE = os.path.join(HERE, "orders.log")
+# {"old number": "new number"} for cases eCourts has renumbered, e.g. an FAO
+# converted to an RFA. Older causelist entries still carry the old number.
+ALIASES_FILE = os.path.join(HERE, "case_aliases.json")
 
 BENCH = "srinagar"            # the causelist watcher only reads the Srinagar lists
 REQUEST_GAP = 1.5             # seconds between portal requests -- keep the load light
@@ -99,12 +102,20 @@ def cases_in_entry(case_no_text):
     return out
 
 
-def tracked_cases(matches):
-    """{key: {type, number, year, parties}} for every distinct case."""
+def tracked_cases(matches, aliases=None):
+    """{key: {type, number, year, title}} for every distinct case, with
+    renumbered cases (aliases) tracked under their current number only."""
+    aliases = aliases or {}
     found = {}
     for m in matches:
         for ctype, number, year in cases_in_entry(m.get("caseNo", "")):
             key = case_key(ctype, number, year)
+            if key in aliases:
+                renamed = cases_in_entry(aliases[key])
+                if not renamed:
+                    continue
+                ctype, number, year = renamed[0]
+                key = case_key(ctype, number, year)
             found.setdefault(key, {"type": ctype, "number": number, "year": year,
                                    "title": m.get("caseName", "")})
     return found
@@ -312,7 +323,10 @@ def run(only=None, download=True, manual_captcha=False):
     cases = index.setdefault("cases", {})
     now = datetime.now(timezone.utc)
 
-    tracked = tracked_cases(matches)
+    aliases = load_json(ALIASES_FILE, {})
+    for old in aliases:
+        cases.pop(old, None)  # its orders live under the new number
+    tracked = tracked_cases(matches, aliases)
     if only:
         tracked = {k: v for k, v in tracked.items() if norm_type(k) == norm_type(only)}
         if not tracked:

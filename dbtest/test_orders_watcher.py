@@ -50,6 +50,15 @@ class CasesInEntry(unittest.TestCase):
         self.assertEqual(ow.cases_in_entry("Mac App 7/2023"), [("Mac App", 7, "2023")])
 
 
+class Aliases(unittest.TestCase):
+    def test_renumbered_case_tracked_under_new_number(self):
+        matches = [{"caseNo": "FAO 26/2026 CM(5096/2026) Caveat 1131/2026", "caseName": "Z vs S"},
+                   {"caseNo": "WP(C) 1/2024", "caseName": "A vs B"}]
+        t = ow.tracked_cases(matches, {"FAO 26/2026": "RFA 92/2026"})
+        self.assertEqual(sorted(t), ["RFA 92/2026", "WP(C) 1/2024"])
+        self.assertEqual((t["RFA 92/2026"]["type"], t["RFA 92/2026"]["number"]), ("RFA", 92))
+
+
 class PortalParsing(unittest.TestCase):
     def test_case_types(self):
         fake = mock.Mock(text=TYPES)

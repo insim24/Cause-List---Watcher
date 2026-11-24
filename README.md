@@ -212,6 +212,10 @@ The **Fetch new orders** button on the dashboard runs it on GitHub Actions
 orders are marked NEW in the dashboard's Court orders card, which can search
 case, party, judge, date and order text.
 
+If eCourts renumbers a case (e.g. an FAO converted to an RFA), add it to
+`case_aliases.json` as `"old number": "new number"` so only the new number
+is tracked.
+
 Files: `orders/<case>/<NNN>_<date>.pdf` and `.txt`, `orders_index.json`
 (every case's CNR and orders), `orders_status.json` (the last run, for the
 dashboard), `orders.log`.
