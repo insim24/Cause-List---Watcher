@@ -145,6 +145,20 @@ class CheckCase(unittest.TestCase):
         self.assertEqual(entry["orders"], [])
         self.assertEqual(len(ow.check_case(FakePortal(rows, {self.url("a"): pdf_bytes("x")}), "K 1/2024", entry)), 1)
 
+    def test_next_date_read_on_download_and_backfilled(self):
+        entry = {"status": "linked", "cino": "C", "case_no": "1", "court_code": "2"}
+        self.text.stop()
+        self.text = mock.patch.object(ow, "extract_text", return_value=("Heard. List on 10.12.2026.", 1, False))
+        self.text.start()
+        portal = FakePortal(history_html([(1, "01-11-2026", "a")]), {self.url("a"): pdf_bytes("x")})
+        rec = ow.check_case(portal, "K 1/2024", entry)[0]
+        self.assertEqual((rec["next_date"], rec["nd_v"]), ("2026-12-10", ow.NEXT_DATE_VERSION))
+        # an order saved before the parser existed gets its date on the next run
+        del rec["next_date"], rec["nd_v"]
+        self.assertEqual(ow.backfill_next_dates({"K 1/2024": entry}), 1)
+        self.assertEqual(rec["next_date"], "2026-12-10")
+        self.assertEqual(ow.backfill_next_dates({"K 1/2024": entry}), 0)
+
     def test_no_download_leaves_orders_unseen(self):
         entry = {"status": "linked", "cino": "C", "case_no": "1", "court_code": "2"}
         portal = FakePortal(history_html([(1, "03-07-2024", "a")]), {self.url("a"): pdf_bytes("x")})

@@ -33,6 +33,7 @@ import requests
 from bs4 import BeautifulSoup
 
 import ecourts_client as ec
+from order_dates import next_hearing_date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CASES_FILE = os.path.join(HERE, "cases_auto.json")
@@ -234,6 +235,34 @@ def _ocr_page(page):
 
 # ---- the run -----------------------------------------------------------------
 
+NEXT_DATE_VERSION = 1  # bump when order_dates.py changes, to re-read every order
+
+
+def set_next_date(rec, text):
+    """The next-hearing date the order's text gives (order_dates.py), or none."""
+    nd, phrase = next_hearing_date(text, rec.get("date") or None)
+    rec["next_date"] = nd
+    rec["next_date_text"] = phrase
+    rec["nd_v"] = NEXT_DATE_VERSION
+
+
+def backfill_next_dates(cases):
+    """Reads the next date out of already-downloaded orders that predate the
+    parser (or an older version of it). Returns how many were updated."""
+    n = 0
+    for entry in cases.values():
+        for rec in entry.get("orders", []):
+            if rec.get("nd_v") == NEXT_DATE_VERSION or not rec.get("text") or rec.get("duplicate_of"):
+                continue
+            path = os.path.join(HERE, rec["text"])
+            if not os.path.exists(path):
+                continue
+            with open(path, encoding="utf-8") as f:
+                set_next_date(rec, f.read())
+            n += 1
+    return n
+
+
 def link_case(portal, key, entry):
     code = portal.type_code(entry["type"])
     if not code:
@@ -307,6 +336,7 @@ def check_case(portal, key, entry, download=True):
             f.write(text)
         rec.update(pdf=rel_pdf, text=rel_txt, pages=pages, chars=len(text), ocr=used_ocr,
                    bytes=len(data), excerpt=re.sub(r"\s+", " ", text)[:EXCERPT_LEN])
+        set_next_date(rec, text)
         if not text:
             rec["no_text"] = True
         orders.append(rec)
@@ -336,6 +366,11 @@ def run(only=None, download=True, manual_captcha=False):
         entry = cases.setdefault(key, {"status": "new"})
         entry.update(type=info["type"], number=info["number"], year=info["year"])
         entry.setdefault("title", info["title"])
+
+    filled = backfill_next_dates(cases)
+    if filled:
+        log.info("Read next-hearing dates from %d existing orders", filled)
+        save_json(INDEX_FILE, index)
 
     status = {"last_run": now_iso(), "ok": True, "problem": None,
               "linked_now": [], "link_failures": [], "new_orders": [], "errors": []}

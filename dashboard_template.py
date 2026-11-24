@@ -105,6 +105,29 @@ TEMPLATE = """<!DOCTYPE html>
   .order-excerpt mark{{background:var(--brass);color:var(--ink-900);}}
   #ordersCard a{{color:var(--brass);}}
   #ordersMore[hidden]{{display:none;}}
+  .clipped{{cursor:help;border-bottom:1px dotted var(--parchment-dim);}}
+  .nd-prompt{{margin-top:6px;padding:6px 8px;border-left:3px solid var(--brass);background:var(--ink-700);
+    font-size:11px;line-height:1.45;color:var(--parchment);max-width:260px;white-space:normal;}}
+  .nd-prompt-btns{{display:flex;gap:6px;margin-top:5px;flex-wrap:wrap;}}
+  tr.case-detail > td{{background:var(--ink-850);padding:0 10px 14px;}}
+  table.case-table tr.case-detail:hover td{{background:var(--ink-850);}}
+  .cd-box{{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--ink-800);
+    position:sticky;left:0;box-sizing:border-box;}}   /* max-width set to the visible width by fitCaseDetails() */
+  .cd-head{{margin-bottom:8px;}}
+  .cd-title{{font-weight:700;color:var(--parchment);font-size:14px;line-height:1.4;}}
+  .cd-meta{{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:var(--parchment-dim);margin-top:3px;}}
+  .cd-meta b{{color:var(--parchment);}}
+  table.cd-orders{{width:100%;border-collapse:collapse;font-size:12px;min-width:520px;}}
+  table.cd-orders th{{text-align:left;font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--parchment-dim);
+    padding:6px 8px;border-bottom:1px solid var(--line);}}
+  table.cd-orders td{{padding:6px 8px;border-bottom:1px solid var(--line-soft);vertical-align:top;}}
+  .cd-pdf{{color:var(--brass);font-weight:600;}}
+  .cd-flag{{display:inline-block;font-size:11px;color:var(--seal);font-weight:600;}}
+  .cd-flag-block{{display:block;margin:6px 0;}}
+  .cd-flag a{{color:inherit;}}
+  .cd-last-head{{margin:14px 0 6px;font-size:13px;color:var(--parchment);}}
+  .cd-last-text{{white-space:pre-wrap;font-size:12px;line-height:1.55;color:var(--parchment);max-height:360px;overflow:auto;
+    padding:10px 12px;border:1px solid var(--line-soft);border-radius:6px;background:var(--ink-850);}}
   .run-status.err{{border-left-color:var(--seal);}}
   .run-status a{{color:var(--brass);}}
 
@@ -353,11 +376,10 @@ TEMPLATE = """<!DOCTYPE html>
   .cn-name{{display:none;font-family:var(--font-body,inherit);font-size:12px;color:var(--parchment);margin-top:4px;}}
   .case-orders-link{{display:inline-block;margin-top:4px;font-size:11px;color:var(--brass);text-decoration:underline;cursor:pointer;
     background:none;border:none;padding:0;font-family:inherit;}}
-  .orders-filter{{display:inline-flex;align-items:center;gap:8px;font-size:12px;margin:0 0 10px;}}
-  .orders-filter[hidden]{{display:none;}}
   .orders-jump{{font-size:12px;color:var(--brass);align-self:center;}}
   @media (max-width:900px){{
     .cn-name{{display:block;}}   /* the Case Name column is off-screen here */
+    table.case-table td .nd-note{{white-space:normal;}}   /* "earlier: ..." no longer widens the Date column */
     .main-grid{{grid-template-columns:1fr;}}
     .stats-row{{grid-template-columns:repeat(2,1fr);}}
     .board-row{{grid-template-columns:1fr;}}
@@ -490,10 +512,6 @@ TEMPLATE = """<!DOCTYPE html>
       <input type="text" id="ordersSearch" placeholder="Search case, party, judge, date or order text&hellip;" />
     </div>
     <div class="orders-note" id="ordersNote"></div>
-    <div class="orders-filter" id="ordersFilter" hidden>
-      <span>Showing orders for <b id="ordersFilterCase"></b></span>
-      <button class="chip-btn" id="ordersFilterClear" type="button">Show all orders</button>
-    </div>
     <div class="table-scroll">
       <table class="case-table">
         <thead><tr><th>Order date</th><th>Case</th><th>No.</th><th>Judge</th><th>Order</th></tr></thead>
@@ -681,7 +699,7 @@ function docketHtml(e){{
   return '<div class="docket"><div class="docket-meta">'+
     personRow+
     '<div><span>Court No</span>'+esc(e.court||'\\u2014')+'</div>'+
-    '<div><span>Sr No</span>'+esc(e.sr||'\\u2014')+'</div>'+
+    '<div><span>Sr No</span>'+shortCellHtml(e.sr, 8)+'</div>'+
     '<div><span>Case No</span>'+esc(e.caseNo||'\\u2014')+'</div>'+
     '<div><span>Date</span>'+esc(e.date||'\\u2014')+'</div>'+
     benchRow+listRow+
@@ -970,13 +988,47 @@ function saveNextDates(attempt){{
 
 // Your own entry always wins; the court site's date only fills an empty field,
 // and if the two disagree the site's is shown underneath so a change is visible.
+// The latest order's "List on ..." date (orderNext) also only fills an empty
+// field, and isn't saved unless you edit it. If it disagrees with a stored
+// date you're asked; Keep remembers that answer (as "order-kept:<id>" in
+// next_dates.json) until a newer order gives a different date.
 function nextDateCellHtml(e){{
   var nd = e.nextDate || '';
-  var cls = 'next-date' + (nd ? '' : ' empty') + (e.nextDateFromSite ? ' from-site' : '');
+  var id = nextDateId(e);
+  var auto = e.nextDateFromSite || e.nextDateFromOrder;
+  var cls = 'next-date' + (nd ? '' : ' empty') + (auto ? ' from-site' : '');
   var note = '';
-  if (e.nextDateFromSite) note = '<div class="nd-note">from court site</div>';
+  if (e.nextDateFromOrder) note = '<div class="nd-note">from order of '+esc(fmtOrderDate(e.orderNext.orderDate))+'</div>';
+  else if (e.nextDateFromSite) note = '<div class="nd-note">from court site</div>';
   else if (e.siteNextDate && e.siteNextDate !== nd) note = '<div class="nd-note diff">Court site: '+esc(fmtDate(e.siteNextDate))+'</div>';
-  return '<td><input type="date" class="'+cls+'" data-nextid="'+esc(nextDateId(e))+'" value="'+esc(nd)+'" aria-label="Next date of hearing" />'+note+'</td>';
+  var on = e.orderNext;
+  if (on && nd && !e.nextDateFromOrder && on.date !== nd && nextDates['order-kept:' + id] !== on.date){{
+    note += '<div class="nd-prompt" title="'+esc(on.phrase)+'">Order of '+esc(fmtOrderDate(on.orderDate))+' says next date is <b>'+
+      esc(fmtOrderDate(on.date))+'</b>, currently stored as '+esc(fmtOrderDate(nd))+'. Update?'+
+      '<span class="nd-prompt-btns"><button type="button" class="chip-btn" data-nd-accept="'+esc(id)+'" data-nd-date="'+esc(on.date)+'">Update</button>'+
+      '<button type="button" class="chip-btn" data-nd-keep="'+esc(id)+'" data-nd-date="'+esc(on.date)+'">Keep '+esc(fmtOrderDate(nd))+'</button></span></div>';
+  }}
+  return '<td><input type="date" class="'+cls+'" data-nextid="'+esc(id)+'" value="'+esc(nd)+'" aria-label="Next date of hearing" />'+note+'</td>';
+}}
+// The next date the case's most recent order gives, if it's after the hearing
+// this row is for (an older order's date has already passed).
+function orderNextFor(e){{
+  var info = ORDERS_BY_CASE[caseKey(e.caseNo)];
+  if (!info || !info.orders.length) return null;
+  var newest = info.orders[0].date;
+  var o = info.orders.filter(function(x){{ return x.date === newest && x.nextDate; }})[0];
+  if (!o || o.nextDate <= (e.date || '')) return null;
+  return {{date: o.nextDate, orderDate: o.date, phrase: o.nextDateText}};
+}}
+
+// Sr No and Court No are a few characters; a value much longer than that is
+// a misread cause-list page (one once ran to 19,000 characters and, being
+// unwrapped, pushed every column after it ~130,000px off-screen). Shorten
+// it, keeping the full text on hover.
+function shortCellHtml(v, max){{
+  var s = String(v == null || v === '' ? '\\u2014' : v);
+  if (s.length <= max) return esc(s);
+  return '<span class="clipped" title="'+esc(s.slice(0, 2000))+'">'+esc(s.slice(0, max))+'\\u2026</span>';
 }}
 
 function tableRowHtml(e){{
@@ -984,15 +1036,15 @@ function tableRowHtml(e){{
     '<div class="nd-note">earlier: '+e.earlierDates.map(function(d){{ return esc(fmtDateShort(d)); }}).join(', ')+'</div>' : '';
   return '<tr>'+
     '<td class="mono">'+esc(e.date||'\\u2014')+earlier+'</td>'+
-    '<td class="mono">'+esc(e.court||'\\u2014')+'</td>'+
+    '<td class="mono">'+shortCellHtml(e.court, 8)+'</td>'+
     nextDateCellHtml(e)+
-    '<td class="mono">'+esc(e.sr||'\\u2014')+'</td>'+
+    '<td class="mono">'+shortCellHtml(e.sr, 8)+'</td>'+
     '<td class="mono wrap-cell">'+esc(e.caseNo||'\\u2014')+
       (e.caseName ? '<div class="cn-name">'+esc(e.caseName)+'</div>' : '')+caseOrdersLinkHtml(e)+'</td>'+
     '<td class="wrap-cell">'+esc(e.caseName||'\\u2014')+'</td>'+
     '<td>'+(foundByHtml(e)||'\\u2014')+'</td>'+
     '<td>'+esc(e.bench||'\\u2014')+'</td>'+
-    '</tr>';
+    '</tr>'+caseDetailRowHtml(e);
 }}
 
 // All cases shows each case once, on its latest hearing. A case is identified
@@ -1067,6 +1119,11 @@ function groupByCase(list){{
       }});
     }}
     latest.earlierDates = rows.slice(1).map(function(r){{ return r.date; }}).filter(Boolean);
+    latest.orderNext = orderNextFor(latest);
+    if (latest.orderNext && !latest.nextDate){{   // pre-fill only; nothing is saved
+      latest.nextDate = latest.orderNext.date;
+      latest.nextDateFromOrder = true;
+    }}
     return latest;
   }});
 }}
@@ -1090,6 +1147,8 @@ function renderAllTable(q){{
       inp.classList.toggle('empty', !inp.value);
     }});
   }});
+  fitCaseDetails();
+  loadLastOrderTexts();
 }}
 
 function courtSortKey(e){{
@@ -1118,7 +1177,7 @@ function renderTodayWidget(){{
   body.innerHTML = list.map(function(e){{
     var advLine = foundByHtml(e) ? '<div class="tw-adv">'+foundByHtml(e)+'</div>' : '';
     return '<div class="tw-row">'+
-      '<div class="tw-sr">'+esc(e.sr||'\\u2014')+'</div>'+
+      '<div class="tw-sr">'+shortCellHtml(e.sr, 8)+'</div>'+
       '<div class="tw-court">Crt<b>'+esc(e.court||'\\u2014')+'</b></div>'+
       '<div class="tw-case">'+esc(e.caseName||e.caseNo||'\\u2014')+advLine+liveCaseLineHtml(liveCaseInfo(e))+'</div>'+
       '</div>';
@@ -1145,7 +1204,7 @@ function renderBoard(){{
         if (mine.length){{
           var cd = myCourtData[String(c.court)];
           mineHtml = '<div class="board-mine">' + mine.map(function(m){{
-            return '<div class="board-mine-row"><span>Your Sr <b>'+esc(m.sr||'\\u2014')+'</b></span>'+
+            return '<div class="board-mine-row"><span>Your Sr <b>'+shortCellHtml(m.sr, 8)+'</b></span>'+
               liveCaseParts(liveCaseInfo(m), false)+'</div>';
           }}).join('') +
           (cd && cd.error && !cd.data ? '<div class="board-court-hint">Couldn\\u2019t load case statuses: '+esc(cd.error)+'</div>' :
@@ -1800,21 +1859,88 @@ var ORDERS = [];
 var ORDERS_BY_CASE = {{}};  // caseKey() -> {{key, count, latest}}, for the links in All cases
 var ordersStatus = null;
 var ordersShowAll = false;
-var ordersCaseFilter = null; // caseKey() of the case picked from All cases
+
+var expandedCases = {{}};   // caseKey() -> true while its orders panel is open
+var lastOrderText = {{}};   // .txt path -> text (or null while loading)
 
 function caseOrdersLinkHtml(e){{
-  var info = ORDERS_BY_CASE[caseKey(e.caseNo)];
+  var ck = caseKey(e.caseNo), info = ORDERS_BY_CASE[ck];
   if (!info) return '';
-  return '<div><button type="button" class="case-orders-link" data-orders-case="'+esc(caseKey(e.caseNo))+'">'+
-    info.count+' order'+(info.count === 1 ? '' : 's')+(info.latest ? ' \\u00b7 latest '+esc(fmtOrderDate(info.latest)) : '')+
-    '</button></div>';
+  return '<div><button type="button" class="case-orders-link" data-orders-case="'+esc(ck)+'" aria-expanded="'+(expandedCases[ck] ? 'true' : 'false')+'">'+
+    (expandedCases[ck] ? '\\u25be ' : '\\u25b8 ')+info.count+' order'+(info.count === 1 ? '' : 's')+
+    (info.latest ? ' \\u00b7 latest '+esc(fmtOrderDate(info.latest)) : '')+'</button>'+
+    (info.noText ? '<div class="cd-flag">'+info.noText+' scanned, no text yet</div>' : '')+'</div>';
 }}
-function showCaseOrders(ck){{
-  ordersCaseFilter = ck;
-  ordersShowAll = false;
-  document.getElementById('ordersSearch').value = '';
-  renderOrders();
-  document.getElementById('ordersCard').scrollIntoView({{behavior: 'smooth'}});
+function toggleCaseOrders(ck){{
+  if (expandedCases[ck]) delete expandedCases[ck]; else expandedCases[ck] = true;
+  renderAllTable(document.getElementById('searchBox').value);
+}}
+// The panel under a case in All cases: its orders (newest first) and the
+// text of the most recent one. A scanned order with no text layer is
+// flagged rather than left blank.
+function caseDetailRowHtml(e){{
+  var ck = caseKey(e.caseNo), info = ORDERS_BY_CASE[ck];
+  if (!info || !expandedCases[ck]) return '';
+  var last = info.orders[0];
+  var nd = e.nextDate ? esc(fmtOrderDate(e.nextDate)) + (e.nextDateFromOrder ? ' (from the last order)' : e.nextDateFromSite ? ' (from court site)' : '') : 'not set';
+  var rows = info.orders.map(function(o){{
+    return '<tr><td class="mono">'+esc(fmtOrderDate(o.date))+'</td><td class="mono">'+esc(o.no == null ? '' : o.no)+'</td><td>'+esc(o.judge)+'</td>'+
+      '<td><a class="cd-pdf" href="'+esc(o.pdf)+'" target="_blank" rel="noopener">Open PDF</a>'+
+      (o.noText ? ' <span class="cd-flag">scanned image, no text extracted yet</span>' : '')+'</td>'+
+      '<td>'+(o.nextDate ? 'next: '+esc(fmtOrderDate(o.nextDate)) : '')+'</td></tr>';
+  }}).join('');
+  var lastHtml;
+  if (last.noText || !last.text){{
+    lastHtml = '<div class="cd-flag cd-flag-block">This order is a scanned image \\u2014 no text has been extracted from it yet. '+
+      '<a href="'+esc(last.pdf)+'" target="_blank" rel="noopener">Open the PDF</a> to read it.</div>';
+  }} else {{
+    var t = lastOrderText[last.text];
+    lastHtml = '<div class="cd-last-text" data-last-text="'+esc(last.text)+'">'+(typeof t === 'string' ? esc(t) : 'Loading\\u2026')+'</div>';
+  }}
+  return '<tr class="case-detail"><td colspan="8"><div class="cd-box">'+
+    '<div class="cd-head"><div class="cd-title">'+esc(e.caseName || info.key)+'</div>'+
+    '<div class="cd-meta"><span>'+esc(info.key)+'</span><span>Next date of hearing: <b>'+nd+'</b></span></div></div>'+
+    (info.noText ? '<div class="cd-flag cd-flag-block">'+info.noText+' of these orders '+(info.noText === 1 ? 'is a scanned image' : 'are scanned images')+
+      ' with no text extracted yet.</div>' : '')+
+    '<div class="table-scroll"><table class="cd-orders"><thead><tr><th>Order date</th><th>No.</th><th>Judge</th><th>Order</th><th>Next date in order</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+    '<h4 class="cd-last-head">Last order \\u2014 '+esc(fmtOrderDate(last.date))+'</h4>'+lastHtml+
+    '</div></td></tr>';
+}}
+// An open panel spans all 8 columns, which is wider than the screen on a
+// phone or iPad; keep it to the visible part of the table (it stays pinned
+// left while the table scrolls sideways).
+function fitCaseDetails(){{
+  var box = document.querySelector('#tableBody') && document.querySelector('#tableBody').closest('.table-scroll');
+  if (!box) return;
+  var w = Math.max(280, box.clientWidth - 22) + 'px';
+  document.querySelectorAll('#tableBody .cd-box').forEach(function(el){{ el.style.maxWidth = w; }});
+}}
+window.addEventListener('resize', fitCaseDetails);
+// Fills in the "Last order" text of open panels (fetched once per order).
+function loadLastOrderTexts(){{
+  document.querySelectorAll('[data-last-text]').forEach(function(el){{
+    var path = el.getAttribute('data-last-text');
+    if (typeof lastOrderText[path] === 'string'){{ el.textContent = lastOrderText[path]; return; }}
+    if (lastOrderText[path] === null) return;
+    lastOrderText[path] = null;
+    fetch(path, {{cache: 'no-store'}}).then(function(r){{
+      if (!r.ok) throw new Error('status ' + r.status);
+      return r.text();
+    }}).then(function(t){{
+      lastOrderText[path] = t.trim() || '(The order\\u2019s text file is empty.)';
+    }}).catch(function(err){{
+      delete lastOrderText[path];
+      document.querySelectorAll('[data-last-text="' + path.replace(/"/g, '') + '"]').forEach(function(x){{
+        x.textContent = 'Could not load the order text (' + err.message + '). Open the PDF instead.';
+      }});
+      return;
+    }}).then(function(){{
+      if (typeof lastOrderText[path] !== 'string') return;
+      document.querySelectorAll('[data-last-text]').forEach(function(x){{
+        if (x.getAttribute('data-last-text') === path) x.textContent = lastOrderText[path];
+      }});
+    }});
+  }});
 }}
 
 function fetchRawJson(path, empty){{
@@ -1843,7 +1969,8 @@ function loadOrders(){{
         if (o.duplicate_of || !o.pdf) return;
         ORDERS.push({{caseKey: key, parties: c.parties || c.title || '', no: o.no, date: o.date || '',
           judge: o.judge || '', pdf: o.pdf, text: o.text, excerpt: o.excerpt || '', ocr: !!o.ocr,
-          noText: !!o.no_text, isNew: !!fresh[key + '#' + o.no]}});
+          noText: !!o.no_text, isNew: !!fresh[key + '#' + o.no],
+          nextDate: o.next_date || '', nextDateText: o.next_date_text || ''}});
       }});
     }});
     ORDERS.sort(function(a, b){{ return b.date.localeCompare(a.date) || a.caseKey.localeCompare(b.caseKey) || (b.no - a.no); }});
@@ -1851,8 +1978,10 @@ function loadOrders(){{
     ORDERS.forEach(function(o){{
       var ck = caseKey(o.caseKey);
       if (!ck) return;
-      var info = ORDERS_BY_CASE[ck] || (ORDERS_BY_CASE[ck] = {{key: o.caseKey, count: 0, latest: ''}});
+      var info = ORDERS_BY_CASE[ck] || (ORDERS_BY_CASE[ck] = {{key: o.caseKey, count: 0, latest: '', orders: [], noText: 0}});
       info.count++;
+      info.orders.push(o);   // ORDERS is newest first, so this is too
+      if (o.noText) info.noText++;
       if (o.date > info.latest) info.latest = o.date;
     }});
     document.getElementById('ordersJump').hidden = !ORDERS.length;
@@ -1895,16 +2024,12 @@ function renderOrders(){{
   renderOrdersNote();
   var q = normWords(document.getElementById('ordersSearch').value);
   var words = q ? q.split(' ') : [];
-  var filterInfo = ordersCaseFilter && ORDERS_BY_CASE[ordersCaseFilter];
-  document.getElementById('ordersFilter').hidden = !filterInfo;
-  if (filterInfo) document.getElementById('ordersFilterCase').textContent = filterInfo.key;
-  var pool = filterInfo ? ORDERS.filter(function(o){{ return caseKey(o.caseKey) === ordersCaseFilter; }}) : ORDERS;
-  var list = !words.length ? pool : pool.filter(function(o){{
+  var list = !words.length ? ORDERS : ORDERS.filter(function(o){{
     var hay = normWords([o.caseKey, o.parties, o.judge, o.date, fmtOrderDate(o.date), o.excerpt].join(' '));
     return words.every(function(w){{ return hay.indexOf(w) !== -1; }});
   }});
   document.getElementById('ordersCount').textContent = ORDERS.length;
-  var shown = ordersShowAll || words.length || filterInfo ? list : list.slice(0, ORDERS_PAGE);
+  var shown = ordersShowAll || words.length ? list : list.slice(0, ORDERS_PAGE);
   var body = document.getElementById('ordersBody');
   if (!shown.length){{
     body.innerHTML = '<tr><td colspan="5">' + (ORDERS.length ? 'No orders match that search.' : 'No orders downloaded yet.') + '</td></tr>';
@@ -1921,7 +2046,7 @@ function renderOrders(){{
     }}).join('');
   }}
   var more = document.getElementById('ordersMore');
-  more.hidden = words.length > 0 || !!filterInfo || list.length <= ORDERS_PAGE;
+  more.hidden = words.length > 0 || list.length <= ORDERS_PAGE;
   more.textContent = ordersShowAll ? 'Show latest ' + ORDERS_PAGE + ' only' : 'Show all ' + list.length + ' orders';
 }}
 function triggerOrdersFetch(){{
@@ -2424,11 +2549,18 @@ document.getElementById('ordersBtn').addEventListener('click', function(){{ trig
 document.getElementById('ordersSearch').addEventListener('input', function(){{ renderOrders(); }});
 document.getElementById('tableBody').addEventListener('click', function(e){{
   var btn = e.target.closest('[data-orders-case]');
-  if (btn) showCaseOrders(btn.getAttribute('data-orders-case'));
-}});
-document.getElementById('ordersFilterClear').addEventListener('click', function(){{
-  ordersCaseFilter = null;
-  renderOrders();
+  if (btn){{ toggleCaseOrders(btn.getAttribute('data-orders-case')); return; }}
+  var accept = e.target.closest('[data-nd-accept]');
+  if (accept){{   // you said yes: the order's date becomes your entry
+    setNextDate(accept.getAttribute('data-nd-accept'), accept.getAttribute('data-nd-date'));
+    renderAllTable(document.getElementById('searchBox').value);
+    return;
+  }}
+  var keep = e.target.closest('[data-nd-keep]');
+  if (keep){{     // you said no: don't ask again about this order's date
+    setNextDate('order-kept:' + keep.getAttribute('data-nd-keep'), keep.getAttribute('data-nd-date'));
+    renderAllTable(document.getElementById('searchBox').value);
+  }}
 }});
 document.getElementById('ordersMore').addEventListener('click', function(){{
   ordersShowAll = !ordersShowAll;
