@@ -1,0 +1,50 @@
+name: Fetch new orders
+
+# Downloads newly uploaded orders for every case in cases_auto.json from
+# hcservices.ecourts.gov.in (see orders_watcher.py). Runs every evening and
+# whenever the dashboard's "Fetch new orders" button dispatches it.
+on:
+  schedule:
+    - cron: "30 13 * * 1-6"   # 19:00 IST, after the day's orders are uploaded
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: orders
+  cancel-in-progress: false
+
+jobs:
+  orders:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr
+          pip install -r requirements.txt
+      # The captcha model (~95 MB) is downloaded from GitHub on first use;
+      # caching it saves that download on every run.
+      - uses: actions/cache@v4
+        with:
+          path: models
+          key: captcha-model-63f7cf507dab7083170f40c243bb45d9aaa44e4a
+      - name: Fetch new orders
+        run: python orders_watcher.py
+      - name: Commit orders
+        if: always()
+        run: |
+          git config user.name "causelist-bot"
+          git config user.email "actions@users.noreply.github.com"
+          for f in orders orders_index.json orders_status.json orders.log; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
+          git diff --cached --quiet || git commit -m "Fetch new orders"
+          git pull --rebase --autostash origin main
+          git push

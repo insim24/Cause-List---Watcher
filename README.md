@@ -178,6 +178,44 @@ Only lists currently published on the site are searched, so a search with no
 hits stays saved and is re-checked on every fetch. Removing a saved search
 (the × on it) drops the cases it alone found at the next fetch.
 
+## Court orders
+
+`orders_watcher.py` downloads the orders for every case in `cases_auto.json`
+from eCourts (hcservices.ecourts.gov.in, Srinagar Wing). It never changes
+`cases_auto.json`.
+
+1. **Linking (once per case).** Each case is looked up once with eCourts'
+   Case Status → Case Number search to get its CNR. That search is behind
+   a captcha, which is read automatically by the ONNX model from
+   [Prakash-Bandapalli/Captcha_Solver](https://github.com/Prakash-Bandapalli/Captcha_Solver)
+   (`captcha_solver.py`). That repo has no licence, so the ~95 MB model isn't
+   kept here: it's downloaded at a pinned commit on first use, checked
+   against a SHA-256, and cached in `models/`. A case that isn't on eCourts
+   yet is tried again every 14 days.
+2. **Checking (every run, no captcha).** For each linked case it reads the
+   case history and downloads any order not seen before. An identical PDF
+   uploaded again (same SHA-256) isn't stored twice.
+3. **Text.** The full text of every order is saved next to its PDF. Scanned
+   pages are OCR'd when Tesseract is installed (it is in GitHub Actions).
+
+Run it:
+
+```
+python orders_watcher.py                          # all cases
+python orders_watcher.py --case "WP(C) 1394/2024" # one case
+python orders_watcher.py --no-download            # just list what's new
+python orders_watcher.py --manual-captcha         # type captchas yourself
+```
+
+The **Fetch new orders** button on the dashboard runs it on GitHub Actions
+(`.github/workflows/orders.yml`). It also runs every evening, Mon–Sat. New
+orders are marked NEW in the dashboard's Court orders card, which can search
+case, party, judge, date and order text.
+
+Files: `orders/<case>/<NNN>_<date>.pdf` and `.txt`, `orders_index.json`
+(every case's CNR and orders), `orders_status.json` (the last run, for the
+dashboard), `orders.log`.
+
 ## Notes on accuracy
 
 Court No. / Sr. No. / Case No. are extracted heuristically from the text

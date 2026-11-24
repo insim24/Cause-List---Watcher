@@ -1,0 +1,295 @@
+﻿
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Case History</title>
+<style type="text/css">
+form.historyform
+{	font-size:1em;
+}
+tbody
+{	font-size:1em;
+}
+#nextDate {   
+  animation-duration:4000ms;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes blink {
+  from {
+	opacity: 1;
+  }
+
+  to {
+	opacity: 0;
+  }
+}
+.h3class{
+font-size:1em;
+padding-top:-10px;
+font-weight:normal;
+margin-bottom:5px;
+}
+.h2class{
+font-size:1.1em;
+font-weight:normal;
+padding-top:-10px;
+margin-bottom:5px;
+}
+.h1classH{
+font-size:1.2em;
+font-weight:bold;
+margin-top:7px;
+}
+.controlstyle
+{ display:none;}
+.table_o{
+border: 1px solid #555;
+text-align:center;
+}
+.cell_o{
+    border-bottom: 1px solid #555;
+	border-right: 1px solid #555;
+    text-align: left;
+	display: table-cell;
+}
+.cell_o:last-child{
+	border-right: 0px solid #555;
+}
+.table_r{
+border: 1px solid red;
+background-color:#FBF6D9;
+color:red;
+}
+.table_r > tbody > tr > td {border-top:1px solid red;padding:5px;}
+.row_o{
+display:table-row;
+}
+label {
+    font-weight: normal;
+}
+form.historyform > .table > tbody > tr > td, form.historyform > .table > tbody > tr > th, form.historyform > .table > tfoot > tr > td, form.historyform > .table > tfoot > tr > th, form.historyform > .table > thead > tr > td, form.historyform > .table > thead > tr > th {
+
+    border: 1px solid #555;
+}
+form.historyform > .table > caption + thead > tr:first-child > td, form.historyform > .table > caption + thead > tr:first-child > th, form.historyform > .table > colgroup + thead > tr:first-child > td, form.historyform > .table > colgroup + thead > tr:first-child > th, form.historyform > .table > thead:first-child > tr:first-child > td, form.historyform > .table > thead:first-child > tr:first-child > th {
+    border-top: 1px solid #555;
+}
+
+table.IAheading{
+    background: #d9f2f2;
+}
+table.IAheading > tbody > tr > td,table.IAheading > tbody > tr > th {border-top:1px solid #555;padding:5px;}
+
+table.IAheading > tbody > tr:nth-child(odd) {
+  background: #d9f2f2;
+}
+.click
+{
+}
+.w3_whatsapp_btn {
+    background-image: url('icon.png');
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-block !important;
+    position: relative;
+    font-family: Arial,sans-serif;
+    letter-spacing: .4px;
+   cursor: pointer;
+    font-weight: 400;
+    text-transform: none;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #5cbe4a;
+    background-repeat: no-repeat;
+    line-height: 1.2;
+    text-decoration: none;
+    text-align: left;
+}
+.w3_whatsapp_btn_small {
+
+    font-size: 12px;
+    background-size: 16px;
+    background-position: 5px 2px;
+    padding: 3px 6px 3px 25px;
+}
+.w3_whatsapp_btn_medium {
+    font-size: 16px;
+    background-size: 20px;
+    background-position: 4px 2px;
+	padding: 4px 6px 4px 30px;
+}
+.w3_whatsapp_btn_large {
+    font-size: 16px;
+    background-size: 20px;
+    background-position: 5px 5px;
+    padding: 8px 6px 8px 30px;
+    color: #fff;
+}
+a.whatsapp { color: #fff;}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+{
+.cell_o{
+    width: 50%;
+    display: inline-block;
+    border-bottom: 1px solid #555;
+	border-left: 1px solid #555;
+	border-right: 1px solid #555;
+    text-align: left;
+}
+.cell_o:last-child{
+	border-right: 0px solid #555;
+}
+.cell_o:nth-child(even){
+	border-right: 0px solid #555;
+}
+.cell_r{
+    width: 50%;
+    display: inline-block;
+    border-bottom: 1px solid red;
+	border-right: 1px solid red;
+    text-align: left;
+	display: table-cell;
+}
+.cell_r:last-child{
+	border-right: 0px solid red;
+}
+.cell_r:nth-child(even){
+	border-right: 0px solid red;
+}
+
+form.historyform > .table>tbody>tr>td, form.historyform > .table>tbody>tr>th, form.historyform > .table>tfoot>tr>td, form.historyform > .table>tfoot>tr>th, form.historyform > .table>thead>tr>td, form.historyform > .table>thead>tr>th {
+    padding: 0px;
+}
+}
+.blinking{
+	animation:blinkingText 2.3s infinite;
+  font-size: initial;
+}
+@keyframes blinkingText{
+	0%{		color: red;	}
+	49%{	color: red;font-weight: 600;	}
+	50%{	color: red;font-weight: 700;	}
+	99%{	color:red;font-weight: 600;	}
+	100%{	color: red;	}
+}
+</style>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+function fcousHeading()
+{
+document.getElementById("chHeading").focus();
+}
+function newcss()
+{
+	var sess_color_value="W";	
+	if(sess_color_value=='B' )
+	{
+		applycssblack1();
+	}
+	else if(sess_color_value=='W' )
+	{
+		applycsswhite1();
+	}
+	else if (parent.document.getElementById("txt_css").value=='black')
+	{
+	parent.applycssblack();
+	}
+	else if (parent.document.getElementById("txt_css").value=='white')
+	{
+	parent.applycsswhite();
+	}
+}
+function openpopup(popurl)
+{
+	var winpops=window.open(popurl,"","width=400,height=400,scrollbars,menubar,resizable")
+}
+//]]>
+</script>
+<script type="text/javascript" language="javascript">
+ //<![CDATA[
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+	targets: ["body"], //target elements to resize text within: ["selector1", "selector2", etc]
+	levels: 1, //number of levels users can magnify (or shrink) text
+	persist: "session", //enter "session" or "none"
+	animate: 200 //animation duration of text resize. Enter 0 to disable
+})
+ //]]>
+function selectFun3(element) 
+{
+
+}
+</script>
+ <script language="JavaScript" src="../includes/javascript/xmlhttp.js" type="text/javascript"></script>
+</head>
+<body onload="funchkErr();" >
+<div id="sizecontroldiv" class="controlstyle">
+<a href="#smaller" ></a><a href="#fontsize0"></a><a href="#bigger"></a>
+</div>
+<div  align="center" style='margin-top:-5px;'>
+<div   id='caseBusinessDiv4'>
+<span id='errSpan' style='font-color:red;'></span>
+<span style='margin-top:-20px;'>
+</span>
+<br />
+
+<h1 class='h1class'><span style="font-weight:bold;"></span></h1>
+	
+<div><span class="heading" style=' text-align:center;'><label><h2 class='h2class' style='font-weight:bold;'>Case Details</h2></label></span><table width='100%' align='center' border='1' class='table case_details_table' style='font-size:1em'><tr style='background: #bee6fb;color: #28468e;'><td style='background: #9edbf9;'><label style='font-weight:bold;'>Filing Number</label></td><td style='font-weight:bold;'>WP(C) /2143/2024</td><td style='background: #9edbf9;'><label style='font-weight:bold;'>Filing Date</label></td><td style='font-weight:bold;'> 06-06-2024</td></tr><tr style='background: #bee6fb;color: #28468e;'><td style='background: #9edbf9;'><label style='font-weight:bold;'><label style='font-weight:bold;'>Registration Number</label></td><td ><label style='font-weight:bold;'>WP(C) /1394/2024</label></td><td style='background: #9edbf9;'><label style='font-weight:bold;'><label style='font-weight:bold;'>Registration Date</label></td><td ><label style='font-weight:bold;'>01-07-2024</label></td></tr><br /><tr style='background: #bee6fb;color: #28468e;'><td style='background: #9edbf9;'><label><strong>CNR Number</strong></label></td><td colspan='3'><strong style='font-size:1.2em;color:#df3527'>JKHC01-002879-2024</strong></td></tr></table></div><br /><h2 class='h2class' style=' clear:both;color:red;font-weight:bold;display: block;'>Case Status</h2><table border='1' class='table_r table text-left' style='font-size:1.1em;'><tr>
+	<td><label><strong>First Hearing Date </strong></td><td><strong>  </strong></label></span></td></tr><tr><td><label><strong>Next Hearing Date</strong></td><td><strong>07th December 2026</strong></label></td></tr><tr><td><label><strong>Case Stage</strong></td><td><strong>FOR ADMISSION NON FRESH</strong></label></td></tr><tr><td><label><strong>Coram</strong></td><td><strong> HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL</strong></label></td></tr><tr><td><label><strong>Bench Type</strong></td><td> <strong>SINGLE BENCH</strong></label></td></tr><tr><td><label><strong>Judicial Branch</strong></td><td><strong>SERVICE WRIT PETITION (SWP)</strong></label></td></tr><tr><td><label><strong>State</strong></td><td> <strong>JAMMU & KASHMIR</strong></label></td></tr><tr><td><label><strong>District</strong></td><td> <strong>SRINAGAR</strong></label></td></tr></table></div><div  style='margin-top:10px;'><h2 class='h2class_new' style='font-weight:bold; font-size:1.1em'>Petitioner and Advocate</h2><span class='Petitioner_Advocate_table' style='float:left;border:1px solid #000; width:100%;text-align:left; margin-bottom:10px; padding-left:5px;'>1) SHAFAYAT SHAFI<br />&nbsp;&nbsp;&nbsp;&nbsp;M/S SYED MANZOOR AHMAD AND SYED MOHTASIM <br /></span><h2 class='h2class_new' style='font-weight:bold; font-size:1.1em'>Respondent and Advocate</h2><span class='Respondent_Advocate_table' style='float:left;border:1px solid #000; width:100%;text-align:left;margin-bottom:10px;padding-left:5px;'>1) UNION TERRITORY OF J AND K AND ORS. (ARI AND TRAININGS / BOPEE)<br> &nbsp;&nbsp; <br />  </span><h2 class='h2class_new' style='font-weight:bold; font-size:1.1em'>Acts</h2><table width="100%" cellspacing="0" cellpadding="1" align="center" border="1" style="box-sizing:border-box; -moz-box-sizing:border-box; "  id='act_table' class='Acts_table'><tr><th><b>Under Act(s)</b></th><th><b>Under Section(s)</b></th></tr><tr><td width='50%' align='left' style='padding-left:5px;'>Article 226-Section103</td><td width='50%' align='left' style='padding-left:5px;'>226</td></tr></table><br/><div><h2 class='h2class' style='font-weight:bold;'>Category Details</h2><table width="100%" cellspacing="0" cellpadding="1" align="center" border="1" style="box-sizing:border-box; -moz-box-sizing:border-box; "  id='subject_table' ><tr><td width='50%' style='text-align:left !important;padding-left:5px;' ><b>Category</b>
+							</td><td width='50%'  style='padding-left:5px;text-align:left !important;'>SB SERVICE WRIT PETITIONS ( 100 )
+							</td></tr><tr><td width='50%' style='text-align:left !important;padding-left:5px;' ><b>Sub Category</b>
+							</td><td width='50%'  style='padding-left:5px;text-align:left !important;'>AD-HOC APPOINTMENTS & REGULARISATION OF ADHOC APPOINTMENTS. ( 11 )
+							</td></tr></table></div><br/><h2 class='h2class' style='font-weight:bold;display:block;clear:both;'>IA Details</h2><table class='IAheading'  border='1' width='100%'><tr><th><b>IA Number </b></th><th><b>Party </b></th><th><b>Date of  Filing  </b></th><th><b>Next Date   </b></th><th><b>IA Status </b></th></tr><tr><td align='left' width='30%'>CM/3769/2024   </br> <b>Classification :</b> INTERIM RELIEF</td><td>SHAFAYAT SHAFI<br/>UNION TERRITORY OF J AND K AND ORS. (ARI AND TRAININGS / BOPEE)<br/></td><td>01-07-2024 </td><td>-- </td><td>Pending</td></tr></table><h2 class='h2class' style='font-weight:bold;display:block;clear:both;text-align:center'>Case History</h2><table width="100%" cellspacing="0" cellpadding="1" align="center" border="1" style="box-sizing:border-box; -moz-box-sizing:border-box; " class="history_table"><tr><th scope="col" align='left' style=''>Cause List Type </th><th scope="col" style=''>Judge</th><th scope="col" style=''>Business on Date</th><th scope="col" style=''>Hearing Date</th><th scope="col" style=''>Purpose of Hearing</th></tr><tr><td align='left' style=''>SUPPLEMENTARY-1 CAUSELIST                                                                          </td><td align='left' style=''>HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20240703','230000013942024','12','Pending','','1558','0','JKHC010028792024')> </a></td><td>03-07-2024</td><td style=''> FOR ADMISSION FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20261207','230000013942024','12','Pending','13-10-2026','1558','17','JKHC010028792024')>13-10-2026 </a></td><td>07-12-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE RAJESH SEKHRI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20261013','230000013942024','12','Pending','21-09-2026','1560','16','JKHC010028792024')>21-09-2026 </a></td><td>13-10-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE SHAHZAD AZEEM</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20260921','230000013942024','12','Pending','12-08-2026','1649','15','JKHC010028792024')>12-08-2026 </a></td><td>21-09-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE SANJAY DHAR</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20260812','230000013942024','12','Pending','30-06-2026','1496','14','JKHC010028792024')>30-06-2026 </a></td><td>12-08-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE SANJAY DHAR</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20260630','230000013942024','12','Pending','17-04-2026','1496','13','JKHC010028792024')>17-04-2026 </a></td><td>30-06-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE RAHUL BHARTI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20260417','230000013942024','12','Pending','24-03-2026','1553','12','JKHC010028792024')>24-03-2026 </a></td><td>17-04-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE JAVED IQBAL WANI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20260324','230000013942024','12','Pending','10-02-2026','1503','11','JKHC010028792024')>10-02-2026 </a></td><td>24-03-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE  VINOD CHATTERJI KOUL</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20260210','230000013942024','12','Pending','17-11-2025','1495','10','JKHC010028792024')>17-11-2025 </a></td><td>10-02-2026</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE JAVED IQBAL WANI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20251117','230000013942024','12','Pending','09-09-2025','1503','9','JKHC010028792024')>09-09-2025 </a></td><td>17-11-2025</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20250909','230000013942024','12','Pending','04-08-2025','1554','8','JKHC010028792024')>04-08-2025(R)</a></td><td>09-09-2025</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MS. JUSTICE MOKSHA KHAJURIA KAZMI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20251027','230000013942024','12','Pending','04-08-2025','1554','7','JKHC010028792024')>04-08-2025 </a></td><td>27-10-2025</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE RAJESH SEKHRI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20250804','230000013942024','12','Pending','08-04-2025','1560','6','JKHC010028792024')>08-04-2025 </a></td><td>04-08-2025</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>HON'BLE MR. JUSTICE RAHUL BHARTI</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20250408','230000013942024','12','Pending','12-02-2025','1553','5','JKHC010028792024')>12-02-2025 </a></td><td>08-04-2025</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>REGISTRAR JUDICIAL</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20250212','230000013942024','12','Pending','11-12-2024','1437','4','JKHC010028792024')>11-12-2024 </a></td><td>12-02-2025</td><td style=''> FOR ADMISSION NON FRESH</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>REGISTRAR JUDICIAL</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20241211','230000013942024','12','Pending','06-11-2024','1437','3','JKHC010028792024')>06-11-2024 </a></td><td>11-12-2024</td><td style=''> FOR TAKING STEPS</td></tr><tr><td align='left' style=''>REGULAR CAUSELIST                                                                                  </td><td align='left' style=''>REGISTRAR JUDICIAL</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20241106','230000013942024','12','Pending','23-10-2024','1437','2','JKHC010028792024')>23-10-2024 </a></td><td>06-11-2024</td><td style=''> FOR TAKING STEPS</td></tr><tr><td align='left' style=''>SUPPLEMENTARY-1 CAUSELIST                                                                          </td><td align='left' style=''>HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL</td><td align='left' style=''><a href='#' onclick=viewBusiness('2','1','20241023','230000013942024','12','Pending','03-07-2024','1558','1','JKHC010028792024')>03-07-2024 </a></td><td>23-10-2024</td><td style=''> FOR TAKING STEPS</td></tr><table  id='orderheading'><tr><td><br/><h2 class='h2class' style='font-weight:bold;'>Orders </h2></td></tr></table><table width="100%" cellspacing="0" cellpadding="1" align="center" border="1" class="order_table" ><tr><td style='width:71px;'> <font size='2'><strong> &nbsp;&nbsp;Order Number</strong></font></td> <td style='width:71px;'> <font size='2'><strong> &nbsp;&nbsp;Order on</strong></font></td><td style='width:330px;'> <font size='2'><strong> &nbsp;&nbsp;Judge</strong></font></td><td style='width:128px;'> <font size='2'><strong>&nbsp;&nbsp;Order Date </strong></font> </td>
+	
+	<td> <font size='2'><strong>&nbsp;&nbsp;Order Details </strong></font></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;1</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL </font></td><td style='border-top:none;'>&nbsp;&nbsp;03-07-2024</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0pY03Af%2F87p2KzowYfy8kLOh&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;2</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;REGISTRAR JUDICIAL </font></td><td style='border-top:none;'>&nbsp;&nbsp;23-10-2024</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0pbCoMx5hYAjgV1fZ%2BdjrOs1&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;3</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;REGISTRAR JUDICIAL </font></td><td style='border-top:none;'>&nbsp;&nbsp;06-11-2024</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0pb140pAMtZANVgoRSwiNHCz&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;4</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;REGISTRAR JUDICIAL </font></td><td style='border-top:none;'>&nbsp;&nbsp;11-12-2024</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0pZ3XVModFVvFyCz0VuavdY2&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;5</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;HON'BLE MR. JUSTICE RAHUL BHARTI </font></td><td style='border-top:none;'>&nbsp;&nbsp;12-02-2025</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0pa9qzUJ%2FR3iDVxwpkA7SKMH&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;6</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;HON'BLE MR. JUSTICE  VINOD CHATTERJI KOUL </font></td><td style='border-top:none;'>&nbsp;&nbsp;17-11-2025</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0paq1mvKQe4yuksJ9y0cWUcr&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;7</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;HON'BLE MR. JUSTICE JAVED IQBAL WANI </font></td><td style='border-top:none;'>&nbsp;&nbsp;10-02-2026</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0paZFlAu0oHH25HTtftmyaSd&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;8</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;HON'BLE MR. JUSTICE SHAHZAD AZEEM </font></td><td style='border-top:none;'>&nbsp;&nbsp;12-08-2026</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0pYPzebyzf3ALSxJlYmyaX1y&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr><tr><td style='border-top:none;'>&nbsp;&nbsp;9</td><td align='left'>&nbsp;WP(C)/1394/2024 </td><td align='left' style='width:330px;border-top:none;'><font size='2'>&nbsp;&nbsp;HON'BLE MR. JUSTICE RAJESH SEKHRI </font></td><td style='border-top:none;'>&nbsp;&nbsp;21-09-2026</font></td>
+			
+		
+		<td style=" border-top:none;" colspan='3'>	<a target='_blank' href ='cases/display_pdf.php?filename=TeYHI8kPdRUpkijhhxAbcJFpp8c9xNon9261dqAP0paAtYtB3XgJXrNPAo8%2B711I&caseno=WP(C)/1394/2024&cCode=2&cino=JKHC010028792024&state_code=12&court_code=2&&appFlag=' ></font> <font size='2' color='green'> &nbsp;&nbsp;View <span></span></font></a></td></tr></table><br />
+
+</table></table><div style='clear:both;'><h2 class='h2class' style='font-weight:bold;'>Document Details  </h2></div><table width="100%" cellspacing="0" cellpadding="1" align="center" border="1" style="border-collapse:collapse;" class="transfer_table"><tr><th scope="col" style=''><label>Sr. No. </label></th><th scope="col" style=''><label>Document No. </label></th><th scope="col" style=''><label>Date of Receiving </label></th><th scope="col" style=''><label>Filed by</label></th><th scope="col" style=''><label>Name of Advocate </th><th scope="col" style=''><label>Document Filed  </th></tr><tr><td  style='padding-left:5px;text-align:left !important;'>1</td>
+		<td  style='padding-left:5px;text-align:left !important;'>1</td>
+		<td  style='padding-left:5px;text-align:left !important;'>29-07-2025</td>
+		<td  style='padding-left:5px;text-align:left !important;'></td>
+		<td  style='padding-left:5px;text-align:left !important;'>ILYAS LAWAY</td>
+		<td  style='padding-left:5px;text-align:left !important;'>OBJECTIONS</td></tr><tr><td  style='padding-left:5px;text-align:left !important;'>2</td>
+		<td  style='padding-left:5px;text-align:left !important;'>2</td>
+		<td  style='padding-left:5px;text-align:left !important;'>14-08-2026</td>
+		<td  style='padding-left:5px;text-align:left !important;'></td>
+		<td  style='padding-left:5px;text-align:left !important;'>numan malik</td>
+		<td  style='padding-left:5px;text-align:left !important;'>OBJECTIONS</td></tr></table></div></div><div><h2 class='h2class' style='font-weight:bold;display:block;clear:both;text-align:center'>Objection</h2><br /><table id='objection_tabl' cellspacing='0' cellpadding='1' width='100%' class='obj_table' border='1'><tr><td><label><b>Sr.No.</b></label></td><td ><label><b>Sub Category</b></label></td><td><label><b>Objection</b></label></td><td ><label><b>Objection Compliance Date</b></label></td><td><label><b>Receipt Date</b></label></td></tr><tr><td><label><b>1</b></label></td><td><label>01-07-2024</label></td><td><label style='color:green'><b> <label style='color:green'><b>All Objections are Complied</b></label> </b></label></td><td><label></label></td><td><label></label></td></tr></div></div>
+
+</body>
+</html>
