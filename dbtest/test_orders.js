@@ -160,7 +160,7 @@ const TODAY_CASE = { person: 'Syed Mohtasim', people: ['Syed Mohtasim'], court: 
 
 test('All Cases columns: Date, Case (name over number), Next Date, Order', opt, async () => {
   const { doc, errors } = await load({ index: caseIndex(), status: STATUS, latest: LATEST });
-  assert.deepStrictEqual([...doc.querySelectorAll('#tableHead th')].map((th) => th.textContent.trim().replace(/\s*[▲▼]$/, '')),
+  assert.deepStrictEqual([...doc.querySelectorAll('#tableHead th')].map((th) => th.textContent.trim().replace(/\s*[▲▼◆]$/, '')),
     ['Date', 'Case', 'Next Date of Hearing', 'Order']);
   const tr = row(doc, /CRM\(M\) 333\/2022/);
   assert.strictEqual(tr.cells.length, 4);
@@ -286,6 +286,30 @@ test('no case today: the next hearing date with cases is pinned on top, as on th
   assert.strictEqual(w.selectedDate, null);
   assert.strictEqual(chip.style.display, 'none');
   assert.match(body()[0].textContent, /^Next hearing/);
+});
+
+test('Date sorts in calendar order by default: upcoming soonest first, then past', opt, async () => {
+  const day = (n) => { const d = new Date(); d.setDate(d.getDate() + n);
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+  const at = (n, no) => Object.assign({}, TODAY_CASE, { caseNo: 'WP(C) ' + no + '/2026', caseName: 'D' + n + ' Vs STATE', date: day(n), id: 'd' + no });
+  // no hearing today; 1, 2 and 3 days ahead (added out of order) plus the fixture's past cases
+  const { doc } = await load({ index: caseIndex(), status: STATUS, matches: MATCHES.concat([at(3, 903), at(1, 901), at(2, 902)]) });
+  const dates = () => [...doc.querySelectorAll('#tableBody tr:not(.group-row):not(.case-detail)')].map((r) => r.cells[0].textContent.slice(0, 10));
+  const header = () => [...doc.querySelectorAll('#tableHead th')].find((t) => /^Date/.test(t.textContent));
+  let d = dates();
+  assert.deepStrictEqual(d.slice(0, 3), [day(1), day(2), day(3)]);          // pinned next hearing, then 2 and 3 days ahead
+  const past = d.slice(3);
+  assert.ok(past.every((x) => x < day(0)));
+  assert.deepStrictEqual(past, past.slice().sort().reverse());              // past: most recent first
+  assert.match(header().getAttribute('title'), /Calendar order/);
+  header().click();                                                          // oldest first
+  d = dates().slice(1);   // after the pinned row
+  assert.deepStrictEqual(d, d.slice().sort());
+  header().click();                                                          // newest first
+  d = dates().slice(1);
+  assert.deepStrictEqual(d, d.slice().sort().reverse());
+  header().click();                                                          // back to calendar order
+  assert.deepStrictEqual(dates().slice(0, 3), [day(1), day(2), day(3)]);
 });
 
 test('the 5-minute poll refreshes All Cases and the order data', opt, async () => {

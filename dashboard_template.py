@@ -839,7 +839,10 @@ var TABLE_COLS = [
   {{key:'nextDate', label:'Next Date of Hearing'}},
   {{key:'orderDate', label:'Order'}}           // latest order: date, gist, full text
 ];
-var sortState = {{key:'date', dir:'desc'}};
+// Date starts in calendar order ('cal'): upcoming hearings soonest first,
+// like the calendar, then past ones most recent first. Clicking Date cycles
+// calendar order -> oldest first -> newest first -> calendar order.
+var sortState = {{key:'date', dir:'cal'}};
 
 // A number only if the whole value is one ("106"), never just its first
 // part: parseFloat read every date "2026-11-27" as 2026, so all dates sorted
@@ -850,6 +853,15 @@ function numOrText(v){{
   return Number(s);
 }}
 function cmpBy(key, dir){{
+  if (dir === 'cal'){{
+    var today = todayIso();
+    return function(a, b){{
+      var ad = a[key] || '', bd = b[key] || '';
+      var au = ad >= today, bu = bd >= today;
+      if (au !== bu) return au ? -1 : 1;            // upcoming before past
+      return au ? ad.localeCompare(bd) : bd.localeCompare(ad);
+    }};
+  }}
   var mul = dir==='asc' ? 1 : -1;
   return function(a,b){{
     var av = key==='person' ? foundByText(a) : (a[key]||''), bv = key==='person' ? foundByText(b) : (b[key]||'');
@@ -861,15 +873,20 @@ function cmpBy(key, dir){{
 
 function renderTableHead(){{
   var html = TABLE_COLS.map(function(c){{
-    var arrow = sortState.key===c.key ? (sortState.dir==='asc'?'&#9650;':'&#9660;') : '';
-    return '<th data-sortkey="'+c.key+'">'+c.label+' <span class="arrow">'+arrow+'</span></th>';
+    var on = sortState.key===c.key;
+    var arrow = !on ? '' : sortState.dir==='cal' ? '&#9670;' : sortState.dir==='asc' ? '&#9650;' : '&#9660;';
+    var tip = !on ? 'Sort by ' + c.label : sortState.dir==='cal' ? 'Calendar order: upcoming soonest first, then past (click: oldest first)' :
+      sortState.dir==='asc' ? (c.key==='date' ? 'Oldest first (click: newest first)' : 'Ascending (click: descending)') :
+      (c.key==='date' ? 'Newest first (click: calendar order)' : 'Descending (click: ascending)');
+    return '<th data-sortkey="'+c.key+'" title="'+tip+'">'+c.label+' <span class="arrow">'+arrow+'</span></th>';
   }}).join('');
   document.getElementById('tableHead').innerHTML = html;
   document.querySelectorAll('[data-sortkey]').forEach(function(th){{
     th.addEventListener('click', function(){{
       var k = th.getAttribute('data-sortkey');
-      if (sortState.key===k) sortState.dir = sortState.dir==='asc' ? 'desc' : 'asc';
-      else sortState = {{key:k, dir:'asc'}};
+      if (sortState.key===k && k==='date') sortState.dir = {{cal:'asc', asc:'desc', desc:'cal'}}[sortState.dir];
+      else if (sortState.key===k) sortState.dir = sortState.dir==='asc' ? 'desc' : 'asc';
+      else sortState = {{key:k, dir: k==='date' ? 'cal' : 'asc'}};
       renderTableHead();
       renderAllTable(document.getElementById('searchBox').value);
     }});
