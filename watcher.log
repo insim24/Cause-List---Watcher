@@ -8155,3 +8155,36 @@
 2026-11-25 12:59:53,119 [INFO] Fetching live display board
 2026-11-25 12:59:56,731 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "1", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "2", "item": "47", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "13", "text": "Immediate presence of ADV SHEIKH MANZOOR is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-11-25 12:59:56,733 [INFO] Added 0 new match(es). Total saved: 206. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-25 15:18:46,748 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-25 15:18:46,748 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-25 15:18:46,749 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-25 15:18:48,090 [INFO] Found 15 relevant causelist link(s) on the page (13 after filtering by list_types)
+2026-11-25 15:18:48,091 [INFO] Downloading Supplementary%20Cause%20List%20-%2026.11.2026.pdf (supplementary)
+2026-11-25 15:18:48,516 [INFO] Supplementary%20Cause%20List%20-%2026.11.2026.pdf: 9 case row(s) read, 0 potential match(es)
+2026-11-25 15:18:48,516 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2026.11.2026.pdf (supplementary)
+2026-11-25 15:18:48,862 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2026.11.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-11-25 15:18:48,862 [INFO] Downloading causelist_23112026.pdf (daywise)
+2026-11-25 15:18:49,515 [INFO] Unchanged since last run, skipping re-parse: causelist_23112026.pdf
+2026-11-25 15:18:49,515 [INFO] Downloading causelist_25112026.pdf (daywise)
+2026-11-25 15:18:49,865 [INFO] Unchanged since last run, skipping re-parse: causelist_25112026.pdf
+2026-11-25 15:18:49,865 [INFO] Downloading causelist_26112026.pdf (daywise)
+2026-11-25 15:18:50,165 [INFO] Unchanged since last run, skipping re-parse: causelist_26112026.pdf
+2026-11-25 15:18:50,165 [INFO] Downloading causelist_27112026.pdf (daywise)
+2026-11-25 15:18:50,465 [INFO] Unchanged since last run, skipping re-parse: causelist_27112026.pdf
+2026-11-25 15:18:50,465 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-25 15:18:51,909 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-25 15:18:51,909 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-25 15:18:52,201 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-25 15:18:52,201 [INFO] Downloading causelist_11112026.pdf (daywise)
+2026-11-25 15:18:52,515 [INFO] Unchanged since last run, skipping re-parse: causelist_11112026.pdf
+2026-11-25 15:18:52,515 [INFO] Downloading causelist_12112026.pdf (daywise)
+2026-11-25 15:18:52,808 [INFO] Unchanged since last run, skipping re-parse: causelist_12112026.pdf
+2026-11-25 15:18:52,808 [INFO] Downloading causelist_13112026.pdf (daywise)
+2026-11-25 15:18:53,101 [INFO] Unchanged since last run, skipping re-parse: causelist_13112026.pdf
+2026-11-25 15:18:53,101 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-25 15:18:54,830 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-25 15:18:54,830 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-25 15:18:55,122 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-25 15:18:55,128 [INFO] Fetching live display board
+2026-11-25 15:18:59,184 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "1", "item": "1", "coram": "HON'BLE THE CHIEF JUSTICE , HON'BLE MR. JUSTICE  WASIM SADIQ  NARGAL"}, {"court": "2", "item": "47", "coram": "HON'BLE MR. JUSTICE SANJEEV KUMAR, HON'BLE MR. JUSTICE MOHD YOUSUF WANI"}], "raw_status_rows": [], "messages": [{"id": "13", "text": "Immediate presence of ADV SHEIKH MANZOOR is required in court"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-11-25 15:18:59,187 [INFO] Added 0 new match(es). Total saved: 206. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
