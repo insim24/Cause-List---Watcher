@@ -1,23 +1,54 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "3",
+        "item": "18",
+        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "7",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      },
+      {
+        "court": "7",
+        "item": "15",
+        "coram": "HON'BLE MR. JUSTICE RAHUL BHARTI"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "7",
-        "text": "Immediate presence of Mr.  ( FAHIM NISAR SHAH advocate) is required in court"
+        "id": "13",
+        "text": "Immediate presence of ADV SHEIKH MANZOOR is required in court"
       }
     ]
   },
   "Jammu Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "10",
+        "item": "21",
+        "coram": "HON'BLE MR.  JUSTICE RAJESH SEKHRI"
+      },
+      {
+        "court": "14",
+        "item": "14",
+        "coram": "HON'BLE MR. JUSTICE  YASH PAUL BOURNEY"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
         "id": "4",
-        "text": "Mr Dewakar Sharma DyAG is required in court in S No 220"
+        "text": "Item No. 136 and 142 both will be taken up immediately after break"
+      },
+      {
+        "id": "10",
+        "text": "Advocate m/s Damini chauhan is required in court after break (sno.16)"
       }
     ]
   }
