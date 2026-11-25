@@ -2128,3 +2128,10 @@
 2026-11-24 23:21:11,547 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
 2026-11-24 23:21:19,340 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
 2026-11-24 23:24:27,069 INFO Done: 115/115 cases linked, 0 new orders
+2026-11-25 06:55:04,732 WARNING MA 85/2012 order 17: not a PDF (140 bytes), will retry next run
+2026-11-25 06:55:16,960 WARNING MA 86/2012 order 21: not a PDF (82 bytes), will retry next run
+2026-11-25 06:57:19,514 WARNING Could not check OWP 1645/2018: HTTPSConnectionPool(host='hcservices.ecourts.gov.in', port=443): Read timed out. (read timeout=30)
+2026-11-25 06:59:56,967 INFO New order: RFA 11/2026 #3 (2026-11-20)
+2026-11-25 07:04:27,581 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
+2026-11-25 07:04:55,273 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
+2026-11-25 07:09:51,270 INFO Done: 115/115 cases linked, 1 new orders

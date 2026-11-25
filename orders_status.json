@@ -1,18 +1,25 @@
 {
- "last_run": "2026-11-24T23:08:51+00:00",
+ "last_run": "2026-11-25T06:43:30+00:00",
  "ok": true,
  "problem": null,
  "linked_now": [],
  "link_failures": [],
- "new_orders": [],
+ "new_orders": [
+  {
+   "case": "RFA 11/2026",
+   "no": 3,
+   "date": "2026-11-20",
+   "pdf": "orders/RFA_11_2026/003_2026-11-20.pdf"
+  }
+ ],
  "errors": [
   {
-   "case": "LPA 82/2020",
+   "case": "OWP 1645/2018",
    "why": "HTTPSConnectionPool(host='hcservices.ecourts.gov.in', port=443): Read timed out. (read timeout=30)"
   }
  ],
  "cases_total": 115,
  "cases_linked": 115,
- "orders_total": 977,
+ "orders_total": 978,
  "unlinked": []
 }
