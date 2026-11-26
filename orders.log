@@ -2140,3 +2140,10 @@
 2026-11-25 22:49:22,741 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
 2026-11-25 22:49:32,569 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
 2026-11-25 22:51:58,035 INFO Done: 115/115 cases linked, 0 new orders
+2026-11-26 22:28:58,753 INFO Linked CRM(M) 1007/2026 -> JKHC010065732026
+2026-11-26 22:31:05,047 INFO New order: LPA 286/2026 #1 (2026-11-25)
+2026-11-26 22:31:47,292 WARNING MA 85/2012 order 17: not a PDF (140 bytes), will retry next run
+2026-11-26 22:31:52,659 WARNING MA 86/2012 order 21: not a PDF (82 bytes), will retry next run
+2026-11-26 22:33:14,106 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
+2026-11-26 22:33:17,699 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
+2026-11-26 22:34:16,721 INFO Done: 116/116 cases linked, 1 new orders
