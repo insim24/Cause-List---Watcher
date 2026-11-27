@@ -1,16 +1,27 @@
 {
   "Srinagar Wing": {
-    "idle": true,
-    "courts": [],
+    "idle": false,
+    "courts": [
+      {
+        "court": "3",
+        "item": "31",
+        "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"
+      },
+      {
+        "court": "5",
+        "item": "35",
+        "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"
+      }
+    ],
     "raw_status_rows": [],
     "messages": [
       {
-        "id": "8",
-        "text": "Immediate presence of Mr. Mohsin Qadri Sr. AAG  is required in court"
+        "id": "2",
+        "text": "Single bench matter will be taken at 11:45 am"
       },
       {
-        "id": "7",
-        "text": "Immediate presence of Mr. zahid wani (advocate) is required in court"
+        "id": "3",
+        "text": "Immediate presence of Mr.  (parvaiz lone adv) is required in court 3"
       }
     ]
   },

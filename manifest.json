@@ -1689,5 +1689,11 @@
     "parser_version": "5-split-column-fix",
     "watch_key": "cc5f6749c18807ae",
     "last_seen": "2026-11-26T13:31:24.653566"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_23112026/Supplementary%20Cause%20List%20-2-%2027.11.2026.pdf": {
+    "hash": "7ff7a01e8df9156b778004280bfadd3d825553eab4636bf3c96462b98c8c572a",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T12:49:13.410854"
   }
 }
