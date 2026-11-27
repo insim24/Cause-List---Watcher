@@ -1,22 +1,38 @@
 {
- "last_run": "2026-11-26T22:28:53+00:00",
+ "last_run": "2026-11-27T14:00:02+00:00",
  "ok": true,
  "problem": null,
- "linked_now": [
-  "CRM(M) 1007/2026"
- ],
+ "linked_now": [],
  "link_failures": [],
  "new_orders": [
   {
-   "case": "LPA 286/2026",
-   "no": 1,
+   "case": "CM(M) 161/2026",
+   "no": 8,
    "date": "2026-11-25",
-   "pdf": "orders/LPA_286_2026/001_2026-11-25.pdf"
+   "pdf": "orders/CM_M_161_2026/008_2026-11-25.pdf"
+  },
+  {
+   "case": "CRM(M) 1007/2026",
+   "no": 1,
+   "date": "2026-11-27",
+   "pdf": "orders/CRM_M_1007_2026/001_2026-11-27.pdf"
+  },
+  {
+   "case": "CRM(M) 374/2022",
+   "no": 4,
+   "date": "2026-11-27",
+   "pdf": "orders/CRM_M_374_2022/004_2026-11-27.pdf"
+  },
+  {
+   "case": "RFA 38/2023",
+   "no": 7,
+   "date": "2026-11-26",
+   "pdf": "orders/RFA_38_2023/007_2026-11-26.pdf"
   }
  ],
  "errors": [],
  "cases_total": 116,
  "cases_linked": 116,
- "orders_total": 979,
+ "orders_total": 983,
  "unlinked": []
 }
