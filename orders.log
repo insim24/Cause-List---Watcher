@@ -2157,3 +2157,13 @@
 2026-11-27 14:05:11,019 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
 2026-11-27 14:05:21,749 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
 2026-11-27 14:06:33,559 INFO Done: 116/116 cases linked, 4 new orders
+2026-11-27 22:10:18,270 INFO Linked CrlA(AS) 65/2025 -> JKHC010064932025
+2026-11-27 22:11:27,845 INFO CrlA(AS) 65/2025 order 3: same PDF as order 2, not stored again
+2026-11-27 22:11:29,545 INFO New order: CrlA(AS) 65/2025 #1 (2025-12-08)
+2026-11-27 22:11:29,545 INFO New order: CrlA(AS) 65/2025 #2 (2026-03-03)
+2026-11-27 22:11:29,545 INFO New order: CrlA(AS) 65/2025 #4 (2026-08-03)
+2026-11-27 22:12:26,849 WARNING MA 85/2012 order 17: not a PDF (140 bytes), will retry next run
+2026-11-27 22:12:34,457 WARNING MA 86/2012 order 21: not a PDF (82 bytes), will retry next run
+2026-11-27 22:13:17,456 WARNING SWP 2224/2014 order 8: not a PDF (82 bytes), will retry next run
+2026-11-27 22:13:21,601 WARNING SWP 2371/2011 order 17: not a PDF (82 bytes), will retry next run
+2026-11-27 22:14:10,940 INFO Done: 117/117 cases linked, 3 new orders
