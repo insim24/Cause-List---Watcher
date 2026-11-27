@@ -8465,3 +8465,56 @@
 2026-11-27 13:59:46,771 [INFO] Fetching live display board
 2026-11-27 13:59:50,886 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "3", "item": "31", "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "35", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": [{"id": "2", "text": "Single bench matter will be taken at 11:45 am"}, {"id": "3", "text": "Immediate presence of Mr.  (parvaiz lone adv) is required in court 3"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-11-27 13:59:50,888 [INFO] Added 0 new match(es). Total saved: 207. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-27 14:43:35,819 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-27 14:43:35,819 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-27 14:43:35,820 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-27 14:43:37,161 [INFO] Found 12 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-11-27 14:43:37,161 [INFO] Downloading Supplementary%20Cause%20List%20-%2030.11.2026.pdf (supplementary)
+2026-11-27 14:43:37,534 [INFO] Supplementary%20Cause%20List%20-%2030.11.2026.pdf: 9 case row(s) read, 0 potential match(es)
+2026-11-27 14:43:37,534 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2030.11.2026.pdf (supplementary)
+2026-11-27 14:43:37,817 [INFO] No case entries found in Spl.Supplementary%20Cause%20List%20-%2030.11.2026.pdf (empty, scanned, or an unrecognized layout) — skipping
+2026-11-27 14:43:37,818 [INFO] Downloading causelist_30112026.pdf (daywise)
+2026-11-27 14:43:41,799 [INFO] causelist_30112026.pdf: 581 case row(s) read, 1 potential match(es)
+2026-11-27 14:43:41,799 [INFO] Downloading causelist_01122026.pdf (daywise)
+2026-11-27 14:43:44,627 [INFO] causelist_01122026.pdf: 454 case row(s) read, 0 potential match(es)
+2026-11-27 14:43:44,627 [INFO] Downloading causelist_02122026.pdf (daywise)
+2026-11-27 14:43:47,049 [INFO] causelist_02122026.pdf: 379 case row(s) read, 1 potential match(es)
+2026-11-27 14:43:47,049 [INFO] Downloading causelist_03122026.pdf (daywise)
+2026-11-27 14:43:50,408 [INFO] causelist_03122026.pdf: 369 case row(s) read, 5 potential match(es)
+2026-11-27 14:43:50,408 [INFO] Downloading causelist_04122026.pdf (daywise)
+2026-11-27 14:43:53,156 [INFO] causelist_04122026.pdf: 424 case row(s) read, 5 potential match(es)
+2026-11-27 14:43:53,157 [INFO] Downloading causelist_05122026.pdf (daywise)
+2026-11-27 14:43:55,841 [INFO] causelist_05122026.pdf: 423 case row(s) read, 1 potential match(es)
+2026-11-27 14:43:55,841 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-27 14:44:14,360 [INFO] entirelist_sgr.pdf: 2630 case row(s) read, 13 potential match(es)
+2026-11-27 14:44:14,360 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-27 14:44:15,604 [INFO] rjcourtsgr.pdf: 23 case row(s) read, 0 potential match(es)
+2026-11-27 14:44:15,610 [INFO] Fetching live display board
+2026-11-27 14:44:19,477 [INFO] Display board: {"Srinagar Wing": {"idle": false, "courts": [{"court": "3", "item": "31", "coram": "HON'BLE MS. JUSTICE SINDHU SHARMA"}, {"court": "5", "item": "35", "coram": "HON'BLE MR. JUSTICE SANJAY DHAR"}], "raw_status_rows": [], "messages": [{"id": "2", "text": "Single bench matter will be taken at 11:45 am"}, {"id": "3", "text": "Immediate presence of Mr.  (parvaiz lone adv) is required in court 3"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-11-27 14:44:19,479 [INFO] Added 13 new match(es). Total saved: 220. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-27 14:44:19,479 [INFO]   -> [Owais Ashraf] 2026-11-30 | Court 3 | Sr 10 | HCP 122/2026 CM(8212/2026)
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-02 | Court 8 | Sr 54 | WP(C) 1870/2025 CM(4930/2025)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-03 | Court 2 | Sr 21 | LPA 176/2019 in[HCP 178/2018] CM(4593/2019) c/w i)CM(M) 201/2022 CM(2033/2019[1/2019]) CM(928/2020) ii)CM(M) 202/2022 IA(1/2018) IA(2/2018) iii)LPA 115/2023 CM(3692/2023) iv)CrlA(D) 61/2024 CrlM(1372/2024) CrlM(1221/2024) CrlM(1222/2024) v)CrlA(D) 71/2024 CrlM(1525/2024) CrlM(1526/2024) vi)CrlA(D) 20/2025 CrlM(257/2025) vii)CrlA(D) 118/2025 CrlM(2093/2025) CrlM(2094/2025) viii)CrlA(D) 119/2025 CrlM(2106/2025) CrlM(2107/2025) ix)CrlA(D) 122/2025 CrlM(2130/2025) CrlM(2131/2025) COURT NO. : 2
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-12-03 | Court 3 | Sr 1 | CM(M) 161/2026 CM(2889/2026) Caveat 312/2026
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-03 | Court 3 | Sr 21 | SWP 1424/2006
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-03 | Court 3 | Sr 43 | Mac App 7/2023 CM(4200/2023) CM(562/2023) CM(6941/2023)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-03 | Court 13 | Sr 31 | CrlA(S) 6/2023 CrlM(1582/2023) CrlM(900/2023)
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-04 | Court 5 | Sr 4 | HCP 146/2026
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-12-04 | Court 5 | Sr 21 | CM(5723/2026) IN OWP 1645/2018 C/DELAY IA(1/2018) CM(3783/2022) CM(5724/2026) CM(5726/2026) CM(5727/2026) CM(5728/2026) CM(5730/2026)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-12-04 | Court 5 | Sr 37 | WP(C) 398/2023 CM(3096/2023) CM(918/2023) CM(919/2023)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-04 | Court 8 | Sr 11 | OWP 1638/2018 IA(1/2018) IA(2/2018) CM(8411/2024)
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-04 | Court 11 | Sr 24 | CrlM(1919/2025) IN CrlA(AS) 65/2025 C/DELAY CrlM(1920/2025)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-05 | Court 13 | Sr 12 | CRM(M) 463/2021 CrlM(1492/2021) c/w i)CRM(M) 174/2022 CrlM(1271/2023) CrlM(569/2022)
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-11-30 | Court 3 | Sr 10 | HCP 122/2026 CM(8212/2026)
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-02 | Court 8 | Sr 54 | WP(C) 1870/2025 CM(4930/2025)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-03 | Court 2 | Sr 21 | LPA 176/2019 in[HCP 178/2018] CM(4593/2019) c/w i)CM(M) 201/2022 CM(2033/2019[1/2019]) CM(928/2020) ii)CM(M) 202/2022 IA(1/2018) IA(2/2018) iii)LPA 115/2023 CM(3692/2023) iv)CrlA(D) 61/2024 CrlM(1372/2024) CrlM(1221/2024) CrlM(1222/2024) v)CrlA(D) 71/2024 CrlM(1525/2024) CrlM(1526/2024) vi)CrlA(D) 20/2025 CrlM(257/2025) vii)CrlA(D) 118/2025 CrlM(2093/2025) CrlM(2094/2025) viii)CrlA(D) 119/2025 CrlM(2106/2025) CrlM(2107/2025) ix)CrlA(D) 122/2025 CrlM(2130/2025) CrlM(2131/2025) COURT NO. : 2
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-12-03 | Court 3 | Sr 1 | CM(M) 161/2026 CM(2889/2026) Caveat 312/2026
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-03 | Court 3 | Sr 21 | SWP 1424/2006
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-03 | Court 3 | Sr 43 | Mac App 7/2023 CM(4200/2023) CM(562/2023) CM(6941/2023)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-03 | Court 13 | Sr 31 | CrlA(S) 6/2023 CrlM(1582/2023) CrlM(900/2023)
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-04 | Court 5 | Sr 4 | HCP 146/2026
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Mohtasim, Syed Manzoor, Saqib Fayaz] 2026-12-04 | Court 5 | Sr 21 | CM(5723/2026) IN OWP 1645/2018 C/DELAY IA(1/2018) CM(3783/2022) CM(5724/2026) CM(5726/2026) CM(5727/2026) CM(5728/2026) CM(5730/2026)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Mohtasim, Owais Ashraf] 2026-12-04 | Court 5 | Sr 37 | WP(C) 398/2023 CM(3096/2023) CM(918/2023) CM(919/2023)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-04 | Court 8 | Sr 11 | OWP 1638/2018 IA(1/2018) IA(2/2018) CM(8411/2024)
+2026-11-27 14:44:19,480 [INFO]   -> [Owais Ashraf] 2026-12-04 | Court 11 | Sr 24 | CrlM(1919/2025) IN CrlA(AS) 65/2025 C/DELAY CrlM(1920/2025)
+2026-11-27 14:44:19,480 [INFO]   -> [Syed Manzoor] 2026-12-05 | Court 13 | Sr 12 | CRM(M) 463/2021 CrlM(1492/2021) c/w i)CRM(M) 174/2022 CrlM(1271/2023) CrlM(569/2022)

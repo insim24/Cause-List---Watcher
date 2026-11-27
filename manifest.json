@@ -1695,5 +1695,65 @@
     "parser_version": "5-split-column-fix",
     "watch_key": "cc5f6749c18807ae",
     "last_seen": "2026-11-27T12:49:13.410854"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/Supplementary%20Cause%20List%20-%2030.11.2026.pdf": {
+    "hash": "478d5fe49cb892449f0d52408304535433e1ec0709516720166b410a2181e9a8",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:37.430921"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/Spl.Supplementary%20Cause%20List%20-%2030.11.2026.pdf": {
+    "hash": "d51b5b0b2a619f48a6731ee0af1d163571b4c2f32a61c0a2baefc5ea45d50611",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:37.804479"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/causelist_30112026.pdf": {
+    "hash": "6e9fceaea1f3fd0c115296c0583811ab9b71ca2beea355dcacb1ed122fdb0a04",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:38.427528"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/causelist_01122026.pdf": {
+    "hash": "2eaab9843495804c8fe3fcae911e376a277aff8f6f9e11153711899b457f4b00",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:42.077059"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/causelist_02122026.pdf": {
+    "hash": "5a304233dc836a8401e9c221e792d337d91c48d96f7f132f50c2b5daccdfd8af",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:44.898171"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/causelist_03122026.pdf": {
+    "hash": "2dac7bfea0fccf67e0d43f9225dd4e02a6dfc62002e7a9efaaa7b3616339e424",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:47.320951"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/causelist_04122026.pdf": {
+    "hash": "b9d1d8ecd399f7f67c2e14733f947820767bc411526a0af0353e38e3b8d70797",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:50.679433"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/causelist_05122026.pdf": {
+    "hash": "54bdc8504e47a7b1876c9628aff4771af6176349ee3bc92e90000c352e79e7f3",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:53.428412"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/entirelist_sgr.pdf": {
+    "hash": "e29d7dc7e95bcbe3259b46ed29a862b94652cac45002b03d62c76f206600707e",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:43:57.708830"
+  },
+  "https://jkhighcourt.nic.in/upload/causelist/sgr/2026/Nov/weeklycauselist_30112026/rjcourtsgr.pdf": {
+    "hash": "a468d3b1738535fc87017c2b3de53caf92076f97e97006d4a7d2312992ced504",
+    "parser_version": "5-split-column-fix",
+    "watch_key": "cc5f6749c18807ae",
+    "last_seen": "2026-11-27T14:44:15.477053"
   }
 }
