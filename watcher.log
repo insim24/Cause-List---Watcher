@@ -8545,3 +8545,30 @@
 2026-11-27 19:07:51,307 [INFO] Fetching live display board
 2026-11-27 19:07:52,551 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "2", "text": "Single bench matter will be taken at 11:45 am"}, {"id": "3", "text": "Immediate presence of Mr.  (parvaiz lone adv) is required in court 3"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
 2026-11-27 19:07:52,553 [INFO] Added 0 new match(es). Total saved: 220. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
+2026-11-28 13:55:26,382 [INFO] Watching for: Syed Mohtasim, Syed Manzoor, Saqib Fayaz, Owais Ashraf
+2026-11-28 13:55:26,382 [INFO] Saved title searches: FAYAZ AHMAD PEERZADA, Syed iftikhar, Abdul Hamid dandroo
+2026-11-28 13:55:26,383 [INFO] Fetching https://jkhighcourt.nic.in/causelistk.php
+2026-11-28 13:55:27,692 [INFO] Found 12 relevant causelist link(s) on the page (10 after filtering by list_types)
+2026-11-28 13:55:27,692 [INFO] Downloading Supplementary%20Cause%20List%20-%2030.11.2026.pdf (supplementary)
+2026-11-28 13:55:27,995 [INFO] Unchanged since last run, skipping re-parse: Supplementary%20Cause%20List%20-%2030.11.2026.pdf
+2026-11-28 13:55:27,995 [INFO] Downloading Spl.Supplementary%20Cause%20List%20-%2030.11.2026.pdf (supplementary)
+2026-11-28 13:55:28,306 [INFO] Unchanged since last run, skipping re-parse: Spl.Supplementary%20Cause%20List%20-%2030.11.2026.pdf
+2026-11-28 13:55:28,306 [INFO] Downloading causelist_30112026.pdf (daywise)
+2026-11-28 13:55:29,066 [INFO] Unchanged since last run, skipping re-parse: causelist_30112026.pdf
+2026-11-28 13:55:29,066 [INFO] Downloading causelist_01122026.pdf (daywise)
+2026-11-28 13:55:29,466 [INFO] Unchanged since last run, skipping re-parse: causelist_01122026.pdf
+2026-11-28 13:55:29,466 [INFO] Downloading causelist_02122026.pdf (daywise)
+2026-11-28 13:55:29,866 [INFO] Unchanged since last run, skipping re-parse: causelist_02122026.pdf
+2026-11-28 13:55:29,866 [INFO] Downloading causelist_03122026.pdf (daywise)
+2026-11-28 13:55:30,216 [INFO] Unchanged since last run, skipping re-parse: causelist_03122026.pdf
+2026-11-28 13:55:30,216 [INFO] Downloading causelist_04122026.pdf (daywise)
+2026-11-28 13:55:30,566 [INFO] Unchanged since last run, skipping re-parse: causelist_04122026.pdf
+2026-11-28 13:55:30,566 [INFO] Downloading causelist_05122026.pdf (daywise)
+2026-11-28 13:55:30,866 [INFO] Unchanged since last run, skipping re-parse: causelist_05122026.pdf
+2026-11-28 13:55:30,866 [INFO] Downloading entirelist_sgr.pdf (entire)
+2026-11-28 13:55:33,065 [INFO] Unchanged since last run, skipping re-parse: entirelist_sgr.pdf
+2026-11-28 13:55:33,065 [INFO] Downloading rjcourtsgr.pdf (registrar)
+2026-11-28 13:55:33,381 [INFO] Unchanged since last run, skipping re-parse: rjcourtsgr.pdf
+2026-11-28 13:55:33,386 [INFO] Fetching live display board
+2026-11-28 13:55:34,532 [INFO] Display board: {"Srinagar Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": [{"id": "2", "text": "Single bench matter will be taken at 11:45 am"}, {"id": "3", "text": "Immediate presence of Mr.  (parvaiz lone adv) is required in court 3"}]}, "Jammu Wing": {"idle": true, "courts": [], "raw_status_rows": [], "messages": []}}
+2026-11-28 13:55:34,534 [INFO] Added 0 new match(es). Total saved: 220. Dashboard: /home/runner/work/Cause-List---Watcher/Cause-List---Watcher/causelist_dashboard.html
